@@ -1,0 +1,4 @@
+8b9dc6bc945f8fecdcf8064373ae582e  W1_R1.fastq.gz
+3246fc3e749109f6d5f2a56d2b7e8d62  W1_R2.fastq.gz
+13a8cd76e80f55eb7437d16957f6a9e5  W2_R1.fastq.gz
+6d2d24a75252c483249513ec2baed38d  W2_R2.fastq.gz
