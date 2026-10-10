@@ -1,0 +1,23 @@
+8954.0	k__Animalia	__	__	__	__	__	__
+2386.0	k__Animalia	p__Arthropoda	c__Arachnida	__	__	__	__
+9223.0	k__Animalia	p__Arthropoda	__	__	__	__	__
+9816.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Brachionidae	g__Brachionidae_X	s__Brachionidae_XX
+5921.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Brachionidae	g__Brachionus	s__Brachionus caudatus
+1505.0	k__Animalia	p__Arthropoda	c__Insecta	__	__	__	__
+392.0	k__Animalia	p__Rotifera	__	__	__	__	__
+8380.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Brachionidae	g__Keratella	s__Keratella tropica
+2128.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	__	__	__
+1042.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Euchlanidae	g__Euchlanis	s__Euchlanis deflexa
+1706.0	k__Animalia	p__Arthropoda	c__Arachnida	o__Trombidiformes	f__Trombidiformes_X	g__Trombidiformes_XX	s__Trombidiformes_XXX
+703.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Synchaetidae	g__Polyarthra_hn	s__Polyarthra vulgaris
+2005.0	k__Animalia	p__Arthropoda	c__Arachnida	o__Arachnida_X	f__Arachnida_XX	g__Arachnida_XXX	s__Arachnida_XXXX
+0.0	k__Animalia	p__Arthropoda	c__Insecta	o__Ephemeroptera	f__Baetidae	g__Procloeon	s__Procloeon spinosum
+0.0	k__Animalia	p__Gastrotricha	c__Gastrotricha_class_incertae_sedis	o__Chaetonotida	f__Chaetonotidae	g__Chaetonotus	s__Chaetonotus gelidus
+36.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Euchlanidae	g__Euchlanis	s__Euchlanis dilatata
+0.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Brachionidae	g__Brachionus	__
+0.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Brachionidae	__	__
+29.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Notommatidae	g__Cephalodella	s__Cephalodella sp. b HMY-2022
+48.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Synchaetidae	g__Polyarthra_hn	s__Polyarthra dolichoptera
+214.0	k__Animalia	p__Rotifera	c__Rotifera_X	o__Rotifera_XX	f__Rotifera_XXX	g__Rotifera_XXXX	s__Rotifera_XXXXX
+125.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Brachionidae	g__Brachionus	s__Brachionus calyciflorus
+1649.0	k__Animalia	p__Rotifera	c__Eurotatoria	o__Ploima	f__Brachionidae	g__Brachionus	s__Brachionus elevatus

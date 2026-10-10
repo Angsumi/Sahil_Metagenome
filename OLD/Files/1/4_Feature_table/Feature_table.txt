@@ -1,0 +1,274 @@
+# Constructed from biom file
+#OTU ID	W1	W2	taxonomy
+0aa9665b92fd2511f59968478861834b	0.0	412.0	k__Animalia
+721bfa397ff3ffc6d2508cdbe5dffe56	1248.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+6aa440b7d041c5d4fdd3c1a8341c9182	0.0	91.0	k__Animalia
+6e19ed19fa2adad94afcec91f3a09a1e	80.0	0.0	k__Animalia; p__Arthropoda
+36309160e83b59e6a5b23a131eee242a	499.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+a6ba88c07799c6c38f554a40c79d6c7e	711.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+9c3c1975e2013b364334ec89a1cbfcf4	0.0	69.0	k__Animalia; p__Arthropoda
+b682e499345709218b2819ff646af5d3	0.0	901.0	k__Animalia; p__Arthropoda
+b5126097ec467ef4706d01a955f5fb3e	0.0	32.0	k__Animalia; p__Arthropoda
+6df6f51914a4f890c3991e059d55cf19	0.0	710.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+2310b203a02c32620f255817472d362b	0.0	229.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+d0a42d7eac457449f6eb6f9125a9c687	0.0	139.0	k__Animalia
+d6ca57931d0b699578bc33d883f7ee9b	145.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+c1a77fe6a56edfdcbea910f150c5bc96	0.0	43.0	k__Animalia; p__Arthropoda
+c2ffe6b147fc4629e07978eaaa32b832	489.0	0.0	k__Animalia; p__Arthropoda
+c2a91e322ddd8923242ac064f4202df2	138.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+29969e85fff46b897f41770a385e2def	1089.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+2db47ae4a77685de40c120ad8c71950a	972.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+9dbe38d0750f084eab50dd0afe146bc7	35.0	0.0	k__Animalia; p__Arthropoda
+94fa7017a8b504f50d80dadae8a604b6	302.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+b8961b414a5d4c760838adb59808e9ff	0.0	85.0	k__Animalia; p__Rotifera
+9f9ca1f23860c60ab48d89e9f6506be8	0.0	1038.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+56b0f004e1522fcba8b5e7ff8fcb76df	1676.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+e85b787eadf095a3ec4f1c463d92e03d	0.0	988.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+cc9a36a4409e078073ba909566faa560	411.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+89b53536415aaa3010e094575bbb9bb0	0.0	1693.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+ab7e374265705f368b0ce4f37861d6d2	1778.0	0.0	k__Animalia; p__Arthropoda
+a3a241844032c4760fac99d07bc8cbf6	0.0	1565.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+e5b8b37925c89fc20bd30eb498ad8f0a	36.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima
+f490910592864aba029c77e9a4da48dd	30.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+e61d81f2568b5a83cd72019a96043039	0.0	1042.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Euchlanidae; g__Euchlanis; s__Euchlanis deflexa
+948d157561079eb42df1177a9a768949	0.0	478.0	k__Animalia
+287b4921665500aa537d53a7eeda45dc	0.0	34.0	k__Animalia; p__Arthropoda; c__Insecta
+0e90b1169fea27905db6e71665b62fbf	0.0	6.0	k__Animalia; p__Arthropoda
+59eb8ccd4b0684f3b43a4c312097fdac	1622.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Trombidiformes; f__Trombidiformes_X; g__Trombidiformes_XX; s__Trombidiformes_XXX
+d36ab99b274be03b7d18b6aee91c13ba	66.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+2afc1e30e13108ef2d5182af57bdf063	450.0	0.0	k__Animalia
+d5d689f56ce8732ba7b3e967c4a99fe1	135.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+f1ac7383b0b968fb50a380e2e8fffebd	1354.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Synchaetidae; g__Polyarthra_hn; s__Polyarthra vulgaris
+2f621dec1f81d3fbca87027ee1c9aa65	0.0	721.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+01016535db96bd093f8f30ae8e71b183	277.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+8ab8aacd168429510cb2b5634790591f	857.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+14127cbc6bddbc83d5b9531c0c5066f2	310.0	0.0	k__Animalia
+e495bc813c63fe6fb452ad4097b8943e	0.0	401.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+3a17e2ac4f59451925c88cec6bdfe01a	646.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+0adf6b6aeb788cec4cb6771e6a7ad3f6	662.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+622427ec50b70052d7f7f9df6609f3e1	53.0	0.0	k__Animalia; p__Arthropoda
+109f29be7512fa1e7a7ff6f34504a8bb	30.0	0.0	k__Animalia; p__Arthropoda; c__Insecta; o__Ephemeroptera; f__Baetidae; g__Procloeon; s__Procloeon spinosum
+78bed6a6c201c5e55a3f3aa241739cea	0.0	493.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+5e03db33dbabd68c2860e614a18b6400	750.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+5d19db818a07047ea47f805b6e39278b	1218.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+1f9d4e3f6057516fcc92e63a70aae99b	0.0	541.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+121a732fc53f8efc6b95e598c8e8349a	0.0	16.0	k__Animalia; p__Arthropoda
+548a32c7e5588683eae6a817a6ad0a42	1034.0	0.0	k__Animalia
+0a52f4dab22a60a86103d6e184855cdd	64.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Trombidiformes; f__Trombidiformes_X; g__Trombidiformes_XX; s__Trombidiformes_XXX
+486042e58bea7fda3535ff4aed8e2b7f	0.0	518.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+be7ed22d48b3a149353cae3e4de6e905	21.0	0.0	k__Animalia; p__Gastrotricha; c__Gastrotricha_class_incertae_sedis; o__Chaetonotida; f__Chaetonotidae; g__Chaetonotus; s__Chaetonotus gelidus
+6b6472e27431453d9d3bf3d3c87f9644	1044.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Euchlanidae; g__Euchlanis; s__Euchlanis deflexa
+a154fe5a30c4ba8824dcbacf44a7c87c	819.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+2e5412304269a82f0b843db2706b887c	0.0	12.0	k__Animalia
+6d278a587e9de803e5341e5f0d5653f0	0.0	945.0	k__Animalia; p__Arthropoda; c__Arachnida
+8e0c19b53b282cf4e39f5f50cfe6f2f7	0.0	868.0	k__Animalia
+213138d338a20fcfbd9360282d1b7872	0.0	19.0	k__Animalia
+89a07b1a2234feb5b50f58bfb750d7cf	601.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+17e8e8b0448fea1c91e73e1fa4af339c	0.0	856.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+8d8034893347cf0dc8d0c09edc72d352	0.0	449.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+6ec21a758507f473202350c922ca18c4	0.0	191.0	k__Animalia; p__Arthropoda; c__Arachnida
+4cb8ab29228fc311709e2f23b0315f2a	70.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+a434c45c06a419f37ad936eb55712e9b	225.0	0.0	k__Animalia
+e80c505f398b0086c217b1affc3d6565	0.0	63.0	k__Animalia
+30beb8b93aaaed19e168daa3912f428c	59.0	0.0	k__Animalia; p__Arthropoda
+355c4a3ce810a2191c94754e89314837	0.0	535.0	k__Animalia; p__Arthropoda
+d94804248e14ef20cf523fb96dc0860b	996.0	0.0	k__Animalia
+deffac78a34db74b21497364f3fbda43	11.0	0.0	k__Animalia; p__Arthropoda
+49928d72d7b531725daea184cf4114e0	0.0	1386.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+5aa04c4fc84aba8c2f05f24a5a5d5325	0.0	36.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Euchlanidae; g__Euchlanis; s__Euchlanis dilatata
+fd0c253af7d9391c38d0001fff7d1299	15.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+911ddff321759adf349ea712ea311bd2	113.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus
+d4f42723d50c89d4235a1a40e6de1329	307.0	0.0	k__Animalia
+b6faa5bd343262f4523d9937a8593c08	842.0	0.0	k__Animalia
+d82e0e59dfec0db553eb4e8b8e65b344	164.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+16e0c5a6786269ce1a2e8830a974a7b6	26.0	0.0	k__Animalia; p__Arthropoda
+bdfbef12dba80e85b9f5cf52d1a17955	53.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+a6477414193a467e4b6cae2f95cbe7f4	0.0	83.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+cc1d62fb8618df876777271cd388e7d2	0.0	149.0	k__Animalia
+8835873761e9d83de562208795b1bd7f	696.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+b3b5662c39e49a849ea8be0218c349f1	3.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima
+bc041ba121ed4a90604fb84fae5a6694	431.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+f701147992c75ec85d5296c58223c3b7	33.0	0.0	k__Animalia; p__Arthropoda
+5b2a4c527ee63c2980b0fbf321ed772c	1836.0	0.0	k__Animalia
+5db97b385f050db00c39b5995b049c44	204.0	0.0	k__Animalia
+3908ce4280fb941aa0676a061d01da71	56.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae
+b7380375925600f13165fd0b778a3a1c	17.0	0.0	k__Animalia; p__Arthropoda
+947bf3d14e3cc6f44824d7ded0fee3d6	76.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Euchlanidae; g__Euchlanis; s__Euchlanis dilatata
+2877c0ad6f7171b0ad4f3ead49387664	38.0	0.0	k__Animalia
+8d69ae32e2b9ece021551f059d876ba1	185.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+76879abf9ff7ad1dd14523e8f21e2c09	0.0	29.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Notommatidae; g__Cephalodella; s__Cephalodella sp. b HMY-2022
+817e3a5accabcf73f72fb8376ecdddcc	0.0	573.0	k__Animalia
+66a0bb410ec3a5bc2fd58ce4aa54af7d	47.0	0.0	k__Animalia
+46df021793e7e82656f2c948df257365	31.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+3ab2e8dbd86b4573d96e5c4912fbbb74	54.0	0.0	k__Animalia; p__Arthropoda
+155d5e2c362d32af2901359783185445	99.0	0.0	k__Animalia
+5e591a1337835a0fceaff2b05f88af84	32.0	0.0	k__Animalia; p__Arthropoda
+6192c0a5ac13ab7edf48e07fbdde1c4d	20.0	0.0	k__Animalia; p__Arthropoda
+f0d28fcb2c8d45fdc1ce08ae7945ab29	86.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+5340cbe34db257ad9cc9b610e7ca7eb2	0.0	721.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+547e2a1d59568610223c641d386a0a07	0.0	34.0	k__Animalia
+16a22c4f29671858860758ed703e60d0	281.0	0.0	k__Animalia; p__Arthropoda
+250a07953fa1a54d3e186867e4a179bf	4.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+b1c764de3a6e8c8dc92416df74a8443e	0.0	1706.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Trombidiformes; f__Trombidiformes_X; g__Trombidiformes_XX; s__Trombidiformes_XXX
+442f5fbe8bb399d235325fec851680c2	1071.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima
+f1df133c5d96726de7adc31eb2637b43	0.0	887.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+dd489b4aa61874e4c54b8d408179d472	54.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+8b9b28d7da1e7a7521b4972bb0b776db	0.0	1062.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima
+fe7b6d6c9eaf08cb6389d4f7e7830b0f	614.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+e0d439943b270e4e8c40016f21dae84a	0.0	284.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+ed0d42951179d423dc19d7b82c4f7ddf	0.0	45.0	k__Animalia; p__Arthropoda
+ff0198cfc32af431e6c89623d6308ab1	1309.0	0.0	k__Animalia; p__Arthropoda
+0e141e2829ffeda2527b8ee8e11ada53	0.0	48.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Synchaetidae; g__Polyarthra_hn; s__Polyarthra dolichoptera
+0440fa57c2a1d994b0c3654dd145838b	654.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+1f811913d77c43321305c8b740fa8510	31.0	0.0	k__Animalia
+d8456a164d486491e9f7ef7202cd3496	0.0	827.0	k__Animalia; p__Arthropoda
+5ee1c188ed7be26e3495c58941859d7d	47.0	0.0	k__Animalia
+28ae6377c2d9f766d4084beed48f19df	67.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+8072a86d44e649829981aba95af78f59	920.0	1190.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+82a8bb37d6fcd1bf945de97a76a7e83c	0.0	1074.0	k__Animalia; p__Arthropoda
+47860af2eb32f7f8bacb1f9beb838f6a	999.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Euchlanidae; g__Euchlanis; s__Euchlanis deflexa
+0dec53689d21d7cffe3a28dc4d277392	0.0	14.0	k__Animalia
+afb6cae3546f35d4cfa8cda8e4b4bafd	51.0	0.0	k__Animalia; p__Arthropoda
+86159e149065d96a61671461c59928f7	0.0	544.0	k__Animalia
+a49e4730068134d98d1d51bf8bbc6582	1026.0	0.0	k__Animalia; p__Arthropoda
+9b32e4b29525d0fd15dfb5effe148446	0.0	760.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+529fee51b43b7a1042526c9fad220b38	0.0	214.0	k__Animalia; p__Rotifera; c__Rotifera_X; o__Rotifera_XX; f__Rotifera_XXX; g__Rotifera_XXXX; s__Rotifera_XXXXX
+a5b282669bc56768f045ee29324a0ac0	1675.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+ca64aa10ba3ee9be780b17d271ceadca	772.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+43d8481f573c1b5888aa3d3c1042c358	102.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae
+4e89960cfaf914c2a67789f97fc81c4c	0.0	926.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+196a14d1d695b0c890d0031d3edea43b	45.0	0.0	k__Animalia; p__Arthropoda
+4f3886f24542b0f5aadbb17034d8469f	652.0	0.0	k__Animalia
+a412eecb29a00194951a5abfd99147f1	685.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+e8c5faba93f8cec5fb9c27e4a7b6c81e	23.0	0.0	k__Animalia; p__Arthropoda
+2266c62750727f0339bf8401cab829d1	181.0	0.0	k__Animalia; p__Arthropoda
+9242bf55e25816a4751f20868f50925d	0.0	703.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+9b5a31f0988679bb376a1926f7a4fc60	0.0	1446.0	k__Animalia; p__Arthropoda; c__Insecta
+19f5f331c9635281d3066799f0b5c336	0.0	449.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+fe05d444e15f738de37b5168f77b3010	52.0	0.0	k__Animalia; p__Rotifera
+4697ce0ec6585f9f396541bd6e179231	0.0	16.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima
+777bed58efdd8f7dd471fa8a2aeacf00	838.0	0.0	k__Animalia; p__Arthropoda
+07c5d77566be9e8abffe6fd3721da9ae	830.0	0.0	k__Animalia
+7daf46956b2b26e41825ce7180c81687	0.0	64.0	k__Animalia; p__Arthropoda; c__Arachnida
+415d059342393df0dcd5a02f2cd2f8ef	288.0	0.0	k__Animalia
+d4cc1332f1061d805a01bf9212a9d2b8	496.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Euchlanidae; g__Euchlanis; s__Euchlanis dilatata
+7cdff955bc51862fd6544ade8b8e5a48	0.0	26.0	k__Animalia; p__Arthropoda
+a2b87d4f2d2b1e5fe9d4d4aeb48f9e14	1525.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+1587c100184f9c46d3ed71444894ecc6	888.0	0.0	k__Animalia; p__Arthropoda
+4aefece34f5c95da79335975e8aa8c51	808.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Trombidiformes; f__Trombidiformes_X; g__Trombidiformes_XX; s__Trombidiformes_XXX
+e12a53848f6635c3b3a4a8dccb6c424b	0.0	175.0	k__Animalia; p__Arthropoda
+b170f2d3c508c8731a1d9073dd4f1710	0.0	155.0	k__Animalia; p__Arthropoda
+516ced53c26069c39405dd2f62b3067a	0.0	40.0	k__Animalia; p__Arthropoda
+1fd2246d3d0e66f39525e0262be587ee	464.0	0.0	k__Animalia; p__Rotifera; c__Rotifera_X; o__Rotifera_XX; f__Rotifera_XXX; g__Rotifera_XXXX; s__Rotifera_XXXXX
+e601da50e5956d9789d5d1ad4301efb6	24.0	0.0	k__Animalia
+649f1fe777e85ef3e23036631f5966f7	1036.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Euchlanidae; g__Euchlanis; s__Euchlanis deflexa
+792883e5c61b9fb714e941bd1fb0e2d7	317.0	0.0	k__Animalia
+936dae59b7c00ef082fc211b173ecc5a	175.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+bdd1a6c3f7e07141479ac729e0ad478f	49.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+dc26f876a815b04cb1f15642ab4f282b	337.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+34620a724d52ae4e1b6585338dd9d8aa	0.0	1179.0	k__Animalia
+d5f0be90538cca1a13e23ee976172ea8	12.0	0.0	k__Animalia; p__Arthropoda
+fec3c6bc23e96f60e4ccfce1749d11ea	0.0	703.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Synchaetidae; g__Polyarthra_hn; s__Polyarthra vulgaris
+56b1920c7b0797228393a5cd0f4b0007	0.0	307.0	k__Animalia; p__Rotifera
+09be3a79abf74724dc581de20c3bb53f	578.0	0.0	k__Animalia
+e9aa4274832b009fb7df2a3b2584783c	0.0	87.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+68d62b68f42099fd0dbef07e37b0a8dd	40.0	0.0	k__Animalia; p__Rotifera
+191491eaea927c199082bcfdbc246ff7	227.0	0.0	k__Animalia; p__Arthropoda
+6fa954e719822bc97a9c93244abc27e9	0.0	1127.0	k__Animalia
+b09a29619dc029d0405b98947717abf7	124.0	0.0	k__Animalia; p__Arthropoda
+c35f9330534d105101ef0e4170442604	0.0	641.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+71a8b3b6a3b547a8520ec3dcb33b5ec9	110.0	0.0	k__Animalia; p__Arthropoda
+fdc850afd8fc0135bcad40370084ccd6	496.0	0.0	k__Animalia; p__Arthropoda
+5b68432d71b0cce74cf7eece11b94b5b	0.0	930.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+bcb91507ea027837f3fd70ddf53e0952	0.0	735.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+57d7dd8af82150f34644997217f7fe1a	824.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+4b73a69d1903499929d36294ad141046	0.0	902.0	k__Animalia; p__Arthropoda
+3221af60e8fdb71e4fc51e2c596827c3	0.0	21.0	k__Animalia
+88df46e9d5d6a2be4654e39ceb74e423	883.0	0.0	k__Animalia
+d5315a67849df20586bfe76968d07218	9.0	0.0	k__Animalia
+d341ea935923b18bcb57e18252dd49cf	625.0	0.0	k__Animalia
+5ff72284a843e8beccda089e1f5c9f0d	120.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Trombidiformes; f__Trombidiformes_X; g__Trombidiformes_XX; s__Trombidiformes_XXX
+6c954a56d6b2c7fc110942a6451a8edc	6.0	0.0	k__Animalia
+0605bdf1194dd43c7320d257b064f57b	0.0	1012.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+40b7b24fe113d6ea83c2d7d00829262e	75.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+fac0cdfc520c5e7739348a46d549fa50	0.0	125.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus calyciflorus
+f1fe2daad3d8eae578069eeab812395d	13.0	0.0	k__Animalia; p__Arthropoda
+2c67defffae74775861608ca7878485f	778.0	1019.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus elevatus
+08c2db2320322ecd1f46be18bd319a44	69.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+c817a5d323db2d45ce91b35df0dad50d	0.0	1092.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+85a32811307c84643403a8c1c7569dda	26.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+498f5e92c8310327e933391a07c5f724	363.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus calyciflorus
+2b6125d77a99136677c40db7a975665b	11.0	0.0	k__Animalia; p__Arthropoda
+6dc6863a48e877776e95894792e2fc70	37.0	0.0	k__Animalia
+eb6f0c1a8554b684c4c90ec5a938be4d	0.0	1050.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima
+c1e32bed02b47c0e39b7acee6ae9d035	628.0	0.0	k__Animalia; p__Arthropoda
+281b3c26f9cfbe09dbdf35feac202702	0.0	35.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+c314546858a51f61ebdbc13fe601f11b	0.0	58.0	k__Animalia; p__Arthropoda
+32532c8a0dcfb08933b79909a8960c0d	0.0	47.0	k__Animalia; p__Arthropoda
+928ff9ce3f02438fa65843b84452b16e	270.0	0.0	k__Animalia
+2dea8447e95cabd03c3ed70a09a50ea1	0.0	1144.0	k__Animalia
+9f8f7c87257046cf70eb6c5a863ab163	71.0	0.0	k__Animalia; p__Arthropoda
+b488c8e5aa6d597e6b174a5714cdbcae	3.0	0.0	k__Animalia
+0e077cbd5170705dac2faa29698434a0	1523.0	0.0	k__Animalia; p__Arthropoda
+87c30d5b5e76ae370a9d0d552719a534	62.0	0.0	k__Animalia; p__Arthropoda
+9ede296144841e03fabfda20357bfd82	0.0	6.0	k__Animalia; p__Arthropoda
+b37ff58914c09103ddafd8467522abb3	0.0	51.0	k__Animalia; p__Arthropoda
+9b7ce44ab7f68bb0bcf506e27d9bbfe3	1433.0	0.0	k__Animalia
+3df47dcc11ed804b51139c8767a5ecfe	15.0	0.0	k__Animalia; p__Arthropoda
+65ef0c0f1f2cc98673849354c51116d4	0.0	895.0	k__Animalia; p__Arthropoda
+c903dff762e212277ccd5d6887760e41	77.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+f6265567a3f62e9138c550dc56811c66	0.0	1223.0	k__Animalia
+205b31cd440d63028ff804c6e6fc90cc	950.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+be14f005ffa0af2e9d6878a241ff6d4e	3.0	0.0	k__Animalia; p__Gastrotricha; c__Gastrotricha_class_incertae_sedis; o__Chaetonotida; f__Chaetonotidae; g__Chaetonotus; s__Chaetonotus gelidus
+72918a7e5e65220cb4f260b454838671	0.0	666.0	k__Animalia; p__Arthropoda
+107188679a005fc78ba14deefaa7658d	58.0	0.0	k__Animalia; p__Arthropoda
+8cd30fb5f379f9a0c47ac796d20b9013	0.0	909.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+b1bc62b40a5f499af8eee36193745360	690.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+b1e8dc0542d4b4cc3e5cdd70b33eb831	33.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+b5662b24364a655b374828666ce2a5ed	1346.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima
+141023be38229467dd20d7d29cdeb815	19.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+56c63c8d8cce5270b261cee86daf1b4a	17.0	0.0	k__Animalia; p__Arthropoda
+eecaf0997f81af03e29ceb63052dc1d8	0.0	1005.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+d158489a2de7c19914348bbfbf383999	0.0	937.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+a55d301eb96dca69c23787653b72f961	0.0	497.0	k__Animalia; p__Arthropoda
+33c2b7aba0de28287b99e7fd970685a4	0.0	38.0	k__Animalia; p__Arthropoda
+dc649173078bc0345931acb081d67341	0.0	630.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus elevatus
+0e19e96982c23c8bb3b7875a849659b2	595.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+09a9b2f28d6853372b295ed5174b0011	15.0	0.0	k__Animalia; p__Arthropoda
+41b00277a14530934b1630038c39ef20	0.0	864.0	k__Animalia
+78097dd1dbe39133ea81e09db879cc2b	0.0	724.0	k__Animalia; p__Arthropoda
+efe7d5cca036a9a7a3071cf7c9d45a63	12.0	0.0	k__Animalia; p__Arthropoda
+da3592ebb74ab0682b84110a9598e640	1630.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+f0af298a798abc9193acee0e5d317f9e	6.0	0.0	k__Animalia; p__Arthropoda
+fbb7b9afb2b577dbc045e1d522c9d2ea	0.0	954.0	k__Animalia; p__Arthropoda; c__Arachnida
+4045611347e1b6e0b52401744b7ff57c	0.0	46.0	k__Animalia; p__Arthropoda; c__Arachnida
+5269fd42e52b11216637543f1b87b776	499.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+2eb54fb32f567d712cc8fbd587a9e918	0.0	293.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+b09ce7b159d62aa51070344c8242d6e5	644.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+a990209cfffdaab90f11df78eac0a28c	404.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionus; s__Brachionus caudatus
+2f16af6938161c357d6edb695fa20457	0.0	25.0	k__Animalia; p__Arthropoda; c__Insecta
+3d7fc743f3b6e32b5d17195bc19e0511	122.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Synchaetidae; g__Polyarthra_hn; s__Polyarthra dolichoptera
+7dbed8f88a888e6ed0a0eeed1b0b12fc	2.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+2ee2a8caab175f41713d87a64e982b34	19.0	0.0	k__Animalia; p__Arthropoda
+d8606c02c4053454925ae513ac203450	142.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+f36f3b84dbf342dfa38061787cd62704	2383.0	0.0	k__Animalia; p__Arthropoda
+8961e2c4865b4caa98b5c75402b19cc9	6.0	0.0	k__Animalia; p__Arthropoda
+05478a5332b58ede22c4f1cb6c4de49e	945.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+6e3e97f74466217fc6aadd5228f1acdb	510.0	0.0	k__Animalia; p__Arthropoda
+c8dd3083f9a725c0826ecbadce727975	58.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+35d3aa866198c40e2208169db0106647	0.0	612.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+49d9f1c5e969e15cdca8d2f367c386e8	11.0	0.0	k__Animalia; p__Arthropoda
+5d232ef562924cea0a6121be24aa3364	0.0	12.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Brachionidae_X; s__Brachionidae_XX
+121fda74d0413471f0f95b53a9b61ef4	43.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+3c8f9c4b07272390c05735742676c414	36.0	0.0	k__Animalia; p__Arthropoda; c__Arachnida
+352b8bb7137d573becd000dc899cc829	109.0	0.0	k__Animalia; p__Arthropoda
+27d57fb4bffce01d0807875a921ee178	44.0	0.0	k__Animalia; p__Arthropoda
+f4fb271a164a6dc6dbfe2fd4b5cf5360	0.0	231.0	k__Animalia; p__Arthropoda; c__Arachnida; o__Arachnida_X; f__Arachnida_XX; g__Arachnida_XXX; s__Arachnida_XXXX
+e23daad1e757f6f2c87a7b6afc72a836	15.0	0.0	k__Animalia
+910d64904870946f128dbb52291d958a	647.0	0.0	k__Animalia; p__Rotifera; c__Eurotatoria; o__Ploima; f__Brachionidae; g__Keratella; s__Keratella tropica
+efbddbf5a2a4aaa1964408257fd65ac0	0.0	186.0	k__Animalia; p__Arthropoda; c__Arachnida
+82ca88978d462061ae1b5750d517021d	2.0	0.0	k__Animalia; p__Arthropoda; c__Insecta
+674fbde23f3ce26a853d9c2273c72a14	0.0	1395.0	k__Animalia; p__Arthropoda
+dd2e7df34c2776d4ffa37196aed326cc	520.0	0.0	k__Animalia; p__Arthropoda
+d54258a110d32c6ffbe3e045ad01ae54	40.0	0.0	k__Animalia
+7ded61aa155ffd1acfc9cf1a7dfad304	25.0	0.0	k__Animalia
