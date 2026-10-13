@@ -1,0 +1,31 @@
+marker	Genus	W1	W2	role
+COI	Brachionus	14.834	22.747	Rotifers
+18S	Neoheteromita	15.074	2.653	Protozoa (free-living)
+COI	Keratella	3.561	8.393	Rotifers
+18S	Aphanomyces	0	7.711	Water moulds (oomycetes)
+18S	Cyclotella	6.634	0.001	Diatoms
+18S	Rhizophydium	0	3.414	Fungi
+18S	Staurastrum	0.001	3.014	Desmids & conjugating algae
+18S	Desmodesmus	2.704	0.004	Green algae
+18S	Chlamydomonas	2.595	0.067	Green algae
+18S	Pteromonas	2.545	0	Green algae
+18S	Lepidochromonas	0	2.528	Golden & other algae
+18S	Mesocyclops	1.846	0.572	Animals
+18S	Paraphysomonas	0.364	1.495	Golden & other algae
+18S	Filinia	1.366	0	Animals
+18S	Coenochloris	0	1.358	Green algae
+COI	Polyarthra	1.289	0.811	Rotifers
+18S	Cosmarium	0	1.229	Desmids & conjugating algae
+18S	Aphelidium	0.973	0.018	Fungi
+18S	Unruhdinium	0.77	0	Dinoflagellates
+18S	Aulacoseira	0.722	0	Diatoms
+18S	Aeolosoma	0	0.7	Animals
+18S	Chloromonas	0.642	0	Green algae
+18S	Nitzschia	0.633	0.034	Diatoms
+18S	Leptolegnia	0	0.528	Water moulds (oomycetes)
+18S	Arcella	0.056	0.47	Protozoa (free-living)
+18S	Conticribra	0.461	0	Diatoms
+18S	Pleurotaenium	0	0.379	Desmids & conjugating algae
+18S	Haptoglossa	0	0.37	Water moulds (oomycetes)
+18S	Spondylosium	0	0.354	Desmids & conjugating algae
+18S	Cosmocladium	0	0.33	Desmids & conjugating algae

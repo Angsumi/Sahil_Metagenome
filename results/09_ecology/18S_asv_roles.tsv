@@ -1,0 +1,983 @@
+asv	W1	W2	role	Division	Class	Genus	Species
+18S_ASV0001	13350	2171	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Neoheteromita	
+18S_ASV0002	7081	0	Unassigned / other				
+18S_ASV0003	0	5885	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes	Aphanomyces	
+18S_ASV0004	0	5692	Animals	Opisthokonta-Metazoa	Nematoda		
+18S_ASV0005	51	5092	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0006	51	3649	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0007	3627	16	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0008	3272	0	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0009	2882	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	
+18S_ASV0010	0	2794	Fungi	Opisthokonta-Fungi	Chytridiomycota	Rhizophydium	
+18S_ASV0011	2533	0	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0012	41	2445	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0013	2323	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0014	0	2161	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0015	2136	0	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0016	0	2133	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0017	0	1896	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0018	1878	0	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0019	0	1708	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae	Lepidochromonas	
+18S_ASV0020	1623	79	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0021	1697	0	Green algae	Chlorophyta	Chlorophyceae	Pteromonas	
+18S_ASV0022	1638	3	Green algae	Chlorophyta	Chlorophyceae	Desmodesmus	
+18S_ASV0023	1495	81	Animals	Opisthokonta-Metazoa	Arthropoda	Mesocyclops	
+18S_ASV0024	0	1490	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0025	1414	1	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	Cyclotella_meneghiniana
+18S_ASV0026	1241	14	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0027	6	1223	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonas	
+18S_ASV0028	1226	0	Green algae	Chlorophyta	Chlorophyceae	Chlamydomonas	
+18S_ASV0029	0	1188	Protozoa (free-living)	Ancyromonadida			
+18S_ASV0030	0	1175	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0031	1132	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0032	0	1127	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0033	0	1047	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0034	0	1004	Green algae	Chlorophyta	Chlorophyceae	Coenochloris	
+18S_ASV0035	994	0	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0036	987	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	
+18S_ASV0038	948	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0039	0	924	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0040	871	2	Fungi	Opisthokonta-Fungi	Blastocladiomycota		
+18S_ASV0041	0	814	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Cosmarium	
+18S_ASV0042	809	0	Protozoa (free-living)	Alveolata-Chrompodellids	Colpodellidea		
+18S_ASV0043	0	808	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0044	602	187	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta		
+18S_ASV0045	770	0	Animals	Opisthokonta-Metazoa	Rotifera	Filinia	Filinia_longiseta
+18S_ASV0046	710	2	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0047	710	0	Green algae	Chlorophyta	Chlorophyceae	Desmodesmus	
+18S_ASV0048	682	0	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae	Unruhdinium	
+18S_ASV0049	629	53	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0050	671	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0051	666	0	Fungi	Opisthokonta-Fungi	Aphelidiomycota	Aphelidium	
+18S_ASV0052	652	0	Unassigned / other				
+18S_ASV0053	645	0	Green algae	Chlorophyta	Chlorophyceae	Chlamydomonas	
+18S_ASV0054	573	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0055	564	0	Unassigned / other				
+18S_ASV0056	557	0	Green algae	Chlorophyta	Chlorophyceae	Pteromonas	
+18S_ASV0057	11	536	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0058	0	547	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0059	0	543	Animals	Opisthokonta-Metazoa	Annelida	Aeolosoma	
+18S_ASV0060	525	0	Unassigned / other				
+18S_ASV0061	509	0	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0062	508	0	Parasitic protists	Opisthokonta-Ichthyosporea	Ichthyophonida		
+18S_ASV0063	508	0	Unassigned / other				
+18S_ASV0064	0	498	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0065	0	485	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV0066	448	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0068	434	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0069	0	432	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes	Leptolegnia	
+18S_ASV0070	0	425	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes	Aphanomyces	
+18S_ASV0071	415	0	Green algae	Chlorophyta	Chlorophyceae	Chloromonas	Chloromonas_vernalis
+18S_ASV0072	408	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Conticribra	
+18S_ASV0073	400	0	Diatoms	Stramenopiles-Gyrista	Coscinodiscophyceae	Aulacoseira	
+18S_ASV0074	0	396	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0075	383	8	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0076	389	0	Unassigned / other				
+18S_ASV0077	0	388	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0078	383	0	Animals	Opisthokonta-Metazoa	Rotifera	Filinia	Filinia_longiseta
+18S_ASV0079	1	381	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0080	317	55	Green algae	Chlorophyta	Chlorophyceae	Chlamydomonas	
+18S_ASV0081	0	362	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0082	0	344	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0083	2	339	Animals	Opisthokonta-Metazoa	Arthropoda	Mesocyclops	
+18S_ASV0084	319	20	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0085	334	0	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0086	0	334	Protozoa (free-living)	Ancyromonadida			
+18S_ASV0087	316	0	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonas	Paraphysomonas_uniformis
+18S_ASV0088	0	304	Unassigned / other				
+18S_ASV0089	0	303	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes	Haptoglossa	
+18S_ASV0090	175	126	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0091	0	295	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0092	0	290	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Spondylosium	Spondylosium_panduriforme
+18S_ASV0094	0	288	Protozoa (free-living)	Ancyromonadida			
+18S_ASV0095	0	279	Unassigned / other				
+18S_ASV0096	278	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0097	0	274	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0098	257	13	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0099	0	270	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Cosmocladium	
+18S_ASV0100	0	269	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0101	0	265	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0102	259	0	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0103	0	258	Unassigned / other				
+18S_ASV0104	0	253	Parasitic protists	Alveolata-Apicomplexa	Gregarinomorphea		
+18S_ASV0105	252	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0106	0	249	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae	Lepidochromonas	
+18S_ASV0108	239	0	Diatoms	Stramenopiles-Gyrista	Coscinodiscophyceae	Aulacoseira	Aulacoseira_granulata
+18S_ASV0109	9	229	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0110	0	237	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0111	0	237	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0112	236	0	Unassigned / other				
+18S_ASV0113	0	236	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0114	0	233	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Pleurotaenium	
+18S_ASV0115	232	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae		
+18S_ASV0117	0	228	Fungi	Opisthokonta-Fungi	Chytridiomycota	Chytriomyces	
+18S_ASV0118	0	227	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0119	223	3	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0120	223	0	Fungi	Opisthokonta-Fungi	Mucoromycota	Mortierella	
+18S_ASV0121	2	220	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0123	217	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta		
+18S_ASV0124	212	0	Unassigned / other				
+18S_ASV0125	0	210	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0126	204	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0127	178	26	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0128	0	202	Unassigned / other				
+18S_ASV0129	0	201	Unassigned / other				
+18S_ASV0130	197	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0131	194	0	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0132	179	15	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Nitzschia	Nitzschia_palea
+18S_ASV0133	0	191	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0135	0	187	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0136	0	185	Fungi	Opisthokonta-Fungi			
+18S_ASV0137	184	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0138	183	0	Unassigned / other				
+18S_ASV0139	0	183	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0140	0	183	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae		
+18S_ASV0141	0	182	Green algae	Chlorophyta	Trebouxiophyceae	Botryococcus	Botryococcus_braunii
+18S_ASV0142	0	181	Animals	Opisthokonta-Metazoa	Annelida		
+18S_ASV0143	176	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0144	173	3	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0145	0	176	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0146	174	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0147	0	173	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0148	0	172	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0149	0	171	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae	Asulcocephalium	
+18S_ASV0151	0	170	Unassigned / other				
+18S_ASV0152	169	0	Unassigned / other				
+18S_ASV0153	0	167	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae	Glenodiniopsis	Glenodiniopsis_uliginosa
+18S_ASV0154	164	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	
+18S_ASV0155	0	164	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0157	162	0	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0158	2	160	Protozoa (free-living)	Rigifilida		Micronuclearia	Micronuclearia_podoventralis
+18S_ASV0159	161	0	Animals	Opisthokonta-Metazoa	Gastrotricha	Lepidodermella	Lepidodermella_squamata
+18S_ASV0160	0	161	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa	Vampyrella	
+18S_ASV0161	160	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0162	0	159	Unassigned / other				
+18S_ASV0163	152	2	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0164	3	151	Plants	Streptophyta	Embryophyceae		
+18S_ASV0165	0	151	Protozoa (free-living)	Stramenopiles-Bigyra	Bicoecea		
+18S_ASV0166	150	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0167	0	148	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae		
+18S_ASV0168	0	147	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0169	142	2	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0170	20	123	Protozoa (free-living)	Tubulinea	Elardia	Arcella	Arcella_hemisphaerica
+18S_ASV0171	0	142	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0173	0	138	Unassigned / other				
+18S_ASV0174	137	0	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Nitzschia	Nitzschia_palea
+18S_ASV0175	136	1	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0176	136	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0177	0	136	Unassigned / other				
+18S_ASV0178	0	136	Unassigned / other				
+18S_ASV0179	135	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0180	105	29	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0181	0	134	Animals	Opisthokonta-Metazoa			
+18S_ASV0182	133	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0183	0	132	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0184	130	0	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0185	129	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	Cyclotella_meneghiniana
+18S_ASV0186	0	129	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0187	0	128	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0188	2	124	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0189	125	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0190	4	121	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0191	0	125	Unassigned / other				
+18S_ASV0193	123	0	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea	Cyclidium_3	Cyclidium_glaucoma
+18S_ASV0194	109	13	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Nitzschia	Nitzschia_palea
+18S_ASV0195	0	122	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0197	121	0	Unassigned / other				
+18S_ASV0198	3	118	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0199	116	4	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0200	101	19	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0201	0	120	Protozoa (free-living)	Tubulinea	Elardia	Arcella	
+18S_ASV0202	0	118	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Thecofilosea	Rhogostoma	Rhogostoma_absidea
+18S_ASV0203	117	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0204	116	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0205	0	116	Fungi	Opisthokonta-Fungi			
+18S_ASV0206	115	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0207	0	115	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0208	114	0	Unassigned / other				
+18S_ASV0209	110	4	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Closterium	
+18S_ASV0210	113	0	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0211	0	112	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae	Lepidochromonas	
+18S_ASV0212	0	112	Animals	Opisthokonta-Metazoa			
+18S_ASV0213	0	111	Unassigned / other				
+18S_ASV0214	109	0	Unassigned / other				
+18S_ASV0215	109	0	Green algae	Chlorophyta	Chlorophyceae	Chloromonas	Chloromonas_vernalis
+18S_ASV0216	109	0	Animals	Opisthokonta-Metazoa	Nematoda		
+18S_ASV0217	109	0	Parasitic protists	Alveolata-Perkinsea			
+18S_ASV0218	108	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	Cyclotella_meneghiniana
+18S_ASV0219	0	108	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0220	0	108	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0221	32	75	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0222	0	107	Green algae	Chlorophyta	Chlorophyceae	Coenochloris	
+18S_ASV0223	11	95	Protozoa (free-living)	Centroplasthelida			
+18S_ASV0224	0	106	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0225	8	97	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0226	0	105	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0227	0	105	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Micrasterias	
+18S_ASV0229	104	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0230	0	104	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0231	0	103	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0232	0	103	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0233	102	0	Golden & other algae	Stramenopiles-Gyrista	Xanthophyceae	Ophiocytium	
+18S_ASV0234	0	102	Protozoa (free-living)	Alveolata-Ciliophora	Spirotrichea		
+18S_ASV0235	0	101	Unassigned / other				
+18S_ASV0236	0	101	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0238	0	100	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0239	99	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0240	98	1	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0241	0	99	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0242	0	98	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0243	91	5	Animals	Opisthokonta-Metazoa	Arthropoda	Mesocyclops	Mesocyclops_pehpeiensis
+18S_ASV0244	2	94	Fungi	Opisthokonta-Fungi			
+18S_ASV0245	0	96	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0246	0	96	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0247	0	96	Unassigned / other				
+18S_ASV0248	0	95	Golden & other algae	Glaucophyta	Glaucocystophyceae	Cyanoptyche	
+18S_ASV0249	93	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0250	93	0	Parasitic protists	Alveolata-Apicomplexa	Gregarinomorphea		
+18S_ASV0251	6	87	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0252	0	93	Animals	Opisthokonta-Metazoa	Platyhelminthes	Stenostomum	
+18S_ASV0253	0	93	Unassigned / other				
+18S_ASV0254	0	93	Unassigned / other				
+18S_ASV0255	91	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0256	91	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0257	89	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0258	8	81	Green algae	Chlorophyta	Chlorophyceae	Westella	Westella_botryoides
+18S_ASV0259	0	89	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0260	0	88	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0261	0	88	Unassigned / other				
+18S_ASV0262	87	0	Unassigned / other				
+18S_ASV0263	86	0	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Nitzschia	Nitzschia_palea
+18S_ASV0264	0	86	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0265	0	86	Animals	Opisthokonta-Metazoa			
+18S_ASV0266	84	0	Unassigned / other				
+18S_ASV0267	0	84	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0268	83	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0269	56	27	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0270	82	0	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea	Cyclidium_3	Cyclidium_glaucoma
+18S_ASV0271	51	31	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0272	0	82	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0273	81	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0274	0	81	Unassigned / other				
+18S_ASV0275	0	81	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0276	0	81	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0277	80	0	Unassigned / other				
+18S_ASV0278	9	71	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0279	0	80	Protozoa (free-living)	Tubulinea	Elardia	Arcella	
+18S_ASV0280	0	80	Unassigned / other				
+18S_ASV0281	0	80	Protozoa (free-living)	Centroplasthelida			
+18S_ASV0282	0	79	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Closterium	
+18S_ASV0283	0	79	Unassigned / other				
+18S_ASV0284	0	79	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0285	78	0	Protozoa (free-living)	Alveolata-Chrompodellids	Colpodellidea	Alphamonas	
+18S_ASV0286	78	0	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0287	78	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0288	0	78	Unassigned / other				
+18S_ASV0289	77	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0290	72	5	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0291	0	77	Golden & other algae	Glaucophyta	Glaucocystophyceae	Glaucocystis	
+18S_ASV0292	0	77	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0293	76	0	Fungi	Opisthokonta-Fungi	Aphelidiomycota	Aphelidium	
+18S_ASV0294	2	74	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0295	2	74	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0296	0	76	Animals	Opisthokonta-Metazoa	Nematoda		
+18S_ASV0297	75	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0298	66	9	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0299	0	75	Unassigned / other				
+18S_ASV0300	0	75	Unassigned / other				
+18S_ASV0301	0	75	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0302	74	0	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0303	70	4	Animals	Opisthokonta-Metazoa	Gastrotricha	Chaetonotus	
+18S_ASV0304	0	74	Unassigned / other				
+18S_ASV0305	73	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0306	65	8	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0308	60	11	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0309	0	71	Unassigned / other				
+18S_ASV0310	0	71	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Micrasterias	
+18S_ASV0311	70	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	Cyclotella_meneghiniana
+18S_ASV0312	70	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0313	33	37	Animals	Opisthokonta-Metazoa	Arthropoda		
+18S_ASV0314	0	70	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0315	0	70	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0316	0	70	Unassigned / other				
+18S_ASV0317	69	0	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0318	0	69	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Onychonema	
+18S_ASV0319	0	69	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0320	68	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0322	5	63	Fungi	Opisthokonta-Fungi	Ascomycota	Plectosphaerella	
+18S_ASV0323	1	67	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0324	0	68	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0325	67	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0326	39	28	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0327	0	67	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0328	66	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0329	66	0	Unassigned / other				
+18S_ASV0330	66	0	Green algae	Chlorophyta	Chlorophyceae	Chlamydomonas	
+18S_ASV0331	41	25	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0332	0	66	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0333	65	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0334	64	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0335	64	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0336	64	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0338	64	0	Protozoa (free-living)	Alveolata-Chrompodellids	Colpodellidea	Alphamonas	
+18S_ASV0340	64	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0341	0	64	Protozoa (free-living)	Stramenopiles-Bigyra	Bicoecea		
+18S_ASV0342	63	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0344	0	63	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0345	0	63	Unassigned / other				
+18S_ASV0347	20	42	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0348	12	50	Fungi	Opisthokonta-Fungi	Blastocladiomycota	Hyaloraphidium	
+18S_ASV0349	0	62	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0350	0	62	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae		
+18S_ASV0351	0	62	Green algae	Chlorophyta			
+18S_ASV0352	0	62	Unassigned / other				
+18S_ASV0353	0	62	Fungi	Opisthokonta-Fungi			
+18S_ASV0354	0	62	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0355	61	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0356	61	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0357	61	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	
+18S_ASV0358	1	60	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0359	0	61	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0360	0	61	Unassigned / other				
+18S_ASV0361	0	61	Unassigned / other				
+18S_ASV0362	0	61	Protozoa (free-living)	Centroplasthelida			
+18S_ASV0363	0	61	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0364	0	61	Protozoa (free-living)	Centroplasthelida			
+18S_ASV0365	60	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta		
+18S_ASV0366	60	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae	Cyclotella	
+18S_ASV0367	60	0	Fungi	Opisthokonta-Fungi	Aphelidiomycota	Aphelidium	
+18S_ASV0369	0	60	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0370	0	60	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0372	59	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0373	2	57	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0374	0	59	Unassigned / other				
+18S_ASV0375	58	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta		
+18S_ASV0376	57	1	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0377	0	58	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0378	0	58	Unassigned / other				
+18S_ASV0379	0	58	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0380	57	0	Animals	Opisthokonta-Metazoa	Rotifera	Filinia	Filinia_longiseta
+18S_ASV0381	55	2	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Closterium	
+18S_ASV0382	0	57	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0383	0	57	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Cosmarium	
+18S_ASV0384	56	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0385	56	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0386	0	56	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0387	0	56	Unassigned / other				
+18S_ASV0388	55	0	Fungi	Opisthokonta-Fungi	Rozellomycota		
+18S_ASV0389	55	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0390	55	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0391	1	54	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0392	0	55	Unassigned / other				
+18S_ASV0393	0	55	Animals	Opisthokonta-Metazoa	Rotifera	Hexarthra	Hexarthra_intermedia
+18S_ASV0394	54	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta		
+18S_ASV0395	4	50	Animals	Opisthokonta-Metazoa	Arthropoda	Microcyclops	
+18S_ASV0396	0	54	Animals	Opisthokonta-Metazoa	Platyhelminthes	Stenostomum	
+18S_ASV0397	0	54	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0398	0	54	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0400	53	0	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0401	47	6	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0402	0	53	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0403	0	53	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0404	52	0	Unassigned / other				
+18S_ASV0405	0	52	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0406	51	0	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0407	51	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0408	51	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0409	0	51	Animals	Opisthokonta-Metazoa	Arthropoda	Eucyclops	
+18S_ASV0410	0	51	Unassigned / other	Stramenopiles-Gyrista	Raphidophyceae	Gonyostomum	Gonyostomum_semen
+18S_ASV0411	50	0	Protozoa (free-living)	Stramenopiles-Bigyra	Bicoecea		
+18S_ASV0412	50	0	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Nitzschia	Nitzschia_palea
+18S_ASV0413	50	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0414	50	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0415	31	19	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0416	29	21	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0417	0	50	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0418	49	0	Unassigned / other				
+18S_ASV0419	49	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0420	0	49	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0421	0	49	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0422	48	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0423	48	0	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae	Poteriospumella	Poteriospumella_lacustris
+18S_ASV0424	1	47	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0425	0	48	Protozoa (free-living)	Centroplasthelida	Pterocystida		
+18S_ASV0426	0	48	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae	Piscinoodinium	
+18S_ASV0427	0	48	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0428	0	48	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Cosmarium	
+18S_ASV0429	0	48	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Pinnularia	
+18S_ASV0430	47	0	Animals	Opisthokonta-Metazoa	Arthropoda	Mesocyclops	
+18S_ASV0431	47	0	Green algae	Chlorophyta	Chlorophyceae	Desmodesmus	
+18S_ASV0432	47	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0433	47	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0434	35	12	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0435	25	22	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0436	6	41	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Pinnularia	
+18S_ASV0437	0	47	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0438	0	47	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0439	46	0	Unassigned / other				
+18S_ASV0440	46	0	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0441	46	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0442	46	0	Protozoa (free-living)	Alveolata-Chrompodellids	Colpodellidea		
+18S_ASV0443	43	3	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0444	34	12	Protozoa (free-living)	Alveolata-Ciliophora	Spirotrichea		
+18S_ASV0445	1	45	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0446	0	46	Unassigned / other				
+18S_ASV0447	0	46	Fungi	Opisthokonta-Fungi			
+18S_ASV0448	0	46	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0449	45	0	Green algae	Chlorophyta	Chlorophyceae	Chloromonas	Chloromonas_oogama
+18S_ASV0450	45	0	Fungi	Opisthokonta-Fungi	Rozellomycota		
+18S_ASV0451	8	37	Parasitic protists	Alveolata-Apicomplexa	Coccidiomorphea		
+18S_ASV0452	0	45	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0453	0	45	Unassigned / other				
+18S_ASV0454	0	45	Unassigned / other				
+18S_ASV0456	0	45	Unassigned / other				
+18S_ASV0457	44	0	Green algae	Chlorophyta	Chlorophyceae	Chlamydomonas	
+18S_ASV0458	44	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0459	43	1	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0460	13	31	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0461	0	44	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0462	0	44	Fungi	Opisthokonta-Fungi			
+18S_ASV0463	1	42	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa	Planctomyxa	
+18S_ASV0464	0	43	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0465	31	11	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0466	3	39	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0467	0	42	Green algae	Chlorophyta	Trebouxiophyceae	Neglectella	
+18S_ASV0468	0	42	Unassigned / other				
+18S_ASV0469	0	42	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0470	0	42	Unassigned / other				
+18S_ASV0471	0	42	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0472	41	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0473	41	0	Unassigned / other				
+18S_ASV0474	41	0	Animals	Opisthokonta-Metazoa	Arthropoda		
+18S_ASV0475	41	0	Protozoa (free-living)	Alveolata-Chrompodellids	Colpodellidea		
+18S_ASV0476	0	41	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0477	0	41	Golden & other algae	Glaucophyta	Glaucocystophyceae	Glaucocystis	
+18S_ASV0478	0	41	Protozoa (free-living)	Opisthokonta-Choanoflagellata	Choanoflagellatea		
+18S_ASV0479	40	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0480	40	0	Unassigned / other				
+18S_ASV0482	15	25	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0483	8	32	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0484	0	40	Unassigned / other				
+18S_ASV0485	0	40	Unassigned / other				
+18S_ASV0486	0	40	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0487	0	40	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Pleurotaenium	Pleurotaenium_ehrenbergii
+18S_ASV0488	0	40	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0489	0	40	Unassigned / other				
+18S_ASV0490	0	40	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0491	0	40	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0492	0	40	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Closterium	
+18S_ASV0493	39	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0494	39	0	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0496	39	0	Unassigned / other				
+18S_ASV0497	39	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0498	0	39	Fungi	Opisthokonta-Fungi			
+18S_ASV0499	0	39	Protozoa (free-living)	Stramenopiles-Bigyra	Bicoecea		
+18S_ASV0500	0	39	Unassigned / other				
+18S_ASV0501	0	39	Unassigned / other				
+18S_ASV0502	0	39	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0503	38	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0504	38	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0506	0	38	Fungi	Opisthokonta-Fungi			
+18S_ASV0507	0	38	Fungi	Opisthokonta-Fungi			
+18S_ASV0508	37	0	Green algae	Chlorophyta	Chlorophyceae	Colemanosphaera	Colemanosphaera_charkowiensis
+18S_ASV0511	0	37	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Pleurotaenium	
+18S_ASV0512	0	37	Unassigned / other				
+18S_ASV0513	0	37	Unassigned / other				
+18S_ASV0515	36	0	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0516	33	3	Protozoa (free-living)	Opisthokonta-Choanoflagellata	Choanoflagellatea		
+18S_ASV0517	0	36	Protozoa (free-living)	Tubulinea	Elardia	Arcella	
+18S_ASV0518	0	36	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0519	0	36	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0520	0	36	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0521	0	36	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0522	35	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0523	35	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0524	13	22	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0525	0	35	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0526	0	35	Protozoa (free-living)	Centroplasthelida			
+18S_ASV0527	0	35	Unassigned / other				
+18S_ASV0528	0	35	Unassigned / other				
+18S_ASV0529	0	35	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0530	0	35	Unassigned / other				
+18S_ASV0531	0	35	Protozoa (free-living)	Ancyromonadida		Ancyromonas	
+18S_ASV0532	0	35	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0533	0	35	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0534	29	5	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0535	0	34	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa	Leptophrys	
+18S_ASV0536	0	34	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0537	0	34	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0538	0	34	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0539	33	0	Fungi	Opisthokonta-Fungi	Mucoromycota	Mucor	
+18S_ASV0540	0	33	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0541	0	33	Unassigned / other				
+18S_ASV0542	0	33	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0543	0	33	Unassigned / other				
+18S_ASV0544	0	33	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0545	0	33	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0546	32	0	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0547	32	0	Protozoa (free-living)	Alveolata-Chrompodellids	Colpodellidea		
+18S_ASV0548	32	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0549	32	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0550	32	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0551	32	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0552	0	32	Unassigned / other				
+18S_ASV0553	0	32	Fungi	Opisthokonta-Fungi	Rozellomycota		
+18S_ASV0554	0	32	Unassigned / other				
+18S_ASV0555	0	32	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Mougeotia	
+18S_ASV0556	0	32	Animals	Opisthokonta-Metazoa	Platyhelminthes	Gieysztoria	Gieysztoria_ashokae
+18S_ASV0557	31	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0558	31	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta		
+18S_ASV0559	31	0	Fungi	Opisthokonta-Fungi	Aphelidiomycota	Aphelidium	Aphelidium_parallelum
+18S_ASV0560	31	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0561	29	2	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0562	27	4	Green algae	Chlorophyta	Trebouxiophyceae	Choricystis	
+18S_ASV0563	0	31	Protozoa (free-living)	Centroplasthelida	Pterocystida		
+18S_ASV0564	0	31	Unassigned / other				
+18S_ASV0565	0	31	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0566	0	31	Unassigned / other				
+18S_ASV0567	0	31	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0568	0	31	Fungi	Opisthokonta-Fungi			
+18S_ASV0569	0	31	Unassigned / other				
+18S_ASV0570	0	31	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0571	30	0	Protozoa (free-living)	Tubulinea	Elardia	Arcella	Arcella_vulgaris
+18S_ASV0572	0	30	Animals	Opisthokonta-Metazoa	Arthropoda	Mesocyclops	
+18S_ASV0573	0	30	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Cosmarium	Cosmarium_reniforme
+18S_ASV0574	0	30	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV0575	0	30	Parasitic protists	Opisthokonta-Ichthyosporea	Dermocystida		
+18S_ASV0576	0	30	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0577	0	30	Fungi	Opisthokonta-Fungi	Chytridiomycota	Staurastromyces	
+18S_ASV0578	0	30	Unassigned / other				
+18S_ASV0579	0	30	Animals	Opisthokonta-Metazoa	Annelida	Aeolosoma	
+18S_ASV0580	0	30	Unassigned / other				
+18S_ASV0581	29	0	Protozoa (free-living)	Evosea	Variosea	Flamella	
+18S_ASV0582	0	29	Protozoa (free-living)	Tubulinea	Elardia		
+18S_ASV0583	0	29	Green algae	Chlorophyta	Trebouxiophyceae	Botryococcus	Botryococcus_braunii
+18S_ASV0584	0	29	Unassigned / other				
+18S_ASV0585	0	29	Unassigned / other				
+18S_ASV0587	2	26	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0588	0	28	Parasitic protists	Opisthokonta-Ichthyosporea			
+18S_ASV0589	0	28	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0590	0	28	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0591	0	28	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Cosmarium	
+18S_ASV0592	0	28	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0593	0	28	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0594	27	0	Unassigned / other				
+18S_ASV0595	27	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0596	27	0	Protozoa (free-living)	Alveolata-Ciliophora	Spirotrichea	Tintinnidium	
+18S_ASV0597	27	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0598	27	0	Green algae	Chlorophyta	Chlorophyceae	Radiococcus	
+18S_ASV0599	6	21	Fungi	Opisthokonta-Fungi	Ascomycota	Acremonium	
+18S_ASV0600	1	26	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0601	0	27	Animals	Opisthokonta-Metazoa	Arthropoda		
+18S_ASV0602	0	27	Parasitic protists	Alveolata-Apicomplexa	Gregarinomorphea		
+18S_ASV0603	0	27	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0604	0	27	Unassigned / other				
+18S_ASV0605	0	27	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Micrasterias	
+18S_ASV0606	26	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0607	26	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta		
+18S_ASV0608	26	0	Unassigned / other				
+18S_ASV0609	0	26	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0610	0	26	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0611	0	26	Unassigned / other				
+18S_ASV0612	0	26	Protozoa (free-living)	Tubulinea	Elardia	Arcella	
+18S_ASV0613	0	26	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0614	0	26	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0615	0	26	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae	Asulcocephalium	Asulcocephalium_miricentonis
+18S_ASV0616	0	26	Fungi	Opisthokonta-Fungi			
+18S_ASV0617	0	26	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0618	25	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0619	25	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0620	25	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0621	25	0	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0622	21	4	Green algae	Chlorophyta	Chlorophyceae	Mychonastes	
+18S_ASV0623	2	23	Protozoa (free-living)	Alveolata-Ciliophora	Spirotrichea		
+18S_ASV0624	0	25	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0625	0	25	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0626	0	25	Unassigned / other				
+18S_ASV0627	0	25	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurastrum	
+18S_ASV0628	0	25	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Granofilosea	Novel-Gran	
+18S_ASV0629	0	25	Green algae	Chlorophyta	Trebouxiophyceae	Neglectella	
+18S_ASV0630	24	0	Green algae	Chlorophyta			
+18S_ASV0631	24	0	Fungi	Opisthokonta-Fungi	Aphelidiomycota	Aphelidium	Aphelidium_parallelum
+18S_ASV0632	24	0	Parasitic protists	Opisthokonta-Ichthyosporea	Ichthyophonida		
+18S_ASV0633	24	0	Unassigned / other				
+18S_ASV0634	23	1	Fungi	Opisthokonta-Fungi	Rozellomycota		
+18S_ASV0635	23	1	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0636	23	1	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0637	0	24	Green algae	Chlorophyta			
+18S_ASV0638	0	24	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0639	0	24	Unassigned / other				
+18S_ASV0640	0	24	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae		
+18S_ASV0641	0	24	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0642	0	24	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Stenopterobia	
+18S_ASV0643	0	24	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0644	0	24	Unassigned / other				
+18S_ASV0645	0	24	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Granofilosea	Novel-Gran	
+18S_ASV0646	0	24	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0647	23	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0648	23	0	Fungi	Opisthokonta-Fungi	Aphelidiomycota		
+18S_ASV0650	23	0	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0651	23	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0652	18	5	Green algae	Chlorophyta	Chlorophyceae	Pseudomuriella	
+18S_ASV0653	1	22	Protozoa (free-living)	Alveolata-Ciliophora	Spirotrichea		
+18S_ASV0654	0	23	Fungi	Opisthokonta-Fungi			
+18S_ASV0655	0	23	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0656	0	23	Unassigned / other				
+18S_ASV0657	0	23	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0658	0	23	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Cosmarium	
+18S_ASV0659	0	23	Unassigned / other				
+18S_ASV0660	22	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0661	22	0	Protozoa (free-living)	Opisthokonta-Choanoflagellata	Choanoflagellatea		
+18S_ASV0662	22	0	Unassigned / other				
+18S_ASV0663	22	0	Protozoa (free-living)	Opisthokonta-Choanoflagellata	Choanoflagellatea		
+18S_ASV0664	22	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0665	0	22	Unassigned / other				
+18S_ASV0666	0	22	Animals	Opisthokonta-Metazoa	Arthropoda		
+18S_ASV0667	0	22	Unassigned / other				
+18S_ASV0668	0	22	Unassigned / other				
+18S_ASV0669	0	22	Animals	Opisthokonta-Metazoa	Arthropoda		
+18S_ASV0670	0	22	Unassigned / other				
+18S_ASV0671	21	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0672	21	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0673	21	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0674	21	0	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0675	3	18	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0676	2	19	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0677	0	21	Animals	Opisthokonta-Metazoa	Platyhelminthes	Strongylostoma	
+18S_ASV0678	0	21	Animals	Opisthokonta-Metazoa	Platyhelminthes	Gieysztoria	
+18S_ASV0679	0	21	Unassigned / other				
+18S_ASV0680	0	21	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0681	0	21	Green algae	Chlorophyta			
+18S_ASV0682	0	21	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0683	0	21	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0684	0	21	Protozoa (free-living)	Stramenopiles-Bigyra	Bicoecea		
+18S_ASV0685	20	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0687	20	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0688	20	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0689	20	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0690	20	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0692	5	15	Fungi	Opisthokonta-Fungi	Aphelidiomycota	Aphelidium	
+18S_ASV0693	0	20	Unassigned / other				
+18S_ASV0694	0	20	Unassigned / other				
+18S_ASV0695	0	20	Unassigned / other				
+18S_ASV0696	0	20	Unassigned / other				
+18S_ASV0697	0	20	Unassigned / other				
+18S_ASV0698	0	20	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Encyonema	
+18S_ASV0699	0	20	Unassigned / other				
+18S_ASV0700	0	20	Green algae	Chlorophyta	Trebouxiophyceae	Botryococcus	Botryococcus_braunii
+18S_ASV0701	0	20	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Granofilosea		
+18S_ASV0702	0	20	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta		
+18S_ASV0703	19	0	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0704	19	0	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV0705	2	17	Fungi	Opisthokonta-Fungi	Blastocladiomycota	Hyaloraphidium	
+18S_ASV0706	1	18	Fungi	Opisthokonta-Fungi			
+18S_ASV0707	0	19	Fungi	Opisthokonta-Fungi			
+18S_ASV0708	0	19	Unassigned / other				
+18S_ASV0709	0	19	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0710	0	19	Green algae	Chlorophyta	Chlorophyceae	Oedogonium	
+18S_ASV0711	18	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0712	18	0	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0713	18	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0714	11	7	Unassigned / other	Stramenopiles-Gyrista			
+18S_ASV0715	0	18	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0716	0	18	Unassigned / other				
+18S_ASV0717	0	18	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0718	0	18	Unassigned / other				
+18S_ASV0719	0	18	Unassigned / other				
+18S_ASV0720	0	18	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurodesmus	
+18S_ASV0721	0	18	Unassigned / other				
+18S_ASV0722	0	18	Parasitic protists	Alveolata-Apicomplexa	Gregarinomorphea	Hoplorhynchus	Hoplorhynchus_acanthatholius
+18S_ASV0723	0	18	Unassigned / other				
+18S_ASV0724	0	18	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0725	0	18	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa	sm27	
+18S_ASV0726	17	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0727	17	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0728	17	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0729	17	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae		
+18S_ASV0730	16	1	Protozoa (free-living)	Rhizaria-Cercozoa	Novel-clade-10-12		
+18S_ASV0731	13	4	Animals	Opisthokonta-Metazoa	Arthropoda		
+18S_ASV0732	2	15	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Gomphonema	
+18S_ASV0733	0	17	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0734	0	17	Fungi	Opisthokonta-Fungi			
+18S_ASV0735	0	17	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Staurodesmus	Staurodesmus_bulnheimii
+18S_ASV0736	0	17	Fungi	Opisthokonta-Fungi	Rozellomycota		
+18S_ASV0737	0	17	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0738	0	17	Unassigned / other				
+18S_ASV0739	0	17	Unassigned / other				
+18S_ASV0740	0	17	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0741	0	17	Fungi	Opisthokonta-Fungi			
+18S_ASV0742	0	17	Green algae	Chlorophyta	Trebouxiophyceae	Botryococcus	Botryococcus_braunii
+18S_ASV0743	0	17	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0744	0	17	Fungi	Opisthokonta-Fungi			
+18S_ASV0745	0	17	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0747	16	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0748	16	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0749	16	0	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0750	2	14	Protozoa (free-living)	Alveolata-Ciliophora	Oligohymenophorea		
+18S_ASV0751	1	15	Protozoa (free-living)	Tubulinea	Elardia		
+18S_ASV0752	0	16	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae	Paraeustigmatos	Paraeustigmatos_columelliferus
+18S_ASV0753	0	16	Fungi	Opisthokonta-Fungi			
+18S_ASV0754	0	16	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0755	0	16	Unassigned / other				
+18S_ASV0756	0	16	Unassigned / other				
+18S_ASV0757	0	16	Animals	Opisthokonta-Metazoa			
+18S_ASV0758	0	16	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0759	0	16	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0760	0	16	Fungi	Opisthokonta-Fungi	Rozellomycota		
+18S_ASV0761	0	16	Unassigned / other				
+18S_ASV0762	0	16	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0763	0	16	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0764	0	16	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0765	0	16	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0766	15	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0767	15	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0768	15	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0769	15	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0770	15	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0771	0	15	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0772	0	15	Fungi	Opisthokonta-Fungi	Ascomycota	Acremonium	Acremonium_curvulum
+18S_ASV0773	0	15	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0774	0	15	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0775	0	15	Unassigned / other				
+18S_ASV0776	0	15	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0777	0	15	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0778	0	15	Unassigned / other				
+18S_ASV0779	0	15	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0780	0	15	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV0781	0	15	Protozoa (free-living)	Tubulinea	Echinamoebida	Echinamoeba	
+18S_ASV0782	14	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0783	14	0	Fungi	Opisthokonta-Fungi	Aphelidiomycota		
+18S_ASV0784	14	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0785	14	0	Unassigned / other				
+18S_ASV0786	14	0	Unassigned / other				
+18S_ASV0787	13	1	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0788	13	1	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0789	11	3	Protozoa (free-living)	Alveolata-Ciliophora	Prostomatea_1	Coleps	
+18S_ASV0790	1	13	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0791	0	14	Green algae	Chlorophyta			
+18S_ASV0792	0	14	Unassigned / other	Stramenopiles-Gyrista			
+18S_ASV0793	0	14	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa	Penardia	
+18S_ASV0794	13	0	Green algae	Chlorophyta	Chlorophyceae	Mychonastes	
+18S_ASV0795	13	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0796	13	0	Fungi	Opisthokonta-Fungi			
+18S_ASV0797	13	0	Protozoa (free-living)	Alveolata-Ciliophora	Heterotrichea	Linostomella	
+18S_ASV0798	1	12	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0799	0	13	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0800	0	13	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0801	0	13	Animals	Opisthokonta-Metazoa	Arthropoda	Mesocyclops	
+18S_ASV0802	0	13	Unassigned / other				
+18S_ASV0803	0	13	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0804	0	13	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0805	0	13	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0806	0	13	Fungi	Opisthokonta-Fungi			
+18S_ASV0807	0	13	Plants	Streptophyta	Embryophyceae		
+18S_ASV0808	0	13	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0809	0	13	Unassigned / other				
+18S_ASV0810	0	13	Protozoa (free-living)	Opisthokonta-Choanoflagellata	Choanoflagellatea		
+18S_ASV0811	0	13	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Granofilosea		
+18S_ASV0812	0	13	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Desmidium	Desmidium_swartzii
+18S_ASV0813	12	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0814	12	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0815	12	0	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0816	2	10	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0817	1	11	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0818	1	11	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0819	0	12	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0820	0	12	Green algae	Chlorophyta	Chlorophyceae	Ankistrodesmus	
+18S_ASV0821	0	12	Animals	Opisthokonta-Metazoa	Platyhelminthes	Mesostoma	
+18S_ASV0822	0	12	Animals	Opisthokonta-Metazoa	Platyhelminthes	Mesostoma	
+18S_ASV0823	0	12	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0824	0	12	Fungi	Opisthokonta-Fungi	Rozellomycota		
+18S_ASV0825	0	12	Unassigned / other				
+18S_ASV0826	11	0	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0827	11	0	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0828	11	0	Unassigned / other				
+18S_ASV0829	11	0	Unassigned / other	Stramenopiles-Gyrista			
+18S_ASV0830	11	0	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Filosa	
+18S_ASV0831	0	11	Unassigned / other				
+18S_ASV0832	0	11	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0833	0	11	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0834	0	11	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0835	0	11	Animals	Opisthokonta-Metazoa	Craniata		
+18S_ASV0836	0	11	Protozoa (free-living)	Alveolata-Ciliophora	Spirotrichea		
+18S_ASV0837	0	11	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0838	10	0	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0839	10	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0841	10	0	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0842	10	0	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV0843	8	2	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0844	0	10	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0845	0	10	Unassigned / other				
+18S_ASV0846	0	10	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0847	0	10	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0848	0	10	Unassigned / other				
+18S_ASV0849	0	10	Fungi	Opisthokonta-Fungi			
+18S_ASV0850	0	10	Parasitic protists	Opisthokonta-Ichthyosporea	Ichthyophonida	Anurofeca	
+18S_ASV0851	0	10	Unassigned / other				
+18S_ASV0852	0	10	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0853	0	10	Unassigned / other				
+18S_ASV0854	0	10	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0855	0	10	Green algae	Chlorophyta	Chlorophyceae	Oedogonium	
+18S_ASV0856	9	0	Unassigned / other				
+18S_ASV0858	9	0	Protozoa (free-living)	Alveolata-Chrompodellids	Colpodellidea	Alphamonas	
+18S_ASV0859	7	2	Protozoa (free-living)	Alveolata-Ciliophora	Spirotrichea	Hypotrichidium	
+18S_ASV0860	6	3	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0861	4	5	Unassigned / other				
+18S_ASV0862	3	6	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0863	1	8	Fungi	Opisthokonta-Fungi			
+18S_ASV0864	1	8	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0865	0	9	Unassigned / other				
+18S_ASV0866	0	9	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0867	0	9	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0868	0	9	Fungi	Opisthokonta-Fungi			
+18S_ASV0869	0	9	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0870	0	9	Unassigned / other				
+18S_ASV0871	0	9	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0872	0	9	Unassigned / other				
+18S_ASV0873	0	9	Animals	Opisthokonta-Metazoa	Craniata		
+18S_ASV0874	0	9	Protozoa (free-living)	Tubulinea	Elardia		
+18S_ASV0875	0	9	Unassigned / other				
+18S_ASV0876	0	9	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV0877	0	9	Unassigned / other				
+18S_ASV0878	0	9	Golden & other algae	Haptophyta	Pavlovophyceae	Diacronema	Diacronema_noctivaga
+18S_ASV0879	0	9	Green algae	Chlorophyta	Trebouxiophyceae	Choricystis	
+18S_ASV0880	8	0	Unassigned / other	Stramenopiles-Gyrista			
+18S_ASV0881	8	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae		
+18S_ASV0882	8	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0883	3	5	Water moulds (oomycetes)	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytrium	Hyphochytrium_catenoides
+18S_ASV0884	2	6	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0885	0	8	Protozoa (free-living)	Alveolata-Ciliophora	Colpodea		
+18S_ASV0886	0	8	Green algae	Chlorophyta	Chlorophyceae	Carteria	
+18S_ASV0887	0	8	Unassigned / other				
+18S_ASV0888	0	8	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0889	0	8	Golden & other algae	Cryptophyta	Cryptophyceae		
+18S_ASV0890	0	8	Unassigned / other				
+18S_ASV0891	0	8	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0892	0	8	Protozoa (free-living)	Alveolata-Ciliophora	CONThreeP	Askenasia	
+18S_ASV0893	0	8	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0894	0	8	Animals	Opisthokonta-Metazoa	Cnidaria		
+18S_ASV0895	0	8	Animals	Opisthokonta-Metazoa	Platyhelminthes	Stenostomum	Stenostomum_simplex
+18S_ASV0896	0	8	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0897	0	8	Unassigned / other				
+18S_ASV0898	0	8	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0899	0	8	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0900	0	8	Animals	Opisthokonta-Metazoa	Arthropoda		
+18S_ASV0901	0	8	Unassigned / other				
+18S_ASV0902	0	8	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0904	0	8	Protozoa (free-living)	Alveolata-Ciliophora	Heterotrichea	Stentor	
+18S_ASV0905	0	8	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0906	0	8	Protozoa (free-living)	Rhizaria-Cercozoa			
+18S_ASV0908	0	8	Fungi	Opisthokonta-Fungi			
+18S_ASV0909	0	8	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0910	0	8	Unassigned / other				
+18S_ASV0911	7	0	Unassigned / other				
+18S_ASV0912	7	0	Protozoa (free-living)	Alveolata-Ciliophora	Phyllopharyngea	Phascolodon	Phascolodon_vorticella
+18S_ASV0914	7	0	Unassigned / other	Stramenopiles-Gyrista			
+18S_ASV0915	2	5	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0916	1	6	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0917	1	6	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0918	0	7	Fungi	Opisthokonta-Fungi			
+18S_ASV0919	0	7	Unassigned / other				
+18S_ASV0920	0	7	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0921	0	7	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0922	0	7	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV0923	0	7	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0924	0	7	Fungi	Opisthokonta-Fungi			
+18S_ASV0925	0	7	Protozoa (free-living)	Alveolata-Ciliophora			
+18S_ASV0926	0	7	Animals	Opisthokonta-Metazoa	Platyhelminthes	Rhynchomesostoma	Rhynchomesostoma_rostratum
+18S_ASV0927	0	7	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0928	0	7	Unassigned / other				
+18S_ASV0929	0	7	Protozoa (free-living)	Stramenopiles-Bigyra	Opalozoa	MAST-12C	
+18S_ASV0931	6	0	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0933	6	0	Protozoa (free-living)	Centroplasthelida			
+18S_ASV0934	6	0	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0935	6	0	Unassigned / other				
+18S_ASV0936	6	0	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV0937	6	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0938	6	0	Golden & other algae	Stramenopiles-Gyrista	Eustigmatophyceae		
+18S_ASV0939	6	0	Unassigned / other				
+18S_ASV0940	5	1	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0941	5	1	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0942	1	5	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0943	0	6	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0944	0	6	Unassigned / other				
+18S_ASV0945	0	6	Fungi	Opisthokonta-Fungi	Ascomycota		
+18S_ASV0946	0	6	Animals	Opisthokonta-Metazoa	Arthropoda		
+18S_ASV0947	0	6	Unassigned / other				
+18S_ASV0948	0	6	Unassigned / other	Stramenopiles-Gyrista			
+18S_ASV0950	0	6	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV0951	0	6	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0952	0	6	Desmids & conjugating algae	Streptophyta	Zygnemophyceae	Cosmarium	
+18S_ASV0953	0	6	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0954	0	6	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV0955	0	6	Protozoa (free-living)	Centroplasthelida			
+18S_ASV0956	0	6	Protozoa (free-living)	Alveolata-Ciliophora	Colpodea	Colpoda	
+18S_ASV0957	0	6	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0958	0	6	Fungi	Opisthokonta-Fungi	Rozellomycota		
+18S_ASV0959	0	6	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0962	5	0	Animals	Opisthokonta-Metazoa	Platyhelminthes	Dugesia	Dugesia_notogaea
+18S_ASV0963	5	0	Green algae	Chlorophyta	Trebouxiophyceae		
+18S_ASV0964	1	4	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0965	0	5	Unassigned / other				
+18S_ASV0966	0	5	Unassigned / other				
+18S_ASV0967	0	5	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0968	0	5	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0969	0	5	Green algae	Chlorophyta	Chlorophyceae		
+18S_ASV0970	0	5	Protozoa (free-living)	Stramenopiles-Bigyra	Opalozoa	MAST-12C	
+18S_ASV0971	0	5	Fungi	Opisthokonta-Fungi	Basidiomycota	Sporobolomyces	
+18S_ASV0972	0	5	Fungi	Opisthokonta-Fungi			
+18S_ASV0973	0	5	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV0974	0	5	Unassigned / other				
+18S_ASV0975	0	5	Unassigned / other				
+18S_ASV0976	0	5	Protozoa (free-living)	Evosea	Variosea	Mb5C	
+18S_ASV0977	0	5	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0978	4	0	Parasitic protists	Alveolata-Perkinsea	Perkinsida		
+18S_ASV0980	4	0	Protozoa (free-living)	Stramenopiles-Bigyra	Bicoecea		
+18S_ASV0981	4	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0982	4	0	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV0984	0	4	Fungi	Opisthokonta-Fungi	Blastocladiomycota	Hyaloraphidium	
+18S_ASV0985	0	4	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0986	0	4	Protozoa (free-living)	Alveolata-Ciliophora	Heterotrichea	Spirostomum	
+18S_ASV0987	0	4	Animals	Opisthokonta-Metazoa	Rotifera	Microcodon	Microcodon_clavus
+18S_ASV0988	0	4	Unassigned / other				
+18S_ASV0989	0	4	Green algae	Chlorophyta	Chlorophyceae	Monoraphidium	
+18S_ASV0990	0	4	Water moulds (oomycetes)	Stramenopiles-Gyrista	Peronosporomycetes		
+18S_ASV0991	3	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV0992	3	0	Protozoa (free-living)	Tubulinea	Elardia	Ptolemeba	
+18S_ASV0995	3	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV0996	3	0	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV0997	3	0	Green algae	Chlorophyta	Trebouxiophyceae	Oocystaceae	
+18S_ASV0998	3	0	Golden & other algae	Stramenopiles-Gyrista	Chrysophyceae		
+18S_ASV0999	0	3	Unassigned / other				
+18S_ASV1000	0	3	Unassigned / other				
+18S_ASV1001	0	3	Unassigned / other				
+18S_ASV1002	0	3	Protozoa (free-living)	Tubulinea	Elardia		
+18S_ASV1003	0	3	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV1004	0	3	Fungi	Opisthokonta-Fungi			
+18S_ASV1005	0	3	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV1006	0	3	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV1007	0	3	Unassigned / other				
+18S_ASV1008	0	3	Unassigned / other				
+18S_ASV1009	0	3	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV1012	2	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV1013	2	0	Diatoms	Stramenopiles-Gyrista	Mediophyceae		
+18S_ASV1014	2	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV1015	2	0	Diatoms	Stramenopiles-Gyrista	Bacillariophyceae	Sellaphora	
+18S_ASV1017	2	0	Protozoa (free-living)	Stramenopiles-Bigyra	Sagenista		
+18S_ASV1018	2	0	Protozoa (free-living)	Rigifilida			
+18S_ASV1019	0	2	Desmids & conjugating algae	Streptophyta	Zygnemophyceae		
+18S_ASV1020	0	2	Unassigned / other				
+18S_ASV1021	0	2	Unassigned / other				
+18S_ASV1022	0	2	Protozoa (free-living)	Rhizaria-Cercozoa	Endomyxa		
+18S_ASV1023	0	2	Unassigned / other				
+18S_ASV1025	0	2	Animals	Opisthokonta-Metazoa	Rotifera		
+18S_ASV1026	0	2	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV1027	1	0	Dinoflagellates	Alveolata-Dinoflagellata	Dinophyceae		
+18S_ASV1028	1	0	Fungi	Opisthokonta-Fungi			
+18S_ASV1029	1	0	Protozoa (free-living)	Opisthokonta-Choanoflagellata	Choanoflagellatea		
+18S_ASV1030	1	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV1031	1	0	Fungi	Opisthokonta-Fungi	Chytridiomycota		
+18S_ASV1032	1	0	Animals	Opisthokonta-Metazoa	Gastrotricha		
+18S_ASV1033	0	1	Protozoa (free-living)	Rhizaria-Cercozoa	Filosa-Sarcomonadea		
+18S_ASV1034	0	1	Protozoa (free-living)	Centroplasthelida			
+18S_ASV1035	0	1	Fungi	Opisthokonta-Fungi	Ascomycota		

@@ -1,0 +1,7 @@
+marker	level	chandubi_only	deepor_only	shared	total	pct_shared	jaccard_similarity	bray_curtis_dissimilarity
+18S	ASV	297	543	142	982	14.5	0.145	0.955
+18S	Genus	24	59	27	110	24.5	0.245	0.875
+18S	Species	13	19	7	39	17.9	0.179	0.972
+COI	ASV	64	15	266	345	77.1	0.771	0.235
+COI	Genus	0	0	8	8	100	1	0.083
+COI	Species	0	0	10	10	100	1	0.172

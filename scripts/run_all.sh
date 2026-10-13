@@ -14,4 +14,6 @@ Rscript scripts/04_asv_curation.R
 Rscript scripts/05_summary.R
 bash scripts/06_taxonomy.sh          # downloads PR2 + CO1 references on first run
 bash scripts/06b_blast_unknowns.sh   # NCBI BLAST (internet access required)
-python3 scripts/07_build_site.py
+Rscript scripts/08_diversity.R
+Rscript scripts/09_ecology.R
+python3 scripts/10_build_site.py

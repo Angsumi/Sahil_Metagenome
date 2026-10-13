@@ -97,14 +97,14 @@ footer { padding:30px 0 60px; font-size:.85rem; color:var(--muted); }
   <h1>Reading the life of two lakes from a bottle of water</h1>
   <p class="lede">The tiny plants and animals drifting in a lake are too small and too many to count by eye.
   Instead, we read the DNA they leave in the water. This page follows that DNA from the sequencing machine to a
-  named list of what lives in each lake — one step at a time.</p>
+  picture of what lives in each lake and what it tells us — one step at a time.</p>
   <div class="lakes">
     <div class="lake a"><b>Chandubi Beel</b><span>Sample W1 · a natural lake at the foot of the Garo Hills, relatively undisturbed</span></div>
     <div class="lake b"><b>Deepor Beel</b><span>Sample W2 · a Ramsar wetland on the edge of Guwahati, under urban pressure</span></div>
   </div>
   <div class="journey"><span>Lake water</span><i>→</i><span>DNA</span><i>→</i><span>Sequencer</span><i>→</i>
-    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span></div>
-  <nav class="toc"><a href='#field'>Water, DNA and a sequencing machine</a><a href='#qc'>Checking the raw data</a><a href='#primers'>Removing the copying labels</a><a href='#dada2'>Separating real DNA from typos</a><a href='#curation'>Weeding out fakes</a><a href='#summary'>What we ended up with</a><a href='#taxonomy'>Putting names to the signatures</a><a href='#blast'>Looking up the unknowns in GenBank</a><a href='#findings'>What the data tells us</a><a href='#next'>From lists to ecology</a></nav>
+    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span><i>→</i><span>Diversity</span><i>→</i><span>Ecology</span></div>
+  <nav class="toc"><a href='#field'>Water, DNA and a sequencing machine</a><a href='#qc'>Checking the raw data</a><a href='#primers'>Removing the copying labels</a><a href='#dada2'>Separating real DNA from typos</a><a href='#curation'>Weeding out fakes</a><a href='#summary'>What we ended up with</a><a href='#taxonomy'>Putting names to the signatures</a><a href='#blast'>Looking up the unknowns in GenBank</a><a href='#diversity'>How diverse is each lake?</a><a href='#ecology'>Reading the lakes’ ecology</a><a href='#findings'>What the data tells us</a><a href='#next'>What this data cannot answer on its own</a></nav>
 </header>
 <main>
 <ol class="timeline"><li class='node' id='field'><div class='dot'></div><div class='card'><p class='kicker'>Before the computer</p><h2>Water, DNA and a sequencing machine</h2>
@@ -752,12 +752,12 @@ together about 64% of Chandubi’s and
 “rotifer environmental samples” almost exactly (98–100%), sequences found by other studies but never tied to a named species;
 others are 80–89% similar to known rotifers such as <em>Brachionus</em>, <em>Trichocerca</em> and <em>Anuraeopsis</em> —
 likely related species that have never been barcoded. Counting these, rotifers make up roughly
-<strong>62%</strong> of Chandubi’s and <strong>66%</strong> of Deepor’s COI reads.</p>
+<strong>60%</strong> of Chandubi’s and <strong>65%</strong> of Deepor’s COI reads.</p>
 <p><strong>The single most common COI signature is a true unknown.</strong> COI_ASV0001 accounts for
 15% (Chandubi) and 19% (Deepor) of COI reads, reads cleanly as a protein-coding gene,
 yet nothing in all of GenBank is more than about 72% identical to it. It belongs to an organism whose DNA has never been sequenced
 — possibly a new or unstudied local species.</p>
-<div class='stats'><div class='stat'><b>62% / 66%</b><span>COI reads that are rotifers (Chandubi / Deepor)</span></div><div class='stat'><b>~72%</b><span>best match for the top unknown</span></div><div class='stat'><b>40</b><span>sequences searched</span></div></div>
+<div class='stats'><div class='stat'><b>60% / 65%</b><span>COI reads that are rotifers (Chandubi / Deepor)</span></div><div class='stat'><b>~72%</b><span>best match for the top unknown</span></div><div class='stat'><b>40</b><span>sequences searched</span></div></div>
 <figure><a href='img/06b_blast_unknowns.png' target='_blank'><img src='img/06b_blast_unknowns.png' alt='The 25 most abundant ‘unknowns’ and their closest match in GenBank, with % identity. Above ~97%: same species. 80–90%: a relative in the same group. Below 80%: no meaningful relative on record.' loading='lazy'></a><figcaption>The 25 most abundant ‘unknowns’ and their closest match in GenBank, with % identity. Above ~97%: same species. 80–90%: a relative in the same group. Below 80%: no meaningful relative on record.</figcaption></figure>
 <details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>NCBI BLAST URL API, database <code>core_nt</code>, megablast (E ≤ 1e-20, 5 hits per query); queries with no megablast hit re-run with blastn (word size 11). Best hit = highest identity × query cover. Lineage from NCBI Taxonomy (E-utilities). Hits below 80% identity are not assigned to any group.</p><details class='code'><summary><span>Script</span> <code>scripts/06b_blast_unknowns.sh</code></summary><pre><code>#!/usr/bin/env bash
 # Step 6b — The COI reference library could not place many abundant ASVs (&lt; 85 % similar
@@ -928,28 +928,338 @@ ggsave(&quot;docs/img/06b_blast_unknowns.png&quot;, p, width = 10, height = 8, d
 print(res[, .(asv, W1, W2, library_identity, name, group, pident, qcovs, match)])
 print(agg[order(-(W1 + W2))])
 </code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/06b_blast_summary.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>group</th><th>match</th><th>W1</th><th>W2</th></tr></thead><tbody><tr><td>no relative &gt;= 80 %</td><td>distant relative only</td><td class='n'>31,903</td><td class='n'>28,624</td></tr><tr><td>Rotifera</td><td>distant relative only</td><td class='n'>18,220</td><td class='n'>14,055</td></tr><tr><td>Rotifera</td><td>species-level match</td><td class='n'>19,255</td><td class='n'>11,123</td></tr><tr><td>Nemertea</td><td>distant relative only</td><td class='n'>2,205</td><td class='n'>2,149</td></tr><tr><td>Metazoa</td><td>distant relative only</td><td class='n'>1,082</td><td class='n'>1,006</td></tr><tr><td>Pseudomonadota</td><td>close relative (genus/family)</td><td class='n'>907</td><td class='n'>76</td></tr><tr><td>unknown</td><td>distant relative only</td><td class='n'>414</td><td class='n'>305</td></tr><tr><td>Oomycota</td><td>distant relative only</td><td class='n'>396</td><td class='n'>188</td></tr><tr><td>Basidiomycota</td><td>distant relative only</td><td class='n'>168</td><td class='n'>209</td></tr><tr><td>Arthropoda</td><td>distant relative only</td><td class='n'>108</td><td class='n'>181</td></tr><tr><td>Discosea</td><td>distant relative only</td><td class='n'>55</td><td class='n'>183</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_blast_unknowns_by_group.tsv'>results/06_taxonomy/COI_blast_unknowns_by_group.tsv</a></p><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_blast_unknowns_summary.tsv'>results/06_taxonomy/COI_blast_unknowns_summary.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_blast_unknowns.tsv'>results/06_taxonomy/COI_blast_unknowns.tsv</a></li></ul></div></details>
-</div></li><li class='node' id='findings'><div class='dot'></div><div class='card'><p class='kicker'>So far</p><h2>What the data tells us</h2>
+</div></li><li class='node' id='diversity'><div class='dot'></div><div class='card'><p class='kicker'>Step 8</p><h2>How diverse is each lake?</h2>
+<p class='plain'><span>In plain words</span>Diversity has two sides: <em>how many kinds</em> there are, and <em>how evenly</em>
+they are spread. A lake with 100 kinds where one makes up 90% of everything is less diverse in practice than one with 100
+equally common kinds. To compare fairly, both lakes are first cut down to the same number of reads — like comparing two
+birdwatchers who each watched for exactly one hour.</p>
+<p>We report diversity as an <strong>effective number of types</strong>: “this community is as diverse as one with N equally
+common types”. Counting every type gives the largest number; counting only the common ones gives a smaller one.</p>
+<div class='stats'><div class='stat'><b>436 vs 685</b><span>18S types: Chandubi vs Deepor</span></div><div class='stat'><b>329 vs 281</b><span>COI types: Chandubi vs Deepor</span></div><div class='stat'><b>14.5% / 77.1%</b><span>types shared (18S / COI)</span></div></div>
+<p><strong>The two barcodes tell opposite stories.</strong> For algae, protists and fungi (18S), Deepor is clearly richer —
+about 122 effective types against 74 in Chandubi. For zooplankton (COI),
+Chandubi is slightly richer and more even (43 vs 31), because Deepor is more
+dominated by a few rotifers.</p>
+<figure><a href='img/08_alpha.png' target='_blank'><img src='img/08_alpha.png' alt='Diversity of each lake, at three levels of strictness. Numbers are the effective number of equally common types.' loading='lazy'></a><figcaption>Diversity of each lake, at three levels of strictness. Numbers are the effective number of equally common types.</figcaption></figure>
+<p>Looking at what the lakes share: by 18S, most types live in only one of the two lakes — even at genus level only
+24.5% of named genera occur in both. By COI, most types are shared.</p>
+<figure><a href='img/08_overlap.png' target='_blank'><img src='img/08_overlap.png' alt='Share of types found only in Chandubi, in both lakes, or only in Deepor — counted as exact sequences (ASV), named genera and named species. COI genus and species counts are small because few COI sequences could be named.' loading='lazy'></a><figcaption>Share of types found only in Chandubi, in both lakes, or only in Deepor — counted as exact sequences (ASV), named genera and named species. COI genus and species counts are small because few COI sequences could be named.</figcaption></figure>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>Rarefied to the smaller lake’s depth per marker (18S 81,828; COI 102,761 reads), averaged over 100 random subsamples. Hill numbers: q0 = richness, q1 = exp(Shannon), q2 = inverse Simpson. Chao1 is not reported because DADA2 removes singletons. Jaccard and Bray–Curtis at genus/species level use only reads named at that level. One sample per lake: no significance tests are possible.</p><details class='code'><summary><span>Script</span> <code>scripts/08_diversity.R</code></summary><pre><code># Step 8 — Diversity.
+#  (a) Alpha diversity per lake, after rarefying both lakes to the same depth
+#      (mean of 100 random subsamples): observed ASVs, Shannon, Simpson, Pielou&#x27;s evenness,
+#      and Hill numbers (q0 = richness, q1 = exp(Shannon), q2 = inverse Simpson) —
+#      the &quot;effective number&quot; of equally common types.
+#  (b) Overlap between lakes at ASV, genus and species level (shared / unique, Jaccard,
+#      Bray–Curtis). One sample per lake: descriptive only, no significance tests.
+# Chao1 is not reported: DADA2 discards singletons, which Chao1 depends on.
+suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(vegan) })
+
+out &lt;- &quot;results/08_diversity&quot;
+dir.create(out, recursive = TRUE, showWarnings = FALSE)
+site_of &lt;- c(W1 = &quot;Chandubi (W1)&quot;, W2 = &quot;Deepor Beel (W2)&quot;)
+set.seed(2026)
+
+tax &lt;- list(`18S` = fread(&quot;results/06_taxonomy/18S_taxonomy.tsv&quot;, sep = &quot;\t&quot;, quote = &quot;&quot;, na.strings = c(&quot;&quot;, &quot;NA&quot;)),
+            COI = fread(&quot;results/06_taxonomy/COI_taxonomy.tsv&quot;, sep = &quot;\t&quot;, quote = &quot;&quot;, na.strings = c(&quot;&quot;, &quot;NA&quot;)))
+
+# ---- (a) alpha diversity ----
+alpha &lt;- rbindlist(lapply(names(tax), function(m) {
+  mat &lt;- t(as.matrix(tax[[m]][, .(W1, W2)]))
+  depth &lt;- min(rowSums(mat))
+  reps &lt;- replicate(100, {
+    r &lt;- rrarefy(mat, depth)
+    H &lt;- diversity(r, &quot;shannon&quot;); S &lt;- specnumber(r)
+    cbind(observed = S, shannon = H, simpson = diversity(r, &quot;simpson&quot;),
+          pielou = H / log(S), hill_q1 = exp(H), hill_q2 = diversity(r, &quot;invsimpson&quot;))
+  }, simplify = &quot;array&quot;)
+  mean_mat &lt;- apply(reps, c(1, 2), mean)
+  data.table(marker = m, sample = rownames(mat), rarefied_to = depth, round(mean_mat, 3))
+}))
+fwrite(alpha, file.path(out, &quot;alpha_diversity.tsv&quot;), sep = &quot;\t&quot;)
+
+hl &lt;- melt(alpha, id.vars = c(&quot;marker&quot;, &quot;sample&quot;), measure.vars = c(&quot;observed&quot;, &quot;hill_q1&quot;, &quot;hill_q2&quot;),
+           variable.name = &quot;q&quot;, value.name = &quot;value&quot;)
+hl[, q := factor(q, levels = c(&quot;observed&quot;, &quot;hill_q1&quot;, &quot;hill_q2&quot;),
+                 labels = c(&quot;All types\n(richness)&quot;, &quot;Typical types\n(exp Shannon)&quot;, &quot;Dominant types\n(inv. Simpson)&quot;))]
+hl[, site := site_of[sample]]
+p1 &lt;- ggplot(hl, aes(q, value, fill = site)) +
+  geom_col(position = position_dodge(width = 0.7), width = 0.65) +
+  geom_text(aes(label = round(value)), position = position_dodge(width = 0.7), vjust = -0.4, size = 3.4) +
+  facet_wrap(~marker, scales = &quot;free_y&quot;) +
+  scale_fill_manual(values = c(&quot;#2b6c8f&quot;, &quot;#c2662d&quot;)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(x = NULL, y = &quot;Effective number of ASVs&quot;, fill = NULL,
+       title = &quot;How diverse is each lake?&quot;,
+       subtitle = &quot;Both lakes subsampled to equal depth. Left to right: counting every type → only the common ones.&quot;) +
+  theme_minimal(base_size = 12) + theme(legend.position = &quot;bottom&quot;, plot.title.position = &quot;plot&quot;)
+ggsave(&quot;docs/img/08_alpha.png&quot;, p1, width = 9.5, height = 5, dpi = 120)
+
+# ---- (b) overlap at several levels ----
+overlap &lt;- rbindlist(lapply(names(tax), function(m) {
+  d &lt;- tax[[m]]
+  rbindlist(lapply(c(&quot;ASV&quot;, &quot;Genus&quot;, &quot;Species&quot;), function(level) {
+    key &lt;- if (level == &quot;ASV&quot;) d$asv else d[[level]]
+    agg &lt;- d[!is.na(key), .(W1 = sum(W1), W2 = sum(W2)), by = .(k = key[!is.na(key)])]
+    if (nrow(agg) == 0) return(NULL)
+    mat &lt;- t(as.matrix(agg[, .(W1, W2)]))
+    data.table(marker = m, level = level,
+               chandubi_only = sum(agg$W1 &gt; 0 &amp; agg$W2 == 0), deepor_only = sum(agg$W1 == 0 &amp; agg$W2 &gt; 0),
+               shared = sum(agg$W1 &gt; 0 &amp; agg$W2 &gt; 0), total = nrow(agg),
+               pct_shared = round(100 * sum(agg$W1 &gt; 0 &amp; agg$W2 &gt; 0) / nrow(agg), 1),
+               jaccard_similarity = round(1 - as.numeric(vegdist(mat, &quot;jaccard&quot;, binary = TRUE)), 3),
+               bray_curtis_dissimilarity = round(as.numeric(vegdist(decostand(mat, &quot;total&quot;), &quot;bray&quot;)), 3))
+  }))
+}))
+fwrite(overlap, file.path(out, &quot;overlap_by_level.tsv&quot;), sep = &quot;\t&quot;)
+
+ol &lt;- melt(overlap, id.vars = c(&quot;marker&quot;, &quot;level&quot;), measure.vars = c(&quot;chandubi_only&quot;, &quot;shared&quot;, &quot;deepor_only&quot;),
+           variable.name = &quot;where&quot;, value.name = &quot;n&quot;)
+ol[, where := factor(where, levels = c(&quot;chandubi_only&quot;, &quot;shared&quot;, &quot;deepor_only&quot;),
+                     labels = c(&quot;Chandubi only&quot;, &quot;Both lakes&quot;, &quot;Deepor only&quot;))]
+ol[, pct := 100 * n / sum(n), by = .(marker, level)]
+ol[, level := factor(level, levels = c(&quot;ASV&quot;, &quot;Genus&quot;, &quot;Species&quot;))]
+p2 &lt;- ggplot(ol, aes(pct, level, fill = where)) +
+  geom_col(width = 0.6, position = position_stack(reverse = TRUE)) +
+  geom_text(aes(label = ifelse(n &gt; 0, n, &quot;&quot;)), position = position_stack(vjust = 0.5, reverse = TRUE),
+            colour = &quot;white&quot;, size = 3.4) +
+  facet_wrap(~marker, ncol = 1) +
+  scale_fill_manual(values = c(&quot;#2b6c8f&quot;, &quot;#8c8c8c&quot;, &quot;#c2662d&quot;)) +
+  scale_x_continuous(labels = function(x) paste0(x, &quot;%&quot;), expand = expansion(mult = c(0, 0.02))) +
+  labs(x = &quot;Share of types (numbers = count)&quot;, y = NULL, fill = NULL,
+       title = &quot;What do the two lakes have in common?&quot;) +
+  theme_minimal(base_size = 12) + theme(legend.position = &quot;bottom&quot;, plot.title.position = &quot;plot&quot;)
+ggsave(&quot;docs/img/08_overlap.png&quot;, p2, width = 9, height = 5.5, dpi = 120)
+print(alpha); print(overlap)
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/08_diversity.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>rarefied to</th><th>observed</th><th>shannon</th><th>simpson</th><th>pielou</th><th>Hill q1</th><th>Hill q2</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>81,828</td><td class='n'>436.48</td><td class='n'>4.303</td><td class='n'>0.96</td><td class='n'>0.708</td><td class='n'>73.938</td><td class='n'>25.157</td></tr><tr><td>18S</td><td>W2</td><td class='n'>81,828</td><td class='n'>685</td><td class='n'>4.802</td><td class='n'>0.976</td><td class='n'>0.735</td><td class='n'>121.724</td><td class='n'>42.208</td></tr><tr><td>COI</td><td>W1</td><td class='n'>102,761</td><td class='n'>329.15</td><td class='n'>3.762</td><td class='n'>0.949</td><td class='n'>0.649</td><td class='n'>43.053</td><td class='n'>19.771</td></tr><tr><td>COI</td><td>W2</td><td class='n'>102,761</td><td class='n'>281</td><td class='n'>3.418</td><td class='n'>0.93</td><td class='n'>0.606</td><td class='n'>30.502</td><td class='n'>14.346</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/08_diversity/alpha_diversity.tsv'>results/08_diversity/alpha_diversity.tsv</a></p><div class='tbl'><table><thead><tr><th>marker</th><th>level</th><th>Chandubi only</th><th>Deepor only</th><th>shared</th><th>total</th><th>% shared</th><th>Jaccard</th><th>Bray–Curtis</th></tr></thead><tbody><tr><td>18S</td><td>ASV</td><td class='n'>297</td><td class='n'>543</td><td class='n'>142</td><td class='n'>982</td><td class='n'>14.5</td><td class='n'>0.145</td><td class='n'>0.955</td></tr><tr><td>18S</td><td>Genus</td><td class='n'>24</td><td class='n'>59</td><td class='n'>27</td><td class='n'>110</td><td class='n'>24.5</td><td class='n'>0.245</td><td class='n'>0.875</td></tr><tr><td>18S</td><td>Species</td><td class='n'>13</td><td class='n'>19</td><td class='n'>7</td><td class='n'>39</td><td class='n'>17.9</td><td class='n'>0.179</td><td class='n'>0.972</td></tr><tr><td>COI</td><td>ASV</td><td class='n'>64</td><td class='n'>15</td><td class='n'>266</td><td class='n'>345</td><td class='n'>77.1</td><td class='n'>0.771</td><td class='n'>0.235</td></tr><tr><td>COI</td><td>Genus</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td><td class='n'>8</td><td class='n'>100</td><td class='n'>1</td><td class='n'>0.083</td></tr><tr><td>COI</td><td>Species</td><td class='n'>0</td><td class='n'>0</td><td class='n'>10</td><td class='n'>10</td><td class='n'>100</td><td class='n'>1</td><td class='n'>0.172</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/08_diversity/overlap_by_level.tsv'>results/08_diversity/overlap_by_level.tsv</a></p></div></details>
+</div></li><li class='node' id='ecology'><div class='dot'></div><div class='card'><p class='kicker'>Step 9</p><h2>Reading the lakes’ ecology</h2>
+<p class='plain'><span>In plain words</span>A list of names becomes useful when we ask what those organisms <em>do</em>:
+who makes food from sunlight (algae), who eats (protozoa, animals), who recycles or infects (fungi, water moulds,
+parasites). Some organisms are also well-known <em>indicators</em> — their presence hints at how nutrient-rich or polluted
+water is.</p>
+<h4>Who does what (18S)</h4>
+<p>In Chandubi, about <strong>29%</strong> of 18S reads come from algae — green algae and diatoms above all —
+and another 24% from free-living protozoa: a community built on
+<em>producers and grazers</em>. In Deepor, algae make up 27% (mostly desmids), while
+<strong>fungi (24%)</strong> and <strong>water moulds (9%)</strong>
+take a much larger share — a community leaning towards <em>decomposition and parasitism</em>, as expected where dead plant
+material is plentiful.</p>
+<figure><a href='img/09_18S_roles.png' target='_blank'><img src='img/09_18S_roles.png' alt='Share of 18S reads by ecological role in each lake.' loading='lazy'></a><figcaption>Share of 18S reads by ecological role in each lake.</figcaption></figure>
+<h4>Zooplankton groups (COI, including the GenBank look-ups)</h4>
+<p>Rotifers make up about <strong>60%</strong> (Chandubi) and
+<strong>65%</strong> (Deepor) of COI reads. Crustaceans are scarce in this barcode — copepods,
+ostracods and insects together are under 1%. About a fifth of reads remain unknown, the largest part being the single
+unidentified organism found in Step 7.</p>
+<figure><a href='img/09_COI_groups.png' target='_blank'><img src='img/09_COI_groups.png' alt='Share of COI reads by animal group.' loading='lazy'></a><figcaption>Share of COI reads by animal group.</figcaption></figure>
+<h4>The main players</h4>
+<figure><a href='img/09_genera_heatmap.png' target='_blank'><img src='img/09_genera_heatmap.png' alt='The 30 most abundant named genera from both barcodes. Darker = more reads. Chandubi is marked by diatoms (&lt;i&gt;Cyclotella&lt;/i&gt;, &lt;i&gt;Aulacoseira&lt;/i&gt;) and green algae (&lt;i&gt;Desmodesmus&lt;/i&gt;, &lt;i&gt;Chlamydomonas&lt;/i&gt;); Deepor by water moulds (&lt;i&gt;Aphanomyces&lt;/i&gt;), chytrid fungi (&lt;i&gt;Rhizophydium&lt;/i&gt;), desmids (&lt;i&gt;Staurastrum&lt;/i&gt;, &lt;i&gt;Cosmarium&lt;/i&gt;) and golden algae. The rotifers &lt;i&gt;Brachionus&lt;/i&gt; and &lt;i&gt;Keratella&lt;/i&gt; are abundant in both.' loading='lazy'></a><figcaption>The 30 most abundant named genera from both barcodes. Darker = more reads. Chandubi is marked by diatoms (<i>Cyclotella</i>, <i>Aulacoseira</i>) and green algae (<i>Desmodesmus</i>, <i>Chlamydomonas</i>); Deepor by water moulds (<i>Aphanomyces</i>), chytrid fungi (<i>Rhizophydium</i>), desmids (<i>Staurastrum</i>, <i>Cosmarium</i>) and golden algae. The rotifers <i>Brachionus</i> and <i>Keratella</i> are abundant in both.</figcaption></figure>
+<h4>Two barcodes see different animals</h4>
+<p>Of the animal genera named, <strong>14</strong> were found only by 18S (flatworms, gastrotrichs, oligochaete worms,
+copepods <em>Eucyclops</em> and <em>Microcyclops</em>), <strong>5</strong> only by COI (the main rotifers
+<em>Brachionus</em>, <em>Keratella</em>, <em>Polyarthra</em>, <em>Asplanchna</em>, and the mayfly <em>Cloeon</em>), and just
+1 by both (<em>Mesocyclops</em>). Using two barcodes roughly doubled the animal list — the main argument for a
+multi-marker design.</p>
+<h4>Indicator organisms</h4>
+<p>Several organisms that ecologists use as water-quality signals were found. The picture is mixed rather than simple:</p>
+<ul>
+<li><strong>Nutrient-rich signals in both lakes:</strong> the rotifers <em>Brachionus</em> and <em>Keratella tropica</em> are
+abundant everywhere and somewhat more so in Deepor. Chandubi additionally holds diatoms typical of enriched water
+(<em>Cyclotella meneghiniana</em>, <em>Nitzschia palea</em>, <em>Aulacoseira granulata</em>).</li>
+<li><strong>Deepor’s desmids</strong> (<em>Staurastrum</em>, <em>Cosmarium</em>) are a group often linked to plant-rich, less
+enriched water — fitting a macrophyte-covered wetland — alongside chytrid parasites of algae.</li>
+</ul>
+<p>These are pointers, not verdicts: they need checking against the water-chemistry measurements and the literature for
+these lakes.</p>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>18S roles are assigned from PR2 division/class. COI groups use the reference-library phylum where available and the NCBI BLAST phylum (≥ 80% identity) for the 40 looked-up ASVs. Indicator notes in <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/indicator_taxa.tsv'>scripts/indicator_taxa.tsv</a> are general associations from the water-quality literature, to be confirmed with regional sources before citing.</p><details class='code'><summary><span>Script</span> <code>scripts/09_ecology.R</code></summary><pre><code># Step 9 — Ecological reading of the named community.
+#  (a) 18S reads grouped by ecological role (algae by type, fungi, water moulds,
+#      protozoa, parasites, animals).
+#  (b) COI reads grouped by animal group, using the reference-library name where
+#      available and the NCBI BLAST phylum (&gt;= 80 % identity) for the 40 looked-up unknowns.
+#  (c) Heatmap of the most abundant named genera from both markers.
+#  (d) Marker complementarity: which animal genera each barcode detected.
+#  (e) Indicator taxa: genera/species commonly used as water-quality indicators, with
+#      their share in each lake. Interpretation notes are general, not site-specific evidence.
+suppressPackageStartupMessages({ library(data.table); library(ggplot2) })
+
+out &lt;- &quot;results/09_ecology&quot;
+dir.create(out, recursive = TRUE, showWarnings = FALSE)
+site_of &lt;- c(W1 = &quot;Chandubi (W1)&quot;, W2 = &quot;Deepor Beel (W2)&quot;)
+t18 &lt;- fread(&quot;results/06_taxonomy/18S_taxonomy.tsv&quot;, sep = &quot;\t&quot;, quote = &quot;&quot;, na.strings = c(&quot;&quot;, &quot;NA&quot;))
+tco &lt;- fread(&quot;results/06_taxonomy/COI_taxonomy.tsv&quot;, sep = &quot;\t&quot;, quote = &quot;&quot;, na.strings = c(&quot;&quot;, &quot;NA&quot;))
+blast &lt;- fread(&quot;results/06_taxonomy/COI_blast_unknowns_summary.tsv&quot;, sep = &quot;\t&quot;, quote = &quot;&quot;,
+               na.strings = c(&quot;&quot;, &quot;NA&quot;))
+pct &lt;- function(x) 100 * x / sum(x)
+
+# ---- (a) 18S ecological roles ----
+diatoms &lt;- c(&quot;Mediophyceae&quot;, &quot;Coscinodiscophyceae&quot;, &quot;Bacillariophyceae&quot;)
+other_algae &lt;- c(&quot;Chrysophyceae&quot;, &quot;Eustigmatophyceae&quot;, &quot;Xanthophyceae&quot;)
+protozoa &lt;- c(&quot;Rhizaria-Cercozoa&quot;, &quot;Alveolata-Ciliophora&quot;, &quot;Stramenopiles-Bigyra&quot;, &quot;Tubulinea&quot;, &quot;Evosea&quot;,
+              &quot;Opisthokonta-Choanoflagellata&quot;, &quot;Centroplasthelida&quot;, &quot;Ancyromonadida&quot;, &quot;Rigifilida&quot;,
+              &quot;Alveolata-Chrompodellids&quot;)
+parasites &lt;- c(&quot;Alveolata-Perkinsea&quot;, &quot;Alveolata-Apicomplexa&quot;, &quot;Opisthokonta-Ichthyosporea&quot;)
+t18[, role := fcase(
+  Division == &quot;Chlorophyta&quot;, &quot;Green algae&quot;,
+  Division == &quot;Streptophyta&quot; &amp; Class == &quot;Zygnemophyceae&quot;, &quot;Desmids &amp; conjugating algae&quot;,
+  Division == &quot;Streptophyta&quot;, &quot;Plants&quot;,
+  Class %in% diatoms, &quot;Diatoms&quot;,
+  Class %in% other_algae | Division %in% c(&quot;Glaucophyta&quot;, &quot;Cryptophyta&quot;, &quot;Haptophyta&quot;, &quot;Rhodophyta&quot;),
+    &quot;Golden &amp; other algae&quot;,
+  Division == &quot;Alveolata-Dinoflagellata&quot;, &quot;Dinoflagellates&quot;,
+  Division == &quot;Opisthokonta-Fungi&quot;, &quot;Fungi&quot;,
+  Class %in% c(&quot;Peronosporomycetes&quot;, &quot;Hyphochytriomyceta&quot;), &quot;Water moulds (oomycetes)&quot;,
+  Division %in% protozoa, &quot;Protozoa (free-living)&quot;,
+  Division %in% parasites, &quot;Parasitic protists&quot;,
+  Division == &quot;Opisthokonta-Metazoa&quot;, &quot;Animals&quot;,
+  default = &quot;Unassigned / other&quot;)]
+roles &lt;- t18[, .(W1 = sum(W1), W2 = sum(W2)), by = role][, `:=`(W1 = round(pct(W1), 2), W2 = round(pct(W2), 2))]
+role_levels &lt;- c(&quot;Green algae&quot;, &quot;Desmids &amp; conjugating algae&quot;, &quot;Diatoms&quot;, &quot;Golden &amp; other algae&quot;, &quot;Dinoflagellates&quot;,
+                 &quot;Plants&quot;, &quot;Protozoa (free-living)&quot;, &quot;Parasitic protists&quot;, &quot;Fungi&quot;, &quot;Water moulds (oomycetes)&quot;,
+                 &quot;Animals&quot;, &quot;Unassigned / other&quot;)
+roles &lt;- roles[order(match(role, role_levels))]
+fwrite(roles, file.path(out, &quot;18S_ecological_roles.tsv&quot;), sep = &quot;\t&quot;)
+fwrite(t18[, .(asv, W1, W2, role, Division, Class, Genus, Species)], file.path(out, &quot;18S_asv_roles.tsv&quot;), sep = &quot;\t&quot;)
+
+role_cols &lt;- c(&quot;Green algae&quot; = &quot;#3f8f4f&quot;, &quot;Desmids &amp; conjugating algae&quot; = &quot;#8cc084&quot;, &quot;Diatoms&quot; = &quot;#c9a227&quot;,
+               &quot;Golden &amp; other algae&quot; = &quot;#e3c770&quot;, &quot;Dinoflagellates&quot; = &quot;#d08a4a&quot;, &quot;Plants&quot; = &quot;#5b6b2f&quot;,
+               &quot;Protozoa (free-living)&quot; = &quot;#4f8fb8&quot;, &quot;Parasitic protists&quot; = &quot;#8a6bb0&quot;, &quot;Fungi&quot; = &quot;#b5536b&quot;,
+               &quot;Water moulds (oomycetes)&quot; = &quot;#d98aa0&quot;, &quot;Animals&quot; = &quot;#2b4c6f&quot;, &quot;Unassigned / other&quot; = &quot;#dcdcdc&quot;)
+rl &lt;- melt(roles, id.vars = &quot;role&quot;, variable.name = &quot;sample&quot;, value.name = &quot;pct&quot;)
+rl[, site := site_of[sample]][, role := factor(role, levels = rev(role_levels))]
+p1 &lt;- ggplot(rl, aes(pct, site, fill = role)) +
+  geom_col(width = 0.55, colour = &quot;white&quot;, linewidth = 0.3) +
+  scale_fill_manual(values = role_cols, breaks = role_levels) +
+  scale_x_continuous(labels = function(x) paste0(x, &quot;%&quot;), expand = c(0, 0)) +
+  labs(x = &quot;Share of 18S reads&quot;, y = NULL, fill = NULL,
+       title = &quot;Who does what: the microscopic community by ecological role (18S)&quot;) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = &quot;bottom&quot;, plot.title.position = &quot;plot&quot;) + guides(fill = guide_legend(ncol = 3))
+ggsave(&quot;docs/img/09_18S_roles.png&quot;, p1, width = 10, height = 4.6, dpi = 120)
+
+# ---- (b) COI animal groups (library + BLAST) ----
+bl &lt;- blast[ncbi_identity &gt;= 80, .(asv, blast_phylum = ncbi_phylum, blast_class = ncbi_class)]
+tco &lt;- merge(tco, bl, by = &quot;asv&quot;, all.x = TRUE)
+tco[, phylum_final := fifelse(!is.na(Phylum), Phylum, blast_phylum)]
+tco[, class_final := fifelse(!is.na(Class), Class, blast_class)]
+tco[, group := fcase(
+  phylum_final == &quot;Rotifera&quot;, &quot;Rotifers&quot;,
+  phylum_final == &quot;Arthropoda&quot; &amp; (grepl(&quot;Hexanauplia|Copepoda&quot;, class_final) | Genus %in% &quot;Mesocyclops&quot;), &quot;Copepods&quot;,
+  phylum_final == &quot;Arthropoda&quot; &amp; class_final %in% &quot;Ostracoda&quot;, &quot;Ostracods&quot;,
+  phylum_final == &quot;Arthropoda&quot;, &quot;Insects, mites &amp; other arthropods&quot;,
+  phylum_final %in% c(&quot;Nemertea&quot;, &quot;Nematoda&quot;, &quot;Mollusca&quot;, &quot;Annelida&quot;, &quot;Gastrotricha&quot;, &quot;Platyhelminthes&quot;, &quot;Metazoa&quot;),
+    &quot;Other animals (worms etc.)&quot;,
+  !is.na(phylum_final), &quot;Non-animal (algae, fungi, bacteria…)&quot;,
+  Kingdom %in% &quot;Metazoa&quot;, &quot;Animal, group unknown&quot;,
+  default = &quot;Unknown&quot;)]
+grp &lt;- tco[, .(W1 = sum(W1), W2 = sum(W2)), by = group][, `:=`(W1 = round(pct(W1), 2), W2 = round(pct(W2), 2))]
+grp_levels &lt;- c(&quot;Rotifers&quot;, &quot;Copepods&quot;, &quot;Ostracods&quot;, &quot;Insects, mites &amp; other arthropods&quot;, &quot;Other animals (worms etc.)&quot;,
+                &quot;Animal, group unknown&quot;, &quot;Non-animal (algae, fungi, bacteria…)&quot;, &quot;Unknown&quot;)
+grp &lt;- grp[order(match(group, grp_levels))]
+fwrite(grp, file.path(out, &quot;COI_animal_groups.tsv&quot;), sep = &quot;\t&quot;)
+fwrite(tco[, .(asv, W1, W2, group, phylum_final, class_final, Genus, Species, identity)],
+       file.path(out, &quot;COI_asv_groups.tsv&quot;), sep = &quot;\t&quot;)
+
+grp_cols &lt;- c(&quot;Rotifers&quot; = &quot;#2b6c8f&quot;, &quot;Copepods&quot; = &quot;#c2662d&quot;, &quot;Ostracods&quot; = &quot;#e0a35a&quot;,
+              &quot;Insects, mites &amp; other arthropods&quot; = &quot;#8a6bb0&quot;, &quot;Other animals (worms etc.)&quot; = &quot;#5a9e6f&quot;,
+              &quot;Animal, group unknown&quot; = &quot;#9fb7c6&quot;, &quot;Non-animal (algae, fungi, bacteria…)&quot; = &quot;#c9a227&quot;,
+              &quot;Unknown&quot; = &quot;#dcdcdc&quot;)
+gl &lt;- melt(grp, id.vars = &quot;group&quot;, variable.name = &quot;sample&quot;, value.name = &quot;pct&quot;)
+gl[, site := site_of[sample]][, group := factor(group, levels = rev(grp_levels))]
+p2 &lt;- ggplot(gl, aes(pct, site, fill = group)) +
+  geom_col(width = 0.55, colour = &quot;white&quot;, linewidth = 0.3) +
+  scale_fill_manual(values = grp_cols, breaks = grp_levels) +
+  scale_x_continuous(labels = function(x) paste0(x, &quot;%&quot;), expand = c(0, 0)) +
+  labs(x = &quot;Share of COI reads&quot;, y = NULL, fill = NULL,
+       title = &quot;Zooplankton by group (COI, reference library + GenBank look-up)&quot;) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = &quot;bottom&quot;, plot.title.position = &quot;plot&quot;) + guides(fill = guide_legend(ncol = 3))
+ggsave(&quot;docs/img/09_COI_groups.png&quot;, p2, width = 10, height = 4.4, dpi = 120)
+
+# ---- (c) heatmap of top genera, both markers ----
+gen &lt;- rbind(t18[!is.na(Genus), .(marker = &quot;18S&quot;, Genus, W1, W2, role)],
+             tco[!is.na(Genus), .(marker = &quot;COI&quot;, Genus, W1, W2, role = group)])
+tot &lt;- list(`18S` = c(W1 = sum(t18$W1), W2 = sum(t18$W2)), COI = c(W1 = sum(tco$W1), W2 = sum(tco$W2)))
+gen[, `:=`(W1p = 100 * W1 / tot[[marker]][[&quot;W1&quot;]], W2p = 100 * W2 / tot[[marker]][[&quot;W2&quot;]]), by = marker]
+g &lt;- gen[, .(W1 = sum(W1p), W2 = sum(W2p), role = role[1]), by = .(marker, Genus)]
+topg &lt;- g[order(-(pmax(W1, W2)))][1:30]
+fwrite(topg[, `:=`(W1 = round(W1, 3), W2 = round(W2, 3))], file.path(out, &quot;top_genera.tsv&quot;), sep = &quot;\t&quot;)
+hm &lt;- melt(topg, id.vars = c(&quot;marker&quot;, &quot;Genus&quot;, &quot;role&quot;), measure.vars = c(&quot;W1&quot;, &quot;W2&quot;),
+           variable.name = &quot;sample&quot;, value.name = &quot;pct&quot;)
+hm[, site := factor(site_of[sample], levels = site_of)]
+hm[, lab := sprintf(&quot;%s  (%s · %s)&quot;, gsub(&quot;_&quot;, &quot; &quot;, Genus), marker, role)]
+ord &lt;- topg[order(W1 - W2), sprintf(&quot;%s  (%s · %s)&quot;, gsub(&quot;_&quot;, &quot; &quot;, Genus), marker, role)]
+hm[, lab := factor(lab, levels = ord)]
+p3 &lt;- ggplot(hm, aes(site, lab, fill = pmax(pct, 0.001))) +
+  geom_tile(colour = &quot;white&quot;, linewidth = 0.6) +
+  geom_text(aes(label = ifelse(pct &gt;= 0.01, sprintf(&quot;%.2f&quot;, pct), &quot;–&quot;)), size = 3.1) +
+  scale_fill_gradientn(colours = c(&quot;#f7f7f2&quot;, &quot;#cfe3ec&quot;, &quot;#7fb2cc&quot;, &quot;#2b6c8f&quot;, &quot;#163e57&quot;), trans = &quot;log10&quot;,
+                       labels = function(x) paste0(x, &quot;%&quot;), name = &quot;% of reads&quot;) +
+  scale_x_discrete(position = &quot;top&quot;) +
+  labs(x = NULL, y = NULL, title = &quot;The 30 most abundant named genera&quot;,
+       subtitle = &quot;% of all reads of that barcode in each lake. Top: Chandubi-leaning; bottom: Deepor-leaning&quot;) +
+  theme_minimal(base_size = 11) + theme(panel.grid = element_blank(), plot.title.position = &quot;plot&quot;)
+ggsave(&quot;docs/img/09_genera_heatmap.png&quot;, p3, width = 9, height = 9.5, dpi = 120)
+
+# ---- (d) marker complementarity for animals ----
+a18 &lt;- t18[Division == &quot;Opisthokonta-Metazoa&quot; &amp; !is.na(Genus), .(phylum = na.omit(Class)[1]), by = Genus]
+aco &lt;- tco[Kingdom %in% &quot;Metazoa&quot; &amp; !is.na(Genus), .(phylum = na.omit(Phylum)[1]), by = Genus]
+comp &lt;- merge(a18[, .(Genus, phylum_18S = phylum, in_18S = TRUE)], aco[, .(Genus, phylum_COI = phylum, in_COI = TRUE)],
+              by = &quot;Genus&quot;, all = TRUE)
+comp[is.na(in_18S), in_18S := FALSE][is.na(in_COI), in_COI := FALSE]
+comp[, group := fifelse(!is.na(phylum_18S), phylum_18S, phylum_COI)]
+comp[, detected_by := fcase(in_18S &amp; in_COI, &quot;both&quot;, in_18S, &quot;18S only&quot;, default = &quot;COI only&quot;)]
+fwrite(comp[order(detected_by, group, Genus), .(Genus, group, detected_by)], file.path(out, &quot;animal_genera_by_marker.tsv&quot;), sep = &quot;\t&quot;)
+phyla &lt;- rbind(t18[Division == &quot;Opisthokonta-Metazoa&quot; &amp; !is.na(Class), .(marker = &quot;18S&quot;, phylum = Class, W1, W2)],
+               tco[!is.na(phylum_final) &amp; !group %in% c(&quot;Non-animal (algae, fungi, bacteria…)&quot;, &quot;Unknown&quot;),
+                   .(marker = &quot;COI&quot;, phylum = phylum_final, W1, W2)])
+fwrite(phyla[, .(asvs = .N, reads = sum(W1 + W2)), by = .(phylum, marker)][order(phylum, marker)],
+       file.path(out, &quot;animal_phyla_by_marker.tsv&quot;), sep = &quot;\t&quot;)
+
+# ---- (e) indicator taxa ----
+ind &lt;- fread(&quot;scripts/indicator_taxa.tsv&quot;, sep = &quot;\t&quot;, quote = &quot;&quot;)
+lookup &lt;- function(level, name, marker) {
+  d &lt;- if (marker == &quot;18S&quot;) t18 else tco
+  hit &lt;- d[[level]] %in% name
+  c(W1 = 100 * sum(d$W1[hit]) / sum(d$W1), W2 = 100 * sum(d$W2[hit]) / sum(d$W2))
+}
+ind_res &lt;- rbindlist(lapply(seq_len(nrow(ind)), function(i) {
+  v &lt;- lookup(ind$level[i], ind$name[i], ind$marker[i])
+  data.table(ind[i], chandubi_pct = round(v[[&quot;W1&quot;]], 3), deepor_pct = round(v[[&quot;W2&quot;]], 3))
+}))
+fwrite(ind_res, file.path(out, &quot;indicator_taxa.tsv&quot;), sep = &quot;\t&quot;)
+
+print(roles); print(grp); print(comp[, .N, by = detected_by]); print(ind_res[, .(name, marker, chandubi_pct, deepor_pct)])
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/09_ecology.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>role</th><th>W1</th><th>W2</th></tr></thead><tbody><tr><td>Green algae</td><td class='n'>16.13</td><td class='n'>4</td></tr><tr><td>Desmids &amp; conjugating algae</td><td class='n'>0.19</td><td class='n'>15.49</td></tr><tr><td>Diatoms</td><td class='n'>8.75</td><td class='n'>0.73</td></tr><tr><td>Golden &amp; other algae</td><td class='n'>1.43</td><td class='n'>5.19</td></tr><tr><td>Dinoflagellates</td><td class='n'>2.55</td><td class='n'>1.76</td></tr><tr><td>Plants</td><td class='n'>0</td><td class='n'>0.2</td></tr><tr><td>Protozoa (free-living)</td><td class='n'>23.69</td><td class='n'>10.08</td></tr><tr><td>Parasitic protists</td><td class='n'>5.71</td><td class='n'>0.64</td></tr><tr><td>Fungi</td><td class='n'>7.94</td><td class='n'>24.1</td></tr><tr><td>Water moulds (oomycetes)</td><td class='n'>3.96</td><td class='n'>9.35</td></tr><tr><td>Animals</td><td class='n'>16.49</td><td class='n'>21.39</td></tr><tr><td>Unassigned / other</td><td class='n'>13.16</td><td class='n'>7.06</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/09_ecology/18S_ecological_roles.tsv'>results/09_ecology/18S_ecological_roles.tsv</a></p><div class='tbl'><table><thead><tr><th>group</th><th>W1</th><th>W2</th></tr></thead><tbody><tr><td>Rotifers</td><td class='n'>60.39</td><td class='n'>64.63</td></tr><tr><td>Copepods</td><td class='n'>0.01</td><td class='n'>0</td></tr><tr><td>Ostracods</td><td class='n'>0.09</td><td class='n'>0.18</td></tr><tr><td>Insects, mites &amp; other arthropods</td><td class='n'>0.49</td><td class='n'>0.11</td></tr><tr><td>Other animals (worms etc.)</td><td class='n'>1.89</td><td class='n'>2.09</td></tr><tr><td>Animal, group unknown</td><td class='n'>14.39</td><td class='n'>9.67</td></tr><tr><td>Non-animal (algae, fungi, bacteria…)</td><td class='n'>2.14</td><td class='n'>1.26</td></tr><tr><td>Unknown</td><td class='n'>20.59</td><td class='n'>22.06</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/09_ecology/COI_animal_groups.tsv'>results/09_ecology/COI_animal_groups.tsv</a></p><div class='tbl'><table><thead><tr><th>name</th><th>level</th><th>marker</th><th>group</th><th>general association</th><th>Chandubi %</th><th>Deepor %</th></tr></thead><tbody><tr><td>Brachionus</td><td>Genus</td><td>COI</td><td>Rotifer</td><td>Genus widely used in the Brachionus:Trichocerca ratio; dominance usually read as nutrient-rich (eutrophic) water</td><td class='n'>14.834</td><td class='n'>22.747</td></tr><tr><td>Brachionus_calyciflorus</td><td>Species</td><td>COI</td><td>Rotifer</td><td>Common in eutrophic, organically enriched waters</td><td class='n'>1.151</td><td class='n'>1.735</td></tr><tr><td>Brachionus_caudatus</td><td>Species</td><td>COI</td><td>Rotifer</td><td>Warm-water species typical of tropical nutrient-rich ponds and lakes</td><td class='n'>4.528</td><td class='n'>7.439</td></tr><tr><td>Keratella_tropica</td><td>Species</td><td>COI</td><td>Rotifer</td><td>Warm-water species often abundant in eutrophic tropical lakes</td><td class='n'>1.111</td><td class='n'>2.358</td></tr><tr><td>Polyarthra_vulgaris</td><td>Species</td><td>COI</td><td>Rotifer</td><td>Widespread, tolerant of a broad range of conditions</td><td class='n'>0.907</td><td class='n'>0.539</td></tr><tr><td>Filinia_longiseta</td><td>Species</td><td>18S</td><td>Rotifer</td><td>Frequently associated with eutrophic, turbid waters</td><td class='n'>1.366</td><td class='n'>0</td></tr><tr><td>Mesocyclops</td><td>Genus</td><td>18S</td><td>Copepod</td><td>Predatory cyclopoid copepod common in tropical lakes and ponds</td><td class='n'>1.846</td><td class='n'>0.572</td></tr><tr><td>Cyclotella_meneghiniana</td><td>Species</td><td>18S</td><td>Diatom</td><td>Tolerant of high nutrients and organic pollution; common in eutrophic waters</td><td class='n'>1.943</td><td class='n'>0.001</td></tr><tr><td>Nitzschia_palea</td><td>Species</td><td>18S</td><td>Diatom</td><td>Classic pollution-tolerant diatom used in diatom water-quality indices</td><td class='n'>0.633</td><td class='n'>0.034</td></tr><tr><td>Aulacoseira_granulata</td><td>Species</td><td>18S</td><td>Diatom</td><td>Typical of eutrophic, well-mixed and turbid waters</td><td class='n'>0.27</td><td class='n'>0</td></tr><tr><td>Staurastrum</td><td>Genus</td><td>18S</td><td>Desmid</td><td>Desmid genus; desmid-rich communities are often linked to macrophyte-rich, less enriched waters</td><td class='n'>0.001</td><td class='n'>3.014</td></tr><tr><td>Cosmarium</td><td>Genus</td><td>18S</td><td>Desmid</td><td>Desmid genus with species spanning clean to moderately enriched waters</td><td class='n'>0</td><td class='n'>1.229</td></tr><tr><td>Gonyostomum_semen</td><td>Species</td><td>18S</td><td>Raphidophyte</td><td>Nuisance flagellate of humic, brown-water lakes; can form blooms</td><td class='n'>0</td><td class='n'>0.062</td></tr><tr><td>Botryococcus_braunii</td><td>Species</td><td>18S</td><td>Green alga</td><td>Colonial oil-rich green alga of lakes and ponds; can form surface blooms</td><td class='n'>0</td><td class='n'>0.303</td></tr><tr><td>Rhizophydium</td><td>Genus</td><td>18S</td><td>Chytrid fungus</td><td>Parasite of phytoplankton (including diatoms and green algae)</td><td class='n'>0</td><td class='n'>3.414</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/09_ecology/indicator_taxa.tsv'>results/09_ecology/indicator_taxa.tsv</a></p><div class='tbl'><table><thead><tr><th>Genus</th><th>group</th><th>detected by</th></tr></thead><tbody><tr><td>Aeolosoma</td><td>Annelida</td><td>18S only</td></tr><tr><td>Eucyclops</td><td>Arthropoda</td><td>18S only</td></tr><tr><td>Microcyclops</td><td>Arthropoda</td><td>18S only</td></tr><tr><td>Chaetonotus</td><td>Gastrotricha</td><td>18S only</td></tr><tr><td>Lepidodermella</td><td>Gastrotricha</td><td>18S only</td></tr><tr><td>Dugesia</td><td>Platyhelminthes</td><td>18S only</td></tr><tr><td>Gieysztoria</td><td>Platyhelminthes</td><td>18S only</td></tr><tr><td>Mesostoma</td><td>Platyhelminthes</td><td>18S only</td></tr><tr><td>Rhynchomesostoma</td><td>Platyhelminthes</td><td>18S only</td></tr><tr><td>Stenostomum</td><td>Platyhelminthes</td><td>18S only</td></tr><tr><td>Strongylostoma</td><td>Platyhelminthes</td><td>18S only</td></tr><tr><td>Filinia</td><td>Rotifera</td><td>18S only</td></tr><tr><td>Hexarthra</td><td>Rotifera</td><td>18S only</td></tr><tr><td>Microcodon</td><td>Rotifera</td><td>18S only</td></tr><tr><td>Cloeon</td><td>Arthropoda</td><td>COI only</td></tr><tr><td>Asplanchna</td><td>Rotifera</td><td>COI only</td></tr><tr><td>Brachionus</td><td>Rotifera</td><td>COI only</td></tr><tr><td>Keratella</td><td>Rotifera</td><td>COI only</td></tr><tr><td>Polyarthra</td><td>Rotifera</td><td>COI only</td></tr><tr><td>Mesocyclops</td><td>Arthropoda</td><td>both</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/09_ecology/animal_genera_by_marker.tsv'>results/09_ecology/animal_genera_by_marker.tsv</a></p><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/09_ecology/top_genera.tsv'>results/09_ecology/top_genera.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/09_ecology/18S_asv_roles.tsv'>results/09_ecology/18S_asv_roles.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/09_ecology/COI_asv_groups.tsv'>results/09_ecology/COI_asv_groups.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/09_ecology/animal_phyla_by_marker.tsv'>results/09_ecology/animal_phyla_by_marker.tsv</a></li></ul></div></details>
+</div></li><li class='node' id='findings'><div class='dot'></div><div class='card'><p class='kicker'>In summary</p><h2>What the data tells us</h2>
 <div class='finding'><h4>Two very different microscopic worlds</h4>
-<p>By the 18S barcode the lakes share only 142 of 982 signatures. Chandubi’s water is
-full of green algae, diatoms and protists; Deepor’s is dominated by fungi, desmids, water moulds and small worms.</p></div>
+<p>Chandubi is an algae-and-grazer lake: green algae, diatoms, protozoa and rotifers. Deepor is richer in kinds but leans
+towards fungi, water moulds, desmids and small worms. By 18S the lakes share only 14.5% of
+their DNA types.</p></div>
 <div class='finding'><h4>Rotifers rule the zooplankton</h4>
-<p>About 62% (Chandubi) and 66% (Deepor) of the animal (COI) reads are rotifers, many of them species not yet in any DNA library.
-Copepods (<em>Mesocyclops</em> and relatives) are present; water fleas were not detected.</p></div>
+<p>About 60% (Chandubi) and 65% (Deepor) of animal (COI) reads are
+rotifers, many of them species not yet in any DNA library. Copepods (<em>Mesocyclops</em>, <em>Eucyclops</em>,
+<em>Microcyclops</em>) are present; water fleas were not detected.</p></div>
+<div class='finding'><h4>Two barcodes are better than one</h4>
+<p>Most named animal genera were seen by only one of the two barcodes — neither alone gives the full picture.</p></div>
 <div class='finding'><h4>An abundant, unknown organism</h4>
 <p>The most common COI signature in both lakes matches nothing on record above ~72% — a candidate for closer study.</p></div>
 <div class='finding warn'><h4>Zooplankton: surprisingly similar — needs checking</h4>
 <p>By COI, 266 of 345 signatures appear in <em>both</em> lakes at similar levels, while the
 algae and protists (18S) differ sharply. Either the zooplankton truly are similar, or DNA crossed between the two samples in
 the lab. No blank (control) samples were sequenced, so this can’t yet be told apart — a question for Eurofins.</p></div>
-<div class='finding'><h4>A caution on comparisons</h4>
-<p>There is one water sample per lake. Differences describe these two samples; they cannot yet be tested statistically.
-Read counts reflect DNA, not the number or weight of organisms.</p></div>
-</div></li><li class='node' id='next'><div class='dot'></div><div class='card'><p class='kicker'>Next</p><h2>From lists to ecology</h2>
-<p>With names attached, the next stage compares diversity between the lakes, links indicator organisms to water quality
-(for example, desmids and rotifer species known to signal nutrient levels), and compares the DNA results with older
-microscope surveys of Deepor Beel.</p>
+<div class='finding'><h4>Cautions</h4>
+<p>One water sample per lake: differences describe these two samples and cannot be tested statistically. Read counts
+reflect DNA, not the number or weight of organisms. Traces of fish and mammal DNA in Deepor are too few to interpret.</p></div>
+</div></li><li class='node' id='next'><div class='dot'></div><div class='card'><p class='kicker'>Still to do</p><h2>What this data cannot answer on its own</h2>
+<ul>
+<li><strong>Link to water quality</strong> — set the indicator organisms against the pH, oxygen, BOD/COD and nutrient
+measurements taken at sampling.</li>
+<li><strong>Compare with microscopy</strong> — check the DNA lists against published microscope surveys of Deepor Beel and any
+counts made from these samples.</li>
+<li><strong>Controls</strong> — ask Eurofins whether blank samples were run, to settle the COI overlap question.</li>
+<li><strong>Replication</strong> — more samples per lake (or another season) would allow real statistical comparison.</li>
+<li><strong>Publish the raw data</strong> — submit the reads to NCBI SRA before submitting the paper.</li>
+</ul>
 </div></li></ol>
-<section class="glossary"><h2>Words used on this page</h2><dl><div><dt>eDNA</dt><dd>Environmental DNA — genetic material organisms leave in water, soil or air.</dd></div><div><dt>Barcode gene</dt><dd>A short gene that differs between species, used like a product barcode to tell them apart.</dd></div><div><dt>Read</dt><dd>One stretch of DNA letters produced by the sequencer.</dd></div><div><dt>Primer</dt><dd>A short starter DNA piece used to copy the barcode; removed before analysis.</dd></div><div><dt>ASV</dt><dd>Amplicon sequence variant — one exact, unique DNA signature, roughly one kind of organism.</dd></div><div><dt>Chimera</dt><dd>An artificial sequence accidentally stitched from two organisms during copying.</dd></div><div><dt>Rarefaction</dt><dd>A check of whether sampling more would have found many more signatures.</dd></div><div><dt>Reference library</dt><dd>A collection of DNA sequences from organisms that experts have identified, used to name new sequences.</dd></div><div><dt>% identity</dt><dd>How many DNA letters two sequences share; 97–100% usually means the same species.</dd></div><div><dt>BLAST / GenBank</dt><dd>BLAST is a search tool; GenBank is the public archive of nearly all published DNA sequences.</dd></div></dl></section>
+<section class="glossary"><h2>Words used on this page</h2><dl><div><dt>eDNA</dt><dd>Environmental DNA — genetic material organisms leave in water, soil or air.</dd></div><div><dt>Barcode gene</dt><dd>A short gene that differs between species, used like a product barcode to tell them apart.</dd></div><div><dt>Read</dt><dd>One stretch of DNA letters produced by the sequencer.</dd></div><div><dt>Primer</dt><dd>A short starter DNA piece used to copy the barcode; removed before analysis.</dd></div><div><dt>ASV</dt><dd>Amplicon sequence variant — one exact, unique DNA signature, roughly one kind of organism.</dd></div><div><dt>Chimera</dt><dd>An artificial sequence accidentally stitched from two organisms during copying.</dd></div><div><dt>Rarefaction</dt><dd>A check of whether sampling more would have found many more signatures.</dd></div><div><dt>Reference library</dt><dd>A collection of DNA sequences from organisms that experts have identified, used to name new sequences.</dd></div><div><dt>% identity</dt><dd>How many DNA letters two sequences share; 97–100% usually means the same species.</dd></div><div><dt>Effective number of types</dt><dd>Diversity expressed as the number of equally common types that would give the same diversity.</dd></div><div><dt>Indicator organism</dt><dd>A species whose presence or abundance signals something about water conditions, such as nutrient level.</dd></div><div><dt>BLAST / GenBank</dt><dd>BLAST is a search tool; GenBank is the public archive of nearly all published DNA sequences.</dd></div></dl></section>
 </main>
 <footer>Scripts, results and raw data: <a href="https://github.com/Angsumi/Sahil_Metagenome">github.com/Angsumi/Sahil_Metagenome</a> ·
 Reproduce with <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/run_all.sh">run_all.sh</a> and <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/environment.yml">environment.yml</a> ·

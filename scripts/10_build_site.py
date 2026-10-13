@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Step 7 — Build the GitHub Pages site (docs/index.html) from the scripts, result
-tables and figures produced by steps 1–6b. The page is a plain-language timeline;
+"""Step 10 — Build the GitHub Pages site (docs/index.html) from the scripts, result
+tables and figures produced by steps 1–9. The page is a plain-language timeline;
 scripts and full tables sit in collapsible "for specialists" panels. Standard library only."""
 import csv
 import html
@@ -231,9 +231,9 @@ signatures each lake has, and — the key question — did we sequence deeply en
 tsum = {r["marker"]: r for r in rows("results/06_taxonomy/taxonomy_summary.tsv")}
 depth = {(r["marker"], r["rank"]): r for r in rows("results/06_taxonomy/assignment_depth.tsv")}
 blast = rows("results/06_taxonomy/COI_blast_unknowns_summary.tsv")
-coi_phy = {r["grp"]: r for r in rows("results/06_taxonomy/COI_composition_phylum.tsv")}
-rot_blast = {s: sum(float(r[f"reads_pct_{s}"]) for r in blast if r["ncbi_phylum"] == "Rotifera") for s in ("W1", "W2")}
-rot_total = {s: float(coi_phy["Rotifera"][s]) + rot_blast[s] for s in ("W1", "W2")}
+# Rotifer share with library names + BLAST look-ups, without double counting (from step 9)
+rot_total = {r["group"]: r for r in rows("results/09_ecology/COI_animal_groups.tsv")}["Rotifers"]
+rot_total = {k: float(rot_total[k]) for k in ("W1", "W2")}
 top = next(r for r in blast if r["asv"] == "COI_ASV0001")
 div18 = (min(float(depth[("18S", "Division")][s]) for s in ("W1", "W2")),
          max(float(depth[("18S", "Division")][s]) for s in ("W1", "W2")))
@@ -318,30 +318,147 @@ yet nothing in all of GenBank is more than about 72% identical to it. It belongs
     files(f"{TAXDIR}/COI_blast_unknowns_summary.tsv", f"{TAXDIR}/COI_blast_unknowns.tsv"))}
 """))
 
-steps.append(("findings", "So far", "What the data tells us", f"""
+
+# ---- diversity & ecology numbers ----
+alpha = {(r["marker"], r["sample"]): r for r in rows("results/08_diversity/alpha_diversity.tsv")}
+ovl = {(r["marker"], r["level"]): r for r in rows("results/08_diversity/overlap_by_level.tsv")}
+roles = {r["role"]: r for r in rows("results/09_ecology/18S_ecological_roles.tsv")}
+cgrp = {r["group"]: r for r in rows("results/09_ecology/COI_animal_groups.tsv")}
+amark = rows("results/09_ecology/animal_genera_by_marker.tsv")
+n_by = {k: sum(1 for r in amark if r["detected_by"] == k) for k in ("18S only", "COI only", "both")}
+ECO = "results/09_ecology"
+DIV = "results/08_diversity"
+
+
+def a(m, s, k, d=0):
+    return f"{float(alpha[(m, s)][k]):.{d}f}"
+
+
+def algae(s):
+    return sum(float(roles[r][s]) for r in ("Green algae", "Desmids & conjugating algae", "Diatoms",
+                                             "Golden & other algae", "Dinoflagellates"))
+
+
+steps.append(("diversity", "Step 8", "How diverse is each lake?", f"""
+<p class='plain'><span>In plain words</span>Diversity has two sides: <em>how many kinds</em> there are, and <em>how evenly</em>
+they are spread. A lake with 100 kinds where one makes up 90% of everything is less diverse in practice than one with 100
+equally common kinds. To compare fairly, both lakes are first cut down to the same number of reads — like comparing two
+birdwatchers who each watched for exactly one hour.</p>
+<p>We report diversity as an <strong>effective number of types</strong>: “this community is as diverse as one with N equally
+common types”. Counting every type gives the largest number; counting only the common ones gives a smaller one.</p>
+{stats((f"{a('18S','W1','observed')} vs {a('18S','W2','observed')}", "18S types: Chandubi vs Deepor"),
+       (f"{a('COI','W1','observed')} vs {a('COI','W2','observed')}", "COI types: Chandubi vs Deepor"),
+       (f"{ovl[('18S','ASV')]['pct_shared']}% / {ovl[('COI','ASV')]['pct_shared']}%", "types shared (18S / COI)"))}
+<p><strong>The two barcodes tell opposite stories.</strong> For algae, protists and fungi (18S), Deepor is clearly richer —
+about {a('18S','W2','hill_q1')} effective types against {a('18S','W1','hill_q1')} in Chandubi. For zooplankton (COI),
+Chandubi is slightly richer and more even ({a('COI','W1','hill_q1')} vs {a('COI','W2','hill_q1')}), because Deepor is more
+dominated by a few rotifers.</p>
+{fig("08_alpha.png", "Diversity of each lake, at three levels of strictness. Numbers are the effective number of equally common types.")}
+<p>Looking at what the lakes share: by 18S, most types live in only one of the two lakes — even at genus level only
+{ovl[('18S','Genus')]['pct_shared']}% of named genera occur in both. By COI, most types are shared.</p>
+{fig("08_overlap.png", "Share of types found only in Chandubi, in both lakes, or only in Deepor — counted as exact sequences (ASV), "
+     "named genera and named species. COI genus and species counts are small because few COI sequences could be named.")}
+{specialist(
+    "<p>Rarefied to the smaller lake’s depth per marker (18S 81,828; COI 102,761 reads), averaged over 100 random subsamples. "
+    "Hill numbers: q0 = richness, q1 = exp(Shannon), q2 = inverse Simpson. Chao1 is not reported because DADA2 removes "
+    "singletons. Jaccard and Bray–Curtis at genus/species level use only reads named at that level. "
+    "One sample per lake: no significance tests are possible.</p>",
+    script("scripts/08_diversity.R"),
+    table(f"{DIV}/alpha_diversity.tsv", {"rarefied_to": "rarefied to", "hill_q1": "Hill q1", "hill_q2": "Hill q2"}),
+    table(f"{DIV}/overlap_by_level.tsv", {"chandubi_only": "Chandubi only", "deepor_only": "Deepor only",
+                                         "pct_shared": "% shared", "jaccard_similarity": "Jaccard",
+                                         "bray_curtis_dissimilarity": "Bray–Curtis"}))}
+"""))
+
+steps.append(("ecology", "Step 9", "Reading the lakes’ ecology", f"""
+<p class='plain'><span>In plain words</span>A list of names becomes useful when we ask what those organisms <em>do</em>:
+who makes food from sunlight (algae), who eats (protozoa, animals), who recycles or infects (fungi, water moulds,
+parasites). Some organisms are also well-known <em>indicators</em> — their presence hints at how nutrient-rich or polluted
+water is.</p>
+<h4>Who does what (18S)</h4>
+<p>In Chandubi, about <strong>{algae('W1'):.0f}%</strong> of 18S reads come from algae — green algae and diatoms above all —
+and another {float(roles['Protozoa (free-living)']['W1']):.0f}% from free-living protozoa: a community built on
+<em>producers and grazers</em>. In Deepor, algae make up {algae('W2'):.0f}% (mostly desmids), while
+<strong>fungi ({float(roles['Fungi']['W2']):.0f}%)</strong> and <strong>water moulds ({float(roles['Water moulds (oomycetes)']['W2']):.0f}%)</strong>
+take a much larger share — a community leaning towards <em>decomposition and parasitism</em>, as expected where dead plant
+material is plentiful.</p>
+{fig("09_18S_roles.png", "Share of 18S reads by ecological role in each lake.")}
+<h4>Zooplankton groups (COI, including the GenBank look-ups)</h4>
+<p>Rotifers make up about <strong>{float(cgrp['Rotifers']['W1']):.0f}%</strong> (Chandubi) and
+<strong>{float(cgrp['Rotifers']['W2']):.0f}%</strong> (Deepor) of COI reads. Crustaceans are scarce in this barcode — copepods,
+ostracods and insects together are under 1%. About a fifth of reads remain unknown, the largest part being the single
+unidentified organism found in Step 7.</p>
+{fig("09_COI_groups.png", "Share of COI reads by animal group.")}
+<h4>The main players</h4>
+{fig("09_genera_heatmap.png", "The 30 most abundant named genera from both barcodes. Darker = more reads. "
+     "Chandubi is marked by diatoms (<i>Cyclotella</i>, <i>Aulacoseira</i>) and green algae (<i>Desmodesmus</i>, <i>Chlamydomonas</i>); "
+     "Deepor by water moulds (<i>Aphanomyces</i>), chytrid fungi (<i>Rhizophydium</i>), desmids (<i>Staurastrum</i>, <i>Cosmarium</i>) "
+     "and golden algae. The rotifers <i>Brachionus</i> and <i>Keratella</i> are abundant in both.")}
+<h4>Two barcodes see different animals</h4>
+<p>Of the animal genera named, <strong>{n_by['18S only']}</strong> were found only by 18S (flatworms, gastrotrichs, oligochaete worms,
+copepods <em>Eucyclops</em> and <em>Microcyclops</em>), <strong>{n_by['COI only']}</strong> only by COI (the main rotifers
+<em>Brachionus</em>, <em>Keratella</em>, <em>Polyarthra</em>, <em>Asplanchna</em>, and the mayfly <em>Cloeon</em>), and just
+{n_by['both']} by both (<em>Mesocyclops</em>). Using two barcodes roughly doubled the animal list — the main argument for a
+multi-marker design.</p>
+<h4>Indicator organisms</h4>
+<p>Several organisms that ecologists use as water-quality signals were found. The picture is mixed rather than simple:</p>
+<ul>
+<li><strong>Nutrient-rich signals in both lakes:</strong> the rotifers <em>Brachionus</em> and <em>Keratella tropica</em> are
+abundant everywhere and somewhat more so in Deepor. Chandubi additionally holds diatoms typical of enriched water
+(<em>Cyclotella meneghiniana</em>, <em>Nitzschia palea</em>, <em>Aulacoseira granulata</em>).</li>
+<li><strong>Deepor’s desmids</strong> (<em>Staurastrum</em>, <em>Cosmarium</em>) are a group often linked to plant-rich, less
+enriched water — fitting a macrophyte-covered wetland — alongside chytrid parasites of algae.</li>
+</ul>
+<p>These are pointers, not verdicts: they need checking against the water-chemistry measurements and the literature for
+these lakes.</p>
+{specialist(
+    "<p>18S roles are assigned from PR2 division/class. COI groups use the reference-library phylum where available and the "
+    "NCBI BLAST phylum (≥ 80% identity) for the 40 looked-up ASVs. Indicator notes in "
+    f"<a href='{BLOB}/scripts/indicator_taxa.tsv'>scripts/indicator_taxa.tsv</a> are general associations from the "
+    "water-quality literature, to be confirmed with regional sources before citing.</p>",
+    script("scripts/09_ecology.R"),
+    table(f"{ECO}/18S_ecological_roles.tsv"),
+    table(f"{ECO}/COI_animal_groups.tsv"),
+    table(f"{ECO}/indicator_taxa.tsv", {"chandubi_pct": "Chandubi %", "deepor_pct": "Deepor %",
+                                       "general_association": "general association"}),
+    table(f"{ECO}/animal_genera_by_marker.tsv", {"detected_by": "detected by"}),
+    files(f"{ECO}/top_genera.tsv", f"{ECO}/18S_asv_roles.tsv", f"{ECO}/COI_asv_groups.tsv",
+          f"{ECO}/animal_phyla_by_marker.tsv"))}
+"""))
+
+steps.append(("findings", "In summary", "What the data tells us", f"""
 <div class='finding'><h4>Two very different microscopic worlds</h4>
-<p>By the 18S barcode the lakes share only {c18['shared_asvs']} of {fmt(c18['total_asvs'])} signatures. Chandubi’s water is
-full of green algae, diatoms and protists; Deepor’s is dominated by fungi, desmids, water moulds and small worms.</p></div>
+<p>Chandubi is an algae-and-grazer lake: green algae, diatoms, protozoa and rotifers. Deepor is richer in kinds but leans
+towards fungi, water moulds, desmids and small worms. By 18S the lakes share only {ovl[('18S','ASV')]['pct_shared']}% of
+their DNA types.</p></div>
 <div class='finding'><h4>Rotifers rule the zooplankton</h4>
-<p>About {rot_total["W1"]:.0f}% (Chandubi) and {rot_total["W2"]:.0f}% (Deepor) of the animal (COI) reads are rotifers, many of them species not yet in any DNA library.
-Copepods (<em>Mesocyclops</em> and relatives) are present; water fleas were not detected.</p></div>
+<p>About {float(cgrp['Rotifers']['W1']):.0f}% (Chandubi) and {float(cgrp['Rotifers']['W2']):.0f}% (Deepor) of animal (COI) reads are
+rotifers, many of them species not yet in any DNA library. Copepods (<em>Mesocyclops</em>, <em>Eucyclops</em>,
+<em>Microcyclops</em>) are present; water fleas were not detected.</p></div>
+<div class='finding'><h4>Two barcodes are better than one</h4>
+<p>Most named animal genera were seen by only one of the two barcodes — neither alone gives the full picture.</p></div>
 <div class='finding'><h4>An abundant, unknown organism</h4>
 <p>The most common COI signature in both lakes matches nothing on record above ~72% — a candidate for closer study.</p></div>
 <div class='finding warn'><h4>Zooplankton: surprisingly similar — needs checking</h4>
 <p>By COI, {cco['shared_asvs']} of {cco['total_asvs']} signatures appear in <em>both</em> lakes at similar levels, while the
 algae and protists (18S) differ sharply. Either the zooplankton truly are similar, or DNA crossed between the two samples in
 the lab. No blank (control) samples were sequenced, so this can’t yet be told apart — a question for Eurofins.</p></div>
-<div class='finding'><h4>A caution on comparisons</h4>
-<p>There is one water sample per lake. Differences describe these two samples; they cannot yet be tested statistically.
-Read counts reflect DNA, not the number or weight of organisms.</p></div>
+<div class='finding'><h4>Cautions</h4>
+<p>One water sample per lake: differences describe these two samples and cannot be tested statistically. Read counts
+reflect DNA, not the number or weight of organisms. Traces of fish and mammal DNA in Deepor are too few to interpret.</p></div>
 """))
 
-steps.append(("next", "Next", "From lists to ecology", """
-<p>With names attached, the next stage compares diversity between the lakes, links indicator organisms to water quality
-(for example, desmids and rotifer species known to signal nutrient levels), and compares the DNA results with older
-microscope surveys of Deepor Beel.</p>
+steps.append(("next", "Still to do", "What this data cannot answer on its own", """
+<ul>
+<li><strong>Link to water quality</strong> — set the indicator organisms against the pH, oxygen, BOD/COD and nutrient
+measurements taken at sampling.</li>
+<li><strong>Compare with microscopy</strong> — check the DNA lists against published microscope surveys of Deepor Beel and any
+counts made from these samples.</li>
+<li><strong>Controls</strong> — ask Eurofins whether blank samples were run, to settle the COI overlap question.</li>
+<li><strong>Replication</strong> — more samples per lake (or another season) would allow real statistical comparison.</li>
+<li><strong>Publish the raw data</strong> — submit the reads to NCBI SRA before submitting the paper.</li>
+</ul>
 """))
-
 timeline = "".join(
     f"<li class='node' id='{sid}'><div class='dot'></div><div class='card'>"
     f"<p class='kicker'>{esc(k)}</p><h2>{esc(t)}</h2>{body}</div></li>"
@@ -358,6 +475,8 @@ glossary = [
     ("Rarefaction", "A check of whether sampling more would have found many more signatures."),
     ("Reference library", "A collection of DNA sequences from organisms that experts have identified, used to name new sequences."),
     ("% identity", "How many DNA letters two sequences share; 97–100% usually means the same species."),
+    ("Effective number of types", "Diversity expressed as the number of equally common types that would give the same diversity."),
+    ("Indicator organism", "A species whose presence or abundance signals something about water conditions, such as nutrient level."),
     ("BLAST / GenBank", "BLAST is a search tool; GenBank is the public archive of nearly all published DNA sequences."),
 ]
 gloss = "".join(f"<div><dt>{esc(a)}</dt><dd>{esc(b)}</dd></div>" for a, b in glossary)
@@ -461,13 +580,13 @@ footer {{ padding:30px 0 60px; font-size:.85rem; color:var(--muted); }}
   <h1>Reading the life of two lakes from a bottle of water</h1>
   <p class="lede">The tiny plants and animals drifting in a lake are too small and too many to count by eye.
   Instead, we read the DNA they leave in the water. This page follows that DNA from the sequencing machine to a
-  named list of what lives in each lake — one step at a time.</p>
+  picture of what lives in each lake and what it tells us — one step at a time.</p>
   <div class="lakes">
     <div class="lake a"><b>Chandubi Beel</b><span>Sample W1 · a natural lake at the foot of the Garo Hills, relatively undisturbed</span></div>
     <div class="lake b"><b>Deepor Beel</b><span>Sample W2 · a Ramsar wetland on the edge of Guwahati, under urban pressure</span></div>
   </div>
   <div class="journey"><span>Lake water</span><i>→</i><span>DNA</span><i>→</i><span>Sequencer</span><i>→</i>
-    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span></div>
+    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span><i>→</i><span>Diversity</span><i>→</i><span>Ecology</span></div>
   <nav class="toc">{toc}</nav>
 </header>
 <main>

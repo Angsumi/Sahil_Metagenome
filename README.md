@@ -26,7 +26,10 @@ Sahil_Metagenome/
 │   ├── 05_summary.R          # read tracking, ASVs per site, rarefaction
 │   ├── 06_taxonomy.sh/.R     # SINTAX naming vs PR2 (18S) and CO1 Reference Set (COI)
 │   ├── 06b_blast_unknowns.sh # NCBI BLAST of abundant unnamed COI ASVs
-│   ├── 07_build_site.py      # builds docs/index.html
+│   ├── 08_diversity.R        # alpha diversity (rarefied, Hill numbers), overlap by level
+│   ├── 09_ecology.R          # ecological roles, zooplankton groups, genera heatmap, indicators
+│   ├── indicator_taxa.tsv    # indicator taxa list used by step 9
+│   ├── 10_build_site.py      # builds docs/index.html
 │   └── run_all.sh            # runs everything
 ├── results/                  # Tables and ASV FASTA files from each step
 ├── docs/                     # GitHub Pages site
@@ -46,4 +49,5 @@ Intermediate FASTQs and reference databases are written to `work/` (git-ignored)
 
 - [x] Processing: QC → primer removal → DADA2 (joint) → ASV curation
 - [x] Taxonomic assignment (18S: PR2 v5.1.1; COI: Eukaryote CO1 Reference Set v5.1.0) + NCBI BLAST of unassigned COI ASVs
-- [ ] Diversity and composition analysis
+- [x] Diversity, composition, ecological roles, indicator taxa, marker complementarity
+- [ ] Link to water-quality data; comparison with microscopy; SRA submission
