@@ -7,7 +7,7 @@ eDNA metabarcoding of plankton in two wetlands of Assam, India — **Chandubi Be
 
 Illumina MiSeq 2 × 301 bp, one sample per site per marker.
 
-**📄 Processing report (scripts, results and figures for every step): https://angsumi.github.io/Sahil_Metagenome/**
+**📄 Processing report (scripts, results and figures for every step): https://angsumi.online/Sahil_Metagenome/**
 
 ---
 
