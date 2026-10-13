@@ -97,14 +97,14 @@ footer { padding:30px 0 60px; font-size:.85rem; color:var(--muted); }
   <h1>Reading the life of two lakes from a bottle of water</h1>
   <p class="lede">The tiny plants and animals drifting in a lake are too small and too many to count by eye.
   Instead, we read the DNA they leave in the water. This page follows that DNA from the sequencing machine to a
-  clean, trustworthy dataset — one step at a time.</p>
+  named list of what lives in each lake — one step at a time.</p>
   <div class="lakes">
     <div class="lake a"><b>Chandubi Beel</b><span>Sample W1 · a natural lake at the foot of the Garo Hills, relatively undisturbed</span></div>
     <div class="lake b"><b>Deepor Beel</b><span>Sample W2 · a Ramsar wetland on the edge of Guwahati, under urban pressure</span></div>
   </div>
   <div class="journey"><span>Lake water</span><i>→</i><span>DNA</span><i>→</i><span>Sequencer</span><i>→</i>
-    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Clean dataset</span></div>
-  <nav class="toc"><a href='#field'>Water, DNA and a sequencing machine</a><a href='#qc'>Checking the raw data</a><a href='#primers'>Removing the copying labels</a><a href='#dada2'>Separating real DNA from typos</a><a href='#curation'>Weeding out fakes</a><a href='#summary'>What we ended up with</a><a href='#findings'>What the clean data already tells us</a><a href='#next'>Putting names to the signatures</a></nav>
+    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span></div>
+  <nav class="toc"><a href='#field'>Water, DNA and a sequencing machine</a><a href='#qc'>Checking the raw data</a><a href='#primers'>Removing the copying labels</a><a href='#dada2'>Separating real DNA from typos</a><a href='#curation'>Weeding out fakes</a><a href='#summary'>What we ended up with</a><a href='#taxonomy'>Putting names to the signatures</a><a href='#blast'>Looking up the unknowns in GenBank</a><a href='#findings'>What the data tells us</a><a href='#next'>From lists to ecology</a></nav>
 </header>
 <main>
 <ol class="timeline"><li class='node' id='field'><div class='dot'></div><div class='card'><p class='kicker'>Before the computer</p><h2>Water, DNA and a sequencing machine</h2>
@@ -499,26 +499,457 @@ p3 &lt;- ggplot(al, aes(variable, asvs, fill = variable)) +
 ggsave(&quot;docs/img/05_asv_counts.png&quot;, p3, width = 8, height = 4.2, dpi = 120)
 print(track); print(asv_stats)
 </code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/05_summary.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>raw</th><th>primers found</th><th>filtered</th><th>merged</th><th>non-chimeric</th><th>curated</th><th>% of raw retained</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>166,108</td><td class='n'>145,813</td><td class='n'>115,951</td><td class='n'>104,117</td><td class='n'>93,012</td><td class='n'>88,564</td><td class='n'>53.3</td></tr><tr><td>18S</td><td>W2</td><td class='n'>143,035</td><td class='n'>128,222</td><td class='n'>101,027</td><td class='n'>88,768</td><td class='n'>81,898</td><td class='n'>81,828</td><td class='n'>57.2</td></tr><tr><td>COI</td><td>W1</td><td class='n'>167,886</td><td class='n'>148,980</td><td class='n'>125,051</td><td class='n'>123,126</td><td class='n'>117,653</td><td class='n'>116,954</td><td class='n'>69.7</td></tr><tr><td>COI</td><td>W2</td><td class='n'>143,351</td><td class='n'>127,418</td><td class='n'>107,049</td><td class='n'>106,300</td><td class='n'>102,969</td><td class='n'>102,761</td><td class='n'>71.7</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/read_tracking.tsv'>results/05_summary/read_tracking.tsv</a></p><div class='tbl'><table><thead><tr><th>marker</th><th>Chandubi</th><th>Deepor</th><th>shared</th><th>total</th><th>% Chandubi reads shared</th><th>% Deepor reads shared</th><th>Bray–Curtis</th><th>Jaccard</th></tr></thead><tbody><tr><td>18S</td><td class='n'>439</td><td class='n'>685</td><td class='n'>142</td><td class='n'>982</td><td class='n'>36.5</td><td class='n'>24.6</td><td class='n'>0.955</td><td class='n'>0.855</td></tr><tr><td>COI</td><td class='n'>330</td><td class='n'>281</td><td class='n'>266</td><td class='n'>345</td><td class='n'>99.4</td><td class='n'>99.9</td><td class='n'>0.235</td><td class='n'>0.229</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/asv_counts.tsv'>results/05_summary/asv_counts.tsv</a></p></div></details>
-</div></li><li class='node' id='findings'><div class='dot'></div><div class='card'><p class='kicker'>So far</p><h2>What the clean data already tells us</h2>
-<div class='finding'><h4>Better use of the data</h4>
-<p>63% of the raw data reached the final tables (COI: 70–72%), compared with about 40% in the
-lab’s original COI processing.</p></div>
-<div class='finding'><h4>Algae &amp; protists: the lakes are very different</h4>
-<p>By the 18S barcode, Chandubi and Deepor share only 142 of 982 signatures —
-their microscopic communities are largely distinct.</p></div>
+</div></li><li class='node' id='taxonomy'><div class='dot'></div><div class='card'><p class='kicker'>Step 6</p><h2>Putting names to the signatures</h2>
+<p class='plain'><span>In plain words</span>Each signature is still just a string of DNA letters. To name it, we compare
+it with large public libraries of DNA from organisms that experts have already identified — like matching a
+fingerprint against a database. A name is accepted only when the match is both <em>confident</em> and
+<em>close enough</em>: a species name, for example, needs the sequence to be at least 97–99% identical to a known one.
+If the match is weaker, we only claim a broader group (a family, or just “a rotifer”).</p>
+<div class='stats'><div class='stat'><b>87–93%</b><span>18S reads named to major group</span></div><div class='stat'><b>110</b><span>18S genera named</span></div><div class='stat'><b>8</b><span>COI genera named</span></div></div>
+<h4>What lives where (18S — the microscopic community)</h4>
+<div class='pair'>
+  <div><h4>Chandubi Beel</h4><p>Rich in <strong>green algae</strong> (Chlorophyceae, ~14% of reads), <strong>diatoms</strong>
+  (<em>Cyclotella</em>, <em>Aulacoseira</em>, <em>Nitzschia</em>), small amoeboid <strong>cercozoans</strong>, <strong>ciliates</strong>
+  and <strong>rotifers</strong>.</p></div>
+  <div><h4>Deepor Beel</h4><p>Dominated by <strong>fungi</strong> (incl. chytrids that infect algae), <strong>desmids</strong> — ornate
+  green algae such as <em>Staurastrum</em> and <em>Cosmarium</em> (~15%), <strong>water moulds</strong> (oomycetes),
+  <strong>gastrotrichs</strong> and <strong>nematodes</strong>.</p></div>
+</div>
+<figure><a href='img/06_18S_division.png' target='_blank'><img src='img/06_18S_division.png' alt='Share of 18S reads in each major group. The two lakes look strikingly different: Chandubi is algae-and-protist rich, Deepor fungus- and desmid-rich.' loading='lazy'></a><figcaption>Share of 18S reads in each major group. The two lakes look strikingly different: Chandubi is algae-and-protist rich, Deepor fungus- and desmid-rich.</figcaption></figure>
+<h4>Zooplankton (COI)</h4>
+<p>Rotifers dominate the named animals in both lakes — <em>Brachionus caudatus</em>, <em>B. calyciflorus</em>,
+<em>Keratella tropica</em> and <em>Polyarthra vulgaris</em> among them. <strong>Copepods are present</strong>:
+<em>Mesocyclops</em> (both lakes), <em>Microcyclops</em> and <em>Eucyclops</em> appear in the 18S data and a trace of
+<em>Mesocyclops</em> in COI — the lab’s earlier report found none. Water fleas (cladocerans) were not detected.</p>
+<p>But most COI reads could not be named at all: only 31% (Chandubi) and
+42% (Deepor) reach even phylum level. Their closest library matches are only 70–85% identical —
+too distant to name. Step 7 looks into them.</p>
+<figure><a href='img/06_identity.png' target='_blank'><img src='img/06_identity.png' alt='How similar each sequence is to its closest relative in the library (bars weighted by reads). 18S piles up near 100% — well known organisms. COI is split: one peak near 98% (named rotifers) and a large mass between 70 and 85% — organisms with no close relative in the library.' loading='lazy'></a><figcaption>How similar each sequence is to its closest relative in the library (bars weighted by reads). 18S piles up near 100% — well known organisms. COI is split: one peak near 98% (named rotifers) and a large mass between 70 and 85% — organisms with no close relative in the library.</figcaption></figure>
+<figure><a href='img/06_assignment_depth.png' target='_blank'><img src='img/06_assignment_depth.png' alt='Share of reads that could be named at each level, from broad (left) to precise (right).' loading='lazy'></a><figcaption>Share of reads that could be named at each level, from broad (left) to precise (right).</figcaption></figure>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><div class='tbl'><table><thead><tr><th></th><th>18S</th><th>COI</th></tr></thead><tbody><tr><td>Reference</td><td>PR2 v5.1.1 (SSU, UTAX format)</td><td>Eukaryote CO1 Reference Set v5.1.0 (Porter &amp; Hajibabaei)</td></tr><tr><td>Classifier</td><td colspan='2'>VSEARCH SINTAX, bootstrap cutoff 0.80, both strands</td></tr><tr><td>Closest hit</td><td colspan='2'>VSEARCH global alignment, top hit % identity</td></tr><tr><td>Minimum identity</td><td>family 95 · genus 97 · species 99 %</td><td>order 85 · family 90 · genus 95 · species 97 %</td></tr></tbody></table></div><p>Ranks are accepted top-down; PR2 placeholder names (<code>_X</code>, <code>_sp.</code>) are left blank but do not block lower ranks. MIDORI2 was the intended COI reference, but its Zenodo host refused downloads from this network.</p><details class='code'><summary><span>Script</span> <code>scripts/06_taxonomy.sh</code></summary><pre><code>#!/usr/bin/env bash
+# Step 6 — Taxonomic assignment of curated ASVs with VSEARCH.
+#  (a) SINTAX: k-mer classifier with bootstrap confidence per rank (cutoff applied in R).
+#  (b) Global alignment to the same reference: % identity of the closest reference sequence,
+#      used to decide whether genus/species names are close enough to trust.
+# References (downloaded to work/refs, git-ignored):
+#   18S : PR2 v5.1.1 SSU, UTAX/SINTAX format
+#         https://github.com/pr2database/pr2database/releases/tag/v5.1.1
+#   COI : Eukaryote CO1 Reference Set v5.1.0 (Porter &amp; Hajibabaei), SINTAX format
+#         https://github.com/terrimporter/CO1Classifier/releases/tag/SINTAX-COI-v5.1.0-ref
+set -euo pipefail
+cd &quot;$(dirname &quot;$0&quot;)/..&quot;
+
+REFS=work/refs
+OUT=results/06_taxonomy
+mkdir -p &quot;$REFS&quot; &quot;$OUT&quot;
+
+if [ ! -s &quot;$REFS/pr2_5.1.1_UTAX.fasta.gz&quot; ]; then
+  curl -sL -o &quot;$REFS/pr2_5.1.1_UTAX.fasta.gz&quot; \
+    https://github.com/pr2database/pr2database/releases/download/v5.1.1/pr2_version_5.1.1_SSU_UTAX.fasta.gz
+fi
+if [ ! -s &quot;$REFS/COIv5.1.0_sintax.fasta&quot; ]; then
+  curl -sL -o &quot;$REFS/coi.zip&quot; \
+    https://github.com/terrimporter/CO1Classifier/releases/download/SINTAX-COI-v5.1.0-ref/SINTAX_COIv5.1.0_ref.zip
+  # sequences are distributed in lower case, which VSEARCH treats as masked -&gt; upper-case them
+  unzip -p &quot;$REFS/coi.zip&quot; training/sintax.fasta | awk &#x27;/^&gt;/ {print; next} {print toupper($0)}&#x27; \
+    &gt; &quot;$REFS/COIv5.1.0_sintax.fasta&quot; &amp;&amp; rm &quot;$REFS/coi.zip&quot;
+fi
+
+declare -A DB=( [18S]=&quot;$REFS/pr2_5.1.1_UTAX.fasta.gz&quot; [COI]=&quot;$REFS/COIv5.1.0_sintax.fasta&quot; )
+
+for m in 18S COI; do
+  q=results/04_curation/${m}_asv_seqs_curated.fasta
+  # (a) classifier, 100 bootstrap subsamples, both strands
+  vsearch --sintax &quot;$q&quot; --db &quot;${DB[$m]}&quot; --strand both --sintax_random --randseed 2026 \
+    --tabbedout &quot;$OUT/${m}_sintax.tsv&quot; --threads 16 --quiet
+  # (b) closest reference sequence (top hits only; ties kept)
+  vsearch --usearch_global &quot;$q&quot; --db &quot;${DB[$m]}&quot; --id 0.70 --strand both \
+    --maxaccepts 20 --maxrejects 500 --top_hits_only --output_no_hits \
+    --userout &quot;$OUT/${m}_tophit.tsv&quot; --userfields query+target+id+alnlen \
+    --threads 16 --quiet
+done
+
+Rscript scripts/06_taxonomy.R
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/06_taxonomy.sh'>View on GitHub</a></p></details><details class='code'><summary><span>Script</span> <code>scripts/06_taxonomy.R</code></summary><pre><code># Step 6 — Turn raw SINTAX + top-hit output into a conservative taxonomy table.
+# A rank is accepted only if BOTH
+#   (1) SINTAX bootstrap confidence &gt;= 0.80, and
+#   (2) the closest reference sequence is similar enough for that rank:
+#         COI : species &gt;= 97 %, genus &gt;= 95 %, family &gt;= 90 %, order &gt;= 85 %
+#         18S : species &gt;= 99 %, genus &gt;= 97 %, family &gt;= 95 %
+# Ranks are accepted top-down; once one fails, all lower ranks are left unassigned.
+# PR2 placeholder names (e.g. &quot;Dinophyceae_X&quot;, &quot;Enoplea_XX_sp.&quot;) are left blank at their
+# own rank but do not stop lower ranks (e.g. order &quot;Sphaeropleales_X&quot; -&gt; genus Desmodesmus).
+suppressPackageStartupMessages({ library(data.table); library(ggplot2) })
+
+out &lt;- &quot;results/06_taxonomy&quot;
+CONF &lt;- 0.80
+ranks &lt;- list(
+  COI = c(d = &quot;Domain&quot;, k = &quot;Kingdom&quot;, p = &quot;Phylum&quot;, c = &quot;Class&quot;, o = &quot;Order&quot;,
+          f = &quot;Family&quot;, g = &quot;Genus&quot;, s = &quot;Species&quot;),
+  `18S` = c(k = &quot;Domain&quot;, d = &quot;Supergroup&quot;, p = &quot;Division&quot;, c = &quot;Class&quot;, o = &quot;Order&quot;,
+            f = &quot;Family&quot;, g = &quot;Genus&quot;, s = &quot;Species&quot;))
+min_id &lt;- list(COI = c(Order = 85, Family = 90, Genus = 95, Species = 97),
+               `18S` = c(Family = 95, Genus = 97, Species = 99))
+site_of &lt;- c(W1 = &quot;Chandubi (W1)&quot;, W2 = &quot;Deepor Beel (W2)&quot;)
+
+parse_sintax &lt;- function(m) {
+  s &lt;- fread(file.path(out, sprintf(&quot;%s_sintax.tsv&quot;, m)), header = FALSE, sep = &quot;\t&quot;, quote = &quot;&quot;,
+             fill = TRUE, col.names = c(&quot;asv&quot;, &quot;tax&quot;, &quot;strand&quot;))[, 1:2]
+  r &lt;- ranks[[m]]
+  rbindlist(lapply(seq_len(nrow(s)), function(i) {
+    parts &lt;- if (is.na(s$tax[i]) || s$tax[i] == &quot;&quot;) character() else strsplit(s$tax[i], &quot;,&quot;)[[1]]
+    d &lt;- data.table(asv = s$asv[i], letter = sub(&quot;:.*&quot;, &quot;&quot;, parts),
+                    name = sub(&quot;^.:(.*)\\(.*$&quot;, &quot;\\1&quot;, parts),
+                    conf = as.numeric(sub(&quot;.*\\((.*)\\)$&quot;, &quot;\\1&quot;, parts)))
+    d[, rank := r[letter]][]
+  }), fill = TRUE)
+}
+
+summarise_marker &lt;- function(m) {
+  r &lt;- unname(ranks[[m]])
+  counts &lt;- fread(sprintf(&quot;results/04_curation/%s_asv_table_curated.tsv&quot;, m))[, .(asv, W1, W2, length)]
+  long &lt;- parse_sintax(m)
+
+  hit &lt;- fread(file.path(out, sprintf(&quot;%s_tophit.tsv&quot;, m)), header = FALSE, sep = &quot;\t&quot;, quote = &quot;&quot;,
+               col.names = c(&quot;asv&quot;, &quot;target&quot;, &quot;identity&quot;, &quot;alnlen&quot;))
+  hit &lt;- hit[target != &quot;*&quot;][order(asv, -identity)][, .SD[1], by = asv]
+  hit[, best_match := gsub(&quot;_&quot;, &quot; &quot;, sub(&quot;.*s:&quot;, &quot;&quot;, target))]
+
+  # Accept ranks top-down
+  long &lt;- merge(long, hit[, .(asv, identity)], by = &quot;asv&quot;, all.x = TRUE)
+  long[, need := min_id[[m]][rank]][is.na(need), need := 0]
+  # PR2 joins division and subdivision (&quot;Chlorophyta-Chlorophyta_X&quot;): keep the division part
+  long[, name := sub(&quot;-[^-]*_X+$&quot;, &quot;&quot;, name)]
+  long[, placeholder := grepl(&quot;(_X+|_sp\\.)$&quot;, name) | grepl(&quot;^undef_&quot;, name)]
+  long[, ok := conf &gt;= CONF &amp; !is.na(identity) &amp; identity &gt;= need]
+  long[, rank := factor(rank, levels = r)]
+  setorder(long, asv, rank)
+  long[, ok := cumprod(ok) == 1, by = asv]
+
+  # Placeholders are left blank at their own rank but do not block the ranks below
+  wide &lt;- dcast(long[ok == TRUE &amp; !placeholder], asv ~ rank, value.var = &quot;name&quot;)
+  for (x in r) if (!x %in% names(wide)) wide[, (x) := NA_character_]
+  conf_wide &lt;- dcast(long, asv ~ rank, value.var = &quot;conf&quot;)
+  setnames(conf_wide, setdiff(names(conf_wide), &quot;asv&quot;), paste0(&quot;conf_&quot;, setdiff(names(conf_wide), &quot;asv&quot;)))
+
+  tax &lt;- Reduce(function(a, b) merge(a, b, by = &quot;asv&quot;, all.x = TRUE),
+                list(counts, wide[, c(&quot;asv&quot;, r), with = FALSE], conf_wide,
+                     hit[, .(asv, identity, best_match)]))
+  tax[, deepest := apply(.SD, 1, function(v) { k &lt;- which(!is.na(v)); if (length(k)) r[max(k)] else &quot;Unassigned&quot; }),
+      .SDcols = r]
+  tax[, label := apply(.SD, 1, function(v) { k &lt;- which(!is.na(v)); if (length(k)) v[max(k)] else &quot;Unassigned&quot; }),
+      .SDcols = r]
+  tax[, label := gsub(&quot;_&quot;, &quot; &quot;, label)]
+  setorder(tax, -W1)
+  fwrite(tax[order(asv)], file.path(out, sprintf(&quot;%s_taxonomy.tsv&quot;, m)), sep = &quot;\t&quot;)
+  tax[, marker := m][]
+}
+
+tax &lt;- list(COI = summarise_marker(&quot;COI&quot;), `18S` = summarise_marker(&quot;18S&quot;))
+
+# ---- How deep could reads be named? ----
+depth &lt;- rbindlist(lapply(names(tax), function(m) {
+  d &lt;- tax[[m]]; r &lt;- unname(ranks[[m]])
+  rbindlist(lapply(r[-1], function(x) data.table(
+    marker = m, rank = x,
+    W1 = round(100 * sum(d$W1[!is.na(d[[x]])]) / sum(d$W1), 1),
+    W2 = round(100 * sum(d$W2[!is.na(d[[x]])]) / sum(d$W2), 1))))
+}))
+fwrite(depth, file.path(out, &quot;assignment_depth.tsv&quot;), sep = &quot;\t&quot;)
+dl &lt;- melt(depth, id.vars = c(&quot;marker&quot;, &quot;rank&quot;), variable.name = &quot;sample&quot;, value.name = &quot;pct&quot;)
+dl[, site := site_of[sample]]
+dl[, rank := factor(rank, levels = c(&quot;Supergroup&quot;, &quot;Kingdom&quot;, &quot;Division&quot;, &quot;Phylum&quot;, &quot;Class&quot;,
+                                     &quot;Order&quot;, &quot;Family&quot;, &quot;Genus&quot;, &quot;Species&quot;))]
+p1 &lt;- ggplot(dl, aes(rank, pct, colour = site, group = site)) +
+  geom_line(linewidth = 1) + geom_point(size = 2.2) + facet_wrap(~marker, scales = &quot;free_x&quot;) +
+  scale_y_continuous(limits = c(0, 100), labels = function(x) paste0(x, &quot;%&quot;)) +
+  scale_colour_manual(values = c(&quot;#2b6c8f&quot;, &quot;#c2662d&quot;)) +
+  labs(x = NULL, y = &quot;Reads named at this rank&quot;, colour = NULL,
+       title = &quot;How far down the tree of life could reads be named?&quot;) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = &quot;bottom&quot;, axis.text.x = element_text(angle = 30, hjust = 1))
+ggsave(&quot;docs/img/06_assignment_depth.png&quot;, p1, width = 9, height = 4.8, dpi = 120)
+
+# ---- Composition per lake ----
+comp_plot &lt;- function(m, rank, top, file, title) {
+  d &lt;- copy(tax[[m]])
+  d[, grp := fifelse(is.na(get(rank)), &quot;Unassigned&quot;, gsub(&quot;_&quot;, &quot; &quot;, get(rank)))]
+  cmp &lt;- d[, .(W1 = sum(W1), W2 = sum(W2)), by = grp]
+  cmp[, `:=`(W1 = 100 * W1 / sum(W1), W2 = 100 * W2 / sum(W2))]
+  keep &lt;- cmp[grp != &quot;Unassigned&quot;][order(-(W1 + W2))][seq_len(min(top, .N)), grp]
+  cmp[!grp %in% c(keep, &quot;Unassigned&quot;), grp := &quot;Other named&quot;]
+  cmp &lt;- cmp[, .(W1 = sum(W1), W2 = sum(W2)), by = grp]
+  fwrite(cmp[order(-(W1 + W2))][, `:=`(W1 = round(W1, 2), W2 = round(W2, 2))],
+         file.path(out, sprintf(&quot;%s_composition_%s.tsv&quot;, m, tolower(rank))), sep = &quot;\t&quot;)
+  cl &lt;- melt(cmp, id.vars = &quot;grp&quot;, variable.name = &quot;sample&quot;, value.name = &quot;pct&quot;)
+  cl[, site := site_of[sample]]
+  lv &lt;- c(keep, &quot;Other named&quot;, &quot;Unassigned&quot;)
+  cl[, grp := factor(grp, levels = rev(lv[lv %in% grp]))]
+  pal &lt;- c(&quot;#2b6c8f&quot;, &quot;#c2662d&quot;, &quot;#5a9e6f&quot;, &quot;#8a6bb0&quot;, &quot;#d4a72c&quot;, &quot;#4fa3b8&quot;, &quot;#b5536b&quot;,
+           &quot;#7d8c3a&quot;, &quot;#a0785a&quot;, &quot;#5d6fb3&quot;, &quot;#c98bb9&quot;, &quot;#3f7f6e&quot;)
+  cols &lt;- setNames(c(pal[seq_along(keep)], &quot;#c9c9c9&quot;, &quot;#ededed&quot;), c(keep, &quot;Other named&quot;, &quot;Unassigned&quot;))
+  p &lt;- ggplot(cl, aes(site, pct, fill = grp)) +
+    geom_col(width = 0.55, colour = &quot;white&quot;, linewidth = 0.3) +
+    scale_fill_manual(values = cols, breaks = lv) +
+    scale_y_continuous(labels = function(x) paste0(x, &quot;%&quot;), expand = c(0, 0)) +
+    labs(x = NULL, y = &quot;Share of reads&quot;, fill = rank, title = title) +
+    theme_minimal(base_size = 12) + guides(fill = guide_legend(ncol = 1))
+  ggsave(file, p, width = 7.5, height = 5.2, dpi = 120)
+}
+comp_plot(&quot;COI&quot;, &quot;Phylum&quot;, 8, &quot;docs/img/06_COI_phylum.png&quot;, &quot;COI — animal groups (phylum)&quot;)
+comp_plot(&quot;COI&quot;, &quot;Class&quot;, 10, &quot;docs/img/06_COI_class.png&quot;, &quot;COI — class&quot;)
+comp_plot(&quot;18S&quot;, &quot;Division&quot;, 11, &quot;docs/img/06_18S_division.png&quot;, &quot;18S — major groups (division)&quot;)
+comp_plot(&quot;18S&quot;, &quot;Class&quot;, 12, &quot;docs/img/06_18S_class.png&quot;, &quot;18S — class&quot;)
+
+# ---- Named genera and species ----
+named &lt;- rbindlist(lapply(names(tax), function(m) {
+  d &lt;- tax[[m]][!is.na(Genus)]
+  grp_col &lt;- if (m == &quot;COI&quot;) &quot;Phylum&quot; else &quot;Division&quot;
+  d[, .(marker = m, group = get(grp_col)[1], Genus,
+        Species = gsub(&quot;_&quot;, &quot; &quot;, Species),
+        asvs = .N, W1_reads = sum(W1), W2_reads = sum(W2),
+        W1_pct = round(100 * sum(W1) / sum(tax[[m]]$W1), 2),
+        W2_pct = round(100 * sum(W2) / sum(tax[[m]]$W2), 2),
+        best_identity = max(identity)), by = .(Genus, Species)][, -(1:2)]
+}))
+setorder(named, marker, -W1_pct)
+fwrite(named, file.path(out, &quot;named_genera_species.tsv&quot;), sep = &quot;\t&quot;)
+
+# ---- Identity of best match, weighted by reads ----
+idd &lt;- rbindlist(lapply(names(tax), function(m) tax[[m]][, .(marker = m, identity, reads = W1 + W2)]))
+idd[is.na(identity), identity := 69]
+p3 &lt;- ggplot(idd, aes(identity, weight = reads)) +
+  geom_histogram(binwidth = 1, fill = &quot;#2b6c8f&quot;) + facet_wrap(~marker, scales = &quot;free_y&quot;) +
+  geom_vline(data = data.table(marker = c(&quot;COI&quot;, &quot;18S&quot;), x = c(97, 99)), aes(xintercept = x),
+             linetype = 2, colour = &quot;#c2662d&quot;) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(x = &quot;Similarity to closest reference sequence (%)&quot;, y = &quot;Reads&quot;,
+       title = &quot;How close is each sequence to something already in the library?&quot;,
+       subtitle = &quot;Dashed line: similarity needed to accept a species name&quot;) +
+  theme_minimal(base_size = 12)
+ggsave(&quot;docs/img/06_identity.png&quot;, p3, width = 9, height = 4.5, dpi = 120)
+
+# ---- Summary ----
+summ &lt;- rbindlist(lapply(names(tax), function(m) {
+  d &lt;- tax[[m]]
+  data.table(marker = m, asvs = nrow(d),
+             asvs_to_genus = sum(!is.na(d$Genus)), asvs_to_species = sum(!is.na(d$Species)),
+             named_genera = uniqueN(na.omit(d$Genus)), named_species = uniqueN(na.omit(d$Species)),
+             reads_below_85pct_identity = round(100 * sum((d$W1 + d$W2)[is.na(d$identity) | d$identity &lt; 85]) /
+                                                  sum(d$W1 + d$W2), 1))
+}))
+fwrite(summ, file.path(out, &quot;taxonomy_summary.tsv&quot;), sep = &quot;\t&quot;)
+print(summ); print(depth)
+print(named[, .(marker, group, Genus, Species, W1_pct, W2_pct, best_identity)][order(marker, -(W1_pct + W2_pct))][, head(.SD, 15), by = marker])
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/06_taxonomy.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>marker</th><th>asvs</th><th>asvs_to_genus</th><th>asvs_to_species</th><th>named_genera</th><th>named_species</th><th>reads_below_85pct_identity</th></tr></thead><tbody><tr><td>COI</td><td class='n'>345</td><td class='n'>49</td><td class='n'>41</td><td class='n'>8</td><td class='n'>10</td><td class='n'>63.3</td></tr><tr><td>18S</td><td class='n'>982</td><td class='n'>200</td><td class='n'>54</td><td class='n'>110</td><td class='n'>39</td><td class='n'>9.9</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/taxonomy_summary.tsv'>results/06_taxonomy/taxonomy_summary.tsv</a></p><div class='tbl'><table><thead><tr><th>marker</th><th>rank</th><th>W1</th><th>W2</th></tr></thead><tbody><tr><td>COI</td><td>Kingdom</td><td class='n'>78.3</td><td class='n'>77</td></tr><tr><td>COI</td><td>Phylum</td><td class='n'>31</td><td class='n'>42.4</td></tr><tr><td>COI</td><td>Class</td><td class='n'>30.3</td><td class='n'>42</td></tr><tr><td>COI</td><td>Order</td><td class='n'>27.5</td><td class='n'>39.2</td></tr><tr><td>COI</td><td>Family</td><td class='n'>20</td><td class='n'>32.1</td></tr><tr><td>COI</td><td>Genus</td><td class='n'>19.9</td><td class='n'>32.1</td></tr><tr><td>COI</td><td>Species</td><td class='n'>9.4</td><td class='n'>12.9</td></tr><tr><td>18S</td><td>Supergroup</td><td class='n'>90.1</td><td class='n'>91.2</td></tr><tr><td>18S</td><td>Division</td><td class='n'>86.9</td><td class='n'>93</td></tr><tr><td>18S</td><td>Class</td><td class='n'>84.9</td><td class='n'>88.2</td></tr><tr><td>18S</td><td>Order</td><td class='n'>56.4</td><td class='n'>46.8</td></tr><tr><td>18S</td><td>Family</td><td class='n'>39.3</td><td class='n'>38.3</td></tr><tr><td>18S</td><td>Genus</td><td class='n'>39</td><td class='n'>31.4</td></tr><tr><td>18S</td><td>Species</td><td class='n'>6</td><td class='n'>1.9</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/assignment_depth.tsv'>results/06_taxonomy/assignment_depth.tsv</a></p><figure><a href='img/06_18S_class.png' target='_blank'><img src='img/06_18S_class.png' alt='18S, class level.' loading='lazy'></a><figcaption>18S, class level.</figcaption></figure><div class='grid'><figure><a href='img/06_COI_phylum.png' target='_blank'><img src='img/06_COI_phylum.png' alt='COI, phylum level.' loading='lazy'></a><figcaption>COI, phylum level.</figcaption></figure><figure><a href='img/06_COI_class.png' target='_blank'><img src='img/06_COI_class.png' alt='COI, class level.' loading='lazy'></a><figcaption>COI, class level.</figcaption></figure></div><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/18S_taxonomy.tsv'>results/06_taxonomy/18S_taxonomy.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_taxonomy.tsv'>results/06_taxonomy/COI_taxonomy.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/named_genera_species.tsv'>results/06_taxonomy/named_genera_species.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/18S_composition_division.tsv'>results/06_taxonomy/18S_composition_division.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/18S_composition_class.tsv'>results/06_taxonomy/18S_composition_class.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_composition_phylum.tsv'>results/06_taxonomy/COI_composition_phylum.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_composition_class.tsv'>results/06_taxonomy/COI_composition_class.tsv</a></li></ul></div></details>
+</div></li><li class='node' id='blast'><div class='dot'></div><div class='card'><p class='kicker'>Step 7</p><h2>Looking up the unknowns in GenBank</h2>
+<p class='plain'><span>In plain words</span>The COI library used in step 6 is curated and so leaves things out. GenBank,
+run by the US National Center for Biotechnology Information (NCBI), holds nearly every DNA sequence ever published.
+We searched it (with a tool called BLAST) for the 40 most abundant COI signatures that step 6 could not name —
+together about 64% of Chandubi’s and
+57% of Deepor’s COI reads.</p>
+<p><strong>Most of them are rotifers</strong> that simply aren’t in reference libraries yet. Several match unnamed
+“rotifer environmental samples” almost exactly (98–100%), sequences found by other studies but never tied to a named species;
+others are 80–89% similar to known rotifers such as <em>Brachionus</em>, <em>Trichocerca</em> and <em>Anuraeopsis</em> —
+likely related species that have never been barcoded. Counting these, rotifers make up roughly
+<strong>62%</strong> of Chandubi’s and <strong>66%</strong> of Deepor’s COI reads.</p>
+<p><strong>The single most common COI signature is a true unknown.</strong> COI_ASV0001 accounts for
+15% (Chandubi) and 19% (Deepor) of COI reads, reads cleanly as a protein-coding gene,
+yet nothing in all of GenBank is more than about 72% identical to it. It belongs to an organism whose DNA has never been sequenced
+— possibly a new or unstudied local species.</p>
+<div class='stats'><div class='stat'><b>62% / 66%</b><span>COI reads that are rotifers (Chandubi / Deepor)</span></div><div class='stat'><b>~72%</b><span>best match for the top unknown</span></div><div class='stat'><b>40</b><span>sequences searched</span></div></div>
+<figure><a href='img/06b_blast_unknowns.png' target='_blank'><img src='img/06b_blast_unknowns.png' alt='The 25 most abundant ‘unknowns’ and their closest match in GenBank, with % identity. Above ~97%: same species. 80–90%: a relative in the same group. Below 80%: no meaningful relative on record.' loading='lazy'></a><figcaption>The 25 most abundant ‘unknowns’ and their closest match in GenBank, with % identity. Above ~97%: same species. 80–90%: a relative in the same group. Below 80%: no meaningful relative on record.</figcaption></figure>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>NCBI BLAST URL API, database <code>core_nt</code>, megablast (E ≤ 1e-20, 5 hits per query); queries with no megablast hit re-run with blastn (word size 11). Best hit = highest identity × query cover. Lineage from NCBI Taxonomy (E-utilities). Hits below 80% identity are not assigned to any group.</p><details class='code'><summary><span>Script</span> <code>scripts/06b_blast_unknowns.sh</code></summary><pre><code>#!/usr/bin/env bash
+# Step 6b — The COI reference library could not place many abundant ASVs (&lt; 85 % similar
+# to anything in it). Send the most abundant of these to NCBI BLAST (core_nt, remote) to
+# see what they are (NCBI BLAST URL API, megablast). Top 40 by total reads.
+set -euo pipefail
+cd &quot;$(dirname &quot;$0&quot;)/..&quot;
+
+OUT=results/06_taxonomy
+N=40
+
+# ASVs whose closest library match is &lt; 85 % (or none), most abundant first
+awk -F&#x27;\t&#x27; &#x27;NR==1 {for (i=1;i&lt;=NF;i++) h[$i]=i; next}
+            ($h[&quot;identity&quot;]==&quot;&quot; || $h[&quot;identity&quot;]&lt;85) {print $h[&quot;asv&quot;] &quot;\t&quot; $h[&quot;W1&quot;]+$h[&quot;W2&quot;]}&#x27; \
+  &quot;$OUT/COI_taxonomy.tsv&quot; | sort -t$&#x27;\t&#x27; -k2,2nr | head -n &quot;$N&quot; | cut -f1 &gt; work/blast_ids.txt
+awk &#x27;NR==FNR {want[&quot;&gt;&quot; $1]=1; next} /^&gt;/ {keep = ($1 in want)} keep&#x27; \
+  work/blast_ids.txt results/04_curation/COI_asv_seqs_curated.fasta &gt; work/blast_query.fasta
+
+python3 scripts/06b_ncbi_blast.py work/blast_query.fasta &quot;$OUT/COI_blast_unknowns.tsv&quot; 5
+
+# Queries with no megablast hit: retry with sensitive blastn and append
+cut -f1 &quot;$OUT/COI_blast_unknowns.tsv&quot; | sort -u &gt; work/blast_hit_ids.txt
+grep -vxFf work/blast_hit_ids.txt work/blast_ids.txt &gt; work/blast_nohit_ids.txt || true
+if [ -s work/blast_nohit_ids.txt ]; then
+  awk &#x27;NR==FNR {want[&quot;&gt;&quot; $1]=1; next} /^&gt;/ {keep = ($1 in want)} keep&#x27; \
+    work/blast_nohit_ids.txt results/04_curation/COI_asv_seqs_curated.fasta &gt; work/blast_query2.fasta
+  python3 scripts/06b_ncbi_blast.py work/blast_query2.fasta work/blast_sensitive.tsv 5 --sensitive
+  cat work/blast_sensitive.tsv &gt;&gt; &quot;$OUT/COI_blast_unknowns.tsv&quot;
+fi
+
+Rscript scripts/06b_blast_summary.R
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/06b_blast_unknowns.sh'>View on GitHub</a></p></details><details class='code'><summary><span>Script</span> <code>scripts/06b_ncbi_blast.py</code></summary><pre><code>#!/usr/bin/env python3
+&quot;&quot;&quot;Step 6b helper — BLAST a FASTA file against NCBI core_nt through the NCBI BLAST
+URL API (submit, poll, fetch). Writes one tab-separated row per hit:
+qseqid, accession, pident, align_len, qcov, evalue, taxid, sciname, kingdom, phylum, class.
+Usage: 06b_ncbi_blast.py query.fasta out.tsv [max_hits] [--sensitive]
+--sensitive uses blastn (word size 11) instead of megablast, for distant matches.
+Appends kingdom, phylum and class of each hit from NCBI Taxonomy.&quot;&quot;&quot;
+import json
+import re
+import sys
+import time
+import urllib.parse
+import urllib.request
+
+URL = &quot;https://blast.ncbi.nlm.nih.gov/Blast.cgi&quot;
+query, out = sys.argv[1], sys.argv[2]
+max_hits = int(sys.argv[3]) if len(sys.argv) &gt; 3 else 5
+sensitive = &quot;--sensitive&quot; in sys.argv
+
+
+def call(params, data=False):
+    enc = urllib.parse.urlencode(params).encode()
+    req = urllib.request.Request(URL, data=enc if data else None,
+                                 headers={&quot;User-Agent&quot;: &quot;Sahil_Metagenome/1.0 (amplicon taxonomy)&quot;})
+    if not data:
+        req.full_url = URL + &quot;?&quot; + enc.decode()
+    with urllib.request.urlopen(req, timeout=120) as r:
+        return r.read()
+
+
+fasta = open(query).read()
+qlen = {m.group(1): len(m.group(2).replace(&quot;\n&quot;, &quot;&quot;))
+        for m in re.finditer(r&quot;&gt;(\S+)[^\n]*\n([^&gt;]*)&quot;, fasta)}
+
+mode = {&quot;MEGABLAST&quot;: &quot;off&quot;, &quot;WORD_SIZE&quot;: 11} if sensitive else {&quot;MEGABLAST&quot;: &quot;on&quot;}
+resp = call({&quot;CMD&quot;: &quot;Put&quot;, &quot;PROGRAM&quot;: &quot;blastn&quot;, **mode, &quot;DATABASE&quot;: &quot;core_nt&quot;,
+             &quot;QUERY&quot;: fasta, &quot;HITLIST_SIZE&quot;: max_hits, &quot;EXPECT&quot;: &quot;1e-20&quot;,
+             &quot;EMAIL&quot;: &quot;&quot;, &quot;TOOL&quot;: &quot;Sahil_Metagenome&quot;}, data=True).decode()
+rid = re.search(r&quot;RID = (\S+)&quot;, resp).group(1)
+wait = int(re.search(r&quot;RTOE = (\d+)&quot;, resp).group(1))
+print(f&quot;RID {rid}, estimated {wait}s&quot;, file=sys.stderr)
+time.sleep(max(wait, 30))
+while True:
+    status = call({&quot;CMD&quot;: &quot;Get&quot;, &quot;RID&quot;: rid, &quot;FORMAT_OBJECT&quot;: &quot;SearchInfo&quot;}).decode()
+    s = re.search(r&quot;Status=(\w+)&quot;, status).group(1)
+    print(f&quot;status {s}&quot;, file=sys.stderr)
+    if s == &quot;READY&quot;:
+        break
+    if s in (&quot;FAILED&quot;, &quot;UNKNOWN&quot;):
+        sys.exit(f&quot;BLAST {s} for RID {rid}&quot;)
+    time.sleep(60)
+
+raw = call({&quot;CMD&quot;: &quot;Get&quot;, &quot;RID&quot;: rid, &quot;FORMAT_TYPE&quot;: &quot;JSON2_S&quot;})
+doc = json.loads(raw)
+rows = []
+for rep in doc[&quot;BlastOutput2&quot;]:
+    search = rep[&quot;report&quot;][&quot;results&quot;][&quot;search&quot;]
+    q = search[&quot;query_title&quot;].split()[0]
+    for hit in search.get(&quot;hits&quot;, []):
+        d = hit[&quot;description&quot;][0]
+        hsp = hit[&quot;hsps&quot;][0]
+        rows.append([q, d.get(&quot;accession&quot;, &quot;&quot;), round(100 * hsp[&quot;identity&quot;] / hsp[&quot;align_len&quot;], 2),
+                     hsp[&quot;align_len&quot;], round(100 * (hsp[&quot;query_to&quot;] - hsp[&quot;query_from&quot;] + 1) / qlen[q], 1),
+                     hsp[&quot;evalue&quot;], str(d.get(&quot;taxid&quot;, &quot;&quot;)), d.get(&quot;sciname&quot;, &quot;&quot;)])
+
+# Higher taxonomy (phylum, class) for each hit, from NCBI Taxonomy via E-utilities
+lineage = {}
+taxids = sorted({r[6] for r in rows if r[6]})
+for i in range(0, len(taxids), 100):
+    xml = urllib.request.urlopen(
+        &quot;https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=&quot; + &quot;,&quot;.join(taxids[i:i + 100]),
+        timeout=120).read().decode()
+    for taxon in re.findall(r&quot;&lt;Taxon&gt;\s*&lt;TaxId&gt;(\d+)&lt;/TaxId&gt;(.*?)&lt;/LineageEx&gt;&quot;, xml, re.S):
+        tid, body = taxon
+        ranks = dict((r, n) for n, r in re.findall(
+            r&quot;&lt;ScientificName&gt;([^&lt;]+)&lt;/ScientificName&gt;\s*&lt;Rank&gt;([^&lt;]+)&lt;/Rank&gt;&quot;, body))
+        lineage[tid] = (ranks.get(&quot;kingdom&quot;, ranks.get(&quot;superkingdom&quot;, &quot;&quot;)), ranks.get(&quot;phylum&quot;, &quot;&quot;),
+                        ranks.get(&quot;class&quot;, &quot;&quot;))
+    time.sleep(0.5)
+
+with open(out, &quot;w&quot;) as fh:
+    for r in rows:
+        fh.write(&quot;\t&quot;.join(map(str, r + list(lineage.get(r[6], (&quot;&quot;, &quot;&quot;, &quot;&quot;))))) + &quot;\n&quot;)
+print(f&quot;wrote {out}&quot;, file=sys.stderr)
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/06b_ncbi_blast.py'>View on GitHub</a></p></details><details class='code'><summary><span>Script</span> <code>scripts/06b_blast_summary.R</code></summary><pre><code># Step 6b — Summarise NCBI BLAST results for the most abundant COI ASVs that the
+# COI reference library could not place. Best hit = highest % identity × query cover.
+# Interpretation: &gt;= 97 % species-level match, &gt;= 90 % same genus/family likely,
+# 80-90 % only a distant relative is on record (phylum-level hint only);
+# &lt; 80 % nothing informative is on record.
+suppressPackageStartupMessages({ library(data.table); library(ggplot2) })
+
+out &lt;- &quot;results/06_taxonomy&quot;
+b &lt;- fread(file.path(out, &quot;COI_blast_unknowns.tsv&quot;), header = FALSE, sep = &quot;\t&quot;, quote = &quot;&quot;,
+           col.names = c(&quot;asv&quot;, &quot;acc&quot;, &quot;pident&quot;, &quot;length&quot;, &quot;qcovs&quot;, &quot;evalue&quot;, &quot;taxid&quot;, &quot;name&quot;,
+                         &quot;kingdom&quot;, &quot;phylum&quot;, &quot;class&quot;))
+b[, group := fifelse(phylum != &quot;&quot;, phylum, fifelse(kingdom != &quot;&quot;, kingdom, &quot;unknown&quot;))]
+tax &lt;- fread(file.path(out, &quot;COI_taxonomy.tsv&quot;), sep = &quot;\t&quot;, quote = &quot;&quot;)
+ids &lt;- readLines(&quot;work/blast_ids.txt&quot;)
+
+best &lt;- b[order(asv, -(pident * qcovs))][, .SD[1], by = asv]
+res &lt;- merge(data.table(asv = ids), best, by = &quot;asv&quot;, all.x = TRUE)
+res &lt;- merge(res, tax[, .(asv, W1, W2, library_identity = identity, library_label = label)], by = &quot;asv&quot;)
+res[, match := fcase(is.na(pident), &quot;no hit in NCBI&quot;,
+                     pident &gt;= 97 &amp; qcovs &gt;= 90, &quot;species-level match&quot;,
+                     pident &gt;= 90 &amp; qcovs &gt;= 80, &quot;close relative (genus/family)&quot;,
+                     default = &quot;distant relative only&quot;)]
+res[is.na(group), group := &quot;no hit&quot;]
+# Below 80 % identity the best hit is not informative even about the phylum
+res[!is.na(pident) &amp; pident &lt; 80, group := &quot;no relative &gt;= 80 %&quot;]
+setorder(res, -W1)
+res[, reads_pct_W1 := round(100 * W1 / sum(tax$W1), 2)][, reads_pct_W2 := round(100 * W2 / sum(tax$W2), 2)]
+fwrite(res[, .(asv, W1, W2, reads_pct_W1, reads_pct_W2, library_identity, ncbi_best_hit = name,
+               ncbi_phylum = group, ncbi_class = class, ncbi_identity = pident, ncbi_query_cover = qcovs, accession = acc, match)],
+       file.path(out, &quot;COI_blast_unknowns_summary.tsv&quot;), sep = &quot;\t&quot;)
+
+# Reads in these ASVs, by NCBI group and match quality
+agg &lt;- res[, .(W1 = sum(W1), W2 = sum(W2)), by = .(group, match)]
+fwrite(agg[order(-(W1 + W2))], file.path(out, &quot;COI_blast_unknowns_by_group.tsv&quot;), sep = &quot;\t&quot;)
+
+res[, lab := sprintf(&quot;%s  ·  %s (%s%%)&quot;, asv,
+                     fcase(is.na(name), &quot;no hit&quot;, pident &lt; 80, &quot;no relative on record&quot;, default = name),
+                     ifelse(is.na(pident), &quot;–&quot;, format(round(pident, 1))))]
+res[, lab := factor(lab, levels = rev(lab))]
+pl &lt;- melt(res[1:min(25, .N)], id.vars = c(&quot;lab&quot;, &quot;match&quot;), measure.vars = c(&quot;W1&quot;, &quot;W2&quot;),
+           variable.name = &quot;sample&quot;, value.name = &quot;reads&quot;)
+pl[, site := c(W1 = &quot;Chandubi (W1)&quot;, W2 = &quot;Deepor Beel (W2)&quot;)[sample]]
+p &lt;- ggplot(pl, aes(reads, lab, fill = site)) +
+  geom_col(position = position_dodge(width = 0.75), width = 0.7) +
+  scale_fill_manual(values = c(&quot;#2b6c8f&quot;, &quot;#c2662d&quot;)) +
+  scale_x_continuous(labels = scales::comma) +
+  labs(x = &quot;Reads&quot;, y = NULL, fill = NULL,
+       title = &quot;25 most abundant &#x27;unknown&#x27; COI sequences: closest match in NCBI&quot;,
+       subtitle = &quot;Label: best NCBI hit (% identical). Below ~90 % only a distant relative is on record.&quot;) +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = &quot;bottom&quot;, plot.title.position = &quot;plot&quot;)
+ggsave(&quot;docs/img/06b_blast_unknowns.png&quot;, p, width = 10, height = 8, dpi = 120)
+print(res[, .(asv, W1, W2, library_identity, name, group, pident, qcovs, match)])
+print(agg[order(-(W1 + W2))])
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/06b_blast_summary.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>group</th><th>match</th><th>W1</th><th>W2</th></tr></thead><tbody><tr><td>no relative &gt;= 80 %</td><td>distant relative only</td><td class='n'>31,903</td><td class='n'>28,624</td></tr><tr><td>Rotifera</td><td>distant relative only</td><td class='n'>18,220</td><td class='n'>14,055</td></tr><tr><td>Rotifera</td><td>species-level match</td><td class='n'>19,255</td><td class='n'>11,123</td></tr><tr><td>Nemertea</td><td>distant relative only</td><td class='n'>2,205</td><td class='n'>2,149</td></tr><tr><td>Metazoa</td><td>distant relative only</td><td class='n'>1,082</td><td class='n'>1,006</td></tr><tr><td>Pseudomonadota</td><td>close relative (genus/family)</td><td class='n'>907</td><td class='n'>76</td></tr><tr><td>unknown</td><td>distant relative only</td><td class='n'>414</td><td class='n'>305</td></tr><tr><td>Oomycota</td><td>distant relative only</td><td class='n'>396</td><td class='n'>188</td></tr><tr><td>Basidiomycota</td><td>distant relative only</td><td class='n'>168</td><td class='n'>209</td></tr><tr><td>Arthropoda</td><td>distant relative only</td><td class='n'>108</td><td class='n'>181</td></tr><tr><td>Discosea</td><td>distant relative only</td><td class='n'>55</td><td class='n'>183</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_blast_unknowns_by_group.tsv'>results/06_taxonomy/COI_blast_unknowns_by_group.tsv</a></p><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_blast_unknowns_summary.tsv'>results/06_taxonomy/COI_blast_unknowns_summary.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/06_taxonomy/COI_blast_unknowns.tsv'>results/06_taxonomy/COI_blast_unknowns.tsv</a></li></ul></div></details>
+</div></li><li class='node' id='findings'><div class='dot'></div><div class='card'><p class='kicker'>So far</p><h2>What the data tells us</h2>
+<div class='finding'><h4>Two very different microscopic worlds</h4>
+<p>By the 18S barcode the lakes share only 142 of 982 signatures. Chandubi’s water is
+full of green algae, diatoms and protists; Deepor’s is dominated by fungi, desmids, water moulds and small worms.</p></div>
+<div class='finding'><h4>Rotifers rule the zooplankton</h4>
+<p>About 62% (Chandubi) and 66% (Deepor) of the animal (COI) reads are rotifers, many of them species not yet in any DNA library.
+Copepods (<em>Mesocyclops</em> and relatives) are present; water fleas were not detected.</p></div>
+<div class='finding'><h4>An abundant, unknown organism</h4>
+<p>The most common COI signature in both lakes matches nothing on record above ~72% — a candidate for closer study.</p></div>
 <div class='finding warn'><h4>Zooplankton: surprisingly similar — needs checking</h4>
-<p>By the COI barcode, 266 of 345 signatures appear in <em>both</em> lakes at similar levels.
-The lab’s earlier report showed almost no overlap, but that came from processing the lakes separately. The remaining
-question is whether the zooplankton truly are similar, or whether DNA crossed between the two samples in the lab.
-No blank (control) samples were sequenced, so this can’t yet be told apart — it is a question for Eurofins.</p></div>
+<p>By COI, 266 of 345 signatures appear in <em>both</em> lakes at similar levels, while the
+algae and protists (18S) differ sharply. Either the zooplankton truly are similar, or DNA crossed between the two samples in
+the lab. No blank (control) samples were sequenced, so this can’t yet be told apart — a question for Eurofins.</p></div>
 <div class='finding'><h4>A caution on comparisons</h4>
-<p>There is one water sample per lake. Differences describe these two samples; they cannot yet be tested statistically.</p></div>
-</div></li><li class='node' id='next'><div class='dot'></div><div class='card'><p class='kicker'>Next</p><h2>Putting names to the signatures</h2>
-<p>So far each signature is just a string of DNA letters. The next stage compares them against reference libraries of
-known organisms — <strong>PR2</strong> for 18S and <strong>MIDORI2 / BOLD</strong> for COI — to name them
-(“this is the rotifer <em>Keratella tropica</em>”). After that come diversity comparisons and the ecological story of the two lakes.</p>
+<p>There is one water sample per lake. Differences describe these two samples; they cannot yet be tested statistically.
+Read counts reflect DNA, not the number or weight of organisms.</p></div>
+</div></li><li class='node' id='next'><div class='dot'></div><div class='card'><p class='kicker'>Next</p><h2>From lists to ecology</h2>
+<p>With names attached, the next stage compares diversity between the lakes, links indicator organisms to water quality
+(for example, desmids and rotifer species known to signal nutrient levels), and compares the DNA results with older
+microscope surveys of Deepor Beel.</p>
 </div></li></ol>
-<section class="glossary"><h2>Words used on this page</h2><dl><div><dt>eDNA</dt><dd>Environmental DNA — genetic material organisms leave in water, soil or air.</dd></div><div><dt>Barcode gene</dt><dd>A short gene that differs between species, used like a product barcode to tell them apart.</dd></div><div><dt>Read</dt><dd>One stretch of DNA letters produced by the sequencer.</dd></div><div><dt>Primer</dt><dd>A short starter DNA piece used to copy the barcode; removed before analysis.</dd></div><div><dt>ASV</dt><dd>Amplicon sequence variant — one exact, unique DNA signature, roughly one kind of organism.</dd></div><div><dt>Chimera</dt><dd>An artificial sequence accidentally stitched from two organisms during copying.</dd></div><div><dt>Rarefaction</dt><dd>A check of whether sampling more would have found many more signatures.</dd></div></dl></section>
+<section class="glossary"><h2>Words used on this page</h2><dl><div><dt>eDNA</dt><dd>Environmental DNA — genetic material organisms leave in water, soil or air.</dd></div><div><dt>Barcode gene</dt><dd>A short gene that differs between species, used like a product barcode to tell them apart.</dd></div><div><dt>Read</dt><dd>One stretch of DNA letters produced by the sequencer.</dd></div><div><dt>Primer</dt><dd>A short starter DNA piece used to copy the barcode; removed before analysis.</dd></div><div><dt>ASV</dt><dd>Amplicon sequence variant — one exact, unique DNA signature, roughly one kind of organism.</dd></div><div><dt>Chimera</dt><dd>An artificial sequence accidentally stitched from two organisms during copying.</dd></div><div><dt>Rarefaction</dt><dd>A check of whether sampling more would have found many more signatures.</dd></div><div><dt>Reference library</dt><dd>A collection of DNA sequences from organisms that experts have identified, used to name new sequences.</dd></div><div><dt>% identity</dt><dd>How many DNA letters two sequences share; 97–100% usually means the same species.</dd></div><div><dt>BLAST / GenBank</dt><dd>BLAST is a search tool; GenBank is the public archive of nearly all published DNA sequences.</dd></div></dl></section>
 </main>
 <footer>Scripts, results and raw data: <a href="https://github.com/Angsumi/Sahil_Metagenome">github.com/Angsumi/Sahil_Metagenome</a> ·
 Reproduce with <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/run_all.sh">run_all.sh</a> and <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/environment.yml">environment.yml</a> ·

@@ -12,4 +12,6 @@ Rscript scripts/03_dada2.R    18S    270    210    2       4
 Rscript scripts/03_dada2.R    COI    250    200    2       4
 Rscript scripts/04_asv_curation.R
 Rscript scripts/05_summary.R
-python3 scripts/06_build_site.py
+bash scripts/06_taxonomy.sh          # downloads PR2 + CO1 references on first run
+bash scripts/06b_blast_unknowns.sh   # NCBI BLAST (internet access required)
+python3 scripts/07_build_site.py

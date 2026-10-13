@@ -1,0 +1,41 @@
+asv	W1	W2	reads_pct_W1	reads_pct_W2	library_identity	ncbi_best_hit	ncbi_phylum	ncbi_class	ncbi_identity	ncbi_query_cover	accession	match
+COI_ASV0001	17141	19250	14.66	18.73	70.9	Bursaphelenchus cocophilus	no relative >= 80 %	Chromadorea	71.88	99.7	AY508039	distant relative only
+COI_ASV0003	11216	7952	9.59	7.74	80.6	Keratella cochlearis	no relative >= 80 %	Eurotatoria	74.76	98.7	MZ438187	distant relative only
+COI_ASV0004	7126	5098	6.09	4.96	83.2	Rotifera environmental sample	Rotifera	""	98.73	100	ON506894	species-level match
+COI_ASV0005	6140	2619	5.25	2.55	79.4	Rotifera environmental sample	Rotifera	""	99.37	100	ON506898	species-level match
+COI_ASV0009	3610	1658	3.09	1.61	78.5	Trichocerca sp. WM-2017b	Rotifera	Eurotatoria	81.61	98.1	LC215603	distant relative only
+COI_ASV0011	3516	1499	3.01	1.46	79.4	Rotifera environmental sample	Rotifera	""	99.68	99.7	ON506898	species-level match
+COI_ASV0016	2596	639	2.22	0.62	81	Plationus patulus macracanthus	Rotifera	Eurotatoria	83.17	99.7	JX216794	distant relative only
+COI_ASV0008	2413	3539	2.06	3.44	83.5	Brachionus calyciflorus	Rotifera	Eurotatoria	84.47	97.8	FJ827028	distant relative only
+COI_ASV0013	2205	2149	1.89	2.09	80.6	Oerstedia viridifusca	Nemertea	Enopla	80.72	52.2	OR800645	distant relative only
+COI_ASV0010	1680	3539	1.44	3.44	81.1	Polyarthra dolichoptera complex sp. UO-2013	Rotifera	Eurotatoria	86.67	37.7	KC619028	distant relative only
+COI_ASV0017	1478	1567	1.26	1.52	82.9	Rotifera environmental sample	Rotifera	""	99.05	100	ON506890	species-level match
+COI_ASV0030	1302	141	1.11	0.14	75.6	Trichocerca sp. WM-2017b	no relative >= 80 %	Eurotatoria	76.14	95.6	LC215605	distant relative only
+COI_ASV0025	1213	707	1.04	0.69	80.1	Brachionus angularis	Rotifera	Eurotatoria	80.45	98.4	MT875426	distant relative only
+COI_ASV0023	1204	816	1.03	0.79	82.3	Rotifera environmental sample	Rotifera	""	86.62	98.7	ON506886	distant relative only
+COI_ASV0022	1082	1006	0.93	0.98	82.6	invertebrate environmental sample	Metazoa	""	85.43	95.6	GU070906	distant relative only
+COI_ASV0024	950	1055	0.81	1.03	82.3	Rotifera environmental sample	Rotifera	""	86.31	98.7	ON506886	distant relative only
+COI_ASV0033	933	215	0.8	0.21	81	Anuraeopsis sp. WM-2017a	Rotifera	Eurotatoria	88.92	100	LC215493	distant relative only
+COI_ASV0032	922	391	0.79	0.38	73.5	Dysdera gollumi	no relative >= 80 %	Arachnida	76.39	90.1	EU068036	distant relative only
+COI_ASV0037	865	228	0.74	0.22	81.6	Keratella sp. STE97	Rotifera	Eurotatoria	81.65	100	OL678385	distant relative only
+COI_ASV0039	768	262	0.66	0.25	81.6	Anuraeopsis sp. WM-2017a	Rotifera	Eurotatoria	99.68	100	LC215493	species-level match
+COI_ASV0035	726	381	0.62	0.37	73.5	Dysdera gollumi	no relative >= 80 %	Arachnida	76.39	90.1	EU068036	distant relative only
+COI_ASV0046	652	50	0.56	0.05	72.5	Candidatus Megaera sp.	Pseudomonadota	Alphaproteobacteria	95.53	100	OZ245887	close relative (genus/family)
+COI_ASV0036	596	509	0.51	0.5		Ototyphlonemertes fila	no relative >= 80 %	Enopla	75.56	85.3	KT730662	distant relative only
+COI_ASV0044	523	186	0.45	0.18	81.3	Anuraeopsis sp. WM-2017a	Rotifera	Eurotatoria	89.24	100	LC215493	distant relative only
+COI_ASV0040	407	524	0.35	0.51	84.2	Brachionus budapestinensis	Rotifera	Eurotatoria	88.14	98.7	MZ438200	distant relative only
+COI_ASV0049	396	188	0.34	0.18	84	Phytophthora cocois	Oomycota	Peronosporomycetes	83.81	100	MT032127	distant relative only
+COI_ASV0053	323	104	0.28	0.1	83.5	Mytilina ventralis	Rotifera	Eurotatoria	85.53	98.1	DQ297783	distant relative only
+COI_ASV0048	287	308	0.25	0.3	83.5	Epiphanes senta	Rotifera	Eurotatoria	83.91	99.7	DQ089728	distant relative only
+COI_ASV0061	283	36	0.24	0.04	81.6	Trichocerca sp. WM-2017h	Rotifera	Eurotatoria	81.61	98.1	LC215615	distant relative only
+COI_ASV0054	263	154	0.22	0.15	82.9	Trichocerca dixonnuttalli	Rotifera	Eurotatoria	83.86	100	MZ438203	distant relative only
+COI_ASV0058	256	108	0.22	0.11	83.5	Trichocerca dixonnuttalli	Rotifera	Eurotatoria	84.18	100	MZ438203	distant relative only
+COI_ASV0068	255	26	0.22	0.03	72.2	Candidatus Megaera sp.	Pseudomonadota	Alphaproteobacteria	95.85	100	OZ245887	close relative (genus/family)
+COI_ASV0063	227	78	0.19	0.08	79.1	Rotifera environmental sample	Rotifera	""	99.37	100	ON506898	species-level match
+COI_ASV0060	220	124	0.19	0.12	84.5	Brachionus angularis	Rotifera	Eurotatoria	85.53	99.7	OL477583	distant relative only
+COI_ASV0057	208	161	0.18	0.16	83.4	Scytosiphon sp.	unknown	Phaeophyceae	82.85	98.7	PV054075	distant relative only
+COI_ASV0059	206	144	0.18	0.14	82.7	Goniochloridales sp. WTwin 8/9 T-7m6.8	unknown	Eustigmatophyceae	84.62	99.7	PZ106322	distant relative only
+COI_ASV0062	194	115	0.17	0.11	80.7	Brachionus angularis	Rotifera	Eurotatoria	80.77	98.4	MT875426	distant relative only
+COI_ASV0056	168	209	0.14	0.2	76	Tulasnella sp. 419	Basidiomycota	Agaricomycetes	81.64	96.8	BK074469	distant relative only
+COI_ASV0066	108	181	0.09	0.18	81.9	Physocypria biwaensis	Arthropoda	Ostracoda	83.22	96.5	KP842898	distant relative only
+COI_ASV0071	55	183	0.05	0.18	83.4	Korotnevella heteracantha	Discosea	Flabellinia	82.43	99.7	MW544513	distant relative only

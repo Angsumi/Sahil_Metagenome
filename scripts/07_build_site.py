@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Step 6 — Build the GitHub Pages site (docs/index.html) from the scripts, result
-tables and figures produced by steps 1–5. The page is a plain-language timeline;
+"""Step 7 — Build the GitHub Pages site (docs/index.html) from the scripts, result
+tables and figures produced by steps 1–6b. The page is a plain-language timeline;
 scripts and full tables sit in collapsible "for specialists" panels. Standard library only."""
 import csv
 import html
@@ -226,26 +226,120 @@ signatures each lake has, and — the key question — did we sequence deeply en
            "bray_curtis": "Bray–Curtis", "jaccard": "Jaccard"}))}
 """))
 
-steps.append(("findings", "So far", "What the clean data already tells us", f"""
-<div class='finding'><h4>Better use of the data</h4>
-<p>{100*final_pairs/raw_pairs:.0f}% of the raw data reached the final tables (COI: 70–72%), compared with about 40% in the
-lab’s original COI processing.</p></div>
-<div class='finding'><h4>Algae &amp; protists: the lakes are very different</h4>
-<p>By the 18S barcode, Chandubi and Deepor share only {c18['shared_asvs']} of {fmt(c18['total_asvs'])} signatures —
-their microscopic communities are largely distinct.</p></div>
-<div class='finding warn'><h4>Zooplankton: surprisingly similar — needs checking</h4>
-<p>By the COI barcode, {cco['shared_asvs']} of {cco['total_asvs']} signatures appear in <em>both</em> lakes at similar levels.
-The lab’s earlier report showed almost no overlap, but that came from processing the lakes separately. The remaining
-question is whether the zooplankton truly are similar, or whether DNA crossed between the two samples in the lab.
-No blank (control) samples were sequenced, so this can’t yet be told apart — it is a question for Eurofins.</p></div>
-<div class='finding'><h4>A caution on comparisons</h4>
-<p>There is one water sample per lake. Differences describe these two samples; they cannot yet be tested statistically.</p></div>
+
+# ---- taxonomy numbers ----
+tsum = {r["marker"]: r for r in rows("results/06_taxonomy/taxonomy_summary.tsv")}
+depth = {(r["marker"], r["rank"]): r for r in rows("results/06_taxonomy/assignment_depth.tsv")}
+blast = rows("results/06_taxonomy/COI_blast_unknowns_summary.tsv")
+coi_phy = {r["grp"]: r for r in rows("results/06_taxonomy/COI_composition_phylum.tsv")}
+rot_blast = {s: sum(float(r[f"reads_pct_{s}"]) for r in blast if r["ncbi_phylum"] == "Rotifera") for s in ("W1", "W2")}
+rot_total = {s: float(coi_phy["Rotifera"][s]) + rot_blast[s] for s in ("W1", "W2")}
+top = next(r for r in blast if r["asv"] == "COI_ASV0001")
+div18 = (min(float(depth[("18S", "Division")][s]) for s in ("W1", "W2")),
+         max(float(depth[("18S", "Division")][s]) for s in ("W1", "W2")))
+TAXDIR = "results/06_taxonomy"
+
+steps.append(("taxonomy", "Step 6", "Putting names to the signatures", f"""
+<p class='plain'><span>In plain words</span>Each signature is still just a string of DNA letters. To name it, we compare
+it with large public libraries of DNA from organisms that experts have already identified — like matching a
+fingerprint against a database. A name is accepted only when the match is both <em>confident</em> and
+<em>close enough</em>: a species name, for example, needs the sequence to be at least 97–99% identical to a known one.
+If the match is weaker, we only claim a broader group (a family, or just “a rotifer”).</p>
+{stats((f"{div18[0]:.0f}–{div18[1]:.0f}%", "18S reads named to major group"),
+       (fmt(tsum['18S']['named_genera']), "18S genera named"),
+       (fmt(tsum['COI']['named_genera']), "COI genera named"))}
+<h4>What lives where (18S — the microscopic community)</h4>
+<div class='pair'>
+  <div><h4>Chandubi Beel</h4><p>Rich in <strong>green algae</strong> (Chlorophyceae, ~14% of reads), <strong>diatoms</strong>
+  (<em>Cyclotella</em>, <em>Aulacoseira</em>, <em>Nitzschia</em>), small amoeboid <strong>cercozoans</strong>, <strong>ciliates</strong>
+  and <strong>rotifers</strong>.</p></div>
+  <div><h4>Deepor Beel</h4><p>Dominated by <strong>fungi</strong> (incl. chytrids that infect algae), <strong>desmids</strong> — ornate
+  green algae such as <em>Staurastrum</em> and <em>Cosmarium</em> (~15%), <strong>water moulds</strong> (oomycetes),
+  <strong>gastrotrichs</strong> and <strong>nematodes</strong>.</p></div>
+</div>
+{fig("06_18S_division.png", "Share of 18S reads in each major group. The two lakes look strikingly different: Chandubi is "
+     "algae-and-protist rich, Deepor fungus- and desmid-rich.")}
+<h4>Zooplankton (COI)</h4>
+<p>Rotifers dominate the named animals in both lakes — <em>Brachionus caudatus</em>, <em>B. calyciflorus</em>,
+<em>Keratella tropica</em> and <em>Polyarthra vulgaris</em> among them. <strong>Copepods are present</strong>:
+<em>Mesocyclops</em> (both lakes), <em>Microcyclops</em> and <em>Eucyclops</em> appear in the 18S data and a trace of
+<em>Mesocyclops</em> in COI — the lab’s earlier report found none. Water fleas (cladocerans) were not detected.</p>
+<p>But most COI reads could not be named at all: only {float(depth[('COI','Phylum')]['W1']):.0f}% (Chandubi) and
+{float(depth[('COI','Phylum')]['W2']):.0f}% (Deepor) reach even phylum level. Their closest library matches are only 70–85% identical —
+too distant to name. Step 7 looks into them.</p>
+{fig("06_identity.png", "How similar each sequence is to its closest relative in the library (bars weighted by reads). "
+     "18S piles up near 100% — well known organisms. COI is split: one peak near 98% (named rotifers) and a large mass "
+     "between 70 and 85% — organisms with no close relative in the library.")}
+{fig("06_assignment_depth.png", "Share of reads that could be named at each level, from broad (left) to precise (right).")}
+{specialist(
+    "<div class='tbl'><table><thead><tr><th></th><th>18S</th><th>COI</th></tr></thead><tbody>"
+    "<tr><td>Reference</td><td>PR2 v5.1.1 (SSU, UTAX format)</td><td>Eukaryote CO1 Reference Set v5.1.0 (Porter &amp; Hajibabaei)</td></tr>"
+    "<tr><td>Classifier</td><td colspan='2'>VSEARCH SINTAX, bootstrap cutoff 0.80, both strands</td></tr>"
+    "<tr><td>Closest hit</td><td colspan='2'>VSEARCH global alignment, top hit % identity</td></tr>"
+    "<tr><td>Minimum identity</td><td>family 95 · genus 97 · species 99 %</td><td>order 85 · family 90 · genus 95 · species 97 %</td></tr>"
+    "</tbody></table></div><p>Ranks are accepted top-down; PR2 placeholder names (<code>_X</code>, <code>_sp.</code>) are "
+    "left blank but do not block lower ranks. MIDORI2 was the intended COI reference, but its Zenodo host refused "
+    "downloads from this network.</p>",
+    script("scripts/06_taxonomy.sh"), script("scripts/06_taxonomy.R"),
+    table(f"{TAXDIR}/taxonomy_summary.tsv"),
+    table(f"{TAXDIR}/assignment_depth.tsv"),
+    fig("06_18S_class.png", "18S, class level."),
+    "<div class='grid'>", fig("06_COI_phylum.png", "COI, phylum level."), fig("06_COI_class.png", "COI, class level."), "</div>",
+    files(f"{TAXDIR}/18S_taxonomy.tsv", f"{TAXDIR}/COI_taxonomy.tsv", f"{TAXDIR}/named_genera_species.tsv",
+          f"{TAXDIR}/18S_composition_division.tsv", f"{TAXDIR}/18S_composition_class.tsv",
+          f"{TAXDIR}/COI_composition_phylum.tsv", f"{TAXDIR}/COI_composition_class.tsv"))}
 """))
 
-steps.append(("next", "Next", "Putting names to the signatures", """
-<p>So far each signature is just a string of DNA letters. The next stage compares them against reference libraries of
-known organisms — <strong>PR2</strong> for 18S and <strong>MIDORI2 / BOLD</strong> for COI — to name them
-(“this is the rotifer <em>Keratella tropica</em>”). After that come diversity comparisons and the ecological story of the two lakes.</p>
+steps.append(("blast", "Step 7", "Looking up the unknowns in GenBank", f"""
+<p class='plain'><span>In plain words</span>The COI library used in step 6 is curated and so leaves things out. GenBank,
+run by the US National Center for Biotechnology Information (NCBI), holds nearly every DNA sequence ever published.
+We searched it (with a tool called BLAST) for the 40 most abundant COI signatures that step 6 could not name —
+together about {sum(float(r['reads_pct_W1']) for r in blast):.0f}% of Chandubi’s and
+{sum(float(r['reads_pct_W2']) for r in blast):.0f}% of Deepor’s COI reads.</p>
+<p><strong>Most of them are rotifers</strong> that simply aren’t in reference libraries yet. Several match unnamed
+“rotifer environmental samples” almost exactly (98–100%), sequences found by other studies but never tied to a named species;
+others are 80–89% similar to known rotifers such as <em>Brachionus</em>, <em>Trichocerca</em> and <em>Anuraeopsis</em> —
+likely related species that have never been barcoded. Counting these, rotifers make up roughly
+<strong>{rot_total['W1']:.0f}%</strong> of Chandubi’s and <strong>{rot_total['W2']:.0f}%</strong> of Deepor’s COI reads.</p>
+<p><strong>The single most common COI signature is a true unknown.</strong> {top['asv']} accounts for
+{float(top['reads_pct_W1']):.0f}% (Chandubi) and {float(top['reads_pct_W2']):.0f}% (Deepor) of COI reads, reads cleanly as a protein-coding gene,
+yet nothing in all of GenBank is more than about 72% identical to it. It belongs to an organism whose DNA has never been sequenced
+— possibly a new or unstudied local species.</p>
+{stats((f"{rot_total['W1']:.0f}% / {rot_total['W2']:.0f}%", "COI reads that are rotifers (Chandubi / Deepor)"),
+       ("~72%", "best match for the top unknown"), ("40", "sequences searched"))}
+{fig("06b_blast_unknowns.png", "The 25 most abundant ‘unknowns’ and their closest match in GenBank, with % identity. "
+     "Above ~97%: same species. 80–90%: a relative in the same group. Below 80%: no meaningful relative on record.")}
+{specialist(
+    "<p>NCBI BLAST URL API, database <code>core_nt</code>, megablast (E ≤ 1e-20, 5 hits per query); queries with no "
+    "megablast hit re-run with blastn (word size 11). Best hit = highest identity × query cover. Lineage from NCBI Taxonomy "
+    "(E-utilities). Hits below 80% identity are not assigned to any group.</p>",
+    script("scripts/06b_blast_unknowns.sh"), script("scripts/06b_ncbi_blast.py"), script("scripts/06b_blast_summary.R"),
+    table(f"{TAXDIR}/COI_blast_unknowns_by_group.tsv"),
+    files(f"{TAXDIR}/COI_blast_unknowns_summary.tsv", f"{TAXDIR}/COI_blast_unknowns.tsv"))}
+"""))
+
+steps.append(("findings", "So far", "What the data tells us", f"""
+<div class='finding'><h4>Two very different microscopic worlds</h4>
+<p>By the 18S barcode the lakes share only {c18['shared_asvs']} of {fmt(c18['total_asvs'])} signatures. Chandubi’s water is
+full of green algae, diatoms and protists; Deepor’s is dominated by fungi, desmids, water moulds and small worms.</p></div>
+<div class='finding'><h4>Rotifers rule the zooplankton</h4>
+<p>About {rot_total["W1"]:.0f}% (Chandubi) and {rot_total["W2"]:.0f}% (Deepor) of the animal (COI) reads are rotifers, many of them species not yet in any DNA library.
+Copepods (<em>Mesocyclops</em> and relatives) are present; water fleas were not detected.</p></div>
+<div class='finding'><h4>An abundant, unknown organism</h4>
+<p>The most common COI signature in both lakes matches nothing on record above ~72% — a candidate for closer study.</p></div>
+<div class='finding warn'><h4>Zooplankton: surprisingly similar — needs checking</h4>
+<p>By COI, {cco['shared_asvs']} of {cco['total_asvs']} signatures appear in <em>both</em> lakes at similar levels, while the
+algae and protists (18S) differ sharply. Either the zooplankton truly are similar, or DNA crossed between the two samples in
+the lab. No blank (control) samples were sequenced, so this can’t yet be told apart — a question for Eurofins.</p></div>
+<div class='finding'><h4>A caution on comparisons</h4>
+<p>There is one water sample per lake. Differences describe these two samples; they cannot yet be tested statistically.
+Read counts reflect DNA, not the number or weight of organisms.</p></div>
+"""))
+
+steps.append(("next", "Next", "From lists to ecology", """
+<p>With names attached, the next stage compares diversity between the lakes, links indicator organisms to water quality
+(for example, desmids and rotifer species known to signal nutrient levels), and compares the DNA results with older
+microscope surveys of Deepor Beel.</p>
 """))
 
 timeline = "".join(
@@ -262,6 +356,9 @@ glossary = [
     ("ASV", "Amplicon sequence variant — one exact, unique DNA signature, roughly one kind of organism."),
     ("Chimera", "An artificial sequence accidentally stitched from two organisms during copying."),
     ("Rarefaction", "A check of whether sampling more would have found many more signatures."),
+    ("Reference library", "A collection of DNA sequences from organisms that experts have identified, used to name new sequences."),
+    ("% identity", "How many DNA letters two sequences share; 97–100% usually means the same species."),
+    ("BLAST / GenBank", "BLAST is a search tool; GenBank is the public archive of nearly all published DNA sequences."),
 ]
 gloss = "".join(f"<div><dt>{esc(a)}</dt><dd>{esc(b)}</dd></div>" for a, b in glossary)
 
@@ -364,13 +461,13 @@ footer {{ padding:30px 0 60px; font-size:.85rem; color:var(--muted); }}
   <h1>Reading the life of two lakes from a bottle of water</h1>
   <p class="lede">The tiny plants and animals drifting in a lake are too small and too many to count by eye.
   Instead, we read the DNA they leave in the water. This page follows that DNA from the sequencing machine to a
-  clean, trustworthy dataset — one step at a time.</p>
+  named list of what lives in each lake — one step at a time.</p>
   <div class="lakes">
     <div class="lake a"><b>Chandubi Beel</b><span>Sample W1 · a natural lake at the foot of the Garo Hills, relatively undisturbed</span></div>
     <div class="lake b"><b>Deepor Beel</b><span>Sample W2 · a Ramsar wetland on the edge of Guwahati, under urban pressure</span></div>
   </div>
   <div class="journey"><span>Lake water</span><i>→</i><span>DNA</span><i>→</i><span>Sequencer</span><i>→</i>
-    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Clean dataset</span></div>
+    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span></div>
   <nav class="toc">{toc}</nav>
 </header>
 <main>

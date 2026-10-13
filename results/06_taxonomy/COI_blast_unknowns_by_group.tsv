@@ -1,0 +1,12 @@
+group	match	W1	W2
+no relative >= 80 %	distant relative only	31903	28624
+Rotifera	distant relative only	18220	14055
+Rotifera	species-level match	19255	11123
+Nemertea	distant relative only	2205	2149
+Metazoa	distant relative only	1082	1006
+Pseudomonadota	close relative (genus/family)	907	76
+unknown	distant relative only	414	305
+Oomycota	distant relative only	396	188
+Basidiomycota	distant relative only	168	209
+Arthropoda	distant relative only	108	181
+Discosea	distant relative only	55	183

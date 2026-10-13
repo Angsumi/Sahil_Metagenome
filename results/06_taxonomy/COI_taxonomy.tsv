@@ -1,0 +1,346 @@
+asv	W1	W2	length	Domain	Kingdom	Phylum	Class	Order	Family	Genus	Species	conf_Domain	conf_Kingdom	conf_Phylum	conf_Class	conf_Order	conf_Family	conf_Genus	conf_Species	identity	best_match	deepest	label
+COI_ASV0001	17141	19250	313	Eukaryota								1	0.75	0.27	0.11	0.06	0.02	0.02	0.01	70.9	Bursaphelenchus cocophilus	Domain	Eukaryota
+COI_ASV0002	8590	12355	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus		1	1	1	1	1	1	1	0.76	98.2	Brachionus angularis	Genus	Brachionus
+COI_ASV0003	11216	7952	316	Eukaryota	Metazoa							1	0.87	0.5	0.33	0.16	0.03	0.01	0.01	80.6	Filinia longiseta	Kingdom	Metazoa
+COI_ASV0004	7126	5098	316	Eukaryota	Metazoa							1	0.95	0.6	0.6	0.6	0.5	0.41	0.31	83.2	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0005	6140	2619	316	Eukaryota	Metazoa							1	0.99	0.49	0.28	0.16	0.07	0.03	0.03	79.4	Lecane leontina	Kingdom	Metazoa
+COI_ASV0006	3458	5276	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_caudatus	1	1	1	1	1	1	1	1	97.5	Brachionus caudatus	Species	Brachionus caudatus
+COI_ASV0007	4324	4029	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.9	0.9	0.9	0.81	0.8	0.27	87.3	Brachionus caudatus	Order	Ploima
+COI_ASV0008	2413	3539	316	Eukaryota	Metazoa							1	0.99	0.62	0.62	0.62	0.46	0.29	0.15	83.5	Brachionus calyciflorus	Kingdom	Metazoa
+COI_ASV0009	3610	1658	316	Eukaryota	Metazoa							1	0.98	0.37	0.26	0.08	0.02	0.01	0.01	78.5	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0010	1680	3539	316	Eukaryota	Metazoa							1	0.93	0.46	0.3	0.1	0.01	0.01	0.01	81.1	Filinia longiseta	Kingdom	Metazoa
+COI_ASV0011	3516	1499	316	Eukaryota	Metazoa							1	0.95	0.42	0.23	0.11	0.04	0.01	0.01	79.4	Lecane leontina	Kingdom	Metazoa
+COI_ASV0012	1233	3291	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella		1	1	1	1	1	1	1	1	96.8	Keratella tropica	Genus	Keratella
+COI_ASV0013	2205	2149	316	Eukaryota	Metazoa							1	0.96	0.42	0.26	0.08	0.03	0.02	0.02	80.6	Filinia longiseta	Kingdom	Metazoa
+COI_ASV0014	981	2350	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella		1	1	1	1	1	1	1	1	96.8	Keratella tropica	Genus	Keratella
+COI_ASV0015	1420	1850	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_caudatus	1	1	1	1	1	0.99	0.99	0.99	97.5	Brachionus caudatus	Species	Brachionus caudatus
+COI_ASV0016	2596	639	316	Eukaryota	Metazoa							1	0.87	0.57	0.52	0.21	0.06	0.03	0.01	81	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0017	1478	1567	316	Eukaryota	Metazoa	Rotifera	Eurotatoria					1	1	0.8	0.8	0.8	0.67	0.44	0.16	82.9	Brachionus urceolaris	Class	Eurotatoria
+COI_ASV0018	1214	1301	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.95	0.95	0.95	0.89	0.87	0.28	87.3	Brachionus quadridentatus	Order	Ploima
+COI_ASV0019	670	1809	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella	Keratella_tropica	1	1	1	1	1	1	1	1	97.2	Keratella tropica	Species	Keratella tropica
+COI_ASV0020	1440	850	313	Eukaryota								1	0.85	0.79	0.7	0.42	0.29	0.29	0.08	91	Stephanocyclus meneghinianus	Domain	Eukaryota
+COI_ASV0021	1168	1085	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	0.97	0.86	0.86	0.86	0.61	0.59	0.19	87	Brachionus quadridentatus	Order	Ploima
+COI_ASV0022	1082	1006	316	Eukaryota	Metazoa	Rotifera	Eurotatoria					1	1	0.93	0.93	0.93	0.73	0.3	0.12	82.6	Brachionus calyciflorus	Class	Eurotatoria
+COI_ASV0023	1204	816	316	Eukaryota	Metazoa							1	0.96	0.72	0.72	0.72	0.4	0.24	0.11	82.3	Brachionus quadridentatus	Kingdom	Metazoa
+COI_ASV0024	950	1055	316	Eukaryota	Metazoa							1	0.99	0.71	0.71	0.71	0.42	0.29	0.09	82.3	Brachionus quadridentatus	Kingdom	Metazoa
+COI_ASV0025	1213	707	316	Eukaryota	Metazoa							1	0.9	0.43	0.43	0.43	0.21	0.09	0.05	80.1	Lecane cornuta	Kingdom	Metazoa
+COI_ASV0026	1297	476	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_quadridentatus	1	1	1	1	1	0.99	0.99	0.99	98.7	Brachionus quadridentatus	Species	Brachionus quadridentatus
+COI_ASV0027	745	1018	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus		1	1	1	1	1	1	1	0.99	96.8	Brachionus caudatus	Genus	Brachionus
+COI_ASV0028	1584	162	313	Eukaryota								1	0.85	0.77	0.75	0.69	0.4	0.4	0.24	91.8	Stephanocyclus meneghinianus	Domain	Eukaryota
+COI_ASV0029	557	1038	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_calyciflorus	1	1	1	1	1	1	1	1	97.8	Brachionus calyciflorus	Species	Brachionus calyciflorus
+COI_ASV0030	1302	141	316	Eukaryota	Metazoa							1	0.89	0.5	0.5	0.5	0.45	0.21	0.07	75.6	Brachionus koreanus	Kingdom	Metazoa
+COI_ASV0031	956	410	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.87	0.87	0.87	0.54	0.37	0.07	85.4	Cyrtonia tuba	Order	Ploima
+COI_ASV0032	922	391	313	Eukaryota	Metazoa							1	0.82	0.48	0.3	0.15	0.03	0.03	0.02	73.5	Scorpio fuscus	Kingdom	Metazoa
+COI_ASV0033	933	215	316	Eukaryota	Metazoa							1	0.89	0.45	0.43	0.18	0.04	0.02	0.02	81	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0034	607	529	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella		1	1	1	1	1	1	1	1	96.8	Keratella tropica	Genus	Keratella
+COI_ASV0035	726	381	313	Eukaryota	Metazoa							1	0.84	0.44	0.3	0.13	0.02	0.01	0.01	73.5	Scorpio fuscus	Kingdom	Metazoa
+COI_ASV0036	596	509	307									1	0.8	0.42	0.3	0.08	0.03	0.01	0.01			Unassigned	Unassigned
+COI_ASV0037	865	228	316	Eukaryota	Metazoa							1	0.86	0.67	0.63	0.32	0.07	0.01	0.01	81.6	Keratella hiemalis	Kingdom	Metazoa
+COI_ASV0038	673	408	313	Eukaryota								1	0.69	0.55	0.52	0.41	0.33	0.33	0.15	88.2	Skeletonema potamos	Domain	Eukaryota
+COI_ASV0039	768	262	316	Eukaryota	Metazoa							1	0.95	0.54	0.45	0.21	0.04	0.01	0.01	81.6	Plationus patulus	Kingdom	Metazoa
+COI_ASV0040	407	524	316	Eukaryota	Metazoa							1	0.96	0.68	0.68	0.68	0.36	0.21	0.11	84.2	Ascomorpha ovalis AEG1	Kingdom	Metazoa
+COI_ASV0041	501	426	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella	Keratella_tropica	1	1	1	1	1	1	1	1	97.5	Keratella tropica	Species	Keratella tropica
+COI_ASV0042	534	266	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_vulgaris	1	1	1	1	1	1	1	1	99.6	Polyarthra vulgaris	Species	Polyarthra vulgaris
+COI_ASV0043	353	419	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_caudatus	1	1	1	1	1	1	1	1	97.2	Brachionus caudatus	Species	Brachionus caudatus
+COI_ASV0044	523	186	316	Eukaryota	Metazoa							1	0.87	0.4	0.33	0.13	0.05	0.03	0.03	81.3	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0045	518	187	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.9	0.9	0.9	0.53	0.45	0.09	85.3	Brachionus leydigi	Order	Ploima
+COI_ASV0046	652	50	313	Eukaryota	Metazoa							1	0.87	0.5	0.37	0.1	0.02	0.02	0.01	72.5	Calopteryx maculata	Kingdom	Metazoa
+COI_ASV0047	417	239	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_vulgaris	1	1	1	1	1	1	1	1	99.6	Polyarthra vulgaris	Species	Polyarthra vulgaris
+COI_ASV0048	287	308	316	Eukaryota	Metazoa							1	1	0.72	0.72	0.71	0.61	0.44	0.11	83.5	Brachionus urceolaris	Kingdom	Metazoa
+COI_ASV0049	396	188	313	Eukaryota								1	0.59	0.56	0.52	0.23	0.09	0.02	0.02	84	Phytophthora hydropathica	Domain	Eukaryota
+COI_ASV0050	478	91	316	Eukaryota	Metazoa							1	0.99	0.79	0.79	0.77	0.36	0.18	0.18	88.1	Polyarthra vulgaris	Kingdom	Metazoa
+COI_ASV0051	474	67	313	Eukaryota	Metazoa	Arthropoda						1	0.98	0.91	0.65	0.26	0.07	0.02	0.01	85.3	Mesocyclops longisetus	Phylum	Arthropoda
+COI_ASV0052	388	110	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_calyciflorus	1	1	1	1	1	1	1	1	100	Brachionus calyciflorus	Species	Brachionus calyciflorus
+COI_ASV0053	323	104	316	Eukaryota	Metazoa	Rotifera	Eurotatoria					1	0.97	0.8	0.8	0.8	0.48	0.24	0.08	83.5	Euchlanis dilatata	Class	Eurotatoria
+COI_ASV0054	263	154	316	Eukaryota	Metazoa							1	0.97	0.71	0.71	0.71	0.38	0.19	0.08	82.9	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0055	161	254	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_calyciflorus	1	1	1	1	1	1	1	1	98.1	Brachionus calyciflorus	Species	Brachionus calyciflorus
+COI_ASV0056	168	209	313	Eukaryota	Metazoa							1	0.82	0.46	0.45	0.11	0.04	0.02	0.01	76	Antillorbis nordestensis	Kingdom	Metazoa
+COI_ASV0057	208	161	313	Eukaryota								1	0.61	0.22	0.2	0.15	0.07	0.03	0.03	83.4	Laminarionema elsbetiae	Domain	Eukaryota
+COI_ASV0058	256	108	316	Eukaryota	Metazoa							1	0.98	0.68	0.68	0.68	0.28	0.19	0.19	83.5	Trichocerca dixon-nuttalli	Kingdom	Metazoa
+COI_ASV0059	206	144	313	Eukaryota								1	0.51	0.27	0.24	0.22	0.21	0.07	0.03	82.7	Nemacystus decipiens	Domain	Eukaryota
+COI_ASV0060	220	124	316	Eukaryota	Metazoa							1	0.98	0.71	0.71	0.71	0.51	0.48	0.2	84.5	Brachionus angularis	Kingdom	Metazoa
+COI_ASV0061	283	36	316	Eukaryota	Metazoa							1	1	0.77	0.75	0.34	0.17	0.04	0.02	81.6	Brachionus paranguensis	Kingdom	Metazoa
+COI_ASV0062	194	115	316	Eukaryota	Metazoa							1	0.92	0.43	0.43	0.41	0.19	0.19	0.13	80.7	Lecane cornuta	Kingdom	Metazoa
+COI_ASV0063	227	78	316	Eukaryota	Metazoa							1	0.98	0.47	0.21	0.1	0.03	0.03	0.02	79.1	Lecane leontina	Kingdom	Metazoa
+COI_ASV0064	148	157	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	1	1	1	100	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0065	105	185	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_calyciflorus	1	1	1	1	1	1	1	1	98.4	Brachionus calyciflorus	Species	Brachionus calyciflorus
+COI_ASV0066	108	181	313	Eukaryota	Metazoa	Arthropoda						1	0.98	0.89	0.63	0.29	0.06	0.02	0.02	81.9	Bennelongia dedeckkeri	Phylum	Arthropoda
+COI_ASV0067	174	114	313	Eukaryota								1	0.79	0.7	0.59	0.57	0.48	0.48	0.26	91.4	Stephanocyclus meneghinianus	Domain	Eukaryota
+COI_ASV0068	255	26	313	Eukaryota	Metazoa							1	0.91	0.6	0.42	0.12	0.04	0.03	0.01	72.2	Geodia gibberosa	Kingdom	Metazoa
+COI_ASV0070	102	141	313	Eukaryota		Oomycota						1	1	1	1	0.66	0.66	0.52	0.14	92.9	Globisporangium ultimum	Phylum	Oomycota
+COI_ASV0071	55	183	313	Eukaryota								1	0.71	0.19	0.18	0.05	0.04	0.04	0.04	83.4	Korotnevella fousta	Domain	Eukaryota
+COI_ASV0072	120	104	313	Eukaryota								1	0.5	0.19	0.19	0.12	0.07	0.03	0.02	74.4	Myriogloea simplex	Domain	Eukaryota
+COI_ASV0073	149	65	316	Eukaryota	Metazoa							1	0.95	0.57	0.57	0.57	0.44	0.33	0.21	82.6	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0074	182	31	313	Eukaryota	Metazoa							1	0.8	0.41	0.22	0.08	0.02	0.01	0.01	72.8	Rhodymenia pacifica	Kingdom	Metazoa
+COI_ASV0075	164	48	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.98	0.98	0.98	0.56	0.36	0.08	85.8	Brachionus quadridentatus	Order	Ploima
+COI_ASV0076	130	75	313	Eukaryota								1	0.78	0.66	0.35	0.35	0.35	0.35	0.35	86.9	Nannochloropsis oculata	Domain	Eukaryota
+COI_ASV0077	202	0	313	Eukaryota	Metazoa							1	0.88	0.69	0.49	0.19	0.07	0.06	0.03	71.6	Callophyllis schneideri	Kingdom	Metazoa
+COI_ASV0079	59	115	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_calyciflorus	1	1	1	1	1	1	1	1	97.2	Brachionus calyciflorus	Species	Brachionus calyciflorus
+COI_ASV0080	108	60	313	Eukaryota								1	0.51	0.26	0.26	0.19	0.12	0.04	0.04	80.3	Ectocarpus siliculosus	Domain	Eukaryota
+COI_ASV0081	65	99	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_caudatus	1	1	1	1	1	1	1	1	97.5	Brachionus caudatus	Species	Brachionus caudatus
+COI_ASV0082	70	93	313	Eukaryota			Phaeophyceae					1	0.93	0.86	0.81	0.63	0.51	0.2	0.11	84.2	Dactylosiphon bullosus	Class	Phaeophyceae
+COI_ASV0083	56	105	316	Eukaryota	Metazoa							1	0.99	0.54	0.27	0.08	0.02	0.02	0.01	80.8	Filinia longiseta	Kingdom	Metazoa
+COI_ASV0084	110	49	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_vulgaris	1	1	1	1	1	1	1	1	98.5	Polyarthra vulgaris	Species	Polyarthra vulgaris
+COI_ASV0085	73	83	316	Eukaryota	Metazoa							1	0.96	0.7	0.7	0.7	0.31	0.16	0.07	83.2	Trichocerca dixon-nuttalli	Kingdom	Metazoa
+COI_ASV0086	67	82	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.81	0.81	0.8	0.66	0.59	0.14	87.6	Brachionus rubens	Order	Ploima
+COI_ASV0087	103	39	316	Eukaryota	Metazoa	Rotifera	Eurotatoria					1	0.98	0.85	0.85	0.84	0.59	0.49	0.2	84.8	Brachionus angularis	Class	Eurotatoria
+COI_ASV0088	101	38	316	Eukaryota	Metazoa							1	0.99	0.46	0.45	0.29	0.1	0.03	0.02	82	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0089	105	30	316	Eukaryota	Metazoa							1	0.97	0.52	0.52	0.52	0.4	0.24	0.22	82.9	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0090	75	50	313	Eukaryota								1	0.67	0.43	0.4	0.17	0.05	0.03	0.02	77.3	Trikentrion helium	Domain	Eukaryota
+COI_ASV0091	33	91	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus		1	1	1	1	1	1	1	0.76	97.9	Brachionus angularis	Genus	Brachionus
+COI_ASV0092	120	0	313	Eukaryota	Metazoa							1	0.85	0.56	0.39	0.15	0.06	0.06	0.01	71.9	Montipora foliosa	Kingdom	Metazoa
+COI_ASV0093	74	46	316	Eukaryota	Metazoa							1	0.98	0.76	0.76	0.75	0.46	0.25	0.08	82.9	Dipleuchlanis propatula	Kingdom	Metazoa
+COI_ASV0094	59	58	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	0.98	0.84	0.84	0.84	0.64	0.6	0.15	87	Brachionus quadridentatus	Order	Ploima
+COI_ASV0095	25	92	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella	Keratella_tropica	1	1	1	1	1	1	1	1	97.2	Keratella tropica	Species	Keratella tropica
+COI_ASV0096	82	34	316	Eukaryota	Metazoa							1	0.9	0.65	0.46	0.18	0.03	0.01	0.01	81.4	Filinia longiseta	Kingdom	Metazoa
+COI_ASV0097	83	29	316	Eukaryota	Metazoa	Rotifera	Eurotatoria					1	0.99	0.81	0.81	0.79	0.55	0.49	0.24	85.1	Brachionus angularis	Class	Eurotatoria
+COI_ASV0098	79	33	316	Eukaryota	Metazoa							1	0.95	0.51	0.51	0.51	0.4	0.15	0.15	82.6	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0099	74	38	316	Eukaryota	Metazoa							1	0.98	0.7	0.7	0.7	0.42	0.2	0.06	82.6	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0100	58	52	316	Eukaryota	Metazoa							1	0.99	0.76	0.76	0.76	0.35	0.27	0.1	83.5	Trichocerca dixon-nuttalli	Kingdom	Metazoa
+COI_ASV0101	96	12	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	0.97	0.86	0.86	0.86	0.61	0.44	0.08	88.3	Brachionus urceolaris	Order	Ploima
+COI_ASV0102	55	53	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella	Keratella_tropica	1	1	1	1	1	1	1	1	97.2	Keratella tropica	Species	Keratella tropica
+COI_ASV0103	87	19	313	Eukaryota								1	0.75	0.63	0.51	0.29	0.29	0.29	0.13	91.1	Skeletonema menzelii	Domain	Eukaryota
+COI_ASV0104	69	34	316	Eukaryota	Metazoa							1	0.97	0.51	0.31	0.17	0.04	0.01	0.01	79.4	Lecane leontina	Kingdom	Metazoa
+COI_ASV0105	51	48	313	Eukaryota								1	0.52	0.27	0.18	0.08	0.02	0.02	0.02	85	Colpomenia sinuosa	Domain	Eukaryota
+COI_ASV0106	70	26	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.98	0.98	0.98	0.81	0.78	0.39	88	Brachionus caudatus	Order	Ploima
+COI_ASV0107	52	44	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	1	1	1	100	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0108	57	37	316	Eukaryota	Metazoa							1	0.93	0.5	0.5	0.5	0.3	0.13	0.09	80.4	Lecane cornuta	Kingdom	Metazoa
+COI_ASV0109	40	54	313	Eukaryota								1	0.6	0.42	0.37	0.22	0.04	0.01	0.01	86.9	Korotnevella fousta	Domain	Eukaryota
+COI_ASV0110	83	10	313	Eukaryota								1	0.72	0.45	0.28	0.07	0.03	0.01	0.01	72.8	Rhodymenia pacifica	Domain	Eukaryota
+COI_ASV0111	48	43	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella	Keratella_tropica	1	1	1	1	1	1	1	1	100	Keratella tropica	Species	Keratella tropica
+COI_ASV0112	66	23	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	1	1	1	100	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0113	62	27	316	Eukaryota	Metazoa	Rotifera	Eurotatoria					1	1	0.81	0.81	0.81	0.41	0.23	0.09	83.2	Euchlanis dilatata	Class	Eurotatoria
+COI_ASV0114	19	70	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_calyciflorus	1	1	1	1	1	1	1	1	98.4	Brachionus calyciflorus	Species	Brachionus calyciflorus
+COI_ASV0115	65	23	307									1	0.83	0.57	0.44	0.19	0.05	0.02	0.01			Unassigned	Unassigned
+COI_ASV0116	46	42	316	Eukaryota	Metazoa							1	0.98	0.48	0.48	0.48	0.29	0.22	0.06	83.1	Brachionus plicatilis	Kingdom	Metazoa
+COI_ASV0117	76	11	313	Eukaryota	Metazoa							1	0.84	0.79	0.67	0.3	0.13	0.04	0.04	72.9	Dermanyssus carpathicus	Kingdom	Metazoa
+COI_ASV0118	56	29	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia_diatoms	Nitzschia_palea	1	1	1	1	1	1	1	1	99	Nitzschia palea	Species	Nitzschia palea
+COI_ASV0119	55	30	313	Eukaryota	Metazoa							1	0.8	0.67	0.64	0.34	0.08	0.03	0.03	76.1	Ostrinia furnacalis	Kingdom	Metazoa
+COI_ASV0120	40	41	313	Eukaryota								1	0.84	0.57	0.54	0.42	0.21	0.05	0.03	85.5	Scytosiphon promiscuus	Domain	Eukaryota
+COI_ASV0121	60	17	313	Eukaryota								1	1	0.73	0.73	0.73	0.73	0.73	0.73	94.8	Nitzschia palea	Domain	Eukaryota
+COI_ASV0122	47	30	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia_diatoms	Nitzschia_palea	1	1	1	1	1	1	1	1	99.6	Nitzschia palea	Species	Nitzschia palea
+COI_ASV0123	45	32	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Keratella		1	1	1	1	1	1	1	1	96.8	Keratella tropica	Genus	Keratella
+COI_ASV0124	36	41	313	Eukaryota		Oomycota						1	1	1	1	0.56	0.56	0.43	0.08	93	Globisporangium spinosum	Phylum	Oomycota
+COI_ASV0125	65	11	313	Eukaryota								1	0.68	0.47	0.43	0.18	0.04	0.04	0.03	80.8	Pythium insidiosum	Domain	Eukaryota
+COI_ASV0126	42	31	313	Eukaryota								1	0.53	0.25	0.25	0.15	0.15	0.15	0.04	78.5	Sellaphora pupula	Domain	Eukaryota
+COI_ASV0127	61	10	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	1	1	1	98.2	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0128	56	14	316	Eukaryota	Metazoa							1	0.97	0.71	0.71	0.71	0.38	0.23	0.07	83.5	Trichocerca dixon-nuttalli	Kingdom	Metazoa
+COI_ASV0129	40	30	313	Eukaryota								1	0.56	0.34	0.17	0.04	0.02	0.01	0.01	72.3	Phytophthora cinnamomi	Domain	Eukaryota
+COI_ASV0130	14	55	310	Eukaryota	Metazoa							1	0.81	0.58	0.35	0.1	0.03	0.02	0.02	70.9	Cloeon fluviatile	Kingdom	Metazoa
+COI_ASV0131	57	11	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_calyciflorus	1	1	1	1	1	1	1	1	99.7	Brachionus calyciflorus	Species	Brachionus calyciflorus
+COI_ASV0132	42	26	313	Eukaryota								1	0.74	0.47	0.39	0.18	0.05	0.05	0.04	73.8	Scorpio fuscus	Domain	Eukaryota
+COI_ASV0133	26	42	313	Eukaryota								1	0.71	0.62	0.34	0.3	0.19	0.04	0.03	86.6	Nannochloropsis oculata	Domain	Eukaryota
+COI_ASV0134	57	10	313	Eukaryota	Metazoa	Arthropoda						1	0.83	0.8	0.67	0.21	0.09	0.02	0.01	74.4	Xeromelissa brevimalaris	Phylum	Arthropoda
+COI_ASV0135	50	17	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Asplanchnidae	Asplanchna		1	1	0.99	0.99	0.99	0.97	0.97	0.97	95.1	Asplanchna brightwellii	Genus	Asplanchna
+COI_ASV0136	61	5	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae			1	1	0.99	0.99	0.99	0.99	0.99	0.99	93.3	Nitzschia palea	Family	Bacillariaceae
+COI_ASV0137	59	5	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	0.99	0.99	0.99	97.9	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0138	30	34	310	Eukaryota								1	0.7	0.52	0.29	0.21	0.06	0.03	0.03	72.3	Longileptoneta byeonsanbando	Domain	Eukaryota
+COI_ASV0139	42	18	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	0.99	0.93	0.93	0.93	0.76	0.7	0.21	89.6	Brachionus urceolaris	Order	Ploima
+COI_ASV0140	38	20	313	Eukaryota	Fungi	Ascomycota	Sordariomycetes	Hypocreales				1	0.96	0.96	0.9	0.81	0.66	0.36	0.36	91.1	Colletotrichum incanum	Order	Hypocreales
+COI_ASV0141	42	13	313	Eukaryota								1	0.57	0.19	0.18	0.06	0.05	0.05	0.05	78	Nemacystus decipiens	Domain	Eukaryota
+COI_ASV0143	26	27	313	Eukaryota								1	0.65	0.53	0.4	0.34	0.3	0.1	0.1	85.6	Nannochloropsis oculata	Domain	Eukaryota
+COI_ASV0144	38	14	313	Eukaryota								1	0.62	0.39	0.34	0.12	0.05	0.02	0.02	78.4	Petalonia tenella	Domain	Eukaryota
+COI_ASV0145	46	5	316	Eukaryota	Metazoa							1	0.98	0.64	0.64	0.64	0.57	0.42	0.26	82.6	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0146	42	9	313									1	0.97	0.45	0.33	0.06	0.03	0.01	0.01			Unassigned	Unassigned
+COI_ASV0147	28	23	313	Eukaryota								1	0.78	0.48	0.44	0.17	0.05	0.02	0.01	77.7	Ganoderma resinaceum	Domain	Eukaryota
+COI_ASV0148	14	35	307									1	0.78	0.36	0.24	0.07	0.01	0.01	0.01			Unassigned	Unassigned
+COI_ASV0149	40	8	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_quadridentatus	1	1	1	1	1	1	1	1	98.6	Brachionus quadridentatus	Species	Brachionus quadridentatus
+COI_ASV0150	41	6	313	Eukaryota								1	1	0.74	0.74	0.74	0.74	0.74	0.74	95.6	Nitzschia palea	Domain	Eukaryota
+COI_ASV0151	39	7	313	Eukaryota								1	1	0.72	0.72	0.72	0.72	0.72	0.72	94.5	Nitzschia palea	Domain	Eukaryota
+COI_ASV0152	31	14	316	Eukaryota	Metazoa							1	0.97	0.69	0.58	0.22	0.03	0.01	0.01	78.8	Plationus patulus	Kingdom	Metazoa
+COI_ASV0154	35	7	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.99	0.99	0.99	0.88	0.7	0.18	85.1	Brachionus forficula	Order	Ploima
+COI_ASV0155	24	18	313	Eukaryota			Phaeophyceae					1	0.88	0.83	0.81	0.58	0.48	0.15	0.15	84.2	Dactylosiphon bullosus	Class	Phaeophyceae
+COI_ASV0156	28	13	313	Eukaryota								1	0.56	0.26	0.2	0.12	0.02	0.01	0.01	85	Cladosiphon zosterae	Domain	Eukaryota
+COI_ASV0157	26	15	313	Eukaryota								1	0.69	0.53	0.51	0.34	0.23	0.09	0.04	83.9	Hapterophycus canaliculatus	Domain	Eukaryota
+COI_ASV0158	17	24	316	Eukaryota	Metazoa							1	0.95	0.52	0.52	0.52	0.25	0.25	0.21	80.7	Lecane cornuta	Kingdom	Metazoa
+COI_ASV0161	25	12	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia_diatoms	Nitzschia_palea	1	1	1	1	1	1	1	1	98.4	Nitzschia palea	Species	Nitzschia palea
+COI_ASV0162	35	1	313	Eukaryota								1	0.74	0.43	0.41	0.3	0.27	0.07	0.07	86.3	Nemacystus decipiens	Domain	Eukaryota
+COI_ASV0163	35	1	313	Eukaryota		Oomycota						1	1	1	1	0.69	0.69	0.62	0.09	92.7	Phytophthora polonica	Phylum	Oomycota
+COI_ASV0164	34	2	313	Eukaryota								1	0.7	0.59	0.57	0.21	0.05	0.04	0.01	82.1	Phytophthora tropicalis	Domain	Eukaryota
+COI_ASV0165	26	10	313	Eukaryota								1	0.61	0.49	0.39	0.19	0.04	0.01	0.01	74.4	Laminarionema elsbetiae	Domain	Eukaryota
+COI_ASV0166	17	19	313	Eukaryota								1	0.59	0.33	0.33	0.23	0.14	0.05	0.04	84.8	Petalonia tenella	Domain	Eukaryota
+COI_ASV0167	15	21	313	Eukaryota	Metazoa							1	0.8	0.45	0.35	0.13	0.05	0.02	0.01	79.2	Hyperaspis proba	Kingdom	Metazoa
+COI_ASV0168	23	12	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	1	1	1	99.3	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0169	8	27	313	Eukaryota								1	0.75	0.56	0.5	0.14	0.05	0.01	0.01	73.2	Cladosiphon zosterae	Domain	Eukaryota
+COI_ASV0170	34	0	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia_diatoms	Nitzschia_palea	1	1	1	1	1	1	1	1	100	Nitzschia palea	Species	Nitzschia palea
+COI_ASV0171	26	8	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia_diatoms	Nitzschia_palea	1	1	1	1	1	1	1	1	100	Nitzschia palea	Species	Nitzschia palea
+COI_ASV0172	14	20	313	Eukaryota								1	0.71	0.55	0.51	0.29	0.07	0.02	0.02	79.6	Parvamoeba rugata	Domain	Eukaryota
+COI_ASV0173	28	5	313	Eukaryota								1	0.53	0.36	0.33	0.18	0.16	0.05	0.04	82.7	Cladosiphon zosterae	Domain	Eukaryota
+COI_ASV0174	31	1	313	Eukaryota								1	0.6	0.49	0.47	0.16	0.06	0.06	0.01	77.6	Phytophthora niederhauseri	Domain	Eukaryota
+COI_ASV0175	29	3	316	Eukaryota	Metazoa							1	0.94	0.35	0.14	0.05	0.02	0.01	0.01	80.1	Filinia hofmanni	Kingdom	Metazoa
+COI_ASV0177	26	6	313	Eukaryota	Metazoa							1	1	0.74	0.47	0.13	0.03	0.03	0.03	81.2	Eucypris virens	Kingdom	Metazoa
+COI_ASV0179	23	9	313	Eukaryota	Metazoa							1	0.81	0.71	0.67	0.2	0.07	0.02	0.01	70.6	Agrius convolvuli	Kingdom	Metazoa
+COI_ASV0180	23	9	313	Eukaryota								1	0.51	0.32	0.28	0.17	0.05	0.04	0.04	79	Scytosiphon shibazakiorum	Domain	Eukaryota
+COI_ASV0181	29	2	313	Eukaryota								1	0.7	0.45	0.31	0.12	0.04	0.04	0.02	72.2	Geodia gibberosa	Domain	Eukaryota
+COI_ASV0182	2	29	316	Eukaryota	Metazoa							1	0.91	0.51	0.51	0.5	0.24	0.17	0.12	82	Polyarthra vulgaris	Kingdom	Metazoa
+COI_ASV0183	29	1	313	Eukaryota								1	0.56	0.32	0.28	0.11	0.05	0.01	0.01	78.6	Dactylosiphon bullosus	Domain	Eukaryota
+COI_ASV0184	24	6	313	Eukaryota								1	0.51	0.39	0.28	0.17	0.12	0.03	0.02	80.5	Vischeria magna	Domain	Eukaryota
+COI_ASV0185	23	6	313	Eukaryota								1	0.8	0.63	0.31	0.31	0.3	0.3	0.3	86.9	Nannochloropsis oculata	Domain	Eukaryota
+COI_ASV0186	17	10	316	Eukaryota	Metazoa							1	0.81	0.43	0.37	0.12	0.02	0.01	0.01	81.6	Euchlanis dilatata	Kingdom	Metazoa
+COI_ASV0187	14	13	313	Eukaryota	Metazoa	Arthropoda	Insecta	Ephemeroptera	Baetidae	Cloeon	Cloeon_navasi	1	1	1	1	1	1	1	1	99	Cloeon navasi	Species	Cloeon navasi
+COI_ASV0188	26	0	313	Eukaryota	Metazoa							1	0.89	0.71	0.53	0.21	0.03	0.02	0.01	72.2	Callophyllis schneideri	Kingdom	Metazoa
+COI_ASV0191	22	4	316	Eukaryota	Metazoa							1	0.88	0.59	0.59	0.59	0.35	0.24	0.13	76.6	Brachionus calyciflorus	Kingdom	Metazoa
+COI_ASV0192	12	14	313	Eukaryota	Fungi	Ascomycota	Sordariomycetes	Hypocreales				1	0.95	0.95	0.89	0.84	0.72	0.47	0.47	87.9	Clonostachys compactiuscula	Order	Hypocreales
+COI_ASV0193	11	15	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	1	1	1	99.3	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0194	20	5	313	Eukaryota								1	0.67	0.36	0.32	0.22	0.15	0.05	0.05	84.8	Petalonia fascia	Domain	Eukaryota
+COI_ASV0195	19	6	313	Eukaryota								1	0.57	0.44	0.4	0.15	0.04	0.01	0.01	76.7	Thalassionema nitzschioides	Domain	Eukaryota
+COI_ASV0196	18	7	295									1	0.51	0.44	0.41	0.19	0.06	0.04	0.04			Unassigned	Unassigned
+COI_ASV0197	14	11	313	Eukaryota	Metazoa	Arthropoda	Insecta	Ephemeroptera	Baetidae	Cloeon	Cloeon_navasi	1	1	1	1	1	1	1	1	99	Cloeon navasi	Species	Cloeon navasi
+COI_ASV0198	13	12	313	Eukaryota								1	0.77	0.47	0.38	0.26	0.06	0.03	0.02	76.7	Poterioochromonas malhamensis	Domain	Eukaryota
+COI_ASV0199	10	15	313	Eukaryota	Metazoa							1	1	0.74	0.74	0.74	0.74	0.56	0.31	87.9	Chaetonotus gelidus	Kingdom	Metazoa
+COI_ASV0200	18	6	313	Eukaryota								1	0.58	0.47	0.34	0.08	0.02	0.01	0.01	83.4	Phytophthora tropicalis	Domain	Eukaryota
+COI_ASV0201	16	8	313	Eukaryota	Metazoa							1	0.99	0.54	0.54	0.54	0.54	0.3	0.13	86.4	Lepidodermella polaris	Kingdom	Metazoa
+COI_ASV0202	21	2	301	Eukaryota								0.96	0.77	0.3	0.2	0.03	0.02	0.01	0.01	75.1	Lobochlamys segnis	Domain	Eukaryota
+COI_ASV0203	19	4	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	1	0.86	0.86	0.86	0.42	0.39	0.24	88.9	Polyarthra vulgaris	Order	Ploima
+COI_ASV0204	7	16	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae			1	1	0.88	0.88	0.88	0.83	0.81	0.32	90.7	Brachionus angularis	Family	Brachionidae
+COI_ASV0205	22	0	313	Eukaryota		Oomycota						1	1	1	1	0.55	0.55	0.48	0.04	92.7	Globisporangium mamillatum	Phylum	Oomycota
+COI_ASV0206	19	3	313	Eukaryota	Metazoa							1	0.99	0.69	0.69	0.69	0.68	0.67	0.2	83.6	Chaetonotus antrumus	Kingdom	Metazoa
+COI_ASV0207	13	9	313	Eukaryota								1	0.64	0.52	0.4	0.1	0.04	0.03	0.03	74.1	Phytophthora parsiana	Domain	Eukaryota
+COI_ASV0208	12	10	301	Eukaryota	Metazoa							1	0.85	0.51	0.31	0.14	0.04	0.04	0.04	78.4	Volvox carteri	Kingdom	Metazoa
+COI_ASV0211	20	0	313	Eukaryota								1	0.63	0.45	0.36	0.14	0.04	0.02	0.02	73.5	Phytophthora macilentosa	Domain	Eukaryota
+COI_ASV0213	13	7	313	Eukaryota								1	0.63	0.41	0.39	0.29	0.21	0.08	0.08	82.7	Nemacystus decipiens	Domain	Eukaryota
+COI_ASV0214	11	9	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	1	1	1	99.3	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0215	4	16	313	Eukaryota								1	0.58	0.26	0.26	0.23	0.22	0.21	0.04	78	Phytophthora personensis	Domain	Eukaryota
+COI_ASV0216	19	0	313	Eukaryota								1	0.6	0.42	0.4	0.13	0.03	0.01	0.01	78.6	Sinularia loyai	Domain	Eukaryota
+COI_ASV0217	18	1	313	Eukaryota	Metazoa							1	0.83	0.65	0.47	0.18	0.05	0.02	0.02	73.2	Rhamphomyia erythrophthalma	Kingdom	Metazoa
+COI_ASV0218	15	4	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Synchaetidae	Polyarthra	Polyarthra_dolichoptera	1	1	1	1	1	1	1	1	100	Polyarthra dolichoptera	Species	Polyarthra dolichoptera
+COI_ASV0219	15	4	313	Eukaryota								1	0.66	0.55	0.54	0.27	0.09	0.01	0.01	74.8	Acrosemia vulpecularia	Domain	Eukaryota
+COI_ASV0220	7	12	313	Eukaryota								1	0.98	0.73	0.73	0.73	0.73	0.72	0.72	92.2	Nitzschia palea	Domain	Eukaryota
+COI_ASV0221	7	12	313	Eukaryota	Metazoa							1	0.82	0.68	0.53	0.25	0.05	0.03	0.03	76.4	Cochliomyia minima	Kingdom	Metazoa
+COI_ASV0222	14	4	313	Eukaryota								1	0.53	0.28	0.18	0.14	0.04	0.03	0.01	80.8	Phytophthora captiosa	Domain	Eukaryota
+COI_ASV0223	17	0	313	Eukaryota								1	0.59	0.48	0.3	0.14	0.06	0.03	0.03	80.5	Acanthamoeba comandoni	Domain	Eukaryota
+COI_ASV0224	16	1	313	Eukaryota								1	0.61	0.28	0.24	0.13	0.13	0.11	0.09	88.8	Stephanocyclus meneghinianus	Domain	Eukaryota
+COI_ASV0225	15	2	313	Eukaryota	Metazoa	Arthropoda	Hexanauplia	Cyclopoida	Cyclopidae	Mesocyclops	Mesocyclops_pehpeiensis	1	1	1	1	1	1	1	0.98	98.4	Mesocyclops pehpeiensis	Species	Mesocyclops pehpeiensis
+COI_ASV0226	9	8	316	Eukaryota	Metazoa							1	1	0.72	0.72	0.71	0.48	0.24	0.09	81.6	Plationus patulus	Kingdom	Metazoa
+COI_ASV0227	5	12	313	Eukaryota								1	0.69	0.51	0.46	0.33	0.19	0.02	0.02	82.4	Cladosiphon zosterae	Domain	Eukaryota
+COI_ASV0228	4	13	313	Eukaryota								1	0.68	0.24	0.24	0.18	0.18	0.17	0.04	83.1	Korotnevella fousta	Domain	Eukaryota
+COI_ASV0229	14	2	313	Eukaryota								1	0.6	0.41	0.38	0.15	0.04	0.01	0.01	76.7	Orthopyxis crenata	Domain	Eukaryota
+COI_ASV0230	10	6	313	Eukaryota								1	0.78	0.64	0.53	0.2	0.1	0.02	0.02	74.8	Phytophthora variabilis	Domain	Eukaryota
+COI_ASV0231	8	8	313	Eukaryota								1	0.57	0.5	0.46	0.18	0.06	0.02	0.01	77	Sonderopelta coriacea	Domain	Eukaryota
+COI_ASV0232	14	1	313	Eukaryota	Metazoa							1	0.87	0.4	0.27	0.11	0.03	0.03	0.03	74.1	Geonemertes pelaensis	Kingdom	Metazoa
+COI_ASV0233	12	3	313	Eukaryota								1	0.51	0.32	0.29	0.25	0.21	0.18	0.18	85.5	Petalonia fascia	Domain	Eukaryota
+COI_ASV0235	9	6	313	Eukaryota								1	0.68	0.46	0.37	0.22	0.07	0.02	0.01	75.1	Plocamium fimbriatum	Domain	Eukaryota
+COI_ASV0236	8	7	313	Eukaryota								1	0.58	0.33	0.33	0.17	0.17	0.14	0.05	76.6	Pythium tracheiphilum	Domain	Eukaryota
+COI_ASV0237	14	0	313	Eukaryota								1	0.56	0.3	0.2	0.08	0.03	0.02	0.02	73.2	Myriogloea simplex	Domain	Eukaryota
+COI_ASV0238	12	2	313	Eukaryota								1	0.78	0.5	0.45	0.24	0.05	0.01	0.01	77.7	Dactylosiphon bullosus	Domain	Eukaryota
+COI_ASV0242	11	2	313	Eukaryota								1	0.8	0.43	0.43	0.2	0.2	0.16	0.03	85.5	Petalonia fascia	Domain	Eukaryota
+COI_ASV0243	10	3	313	Eukaryota	Fungi	Ascomycota	Sordariomycetes	Hypocreales				1	0.95	0.95	0.94	0.88	0.55	0.48	0.42	88.8	Clonostachys compactiuscula	Order	Hypocreales
+COI_ASV0244	0	13	313	Eukaryota								1	0.78	0.41	0.26	0.12	0.01	0.01	0.01	71.2	Parietichytrium sarkarianum	Domain	Eukaryota
+COI_ASV0245	12	0	313	Eukaryota	Fungi	Ascomycota	Dothideomycetes	Cladosporiales	Cladosporiaceae			1	0.93	0.93	0.91	0.91	0.91	0.91	0.91	94.7	Cladosporium tenuissimum	Family	Cladosporiaceae
+COI_ASV0246	11	1	313	Eukaryota	Metazoa							1	0.89	0.74	0.65	0.26	0.07	0.02	0.01	74.1	Niphargus fontanus	Kingdom	Metazoa
+COI_ASV0247	11	1	316	Eukaryota	Metazoa							1	0.87	0.47	0.27	0.11	0.02	0.01	0.01	74.4	Testudinella patina	Kingdom	Metazoa
+COI_ASV0248	7	5	310	Eukaryota								1	0.66	0.47	0.23	0.11	0.02	0.01	0.01	72.3	Athyma selenophora	Domain	Eukaryota
+COI_ASV0249	4	8	313	Eukaryota								1	0.76	0.57	0.39	0.22	0.03	0.02	0.02	75.2	Cladosiphon zosterae	Domain	Eukaryota
+COI_ASV0250	3	9	313	Eukaryota								1	0.62	0.37	0.34	0.12	0.04	0.01	0.01	78	Clytia hemisphaerica	Domain	Eukaryota
+COI_ASV0251	11	0	313	Eukaryota								1	0.66	0.32	0.17	0.16	0.07	0.07	0.07	77.3	Erythropodium caribaeorum	Domain	Eukaryota
+COI_ASV0252	11	0	313	Eukaryota								1	0.72	0.61	0.57	0.42	0.3	0.1	0.06	83.7	Chordaria flagelliformis	Domain	Eukaryota
+COI_ASV0253	10	1	313	Eukaryota								1	0.59	0.37	0.26	0.1	0.02	0.01	0.01	79.8	Phytophthora arecae	Domain	Eukaryota
+COI_ASV0254	7	4	313	Eukaryota								1	0.73	0.62	0.42	0.3	0.26	0.06	0.04	84.3	Nannochloropsis oculata	Domain	Eukaryota
+COI_ASV0255	6	5	313	Eukaryota	Metazoa	Arthropoda						1	1	0.84	0.54	0.18	0.08	0.04	0.02	74.4	Ochlerotatus excrucians	Phylum	Arthropoda
+COI_ASV0256	4	7	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae			1	1	0.99	0.99	0.99	0.99	0.99	0.99	92.7	Nitzschia palea	Family	Bacillariaceae
+COI_ASV0257	3	8	313	Eukaryota								1	0.79	0.73	0.72	0.58	0.36	0.16	0.16	85	Colpomenia claytoniae	Domain	Eukaryota
+COI_ASV0258	2	9	313	Eukaryota								1	0.57	0.36	0.33	0.22	0.14	0.04	0.02	83.7	Sauvageaugloia divaricata	Domain	Eukaryota
+COI_ASV0259	2	9	313	Eukaryota								1	0.68	0.51	0.4	0.14	0.04	0.03	0.03	75.2	Acinetospora asiatica	Domain	Eukaryota
+COI_ASV0260	10	0	313	Eukaryota								1	0.5	0.23	0.19	0.1	0.07	0.04	0.04	77.6	Lobophora challengeriae	Domain	Eukaryota
+COI_ASV0262	9	1	313	Eukaryota								1	0.6	0.38	0.27	0.13	0.03	0.01	0.01	85.3	Cladosiphon zosterae	Domain	Eukaryota
+COI_ASV0263	7	3	313	Eukaryota								1	0.69	0.45	0.45	0.36	0.27	0.08	0.05	83.7	Nemacystus decipiens	Domain	Eukaryota
+COI_ASV0264	7	3	316	Eukaryota	Metazoa							1	0.97	0.68	0.68	0.68	0.25	0.15	0.06	83.5	Brachionus quadridentatus	Kingdom	Metazoa
+COI_ASV0265	7	3	316	Eukaryota	Metazoa							1	0.96	0.52	0.35	0.15	0.07	0.01	0.01	78.8	Lecane hastata AEG1	Kingdom	Metazoa
+COI_ASV0267	4	6	313	Eukaryota		Oomycota						1	1	1	1	0.67	0.67	0.43	0.11	95.2	Pythium aphanidermatum	Phylum	Oomycota
+COI_ASV0268	3	7	313	Eukaryota	Metazoa	Arthropoda						1	1	0.9	0.4	0.31	0.09	0.02	0.01	85.9	Camptocercus dadayi	Phylum	Arthropoda
+COI_ASV0269	0	10	313	Eukaryota								1	0.76	0.32	0.18	0.06	0.02	0.01	0.01	74.8	Platysiphon glacialis	Domain	Eukaryota
+COI_ASV0270	9	0	316	Eukaryota	Metazoa	Rotifera	Eurotatoria					1	1	0.83	0.83	0.83	0.39	0.29	0.09	83.6	Polyarthra dolichoptera	Class	Eurotatoria
+COI_ASV0272	7	2	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Naviculales	Sellaphoraceae	Sellaphora	Sellaphora_pupula	1	1	1	1	1	1	1	0.99	97.8	Sellaphora pupula	Species	Sellaphora pupula
+COI_ASV0273	6	3	313	Eukaryota								1	0.58	0.46	0.45	0.15	0.06	0.01	0.01	79.9	Xiphosiphonia pennata	Domain	Eukaryota
+COI_ASV0274	5	4	313	Eukaryota								1	0.54	0.38	0.33	0.1	0.05	0.04	0.04	82.7	Achlya catenulata	Domain	Eukaryota
+COI_ASV0275	8	0	313	Eukaryota								1	0.5	0.29	0.28	0.11	0.04	0.01	0.01	75.7	Nemopsis bachei	Domain	Eukaryota
+COI_ASV0276	8	0	313	Eukaryota								1	0.84	0.4	0.24	0.19	0.19	0.19	0.19	86.6	Melosira ambiqua	Domain	Eukaryota
+COI_ASV0277	7	1	313	Eukaryota								1	0.69	0.4	0.24	0.1	0.04	0.04	0.02	72.6	Phytophthora phaseoli	Domain	Eukaryota
+COI_ASV0279	5	3	313	Eukaryota								1	0.68	0.42	0.42	0.21	0.11	0.05	0.04	84.3	Nemacystus decipiens	Domain	Eukaryota
+COI_ASV0280	5	3	313	Eukaryota								1	0.71	0.71	0.46	0.45	0.35	0.16	0.16	85.6	Tetracladium breve	Domain	Eukaryota
+COI_ASV0281	4	4	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae			1	1	1	1	1	1	1	1	92.9	Nitzschia palea	Family	Bacillariaceae
+COI_ASV0282	2	6	316	Eukaryota								1	0.61	0.2	0.16	0.05	0.03	0.02	0.02	74.1	Vansoestia caribensis	Domain	Eukaryota
+COI_ASV0283	2	6	313	Eukaryota								1	0.77	0.69	0.58	0.21	0.03	0.02	0.02	81.9	Cosmopsaltria capitata	Domain	Eukaryota
+COI_ASV0284	0	8	313									1	0.62	0.39	0.27	0.08	0.05	0.04	0.03			Unassigned	Unassigned
+COI_ASV0285	7	0	313	Eukaryota								1	0.59	0.56	0.53	0.3	0.24	0.08	0.05	81.8	Myriogloea simplex	Domain	Eukaryota
+COI_ASV0286	7	0	313	Eukaryota								1	0.5	0.34	0.32	0.15	0.04	0.01	0.01	77.2	Sellaphora pupula	Domain	Eukaryota
+COI_ASV0287	7	0	313	Eukaryota	Metazoa							1	0.87	0.77	0.65	0.28	0.1	0.02	0.02	74.1	Colletes sanctus	Kingdom	Metazoa
+COI_ASV0288	7	0	313	Eukaryota								1	0.72	0.37	0.31	0.11	0.03	0.01	0.01	76.4	Cladiella australis	Domain	Eukaryota
+COI_ASV0289	7	0	313	Eukaryota								1	0.74	0.39	0.38	0.22	0.12	0.06	0.06	85.1	Petalonia fascia	Domain	Eukaryota
+COI_ASV0290	7	0	313	Eukaryota		Oomycota						1	1	1	1	0.76	0.76	0.45	0.16	92.6	Globisporangium ultimum	Phylum	Oomycota
+COI_ASV0291	7	0	313	Eukaryota	Metazoa							1	0.9	0.49	0.45	0.24	0.16	0.1	0.05	77.3	Centruroides granosus	Kingdom	Metazoa
+COI_ASV0292	6	1	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima				1	0.99	0.95	0.95	0.95	0.91	0.87	0.18	88.2	Brachionus caudatus	Order	Ploima
+COI_ASV0294	4	3	313	Eukaryota								1	0.76	0.65	0.48	0.43	0.35	0.08	0.08	86.9	Nannochloropsis oculata	Domain	Eukaryota
+COI_ASV0295	6	0	313	Eukaryota	Metazoa							1	0.96	0.78	0.65	0.19	0.08	0.06	0.06	71.9	Liriomyza chinensis	Kingdom	Metazoa
+COI_ASV0296	6	0	313	Eukaryota	Fungi	Ascomycota						1	0.87	0.87	0.4	0.38	0.14	0.12	0.12	85	Calonectria colhounii	Phylum	Ascomycota
+COI_ASV0297	6	0	313	Eukaryota								1	0.68	0.4	0.22	0.09	0.05	0.01	0.01	82.1	Laminarionema elsbetiae	Domain	Eukaryota
+COI_ASV0298	5	1	313	Eukaryota								1	0.53	0.23	0.16	0.04	0.04	0.01	0.01	79.4	Albugo candida	Domain	Eukaryota
+COI_ASV0299	5	1	313	Eukaryota	Metazoa							1	0.87	0.59	0.3	0.09	0.02	0.01	0.01	70.9	Pleioplectron caudatum	Kingdom	Metazoa
+COI_ASV0300	5	1	316	Eukaryota	Metazoa							1	0.9	0.5	0.4	0.15	0.06	0.01	0.01	72.5	Lecane leontina	Kingdom	Metazoa
+COI_ASV0301	5	1	313	Eukaryota								1	0.54	0.32	0.31	0.18	0.13	0.13	0.11	75.8	Hydroclathrus stephanosorus	Domain	Eukaryota
+COI_ASV0302	4	2	313	Eukaryota	Metazoa	Arthropoda						1	0.91	0.83	0.77	0.28	0.1	0.04	0.03	72.5	Phytomyza thalictrella	Phylum	Arthropoda
+COI_ASV0303	4	2	313	Eukaryota								1	0.63	0.41	0.32	0.1	0.05	0.01	0.01	76.4	Acrothrix gracilis	Domain	Eukaryota
+COI_ASV0304	0	6	313	Eukaryota	Metazoa							1	0.87	0.5	0.31	0.11	0.02	0.01	0.01	73.5	Acinetospora asiatica	Kingdom	Metazoa
+COI_ASV0305	0	6	313	Eukaryota								1	0.58	0.41	0.4	0.3	0.15	0.03	0.02	79	Hecatonema maculans	Domain	Eukaryota
+COI_ASV0306	5	0	313	Eukaryota								1	0.55	0.39	0.39	0.26	0.26	0.13	0.06	81.8	Phytophthora ramorum	Domain	Eukaryota
+COI_ASV0307	5	0	313	Eukaryota								1	0.67	0.3	0.3	0.28	0.24	0.12	0.09	84.2	Halothrix lumbricalis	Domain	Eukaryota
+COI_ASV0308	5	0	313	Eukaryota								1	0.66	0.36	0.36	0.28	0.27	0.18	0.03	76.4	Phytophthora personensis	Domain	Eukaryota
+COI_ASV0309	5	0	313	Eukaryota								1	0.5	0.37	0.34	0.14	0.04	0.03	0.01	75.6	Neoporphyra meridionalis	Domain	Eukaryota
+COI_ASV0310	5	0	313	Eukaryota								1	0.61	0.45	0.4	0.17	0.1	0.02	0.01	76.7	Pythium myriotylum	Domain	Eukaryota
+COI_ASV0311	5	0	313	Eukaryota	Metazoa							1	0.84	0.42	0.29	0.25	0.1	0.05	0.04	75.7	Sarcophyton tumulosum	Kingdom	Metazoa
+COI_ASV0312	4	1	313	Eukaryota								1	0.5	0.33	0.26	0.08	0.02	0.01	0.01	77.6	Clytia hemisphaerica	Domain	Eukaryota
+COI_ASV0313	4	1	313	Eukaryota								1	0.55	0.35	0.29	0.11	0.02	0.02	0.01	78.4	Pluteus cervinus	Domain	Eukaryota
+COI_ASV0314	2	3	313	Eukaryota								1	0.81	0.73	0.54	0.42	0.33	0.06	0.06	86.9	Nemacystus decipiens	Domain	Eukaryota
+COI_ASV0315	0	5	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia_diatoms	Nitzschia_palea	1	1	1	1	1	1	1	1	99.6	Nitzschia palea	Species	Nitzschia palea
+COI_ASV0316	4	0	313	Eukaryota	Metazoa							1	0.88	0.26	0.21	0.11	0.04	0.02	0.02	73.8	Malacobdella siliquae	Kingdom	Metazoa
+COI_ASV0317	4	0	313	Eukaryota	Metazoa							1	0.84	0.73	0.59	0.27	0.13	0.05	0.05	75.3	Phytophthora formosa	Kingdom	Metazoa
+COI_ASV0319	4	0	313	Eukaryota								1	0.69	0.46	0.34	0.15	0.06	0.03	0.02	76.4	Cladosiphon takenoensis	Domain	Eukaryota
+COI_ASV0321	4	0	313	Eukaryota		Bacillariophyta	Bacillariophyceae	Bacillariales	Bacillariaceae			1	1	0.99	0.99	0.99	0.99	0.99	0.99	92.6	Nitzschia palea	Family	Bacillariaceae
+COI_ASV0322	3	1	313	Eukaryota								1	0.74	0.36	0.19	0.08	0.02	0.01	0.01	70.1	Durvillaea antarctica	Domain	Eukaryota
+COI_ASV0323	3	1	313	Eukaryota	Metazoa	Arthropoda						1	1	0.88	0.79	0.42	0.09	0.03	0.01	75.1	Elachista flavicilia	Phylum	Arthropoda
+COI_ASV0324	3	1	313	Eukaryota	Fungi	Ascomycota						1	0.83	0.83	0.65	0.65	0.65	0.65	0.64	93.2	Cladosporium tenuissimum	Phylum	Ascomycota
+COI_ASV0325	3	1	313	Eukaryota								1	0.66	0.6	0.56	0.54	0.53	0.15	0.12	85	Cladosiphon zosterae	Domain	Eukaryota
+COI_ASV0326	2	2	313	Eukaryota								1	0.75	0.31	0.29	0.14	0.07	0.03	0.03	83.9	Macrocystis pyrifera	Domain	Eukaryota
+COI_ASV0327	1	3	313	Eukaryota								1	0.52	0.35	0.35	0.19	0.19	0.17	0.04	79.6	Phytophthora javanensis	Domain	Eukaryota
+COI_ASV0328	1	3	313	Eukaryota								1	0.67	0.55	0.52	0.23	0.08	0.03	0.02	76	Pterostichus ganesh	Domain	Eukaryota
+COI_ASV0329	1	3	313	Eukaryota								1	0.6	0.43	0.3	0.14	0.03	0.01	0.01	80.1	Globisporangium ultimum	Domain	Eukaryota
+COI_ASV0330	0	4	313	Eukaryota								1	0.76	0.6	0.56	0.49	0.47	0.16	0.16	86.3	Cladosiphon zosterae	Domain	Eukaryota
+COI_ASV0331	0	4	313	Eukaryota								1	0.55	0.43	0.4	0.22	0.06	0.03	0.01	78.2	Saprolegnia turfosa	Domain	Eukaryota
+COI_ASV0332	0	4	313	Eukaryota	Metazoa							1	0.87	0.77	0.69	0.42	0.15	0.02	0.01	74.8	Aedes ochraceus	Kingdom	Metazoa
+COI_ASV0333	3	0	313	Eukaryota	Metazoa							1	0.9	0.78	0.74	0.32	0.06	0.05	0.02	77.3	Parastegana punctalata	Kingdom	Metazoa
+COI_ASV0334	3	0	313	Eukaryota								1	0.72	0.46	0.33	0.09	0.02	0.01	0.01	71.9	Lobophora declerckii	Domain	Eukaryota
+COI_ASV0335	3	0	313	Eukaryota								1	0.76	0.55	0.44	0.09	0.04	0.01	0.01	73.5	Selenophorus pedicularius	Domain	Eukaryota
+COI_ASV0336	3	0	313	Eukaryota		Oomycota		Peronosporales	Peronosporaceae			1	1	1	1	0.91	0.91	0.9	0.11	93	Phytophthora parsiana	Family	Peronosporaceae
+COI_ASV0338	3	0	313	Eukaryota		Discosea	Flabellinia	Dactylopodida	Paramoebidae			1	0.93	0.88	0.88	0.88	0.88	0.86	0.85	90.4	Korotnevella limbata	Family	Paramoebidae
+COI_ASV0339	3	0	313	Eukaryota								1	0.59	0.24	0.24	0.08	0.08	0.05	0.03	82.4	Achlya radiosa	Domain	Eukaryota
+COI_ASV0340	3	0	313	Eukaryota								1	0.73	0.6	0.46	0.13	0.05	0.03	0.02	78	Phytophthora tentaculata	Domain	Eukaryota
+COI_ASV0341	3	0	313	Eukaryota								1	0.84	0.69	0.67	0.54	0.38	0.13	0.09	84.2	Ectocarpus fasciculatus	Domain	Eukaryota
+COI_ASV0342	3	0	313	Eukaryota		Oomycota						1	1	1	1	0.54	0.54	0.53	0.12	91.4	Pythium plurisporium	Phylum	Oomycota
+COI_ASV0343	3	0	313	Eukaryota								1	0.6	0.24	0.24	0.12	0.12	0.11	0.04	81.5	Phytopythium helicoides	Domain	Eukaryota
+COI_ASV0344	3	0	313	Eukaryota	Metazoa							1	0.81	0.73	0.58	0.26	0.08	0.01	0.01	78.5	Globisporangium ultimum	Kingdom	Metazoa
+COI_ASV0347	3	0	313	Eukaryota	Metazoa							1	0.85	0.71	0.54	0.24	0.07	0.03	0.01	77	Globisporangium irregulare	Kingdom	Metazoa
+COI_ASV0348	3	0	313	Eukaryota								1	0.67	0.52	0.42	0.1	0.03	0.01	0.01	76.7	Cyclocanna producta	Domain	Eukaryota
+COI_ASV0349	3	0	313	Eukaryota	Metazoa							1	1	0.73	0.73	0.73	0.73	0.69	0.4	78.6	Chaetonotus gelidus	Kingdom	Metazoa
+COI_ASV0350	3	0	313	Eukaryota								1	0.58	0.51	0.43	0.23	0.06	0.02	0.02	82.4	Pseudoperonospora cubensis	Domain	Eukaryota
+COI_ASV0351	3	0	313	Eukaryota	Metazoa							1	0.84	0.58	0.55	0.25	0.07	0.02	0.01	79.6	Paralemnalia digitiformis	Kingdom	Metazoa
+COI_ASV0352	2	1	313	Eukaryota								1	0.58	0.39	0.36	0.12	0.03	0.02	0.01	80.1	Peronospora trifolii-minoris	Domain	Eukaryota
+COI_ASV0353	2	1	313	Eukaryota								1	0.6	0.36	0.33	0.26	0.22	0.07	0.07	83.4	Mesogloia vermiculata	Domain	Eukaryota
+COI_ASV0355	0	3	313	Eukaryota	Metazoa							1	0.83	0.61	0.44	0.32	0.06	0.05	0.05	74.8	Cipangopaludina chinensis	Kingdom	Metazoa
+COI_ASV0356	0	3	313	Eukaryota								1	0.64	0.35	0.23	0.15	0.03	0.01	0.01	87.5	Korotnevella novazelandica	Domain	Eukaryota
+COI_ASV0357	0	3	313	Eukaryota								1	0.7	0.53	0.53	0.53	0.51	0.35	0.35	82.4	Laminarionema elsbetiae	Domain	Eukaryota
+COI_ASV0358	2	0	313	Eukaryota	Metazoa							1	0.91	0.79	0.7	0.33	0.08	0.01	0.01	78.2	Newbya spinosa	Kingdom	Metazoa
+COI_ASV0359	2	0	313	Eukaryota								1	0.53	0.32	0.25	0.13	0.04	0.02	0.01	77.3	Globisporangium splendens	Domain	Eukaryota
+COI_ASV0360	2	0	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae			1	1	1	1	1	1	1	1	91.5	Brachionus caudatus	Family	Brachionidae
+COI_ASV0361	2	0	313	Eukaryota								1	0.75	0.75	0.6	0.6	0.6	0.6	0.6	85.8	Cladosporium tenuissimum	Domain	Eukaryota
+COI_ASV0362	2	0	313	Eukaryota								1	0.74	0.7	0.68	0.49	0.17	0.03	0.03	77.3	Chrysoritis lyncurium	Domain	Eukaryota
+COI_ASV0363	2	0	313	Eukaryota								1	0.63	0.29	0.24	0.19	0.15	0.08	0.07	85.3	Microspongium alariae	Domain	Eukaryota
+COI_ASV0364	2	0	292	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae	Brachionus	Brachionus_quadridentatus	1	1	1	1	1	1	1	0.97	98.1	Brachionus quadridentatus	Species	Brachionus quadridentatus
+COI_ASV0365	2	0	313	Eukaryota	Metazoa							1	0.8	0.54	0.28	0.11	0.03	0.03	0.02	71.6	Aporometra wilsoni	Kingdom	Metazoa
+COI_ASV0366	2	0	313	Eukaryota								1	0.75	0.72	0.67	0.31	0.08	0.02	0.02	75.7	Chrysoperla adamsi	Domain	Eukaryota
+COI_ASV0367	2	0	313	Eukaryota								1	0.58	0.48	0.46	0.14	0.04	0.02	0.01	80.5	Phytophthora macilentosa	Domain	Eukaryota
+COI_ASV0368	2	0	316	Eukaryota	Metazoa	Rotifera	Eurotatoria	Ploima	Brachionidae			1	1	1	1	1	0.97	0.96	0.61	90.8	Brachionus angularis	Family	Brachionidae
+COI_ASV0369	2	0	313	Eukaryota								1	0.72	0.63	0.63	0.33	0.21	0.1	0.05	82.4	Colpomenia claytoniae	Domain	Eukaryota
+COI_ASV0371	1	1	313	Eukaryota								1	0.54	0.38	0.37	0.27	0.13	0.08	0.05	83.7	Pseudochorda gracilis	Domain	Eukaryota
+COI_ASV0372	0	2	313	Eukaryota		Discosea		Longamoebia	Acanthamoebidae			1	1	1	0.99	0.99	0.99	0.99	0.65	93.3	Acanthamoeba hatchetti	Family	Acanthamoebidae
+COI_ASV0373	0	2	313	Eukaryota								1	0.61	0.49	0.44	0.11	0.04	0.01	0.01	77	Phytopythium sindhum	Domain	Eukaryota
+COI_ASV0374	0	2	313	Eukaryota								1	0.53	0.38	0.35	0.12	0.03	0.01	0.01	78.6	Laelaps muricola	Domain	Eukaryota

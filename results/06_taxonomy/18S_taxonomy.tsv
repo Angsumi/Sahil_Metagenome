@@ -1,0 +1,983 @@
+asv	W1	W2	length	Domain	Supergroup	Division	Class	Order	Family	Genus	Species	conf_Domain	conf_Supergroup	conf_Division	conf_Class	conf_Order	conf_Family	conf_Genus	conf_Species	identity	best_match	deepest	label
+18S_ASV0001	13350	2171	411	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Glissomonadida	Sandonidae	Neoheteromita		1	1	1	1	1	1	0.88	0.88	99.8	Neoheteromita sp.	Genus	Neoheteromita
+18S_ASV0002	7081	0	350									0.68	0.68	0.28	0.17	0.09	0.09	0.09	0.09	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0003	0	5885	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Saprolegniales	Aphanomyces		1	1	1	1	1	1	0.99	0.65	100	Aphanomyces repetans	Genus	Aphanomyces
+18S_ASV0004	0	5692	402	Eukaryota	Obazoa	Opisthokonta-Metazoa	Nematoda	Enoplea				1	1	1	1	1	1	0.23	0.23	94.1	Axonchium propinquum	Order	Enoplea
+18S_ASV0005	51	5092	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	1	0.32	0.32	100	Dothideomycetes X sp.	Family	Dothideomycetes
+18S_ASV0006	51	3649	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			0.99	0.99	0.99	0.99	0.99	0.98	0.66	0.32	100	Dothideomycetes X sp.	Family	Dothideomycetes
+18S_ASV0007	3627	16	404	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.51	0.4	99.8	Brachionus calyciflorus	Class	Rotifera
+18S_ASV0008	3272	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.24	0.24	98	Dicranophorus forcipatus	Class	Rotifera
+18S_ASV0009	2882	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella		1	1	1	1	1	1	1	0.74	100	Cyclotella meneghiniana	Genus	Cyclotella
+18S_ASV0010	0	2794	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales	Rhizophydiaceae	Rhizophydium		1	1	1	1	0.99	0.98	0.98	0.98	97.8	Rhizophydium sp.	Genus	Rhizophydium
+18S_ASV0011	2533	0	389	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peritrichia_2	Sessilida			1	1	1	1	1	1	0.58	0.44	100	Vorticella aequilata	Family	Sessilida
+18S_ASV0012	41	2445	408	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.6	0.6	99.8	Gastrotricha XXX sp.	Class	Gastrotricha
+18S_ASV0013	2323	0	394	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					0.96	0.96	0.82	0.82	0.82	0.82	0.82	0.82	89.6	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0014	0	2161	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.73	0.73	99.5	Lepidodermella squamata	Class	Gastrotricha
+18S_ASV0015	2136	0	389	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peritrichia_2	Sessilida			1	1	1	1	1	1	0.52	0.45	98.5	Sessilida X sp.	Family	Sessilida
+18S_ASV0016	0	2133	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	1	1	1	1	1	100	Rhizophydiales XX sp.	Order	Rhizophydiales
+18S_ASV0017	0	1896	406	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.71	0.36	96.1	Chaetonotus polyspinosus	Class	Gastrotricha
+18S_ASV0018	1878	0	404	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.29	0.29	97.3	Keratella quadrata	Class	Rotifera
+18S_ASV0019	0	1708	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonadales	Lepidochromonadaceae	Lepidochromonas		1	1	1	1	0.99	0.97	0.97	0.85	97.5	Lepidochromonas sp.	Genus	Lepidochromonas
+18S_ASV0020	1623	79	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.42	0.29	100	Pseudopediastrum boryanum	Order	Sphaeropleales
+18S_ASV0021	1697	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Pteromonas		1	1	1	1	1	1	0.87	0.29	99.7	Pteromonas protracta	Genus	Pteromonas
+18S_ASV0022	1638	3	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Desmodesmus		1	1	1	1	1	1	0.93	0.28	100	Desmodesmus pirkollei	Genus	Desmodesmus
+18S_ASV0023	1495	81	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda	Mesocyclops		1	1	1	1	1	0.98	0.89	0.5	97.3	Mesocyclops dissimilis	Genus	Mesocyclops
+18S_ASV0024	0	1490	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina				1	1	1	1	1	0.7	0.42	0.21	100	Pezizomycotina XX sp.	Order	Pezizomycotina
+18S_ASV0025	1414	1	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella	Cyclotella_meneghiniana	1	1	1	1	1	1	1	0.95	100	Cyclotella meneghiniana	Species	Cyclotella meneghiniana
+18S_ASV0026	1241	14	413	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	1	0.44	0.25	99.5	Lagenidium caudatum	Family	Peronosporales
+18S_ASV0027	6	1223	406	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonadales	Paraphysomonadaceae	Paraphysomonas		1	1	1	1	1	1	1	0.89	99.8	Paraphysomonas sp.	Genus	Paraphysomonas
+18S_ASV0028	1226	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Chlamydomonas		1	1	1	1	1	1	0.91	0.47	100	Chlamydomonas fasciata	Genus	Chlamydomonas
+18S_ASV0029	0	1188	410	Eukaryota		Ancyromonadida						1	1	1	1	1	0.66	0.66	0.36	100	Ancyromonas sigmoides	Division	Ancyromonadida
+18S_ASV0030	0	1175	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.52	0.27	99	Lepidodermella squamata	Class	Gastrotricha
+18S_ASV0031	1132	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.71	0.27	100	Scenedesmus sp.	Order	Sphaeropleales
+18S_ASV0032	0	1127	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.74	0.1	100	Staurastrum quadricornutum	Class	Zygnemophyceae
+18S_ASV0033	0	1047	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.46	0.36	100	Staurodesmus cuspidatus	Class	Zygnemophyceae
+18S_ASV0034	0	1004	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Coenochloris		1	1	1	1	1	0.99	0.91	0.91	97.5	Coenochloris sp.	Genus	Coenochloris
+18S_ASV0035	994	0	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.74	0.72	0.72	0.39	99.5	Unruhdinium penardii	Class	Dinophyceae
+18S_ASV0036	987	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella		1	1	1	1	1	1	1	0.73	100	Cyclotella meneghiniana	Genus	Cyclotella
+18S_ASV0038	948	0	396	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	1	1	1	1	1	1	96	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0039	0	924	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.42	0.09	100	Cosmarium humile var. substriatum	Class	Zygnemophyceae
+18S_ASV0040	871	2	425	Eukaryota	Obazoa	Opisthokonta-Fungi	Blastocladiomycota	Blastocladiomycotina				1	1	0.98	0.92	0.92	0.92	0.51	0.47	89.7	Catenaria uncinata	Order	Blastocladiomycotina
+18S_ASV0041	0	814	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Cosmarium		1	1	1	1	1	1	0.81	0.79	100	Cosmarium contractum	Genus	Cosmarium
+18S_ASV0042	809	0	400	Eukaryota	TSAR	Alveolata-Chrompodellids	Colpodellidea	Colpodellida	Colpodellida_CHR1			1	1	1	1	1	1	1	1	98.2	Colpodellida CHR1 X sp.	Family	Colpodellida CHR1
+18S_ASV0043	0	808	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.84	0.12	100	Staurastrum pseudotetracerum	Genus	Staurastrum
+18S_ASV0044	602	187	411	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales				1	1	1	1	1	1	1	1	99.8	Hyphochytrydiales XX sp.	Order	Hyphochytriales
+18S_ASV0045	770	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera			Filinia	Filinia_longiseta	1	1	1	1	1	1	0.99	0.99	100	Filinia longiseta	Species	Filinia longiseta
+18S_ASV0046	710	2	414	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.99	0.9	0.9	99.5	Peronosporales X sp.	Family	Peronosporales
+18S_ASV0047	710	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Desmodesmus		1	1	1	1	1	0.99	0.93	0.69	100	Desmodesmus communis	Genus	Desmodesmus
+18S_ASV0048	682	0	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Peridiniales	Kryptoperidiniaceae	Unruhdinium		1	1	1	1	0.96	0.95	0.95	0.57	100	Unruhdinium minima	Genus	Unruhdinium
+18S_ASV0049	629	53	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.72	0.34	100	Chlorella sorokiniana	Order	Chlorellales
+18S_ASV0050	671	0	398	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.99	0.69	0.6	0.6	0.6	92.5	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0051	666	0	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Aphelidiomycota	Aphelidiales	Aphelidiaceae	Aphelidium		1	1	0.99	0.81	0.81	0.81	0.81	0.81	97.2	Aphelidium desmodesmi	Genus	Aphelidium
+18S_ASV0052	652	0	360	Eukaryota	TSAR							0.8	0.8	0.76	0.63	0.63	0.18	0.18	0.09	85.9	Suctoria XX sp.	Supergroup	TSAR
+18S_ASV0053	645	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Chlamydomonas		1	1	1	1	1	1	0.9	0.9	99.7	Chlamydomonas sp.	Genus	Chlamydomonas
+18S_ASV0054	573	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.68	0.62	100	Hydrodictyon africanum	Order	Sphaeropleales
+18S_ASV0055	564	0	350									0.49	0.49	0.19	0.1	0.06	0.06	0.06	0.06	71.9	Cryptosporidium1 sp.	Unassigned	Unassigned
+18S_ASV0056	557	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Pteromonas		1	1	1	1	1	1	0.9	0.34	100	Pteromonas protracta	Genus	Pteromonas
+18S_ASV0057	11	536	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	1	0.29	0.18	100	Phoma medicaginis	Family	Dothideomycetes
+18S_ASV0058	0	547	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.99	0.66	0.46	0.46	0.46	95.3	Powellomyces sp.	Class	Chytridiomycota
+18S_ASV0059	0	543	403	Eukaryota	Obazoa	Opisthokonta-Metazoa	Annelida			Aeolosoma		1	1	1	1	1	1	0.97	0.53	99	Aeolosoma viride	Genus	Aeolosoma
+18S_ASV0060	525	0	375	Eukaryota	TSAR							0.85	0.85	0.53	0.29	0.15	0.15	0.15	0.15	71.2	Taphrina deformans	Supergroup	TSAR
+18S_ASV0061	509	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.18	0.15	98.8	Ploesoma hudsoni	Class	Rotifera
+18S_ASV0062	508	0	404	Eukaryota	Obazoa	Opisthokonta-Ichthyosporea	Ichthyophonida		Ichthyophonidae_Freshwater			1	1	1	1	0.83	0.83	0.83	0.83	98.5	Ichthyophonidae Freshwater X sp.	Family	Ichthyophonidae Freshwater
+18S_ASV0063	508	0	402	Eukaryota	TSAR							0.96	0.96	0.64	0.64	0.64	0.52	0.29	0.29	92.3	Colpodellida CHR1 X sp.	Supergroup	TSAR
+18S_ASV0064	0	498	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.89	0.15	100	Staurastrum subavicula	Genus	Staurastrum
+18S_ASV0065	0	485	410	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Glissomonadida	Sandonidae			1	1	1	1	1	1	0.94	0.94	99.8	Sandonidae X sp.	Family	Sandonidae
+18S_ASV0066	448	0	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	1	0.94	0.94	0.94	0.94	95.8	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0068	434	0	396	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	1	1	1	1	1	1	97.2	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0069	0	432	405	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Saprolegniales	Leptolegnia		1	1	1	1	1	1	0.9	0.69	99.3	Leptolegnia caudata	Genus	Leptolegnia
+18S_ASV0070	0	425	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Saprolegniales	Aphanomyces		1	1	1	1	1	0.99	0.94	0.43	99.5	Aphanomyces repetans	Genus	Aphanomyces
+18S_ASV0071	415	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Chloromonas	Chloromonas_vernalis	1	1	1	1	1	1	0.99	0.9	99	Chloromonas vernalis	Species	Chloromonas vernalis
+18S_ASV0072	408	0	405	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Thalassiosiraceae	Conticribra		1	1	1	1	0.99	0.99	0.97	0.97	100	Conticribra sp.	Genus	Conticribra
+18S_ASV0073	400	0	406	Eukaryota	TSAR	Stramenopiles-Gyrista	Coscinodiscophyceae	Aulacoseirales	Aulacoseiraceae	Aulacoseira		1	1	1	1	1	1	1	0.56	100	Aulacoseira granulata	Genus	Aulacoseira
+18S_ASV0074	0	396	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.87	0.22	100	Staurastrum affine	Genus	Staurastrum
+18S_ASV0075	383	8	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.19	0.19	99.8	Notommata allantois	Class	Rotifera
+18S_ASV0076	389	0	350									0.68	0.68	0.27	0.14	0.05	0.04	0.01	0.01	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0077	0	388	407	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.35	0.19	98.8	Chaetonotus aemilianus	Class	Gastrotricha
+18S_ASV0078	383	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera			Filinia	Filinia_longiseta	1	1	1	1	1	1	0.98	0.98	99.8	Filinia longiseta	Species	Filinia longiseta
+18S_ASV0079	1	381	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes			1	1	1	1	0.99	0.95	0.52	0.24	99.8	Monographella nivalis	Family	Sordariomycetes
+18S_ASV0080	317	55	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Chlamydomonas		1	1	1	1	1	1	0.8	0.45	100	Chlamydomonas reinhardtii	Genus	Chlamydomonas
+18S_ASV0081	0	362	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.36	0.18	98.8	Cosmarium punctulatum	Class	Zygnemophyceae
+18S_ASV0082	0	344	403	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae					1	1	1	0.99	0.77	0.71	0.56	0.42	95.8	Chromophyton vischeri	Class	Chrysophyceae
+18S_ASV0083	2	339	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda	Mesocyclops		1	1	1	1	1	1	0.98	0.94	98.8	Mesocyclops dissimilis	Genus	Mesocyclops
+18S_ASV0084	319	20	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.72	0.72	100	Keratella quadrata	Class	Rotifera
+18S_ASV0085	334	0	387	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peritrichia_2				1	1	1	1	1	0.89	0.49	0.49	94.1	Operculariidae X sp.	Order	Peritrichia 2
+18S_ASV0086	0	334	410	Eukaryota		Ancyromonadida						1	1	1	1	1	0.78	0.78	0.46	99.5	Ancyromonas sigmoides	Division	Ancyromonadida
+18S_ASV0087	316	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonadales	Paraphysomonadaceae	Paraphysomonas	Paraphysomonas_uniformis	1	1	1	1	1	1	1	1	100	Paraphysomonas uniformis	Species	Paraphysomonas uniformis
+18S_ASV0088	0	304	396									0.7	0.7	0.58	0.16	0.09	0.09	0.09	0.05	71.3	Novel-Gran-234 X sp.	Unassigned	Unassigned
+18S_ASV0089	0	303	417	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Haptoglossales	Haptoglossa		1	1	1	1	1	1	1	0.47	97.1	Haptoglossa sp.	Genus	Haptoglossa
+18S_ASV0090	175	126	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.56	0.48	100	Coelastrum microporum	Order	Sphaeropleales
+18S_ASV0091	0	295	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.81	0.14	99.8	Staurastrum quadricornutum	Genus	Staurastrum
+18S_ASV0092	0	290	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Spondylosium	Spondylosium_panduriforme	1	1	1	1	1	1	0.92	0.92	99.7	Spondylosium panduriforme	Species	Spondylosium panduriforme
+18S_ASV0094	0	288	410	Eukaryota		Ancyromonadida						1	1	1	1	1	0.57	0.57	0.29	99.8	Ancyromonas sigmoides	Division	Ancyromonadida
+18S_ASV0095	0	279	396									0.74	0.74	0.6	0.15	0.08	0.08	0.08	0.08	71.1	Novel-Gran-234 X sp.	Unassigned	Unassigned
+18S_ASV0096	278	0	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.81	0.36	0.15	0.15	0.15	89.8	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0097	0	274	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	0.99	0.24	0.24	99.2	Cosmarium humile var. substriatum	Class	Zygnemophyceae
+18S_ASV0098	257	13	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	0.98	0.97	0.43	0.22	100	Micractinium pusillum	Order	Chlorellales
+18S_ASV0099	0	270	401	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Cosmocladium		1	1	1	1	1	1	0.93	0.48	99.8	Cosmocladium perissum	Genus	Cosmocladium
+18S_ASV0100	0	269	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.26	0.19	99.8	Xanthidium brebissonii	Class	Zygnemophyceae
+18S_ASV0101	0	265	419	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes	Amphifilaceae			1	1	1	1	1	1	1	1	95	Fibrophrys sp.	Family	Amphifilaceae
+18S_ASV0102	259	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.11	0.11	98.3	Trichocerca elongata	Class	Rotifera
+18S_ASV0103	0	258	396									0.65	0.65	0.48	0.12	0.08	0.08	0.08	0.06	71.7	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0104	0	253	391	Eukaryota	TSAR	Alveolata-Apicomplexa	Gregarinomorphea	Neogregarinorida				0.99	0.99	0.99	0.99	0.98	0.98	0.7	0.7	89.6	Monocystis sp.	Order	Neogregarinorida
+18S_ASV0105	252	0	398	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.93	0.93	0.93	0.93	0.93	99.7	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0106	0	249	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonadales	Lepidochromonadaceae	Lepidochromonas		1	1	1	1	1	0.95	0.95	0.86	98.3	Lepidochromonas sp.	Genus	Lepidochromonas
+18S_ASV0108	239	0	406	Eukaryota	TSAR	Stramenopiles-Gyrista	Coscinodiscophyceae	Aulacoseirales	Aulacoseiraceae	Aulacoseira	Aulacoseira_granulata	1	1	1	1	1	1	1	1	100	Aulacoseira granulata	Species	Aulacoseira granulata
+18S_ASV0109	9	229	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Pezizomycetes			1	1	1	1	1	0.99	0.34	0.26	99.5	Peziza phyllogena	Family	Pezizomycetes
+18S_ASV0110	0	237	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.76	0.61	100	Staurastrum rosei var. stemmatum	Class	Zygnemophyceae
+18S_ASV0111	0	237	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.7	0.21	99.8	Staurastrum pseudotetracerum	Class	Zygnemophyceae
+18S_ASV0112	236	0	350									0.69	0.69	0.23	0.14	0.09	0.08	0.08	0.04	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0113	0	236	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	1	0.91	0.91	98.8	Leptophryidae X sp.	Family	Leptophryidae
+18S_ASV0114	0	233	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Pleurotaenium		1	1	1	1	1	1	0.95	0.56	98.5	Pleurotaenium ehrenbergii	Genus	Pleurotaenium
+18S_ASV0115	232	0	405	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Thalassiosiraceae			1	1	1	1	0.93	0.93	0.71	0.6	97.5	Thalassiosira sp.	Family	Thalassiosiraceae
+18S_ASV0117	0	228	399	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales	Chytridiaceae	Chytriomyces		1	1	1	1	0.98	0.89	0.88	0.84	97.7	Chytriomyces sp.	Genus	Chytriomyces
+18S_ASV0118	0	227	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	0.99	0.99	0.99	0.37	0.07	98.8	Cosmarium pseudoconnatum	Class	Zygnemophyceae
+18S_ASV0119	223	3	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.34	0.28	100	Parachlorella kessleri	Order	Chlorellales
+18S_ASV0120	223	0	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Mucoromycota	Mortierellaceae		Mortierella		1	1	1	0.99	0.89	0.89	0.89	0.65	100	Mortierella polygonia	Genus	Mortierella
+18S_ASV0121	2	220	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	1	0.4	0.28	100	Phaeosphaeria oryzae	Family	Dothideomycetes
+18S_ASV0123	217	0	411	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales				1	1	1	1	1	1	1	1	99.5	Hyphochytrydiales XX sp.	Order	Hyphochytriales
+18S_ASV0124	212	0	383	Eukaryota	TSAR							0.96	0.96	0.7	0.57	0.57	0.57	0.57	0.57	81.7	Perkinsida XXX sp.	Supergroup	TSAR
+18S_ASV0125	0	210	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.77	0.14	99	Staurastrum quadricornutum	Class	Zygnemophyceae
+18S_ASV0126	204	0	403	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.98	0.7	0.7	0.7	0.7	96.8	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0127	178	26	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.48	0.27	100	Brachionus urceolaris	Class	Rotifera
+18S_ASV0128	0	202	396									0.62	0.62	0.48	0.11	0.05	0.05	0.05	0.04	70.5	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0129	0	201	402									0.71	0.71	0.53	0.13	0.1	0.1	0.1	0.05	71	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0130	197	0	400	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.78	0.78	0.78	0.78	0.76	96.8	Aphelidium sp.	Division	Opisthokonta-Fungi
+18S_ASV0131	194	0	404	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					0.96	0.96	0.84	0.81	0.8	0.8	0.8	0.8	97.9	Dinophyceae XXX sp.	Class	Dinophyceae
+18S_ASV0132	179	15	401	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia	Nitzschia_palea	0.98	0.98	0.98	0.98	0.96	0.96	0.96	0.9	100	Nitzschia palea	Species	Nitzschia palea
+18S_ASV0133	0	191	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.47	0.47	0.38	0.38	99.5	Dinophyceae XXX sp.	Class	Dinophyceae
+18S_ASV0135	0	187	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Suessiales	Suessiaceae			1	1	1	1	0.97	0.95	0.4	0.38	97.8	Leiocephalium pseudosanguineum	Family	Suessiaceae
+18S_ASV0136	0	185	409	Eukaryota	Obazoa	Opisthokonta-Fungi						0.82	0.82	0.8	0.26	0.11	0.1	0.1	0.1	79	Chytridiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0137	184	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.33	0.25	100	Scenedesmus sp.	Order	Sphaeropleales
+18S_ASV0138	183	0	384	Eukaryota	TSAR							0.87	0.87	0.35	0.28	0.28	0.24	0.24	0.24	78.4	Perkinsea XXXX sp.	Supergroup	TSAR
+18S_ASV0139	0	183	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.52	0.5	0.42	0.42	95	Gymnodinium sp.	Class	Dinophyceae
+18S_ASV0140	0	183	402	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Naviculales	Naviculaceae			1	1	1	1	0.81	0.8	0.74	0.34	98.3	Navicula salinarum	Family	Naviculaceae
+18S_ASV0141	0	182	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae			Botryococcus	Botryococcus_braunii	1	1	1	1	1	1	1	1	99.8	Botryococcus braunii	Species	Botryococcus braunii
+18S_ASV0142	0	181	402	Eukaryota	Obazoa	Opisthokonta-Metazoa	Annelida					1	1	1	1	1	1	0.15	0.07	100	Dero vaga	Class	Annelida
+18S_ASV0143	176	0	396	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	1	1	1	1	1	1	96.7	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0144	173	3	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.55	0.46	100	Chlamydomonadales XX sp.	Order	Chlamydomonadales
+18S_ASV0145	0	176	406	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	0.95	0.95	0.67	91.6	Vampyrella sp.	Order	Vampyrellida
+18S_ASV0146	174	0	403	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	0.55	0.55	0.55	0.55	98.8	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0147	0	173	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	0.99	0.99	0.96	0.22	0.1	100	Pleosporales sp.	Family	Dothideomycetes
+18S_ASV0148	0	172	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.73	0.11	100	Staurastrum cyclacanthum	Class	Zygnemophyceae
+18S_ASV0149	0	171	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Suessiales	Suessiaceae	Asulcocephalium		1	1	1	1	0.94	0.94	0.89	0.75	98.3	Asulcocephalium miricentonis	Genus	Asulcocephalium
+18S_ASV0151	0	170	397									0.63	0.63	0.53	0.14	0.09	0.09	0.09	0.05	70.7	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0152	169	0	377	Eukaryota	TSAR							0.84	0.84	0.7	0.46	0.23	0.05	0.05	0.05	74.3	Taphrina deformans	Supergroup	TSAR
+18S_ASV0153	0	167	401	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Peridiniales		Glenodiniopsis	Glenodiniopsis_uliginosa	1	1	1	1	0.96	0.96	0.96	0.96	99.3	Glenodiniopsis uliginosa	Species	Glenodiniopsis uliginosa
+18S_ASV0154	164	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella		1	1	1	1	0.97	0.96	0.96	0.73	99.8	Cyclotella meneghiniana	Genus	Cyclotella
+18S_ASV0155	0	164	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.89	0.15	99.5	Staurastrum quadricornutum	Genus	Staurastrum
+18S_ASV0157	162	0	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	0.99	0.99	0.99	0.57	0.57	97.5	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0158	2	160	414	Eukaryota	CRuMs	Rigifilida				Micronuclearia	Micronuclearia_podoventralis	1	1	1	1	1	1	1	1	100	Micronuclearia podoventralis	Species	Micronuclearia podoventralis
+18S_ASV0159	161	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha			Lepidodermella	Lepidodermella_squamata	1	1	1	1	1	1	0.94	0.94	99.8	Lepidodermella squamata	Species	Lepidodermella squamata
+18S_ASV0160	0	161	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Vampyrellidae	Vampyrella		1	1	1	1	1	0.87	0.87	0.87	98.5	Vampyrella closterii	Genus	Vampyrella
+18S_ASV0161	160	0	407	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.95	0.95	0.91	0.87	0.73	0.73	0.73	0.73	85.5	Rhizophydiales XX sp.	Class	Chytridiomycota
+18S_ASV0162	0	159	395									0.75	0.75	0.55	0.12	0.06	0.06	0.06	0.06	70.9	Mesofilidae X sp.	Unassigned	Unassigned
+18S_ASV0163	152	2	401	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	0.99	0.99	0.99	0.99	0.99	0.99	99.5	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0164	3	151	400	Eukaryota	Archaeplastida	Streptophyta	Embryophyceae					0.84	0.84	0.84	0.84	0.84	0.84	0.52	0.36	100	Solanum lycopersicum	Class	Embryophyceae
+18S_ASV0165	0	151	389	Eukaryota	TSAR	Stramenopiles-Bigyra	Bicoecea	Pseudodendromonadales				1	1	1	1	1	1	0.99	0.99	96.2	Pseudodendromonadales XX sp.	Order	Pseudodendromonadales
+18S_ASV0166	150	0	404	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	0.99	0.99	0.99	0.99	0.99	0.99	94.1	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0167	0	148	398	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Naviculales				0.97	0.97	0.97	0.94	0.81	0.55	0.38	0.19	94	Stauroneis anceps	Order	Naviculales
+18S_ASV0168	0	147	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.42	0.13	99.2	Cosmarium pseudoconnatum	Class	Zygnemophyceae
+18S_ASV0169	142	2	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Peridiniales	Thoracosphaeraceae			1	1	1	1	0.84	0.83	0.72	0.72	99.5	Thoracosphaeraceae X sp.	Family	Thoracosphaeraceae
+18S_ASV0170	20	123	408	Eukaryota	Amoebozoa	Tubulinea	Elardia	Arcellinida	Sphaerothecina	Arcella	Arcella_hemisphaerica	1	1	1	1	1	1	1	0.99	100	Arcella hemisphaerica	Species	Arcella hemisphaerica
+18S_ASV0171	0	142	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.3	0.3	98.3	Eothinia elongata	Class	Rotifera
+18S_ASV0173	0	138	431									0.5	0.5	0.24	0.13	0.07	0.07	0.01	0.01			Unassigned	Unassigned
+18S_ASV0174	137	0	401	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia	Nitzschia_palea	0.99	0.99	0.99	0.99	0.99	0.99	0.99	0.94	100	Nitzschia palea	Species	Nitzschia palea
+18S_ASV0175	136	1	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	0.99	0.99	0.99	0.52	0.52	97.5	Goniochloris sculpta	Class	Eustigmatophyceae
+18S_ASV0176	136	0	414	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	1	0.85	0.85	99.8	Peronosporales X sp.	Family	Peronosporales
+18S_ASV0177	0	136	396									0.65	0.65	0.55	0.18	0.09	0.09	0.09	0.07	72	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0178	0	136	396									0.63	0.63	0.5	0.11	0.06	0.06	0.06	0.06	71.5	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0179	135	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.57	0.57	99.2	Chloromonas oogama	Order	Chlamydomonadales
+18S_ASV0180	105	29	413	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.99	0.62	0.62	99.5	Peronosporales X sp.	Family	Peronosporales
+18S_ASV0181	0	134	405	Eukaryota	Obazoa	Opisthokonta-Metazoa						1	1	1	0.7	0.66	0.66	0.37	0.33	86	Eumonhystera sp.	Division	Opisthokonta-Metazoa
+18S_ASV0182	133	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	0.98	0.98	0.98	0.98	99	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0183	0	132	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.57	0.42	99.8	Spondylosium secedens	Class	Zygnemophyceae
+18S_ASV0184	130	0	401	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Suessiales	Suessiaceae			1	1	1	1	0.89	0.8	0.65	0.57	97	Asulcocephalium miricentonis	Family	Suessiaceae
+18S_ASV0185	129	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella	Cyclotella_meneghiniana	1	1	1	1	1	1	1	0.93	100	Cyclotella meneghiniana	Species	Cyclotella meneghiniana
+18S_ASV0186	0	129	400	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.89	0.89	98.5	Rotifera XXX sp.	Class	Rotifera
+18S_ASV0187	0	128	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.6	0.08	99.8	Staurastrum quadricornutum	Class	Zygnemophyceae
+18S_ASV0188	2	124	410	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.88	0.54	0.53	98.8	Lagenidium sp.	Family	Peronosporales
+18S_ASV0189	125	0	408	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.99	0.99	0.97	0.9	0.76	0.76	0.76	0.76	86.3	Rhizophydiales XX sp.	Class	Chytridiomycota
+18S_ASV0190	4	121	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.4	0.4	99.8	Ascomorpha ovalis	Class	Rotifera
+18S_ASV0191	0	125	405									0.26	0.26	0.08	0.06	0.03	0.03	0.02	0.01			Unassigned	Unassigned
+18S_ASV0193	123	0	391	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Scuticociliatia_2		Cyclidium_3	Cyclidium_glaucoma	1	1	1	1	1	1	1	1	100	Cyclidium glaucoma	Species	Cyclidium glaucoma
+18S_ASV0194	109	13	401	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia	Nitzschia_palea	0.97	0.97	0.97	0.97	0.92	0.92	0.92	0.82	100	Nitzschia palea	Species	Nitzschia palea
+18S_ASV0195	0	122	406	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.59	0.59	98.5	Gastrotricha XXX sp.	Class	Gastrotricha
+18S_ASV0197	121	0	350									0.72	0.72	0.25	0.14	0.13	0.05	0.05	0.05	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0198	3	118	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				0.99	0.99	0.99	0.99	0.97	0.97	0.67	0.63	100	Chlorella sp.	Order	Chlorellales
+18S_ASV0199	116	4	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.72	0.72	99.8	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0200	101	19	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.84	0.84	99.5	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0201	0	120	408	Eukaryota	Amoebozoa	Tubulinea	Elardia	Arcellinida	Sphaerothecina	Arcella		1	1	1	1	1	1	1	0.64	98.8	Arcella hemisphaerica	Genus	Arcella
+18S_ASV0202	0	118	411	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Thecofilosea	Cryomonadida	Rhogostoma-lineage	Rhogostoma	Rhogostoma_absidea	1	1	1	1	1	1	0.96	0.96	100	Rhogostoma absidea	Species	Rhogostoma absidea
+18S_ASV0203	117	0	404	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	1	0.79	0.79	93.2	Leptophryidae X sp.	Order	Vampyrellida
+18S_ASV0204	116	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	0.47	0.47	0.47	0.47	98.3	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0205	0	116	409	Eukaryota	Obazoa	Opisthokonta-Fungi						0.85	0.85	0.81	0.27	0.27	0.27	0.27	0.27	79	Chytridiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0206	115	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	1	1	1	1	99.3	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0207	0	115	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	0.98	0.51	0.51	0.51	0.51	95.3	Gymnodinium sp.	Class	Dinophyceae
+18S_ASV0208	114	0	407									0.79	0.79	0.72	0.39	0.2	0.2	0.2	0.2	83	Rhizophydiales XX sp.	Unassigned	Unassigned
+18S_ASV0209	110	4	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Closterium		1	1	1	1	1	1	1	0.98	99.8	Closterium sp.	Genus	Closterium
+18S_ASV0210	113	0	388	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peritrichia_2	Sessilida			1	1	1	1	1	1	0.95	0.95	100	Sessilida X sp.	Family	Sessilida
+18S_ASV0211	0	112	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonadales	Lepidochromonadaceae	Lepidochromonas		1	1	1	1	0.93	0.87	0.87	0.78	97.3	Lepidochromonas sp.	Genus	Lepidochromonas
+18S_ASV0212	0	112	404	Eukaryota	Obazoa	Opisthokonta-Metazoa						1	1	1	0.79	0.73	0.73	0.5	0.49	86.9	Chromadorea XX sp.	Division	Opisthokonta-Metazoa
+18S_ASV0213	0	111	396									0.63	0.63	0.5	0.13	0.12	0.07	0.07	0.07	70.4	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0214	109	0	391	Eukaryota	Obazoa							0.99	0.99	0.59	0.32	0.11	0.07	0.04	0.04	86.4	Gaertneriomyces spectabile	Supergroup	Obazoa
+18S_ASV0215	109	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Chloromonas	Chloromonas_vernalis	1	1	1	1	1	1	0.98	0.91	99.5	Chloromonas vernalis	Species	Chloromonas vernalis
+18S_ASV0216	109	0	401	Eukaryota	Obazoa	Opisthokonta-Metazoa	Nematoda	Chromadorea				1	1	1	0.98	0.93	0.93	0.44	0.16	92.5	Eumonhystera filiformis	Order	Chromadorea
+18S_ASV0217	109	0	383	Eukaryota	TSAR	Alveolata-Perkinsea						0.96	0.96	0.84	0.74	0.74	0.72	0.72	0.72	82	Perkinsida XXX sp.	Division	Alveolata-Perkinsea
+18S_ASV0218	108	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella	Cyclotella_meneghiniana	1	1	1	1	0.99	0.99	0.99	0.9	100	Cyclotella meneghiniana	Species	Cyclotella meneghiniana
+18S_ASV0219	0	108	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	1	0.86	0.86	98.8	Leptophryidae X sp.	Family	Leptophryidae
+18S_ASV0220	0	108	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.73	0.55	100	Conochilus hippocrepis	Class	Rotifera
+18S_ASV0221	32	75	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	0.99	0.99	0.99	0.99	99.3	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0222	0	107	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Coenochloris		1	1	1	1	1	1	0.86	0.86	99	Coenochloris sp.	Genus	Coenochloris
+18S_ASV0223	11	95	415	Eukaryota	Haptista	Centroplasthelida						1	1	1	1	1	1	1	1	99.3	Centroplasthelida XXXXX sp.	Division	Centroplasthelida
+18S_ASV0224	0	106	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.52	0.11	99.2	Cosmarium phaseolus	Class	Zygnemophyceae
+18S_ASV0225	8	97	410	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.95	0.76	0.76	99.5	Lagenidium sp.	Family	Peronosporales
+18S_ASV0226	0	105	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.71	0.23	99.8	Staurastrum sp.	Class	Zygnemophyceae
+18S_ASV0227	0	105	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Micrasterias		1	1	1	1	1	1	0.86	0.23	99	Micrasterias zeylanica	Genus	Micrasterias
+18S_ASV0229	104	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae					1	1	1	1	1	1	0.54	0.54	99.5	Treubaria setigera	Class	Chlorophyceae
+18S_ASV0230	0	104	408	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	1	1	100	Gastrotricha XXX sp.	Class	Gastrotricha
+18S_ASV0231	0	103	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.38	0.09	99	Cosmarium bioculatum	Class	Zygnemophyceae
+18S_ASV0232	0	103	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.61	0.21	98.2	Cosmarium debaryi	Class	Zygnemophyceae
+18S_ASV0233	102	0	431	Eukaryota	TSAR	Stramenopiles-Gyrista	Xanthophyceae			Ophiocytium		1	1	1	1	1	1	1	1	98.1	Ophiocytium capitatum	Genus	Ophiocytium
+18S_ASV0234	0	102	397	Eukaryota	TSAR	Alveolata-Ciliophora	Spirotrichea	Hypotrichia				1	1	1	1	1	0.52	0.23	0.09	96.7	Perisincirra paucicirrata	Order	Hypotrichia
+18S_ASV0235	0	101	402									0.72	0.72	0.61	0.16	0.07	0.06	0.06	0.06	71	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0236	0	101	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	0.99	0.99	0.99	0.99	0.47	0.06	98.5	Staurastrum subavicula	Class	Zygnemophyceae
+18S_ASV0238	0	100	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonadales				1	1	1	1	0.91	0.86	0.86	0.86	97	Paraphysomonadales XX sp.	Order	Paraphysomonadales
+18S_ASV0239	99	0	412	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	1	1	1	1	1	96.8	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0240	98	1	389	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peritrichia_2	Sessilida			1	1	1	1	1	1	1	1	100	Sessilida X sp.	Family	Sessilida
+18S_ASV0241	0	99	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.5	0.18	99.8	Micrasterias fimbriata	Class	Zygnemophyceae
+18S_ASV0242	0	98	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.49	0.23	99.7	Cosmarium meneghinii	Class	Zygnemophyceae
+18S_ASV0243	91	5	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda	Mesocyclops	Mesocyclops_pehpeiensis	1	1	1	1	1	0.99	0.98	0.85	99.3	Mesocyclops pehpeiensis	Species	Mesocyclops pehpeiensis
+18S_ASV0244	2	94	409	Eukaryota	Obazoa	Opisthokonta-Fungi						0.9	0.9	0.83	0.34	0.34	0.32	0.11	0.02	80	Chytridiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0245	0	96	401	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.91	0.91	97.5	Rotifera XXX sp.	Class	Rotifera
+18S_ASV0246	0	96	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	0.98	0.98	0.98	0.29	0.2	88.8	Lagerheimia genevensis	Order	Chlorellales
+18S_ASV0247	0	96	396									0.58	0.58	0.45	0.18	0.13	0.13	0.13	0.09	71.1	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0248	0	95	402	Eukaryota	Archaeplastida	Glaucophyta	Glaucocystophyceae	Glaucocystophytes	Cyanoptycaceae	Cyanoptyche		1	1	1	1	1	1	1	1	98.3	Cyanoptyche gloeocystis	Genus	Cyanoptyche
+18S_ASV0249	93	0	396	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	1	1	1	1	1	1	97	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0250	93	0	393	Eukaryota	TSAR	Alveolata-Apicomplexa	Gregarinomorphea	Neogregarinorida				1	1	1	1	1	1	0.91	0.91	92.4	Monocystis sp.	Order	Neogregarinorida
+18S_ASV0251	6	87	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes			1	1	1	1	1	1	0.42	0.17	100	Gibberella zeae	Family	Sordariomycetes
+18S_ASV0252	0	93	406	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Catenulida	Stenostomum		1	1	1	1	1	1	0.99	0.79	100	Stenostomum sp.	Genus	Stenostomum
+18S_ASV0253	0	93	396	Eukaryota	TSAR							0.97	0.97	0.7	0.69	0.68	0.54	0.14	0.08	81.1	Thraustochytriaceae QPX sp.	Supergroup	TSAR
+18S_ASV0254	0	93	397									0.64	0.64	0.51	0.11	0.09	0.05	0.05	0.03	70.3	Euglypha rotunda	Unassigned	Unassigned
+18S_ASV0255	91	0	408	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	1	0.98	0.98	98.7	Leptophryidae X sp.	Family	Leptophryidae
+18S_ASV0256	91	0	397	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	0.99	0.99	0.99	0.99	0.99	0.99	92.5	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0257	89	0	407	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Vampyrellidae			1	1	1	1	1	1	1	0.93	95.1	Vampyrella sp.	Family	Vampyrellidae
+18S_ASV0258	8	81	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Westella	Westella_botryoides	1	1	1	1	1	1	0.84	0.84	100	Westella botryoides	Species	Westella botryoides
+18S_ASV0259	0	89	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	0.99	0.99	0.99	0.36	0.06	98	Xanthidium brebissonii	Class	Zygnemophyceae
+18S_ASV0260	0	88	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.86	0.2	99.8	Staurastrum affine	Genus	Staurastrum
+18S_ASV0261	0	88	401	Eukaryota	Obazoa							0.96	0.96	0.67	0.31	0.1	0.06	0.06	0.06	89	Aphelidium parallelum	Supergroup	Obazoa
+18S_ASV0262	87	0	377	Eukaryota	TSAR							0.87	0.87	0.67	0.43	0.23	0.03	0.03	0.03	74.3	Taphrina deformans	Supergroup	TSAR
+18S_ASV0263	86	0	401	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia	Nitzschia_palea	0.99	0.99	0.99	0.99	0.99	0.99	0.99	0.95	99.8	Nitzschia palea	Species	Nitzschia palea
+18S_ASV0264	0	86	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.81	0.17	99.8	Staurastrum affine	Genus	Staurastrum
+18S_ASV0265	0	86	405	Eukaryota	Obazoa	Opisthokonta-Metazoa						0.98	0.98	0.97	0.64	0.59	0.59	0.34	0.34	86	Eumonhystera sp.	Division	Opisthokonta-Metazoa
+18S_ASV0266	84	0	387	Eukaryota	TSAR							0.92	0.92	0.54	0.47	0.47	0.37	0.37	0.37	79.7	Perkinsida XXX sp.	Supergroup	TSAR
+18S_ASV0267	0	84	416	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				0.98	0.98	0.98	0.98	0.98	0.97	0.44	0.44	81.2	Amphifilaceae X sp.	Order	Labyrinthulomycetes
+18S_ASV0268	83	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.99	0.98	0.98	0.42	0.42	100	Sphaeropleales XX sp.	Order	Sphaeropleales
+18S_ASV0269	56	27	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	1	1	1	1	99.5	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0270	82	0	391	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Scuticociliatia_2		Cyclidium_3	Cyclidium_glaucoma	1	1	1	1	1	1	1	1	100	Cyclidium glaucoma	Species	Cyclidium glaucoma
+18S_ASV0271	51	31	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.38	0.38	99.5	Polyarthra remata	Class	Rotifera
+18S_ASV0272	0	82	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.51	0.23	99	Cosmarium pseudoconnatum	Class	Zygnemophyceae
+18S_ASV0273	81	0	401	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.54	0.54	0.54	0.54	0.54	97.3	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0274	0	81	403									0.61	0.61	0.5	0.12	0.06	0.03	0.03	0.03	71.5	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0275	0	81	400	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	0.99	0.99	0.39	0.39	0.39	0.39	95.8	Borghiella tenuissima	Class	Dinophyceae
+18S_ASV0276	0	81	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.79	0.27	100	Staurodesmus cuspidatus var. curvatus	Class	Zygnemophyceae
+18S_ASV0277	80	0	375	Eukaryota	TSAR							0.87	0.87	0.58	0.37	0.17	0.17	0.17	0.17	71.2	Taphrina deformans	Supergroup	TSAR
+18S_ASV0278	9	71	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina				1	1	1	1	1	0.76	0.49	0.29	100	Cladosporium sp.	Order	Pezizomycotina
+18S_ASV0279	0	80	408	Eukaryota	Amoebozoa	Tubulinea	Elardia	Arcellinida	Sphaerothecina	Arcella		1	1	1	1	1	1	1	0.47	98.9	Arcella vulgaris	Genus	Arcella
+18S_ASV0280	0	80	400									0.59	0.59	0.51	0.14	0.11	0.04	0.04	0.04	71.7	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0281	0	80	432	Eukaryota	Haptista	Centroplasthelida						1	1	1	1	1	1	1	1	99.1	Centroplasthelida XXXXX sp.	Division	Centroplasthelida
+18S_ASV0282	0	79	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Closterium		1	1	1	1	1	1	1	0.64	99.5	Closterium spinosporum	Genus	Closterium
+18S_ASV0283	0	79	400									0.57	0.57	0.45	0.12	0.07	0.05	0.05	0.03	70.1	Trinematidae X sp.	Unassigned	Unassigned
+18S_ASV0284	0	79	403	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae					1	1	0.98	0.96	0.65	0.57	0.42	0.34	95.5	Chromophyton vischeri	Class	Chrysophyceae
+18S_ASV0285	78	0	400	Eukaryota	TSAR	Alveolata-Chrompodellids	Colpodellidea	Colpodellida	Alphamonaceae	Alphamonas		1	1	1	1	1	1	1	0.69	99	Alphamonas edax	Genus	Alphamonas
+18S_ASV0286	78	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.17	0.11	98.5	Trichocerca elongata	Class	Rotifera
+18S_ASV0287	78	0	400	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	1	1	1	1	1	100	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0288	0	78	402									0.66	0.66	0.55	0.12	0.07	0.07	0.06	0.04	71	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0289	77	0	403	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	1	1	0.83	93.1	Vampyrella sp.	Order	Vampyrellida
+18S_ASV0290	72	5	413	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.97	0.7	0.7	99.3	Peronosporales X sp.	Family	Peronosporales
+18S_ASV0291	0	77	403	Eukaryota	Archaeplastida	Glaucophyta	Glaucocystophyceae	Glaucocystophytes	Glaucocystaceae	Glaucocystis		1	1	1	1	1	1	1	0.93	98.8	Glaucocystis nostochinearum	Genus	Glaucocystis
+18S_ASV0292	0	77	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.32	0.2	99.2	Cosmarium bioculatum	Class	Zygnemophyceae
+18S_ASV0293	76	0	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Aphelidiomycota	Aphelidiales	Aphelidiaceae	Aphelidium		1	1	1	1	1	1	1	1	98.8	Aphelidium sp.	Genus	Aphelidium
+18S_ASV0294	2	74	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	1	0.14	0.14	100	Dothideomycetes X sp.	Family	Dothideomycetes
+18S_ASV0295	2	74	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	0.94	0.84	0.69	0.69	0.69	92	Rhizophydiales XX sp.	Order	Rhizophydiales
+18S_ASV0296	0	76	404	Eukaryota	Obazoa	Opisthokonta-Metazoa	Nematoda					1	1	1	0.8	0.75	0.75	0.43	0.41	85.9	Eumonhystera filiformis	Class	Nematoda
+18S_ASV0297	75	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.52	0.52	99.5	Cephalomonas granulata	Order	Chlamydomonadales
+18S_ASV0298	66	9	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	0.95	0.95	0.69	0.69	99	Planktosphaeria gelatinosa	Order	Sphaeropleales
+18S_ASV0299	0	75	436									0.53	0.53	0.48	0.16	0.14	0.12	0.12	0.12	70.2	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0300	0	75	397									0.63	0.63	0.5	0.15	0.07	0.05	0.05	0.03	70.6	Novel-Gran-2 X sp.	Unassigned	Unassigned
+18S_ASV0301	0	75	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	0.97	0.97	0.97	0.2	0.09	98.5	Cosmarium pseudoconnatum	Class	Zygnemophyceae
+18S_ASV0302	74	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.2	0.2	98	Trichocerca elongata	Class	Rotifera
+18S_ASV0303	70	4	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha			Chaetonotus		1	1	1	1	1	1	0.82	0.78	99.5	Chaetonotus uncinus	Genus	Chaetonotus
+18S_ASV0304	0	74	409									0.76	0.76	0.66	0.6	0.6	0.43	0.22	0.15	77.6	Arachnula impatiens	Unassigned	Unassigned
+18S_ASV0305	73	0	365	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.73	0.73	0.73	0.73	0.73	99.7	Rozellomycota XXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0306	65	8	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.47	0.47	0.46	0.46	98.8	Gyrodiniellum shiwhaense	Class	Dinophyceae
+18S_ASV0308	60	11	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes			1	1	1	1	1	1	0.49	0.39	100	Chaetomium globosum	Family	Sordariomycetes
+18S_ASV0309	0	71	397									0.62	0.62	0.56	0.22	0.16	0.11	0.11	0.07	70.5	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0310	0	71	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Micrasterias		0.98	0.98	0.98	0.98	0.98	0.98	0.91	0.49	100	Micrasterias radians	Genus	Micrasterias
+18S_ASV0311	70	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella	Cyclotella_meneghiniana	1	1	1	1	0.99	0.98	0.98	0.84	99.5	Cyclotella meneghiniana	Species	Cyclotella meneghiniana
+18S_ASV0312	70	0	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	0.99	0.98	0.97	0.55	0.5	100	Micractinium sp.	Order	Chlorellales
+18S_ASV0313	33	37	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda			1	1	1	1	1	0.97	0.7	0.54	97.1	Mesocyclops pehpeiensis	Family	Maxillopoda
+18S_ASV0314	0	70	408	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.81	0.81	99.3	Gastrotricha XXX sp.	Class	Gastrotricha
+18S_ASV0315	0	70	413	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.96	0.42	0.42	98.8	Lagenidium caudatum	Family	Peronosporales
+18S_ASV0316	0	70	403									0.35	0.35	0.21	0.12	0.07	0.04	0.04	0.02			Unassigned	Unassigned
+18S_ASV0317	69	0	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	0.96	0.96	0.96	0.47	0.47	97.1	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0318	0	69	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Onychonema		1	1	1	1	1	1	0.83	0.45	99.5	Onychonema laeve	Genus	Onychonema
+18S_ASV0319	0	69	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.4	0.23	99	Cosmarium obsoletum	Class	Zygnemophyceae
+18S_ASV0320	68	0	398	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				0.98	0.98	0.97	0.9	0.89	0.87	0.84	0.84	78.6	Penardia-lineage X sp.	Order	Vampyrellida
+18S_ASV0322	5	63	403	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes	Plectosphaerella		1	1	1	1	1	1	0.8	0.7	100	Plectosphaerella sp.	Genus	Plectosphaerella
+18S_ASV0323	1	67	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.29	0.12	99.5	Trichotria tetractis	Class	Rotifera
+18S_ASV0324	0	68	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.45	0.15	99.5	Cosmarium granatum	Class	Zygnemophyceae
+18S_ASV0325	67	0	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				0.96	0.96	0.96	0.96	0.96	0.93	0.35	0.24	99.5	Mucidosphaerium palustre	Order	Chlorellales
+18S_ASV0326	39	28	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.54	0.54	0.53	0.53	96	Pentapharsodinium sp.	Class	Dinophyceae
+18S_ASV0327	0	67	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.37	0.37	99	Floscularia decora	Class	Rotifera
+18S_ASV0328	66	0	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.52	0.15	95.9	Polymerurus nodicaudus	Class	Gastrotricha
+18S_ASV0329	66	0	407									0.77	0.77	0.73	0.44	0.29	0.29	0.29	0.29	82.4	Rhizophydiales XX sp.	Unassigned	Unassigned
+18S_ASV0330	66	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Chlamydomonas		1	1	1	1	1	1	0.9	0.35	99.7	Chlamydomonas fasciata	Genus	Chlamydomonas
+18S_ASV0331	41	25	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	0.58	0.58	0.33	100	Sphaeropleales XX sp.	Order	Sphaeropleales
+18S_ASV0332	0	66	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.74	0.73	100	Euastrum substellatum	Class	Zygnemophyceae
+18S_ASV0333	65	0	412	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.98	0.98	0.97	0.91	0.74	0.74	0.74	0.74	85.4	Rhizophydiales XX sp.	Class	Chytridiomycota
+18S_ASV0334	64	0	392	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.34	0.34	0.34	0.34	0.34	89	Rozella allomycis	Division	Opisthokonta-Fungi
+18S_ASV0335	64	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	0.97	0.97	0.97	0.97	99	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0336	64	0	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.38	0.38	97	Oocystella oogama	Order	Chlorellales
+18S_ASV0338	64	0	399	Eukaryota	TSAR	Alveolata-Chrompodellids	Colpodellidea	Colpodellida	Alphamonaceae	Alphamonas		1	1	1	1	1	1	0.98	0.91	99.2	Alphamonas sp.	Genus	Alphamonas
+18S_ASV0340	64	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.39	0.36	99.3	Stylochaeta scirtetica	Class	Gastrotricha
+18S_ASV0341	0	64	399	Eukaryota	TSAR	Stramenopiles-Bigyra	Bicoecea	Bicoecales	Bicoecaceae			1	1	1	1	1	1	1	1	97	Bicoecaceae X sp.	Family	Bicoecaceae
+18S_ASV0342	63	0	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.47	0.25	98.3	Stylochaeta scirtetica	Class	Gastrotricha
+18S_ASV0344	0	63	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.58	0.09	99	Cosmarium phaseolus	Class	Zygnemophyceae
+18S_ASV0345	0	63	398									0.42	0.42	0.28	0.1	0.02	0.01	0.01	0.01	73.5	Trochiliopsis australis	Unassigned	Unassigned
+18S_ASV0347	20	42	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.63	0.63	100	Polyarthra remata	Class	Rotifera
+18S_ASV0348	12	50	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Blastocladiomycota	Blastocladiomycotina	Blastocladiomycetes	Hyaloraphidium		1	1	1	0.97	0.97	0.97	0.97	0.97	98.3	Hyaloraphidium curvatum	Genus	Hyaloraphidium
+18S_ASV0349	0	62	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	0.92	0.73	0.73	97.6	Leptophryidae X sp.	Family	Leptophryidae
+18S_ASV0350	0	62	402	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae					1	1	1	1	0.65	0.65	0.65	0.58	100	Synedra acus	Class	Bacillariophyceae
+18S_ASV0351	0	62	400	Eukaryota	Archaeplastida	Chlorophyta						0.98	0.98	0.91	0.64	0.33	0.33	0.17	0.14	88	Carteria obtusa	Division	Chlorophyta
+18S_ASV0352	0	62	396									0.7	0.7	0.53	0.15	0.08	0.08	0.07	0.05	70.9	Novel-Gran-234 X sp.	Unassigned	Unassigned
+18S_ASV0353	0	62	409	Eukaryota	Obazoa	Opisthokonta-Fungi						0.93	0.93	0.92	0.27	0.27	0.27	0.27	0.27	78.8	Chytridiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0354	0	62	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.73	0.73	99.8	Oocystis solitaria	Order	Chlorellales
+18S_ASV0355	61	0	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	0.99	0.98	0.98	0.98	0.98	96	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0356	61	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.99	0.98	0.98	0.98	0.98	99.3	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0357	61	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella		1	1	1	1	0.98	0.97	0.97	0.68	100	Cyclotella meneghiniana	Genus	Cyclotella
+18S_ASV0358	1	60	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.58	0.58	100	Chlamydomonadales XX sp.	Order	Chlamydomonadales
+18S_ASV0359	0	61	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.86	0.56	100	Staurastrum sp.	Genus	Staurastrum
+18S_ASV0360	0	61	396									0.63	0.63	0.43	0.13	0.08	0.07	0.05	0.05	71.5	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0361	0	61	431									0.49	0.49	0.23	0.11	0.06	0.05	0.01	0.01			Unassigned	Unassigned
+18S_ASV0362	0	61	451	Eukaryota	Haptista	Centroplasthelida						1	1	1	0.91	0.91	0.91	0.91	0.91	85.8	Centroplasthelida XXXXX sp.	Division	Centroplasthelida
+18S_ASV0363	0	61	408	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	1	0.38	0.38	92.7	Vernalophrys algivore	Order	Vampyrellida
+18S_ASV0364	0	61	409	Eukaryota	Haptista	Centroplasthelida						1	1	1	0.99	0.99	0.99	0.99	0.99	99.3	Centroplasthelida XXXXX sp.	Division	Centroplasthelida
+18S_ASV0365	60	0	411	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales				1	1	1	1	1	1	1	1	99.5	Hyphochytrydiales XX sp.	Order	Hyphochytriales
+18S_ASV0366	60	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae	Cyclotella		1	1	1	1	0.99	0.99	0.99	0.88	97	Cyclotella meneghiniana	Genus	Cyclotella
+18S_ASV0367	60	0	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Aphelidiomycota	Aphelidiales	Aphelidiaceae	Aphelidium		1	1	1	0.84	0.84	0.84	0.84	0.84	98.3	Aphelidium sp.	Genus	Aphelidium
+18S_ASV0369	0	60	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.55	0.07	99.2	Staurastrum quadricornutum	Class	Zygnemophyceae
+18S_ASV0370	0	60	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.71	0.2	99	Cosmarium sexangulare	Class	Zygnemophyceae
+18S_ASV0372	59	0	414	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.93	0.62	0.62	98.6	Peronosporales X sp.	Family	Peronosporales
+18S_ASV0373	2	57	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	0.94	0.26	0.19	100	Aulographina pinorum	Family	Dothideomycetes
+18S_ASV0374	0	59	397									0.69	0.69	0.55	0.16	0.11	0.07	0.07	0.04	70.7	Trinematidae X sp.	Unassigned	Unassigned
+18S_ASV0375	58	0	410	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales				1	1	0.93	0.86	0.86	0.78	0.46	0.46	94.9	Rhizidiomyces apophysatus	Order	Hyphochytriales
+18S_ASV0376	57	1	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.98	0.95	0.95	0.51	0.51	99.5	Pseudoschroederia antillarum	Order	Sphaeropleales
+18S_ASV0377	0	58	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.3	0.21	95.2	Oocystella heteromucosa	Order	Chlorellales
+18S_ASV0378	0	58	396									0.71	0.71	0.58	0.15	0.07	0.03	0.03	0.03	70.8	Mesofila sp.	Unassigned	Unassigned
+18S_ASV0379	0	58	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.99	0.96	0.96	0.68	0.68	97.5	Coenochloris sp.	Order	Sphaeropleales
+18S_ASV0380	57	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera			Filinia	Filinia_longiseta	1	1	1	1	1	1	1	1	99.8	Filinia longiseta	Species	Filinia longiseta
+18S_ASV0381	55	2	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Closterium		1	1	1	1	1	1	1	0.84	98.8	Closterium sp.	Genus	Closterium
+18S_ASV0382	0	57	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae					1	1	1	0.97	0.97	0.97	0.69	0.69	96	Treubaria setigera	Class	Chlorophyceae
+18S_ASV0383	0	57	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Cosmarium		1	1	0.99	0.99	0.99	0.99	0.91	0.64	99	Cosmarium trilobulatum	Genus	Cosmarium
+18S_ASV0384	56	0	398	Eukaryota	Obazoa	Opisthokonta-Fungi						0.99	0.99	0.99	0.44	0.3	0.3	0.3	0.3	94	Rhizophydiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0385	56	0	411	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.62	0.61	97.3	Polymerurus nodicaudus	Class	Gastrotricha
+18S_ASV0386	0	56	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.62	0.54	100	Euastrum trigibberum	Class	Zygnemophyceae
+18S_ASV0387	0	56	396									0.65	0.65	0.55	0.22	0.13	0.09	0.09	0.05	71.3	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0388	55	0	386	Eukaryota	Obazoa	Opisthokonta-Fungi	Rozellomycota					1	1	0.99	0.96	0.96	0.96	0.96	0.96	92.5	Rozellomycota XXX sp.	Class	Rozellomycota
+18S_ASV0389	55	0	404	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	1	1	1	1	1	94.1	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0390	55	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.55	0.55	99.2	Chloromonas oogama	Order	Chlamydomonadales
+18S_ASV0391	1	54	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.22	0.07	99	Plationus patulus	Class	Rotifera
+18S_ASV0392	0	55	402									0.61	0.61	0.45	0.12	0.05	0.05	0.05	0.02	71	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0393	0	55	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera			Hexarthra	Hexarthra_intermedia	1	1	1	1	1	1	1	1	99.8	Hexarthra intermedia	Species	Hexarthra intermedia
+18S_ASV0394	54	0	409	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales	Hyphochrytriaceae			1	1	0.99	0.95	0.95	0.89	0.54	0.54	96.4	Rhizidiomyces apophysatus	Family	Hyphochrytriaceae
+18S_ASV0395	4	50	408	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda	Microcyclops		1	1	1	1	1	1	1	1	98.8	Microcyclops varicans	Genus	Microcyclops
+18S_ASV0396	0	54	406	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Catenulida	Stenostomum		1	1	1	1	1	1	0.98	0.31	99	Stenostomum bryophilum	Genus	Stenostomum
+18S_ASV0397	0	54	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.38	0.1	99.8	Cosmarium obsoletum	Class	Zygnemophyceae
+18S_ASV0398	0	54	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.41	0.07	99.2	Cosmarium humile var. substriatum	Class	Zygnemophyceae
+18S_ASV0400	53	0	411	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	0.99	0.65	0.53	0.41	0.34	0.34	90.3	Protaspa-lineage X sp.	Division	Rhizaria-Cercozoa
+18S_ASV0401	47	6	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.61	0.33	99.2	Vitreochlamys incisa	Order	Chlamydomonadales
+18S_ASV0402	0	53	418	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	0.99	0.77	0.77	0.77	0.77	0.77	91.2	Endomyxa Novel-clade-9 X sp.	Division	Rhizaria-Cercozoa
+18S_ASV0403	0	53	408	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	0.57	0.57	0.32	89.5	Vampyrella sp.	Order	Vampyrellida
+18S_ASV0404	52	0	350									0.73	0.73	0.19	0.16	0.07	0.07	0.05	0.03	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0405	0	52	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.76	0.74	98.8	Neglectella peisonis	Order	Chlorellales
+18S_ASV0406	51	0	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.56	0.56	99	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0407	51	0	398	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.84	0.84	0.84	0.84	0.84	99	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0408	51	0	404	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.99	0.99	0.99	0.99	0.99	93.8	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0409	0	51	407	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda	Eucyclops		1	1	1	1	1	1	0.96	0.38	97.8	Eucyclops macruroides	Genus	Eucyclops
+18S_ASV0410	0	51	412	Eukaryota	TSAR	Stramenopiles-Gyrista	Raphidophyceae			Gonyostomum	Gonyostomum_semen	1	1	1	1	1	1	1	1	100	Gonyostomum semen	Species	Gonyostomum semen
+18S_ASV0411	50	0	399	Eukaryota	TSAR	Stramenopiles-Bigyra	Bicoecea	Bicoecales	Bicoecaceae			1	1	1	1	1	1	1	1	97.2	Bicoecaceae X sp.	Family	Bicoecaceae
+18S_ASV0412	50	0	401	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Bacillariales	Bacillariaceae	Nitzschia	Nitzschia_palea	1	1	1	1	1	1	1	0.97	99.8	Nitzschia palea	Species	Nitzschia palea
+18S_ASV0413	50	0	361	Eukaryota	Obazoa	Opisthokonta-Fungi						0.93	0.93	0.92	0.79	0.79	0.79	0.79	0.79	84.1	Rozellomycota XXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0414	50	0	399	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	0.99	0.94	0.94	0.94	0.94	0.94	92.3	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0415	31	19	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.37	0.21	99.7	Chlamydomonas sp.	Order	Chlamydomonadales
+18S_ASV0416	29	21	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.22	0.22	99.5	Polyarthra remata	Class	Rotifera
+18S_ASV0417	0	50	399	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.89	0.58	0.34	0.34	0.34	93.5	Rhizophlyctis harderi	Class	Chytridiomycota
+18S_ASV0418	49	0	363	Eukaryota	Obazoa							0.8	0.8	0.76	0.62	0.62	0.62	0.62	0.62	83.7	Rozellomycota XXX sp.	Supergroup	Obazoa
+18S_ASV0419	49	0	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.6	0.6	98.2	Oocystaceae sp.	Order	Chlorellales
+18S_ASV0420	0	49	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	0.95	0.83	0.83	98	Leptophryidae X sp.	Family	Leptophryidae
+18S_ASV0421	0	49	400	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.84	0.84	97.8	Rotifera XXX sp.	Class	Rotifera
+18S_ASV0422	48	0	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.58	0.46	99.7	Oocystis sp.	Order	Chlorellales
+18S_ASV0423	48	0	403	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Ochromonadales	Ochromonadaceae	Poteriospumella	Poteriospumella_lacustris	1	1	1	1	1	1	1	0.99	100	Poteriospumella lacustris	Species	Poteriospumella lacustris
+18S_ASV0424	1	47	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	0.93	0.36	0.05	99.8	Pseudocercospora paraguayensis	Family	Dothideomycetes
+18S_ASV0425	0	48	432	Eukaryota	Haptista	Centroplasthelida	Pterocystida					1	1	1	1	1	1	1	1	98.8	Pterocystida XXX sp.	Class	Pterocystida
+18S_ASV0426	0	48	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Suessiales	Suessiaceae	Piscinoodinium		1	1	1	1	1	1	1	1	99.5	Piscinoodinium sp.	Genus	Piscinoodinium
+18S_ASV0427	0	48	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.98	0.91	0.89	0.11	0.11	94	Pediastrum boryanum	Order	Sphaeropleales
+18S_ASV0428	0	48	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Cosmarium		1	1	1	1	1	1	0.82	0.52	100	Cosmarium depressum	Genus	Cosmarium
+18S_ASV0429	0	48	398	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Naviculales	Pinnulariaceae	Pinnularia		1	1	1	1	0.85	0.85	0.85	0.37	98.7	Pinnularia sp.	Genus	Pinnularia
+18S_ASV0430	47	0	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda	Mesocyclops		1	1	1	1	1	0.97	0.83	0.55	97.1	Mesocyclops dissimilis	Genus	Mesocyclops
+18S_ASV0431	47	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Desmodesmus		1	1	1	1	1	0.99	0.8	0.38	99.5	Scenedesmus sp.	Genus	Desmodesmus
+18S_ASV0432	47	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.34	0.34	99	Stylochaeta scirtetica	Class	Gastrotricha
+18S_ASV0433	47	0	407	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.36	0.11	94.6	Polymerurus nodicaudus	Class	Gastrotricha
+18S_ASV0434	35	12	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	0.62	0.27	0.11	100	Kirchneriella dianae	Order	Sphaeropleales
+18S_ASV0435	25	22	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.43	0.43	97.3	Goniochloris sculpta	Class	Eustigmatophyceae
+18S_ASV0436	6	41	398	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Naviculales	Pinnulariaceae	Pinnularia		1	1	1	1	0.89	0.89	0.89	0.36	98.5	Pinnularia subcapitata	Genus	Pinnularia
+18S_ASV0437	0	47	399	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.86	0.61	0.42	0.42	0.42	93.8	Rhizophlyctis harderi	Class	Chytridiomycota
+18S_ASV0438	0	47	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					0.99	0.99	0.92	0.81	0.81	0.69	0.39	0.19	94.5	Mesotaenium caldariorum	Class	Zygnemophyceae
+18S_ASV0439	46	0	401	Eukaryota	Obazoa							0.99	0.99	0.49	0.49	0.26	0.12	0.08	0.08	88.8	Aphelidium parallelum	Supergroup	Obazoa
+18S_ASV0440	46	0	387	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peritrichia_2				1	1	1	1	1	0.94	0.52	0.52	94.1	Operculariidae X sp.	Order	Peritrichia 2
+18S_ASV0441	46	0	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	0.63	0.63	0.22	98.5	Monoraphidium dybowskii	Order	Sphaeropleales
+18S_ASV0442	46	0	400	Eukaryota	TSAR	Alveolata-Chrompodellids	Colpodellidea	Colpodellida	Colpodellida_CHR1			1	1	1	1	1	1	1	1	99.6	Colpodellida CHR1 X sp.	Family	Colpodellida CHR1
+18S_ASV0443	43	3	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	1	0.34	0.13	100	Phaeosphaeria elongata	Family	Dothideomycetes
+18S_ASV0444	34	12	397	Eukaryota	TSAR	Alveolata-Ciliophora	Spirotrichea	Hypotrichia				1	1	1	1	1	0.56	0.56	0.56	99.5	Hypotrichia XX sp.	Order	Hypotrichia
+18S_ASV0445	1	45	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.94	0.63	99.8	Staurastrum sebaldi	Genus	Staurastrum
+18S_ASV0446	0	46	396									0.64	0.64	0.54	0.13	0.07	0.06	0.06	0.03	71.3	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0447	0	46	350	Eukaryota	Obazoa	Opisthokonta-Fungi						0.84	0.84	0.8	0.69	0.69	0.68	0.68	0.68	80.5	Tremellomycetes X sp.	Division	Opisthokonta-Fungi
+18S_ASV0448	0	46	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	0.97	0.66	0.66	95.6	Arachnula impatiens	Family	Leptophryidae
+18S_ASV0449	45	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Chloromonas	Chloromonas_oogama	1	1	1	1	1	1	0.89	0.89	100	Chloromonas oogama	Species	Chloromonas oogama
+18S_ASV0450	45	0	386	Eukaryota	Obazoa	Opisthokonta-Fungi	Rozellomycota					1	1	0.99	0.97	0.97	0.97	0.97	0.97	94.8	Rozellomycota XXX sp.	Class	Rozellomycota
+18S_ASV0451	8	37	404	Eukaryota	TSAR	Alveolata-Apicomplexa	Coccidiomorphea	Eimeriida	Eimeriidae			1	1	1	1	1	1	0.71	0.43	96.8	Goussia pannonica	Family	Eimeriidae
+18S_ASV0452	0	45	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.5	0.16	0.1	0.07	99.3	Heterocapsa nei/rotundata	Class	Dinophyceae
+18S_ASV0453	0	45	400									0.72	0.72	0.58	0.16	0.11	0.09	0.09	0.07	71.1	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0454	0	45	400									0.57	0.57	0.5	0.2	0.13	0.07	0.07	0.03	70.6	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0456	0	45	446									0.54	0.54	0.41	0.11	0.11	0.11	0.11	0.11	76.7	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0457	44	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Chlamydomonas		1	1	1	1	1	1	0.84	0.81	99	Chlamydomonas sp.	Genus	Chlamydomonas
+18S_ASV0458	44	0	361	Eukaryota	Obazoa	Opisthokonta-Fungi						0.92	0.92	0.91	0.74	0.74	0.74	0.74	0.74	84.5	Rozellomycota XXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0459	43	1	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.54	0.4	99.5	Paulschulzia pseudovolvox	Order	Chlamydomonadales
+18S_ASV0460	13	31	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.65	0.65	99.8	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0461	0	44	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.68	0.68	0.48	0.48	100	Glenoaulax inaequalis	Class	Dinophyceae
+18S_ASV0462	0	44	398	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.77	0.77	0.65	0.6	0.49	95	Rhizophydium sp.	Division	Opisthokonta-Fungi
+18S_ASV0463	1	42	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae	Planctomyxa		1	1	1	1	1	0.98	0.97	0.97	98.8	Planctomyxa polycarya	Genus	Planctomyxa
+18S_ASV0464	0	43	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.96	0.89	0.88	0.25	0.15	96.5	Bracteacoccus sp.	Order	Sphaeropleales
+18S_ASV0465	31	11	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.53	0.27	100	Dictyosphaerium ehrenbergianum	Order	Chlorellales
+18S_ASV0466	3	39	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	0.99	0.97	0.66	0.66	96.3	Chlamydomonas noctigama	Order	Chlamydomonadales
+18S_ASV0467	0	42	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales		Neglectella		1	1	1	1	1	1	0.88	0.87	98	Neglectella peisonis	Genus	Neglectella
+18S_ASV0468	0	42	394									0.58	0.58	0.48	0.12	0.1	0.1	0.1	0.09	70.6	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0469	0	42	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.38	0.09	99.5	Staurodesmus convergens	Class	Zygnemophyceae
+18S_ASV0470	0	42	352									0.77	0.77	0.27	0.23	0.15	0.07	0.07	0.07	71.4	Urceolaria korschelti	Unassigned	Unassigned
+18S_ASV0471	0	42	412	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				1	1	1	1	1	1	0.97	0.96	89	Fibrophrys sp.	Order	Labyrinthulomycetes
+18S_ASV0472	41	0	407	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.4	0.12	94.6	Dasydytes papaveroi	Class	Gastrotricha
+18S_ASV0473	41	0	350									0.47	0.47	0.16	0.08	0.05	0.05	0.05	0.05	71.1	Cryptosporidium hominis	Unassigned	Unassigned
+18S_ASV0474	41	0	400	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Ostracoda			1	1	1	0.97	0.97	0.97	0.79	0.75	100	Cypria crenulata	Family	Ostracoda
+18S_ASV0475	41	0	401	Eukaryota	TSAR	Alveolata-Chrompodellids	Colpodellidea	Colpodellida	Colpodellida_CHR1			1	1	1	1	1	1	1	1	99.8	Colpodellida CHR1 X sp.	Family	Colpodellida CHR1
+18S_ASV0476	0	41	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	0.98	0.98	0.98	0.7	0.25	98.2	Cosmarium debaryi	Class	Zygnemophyceae
+18S_ASV0477	0	41	403	Eukaryota	Archaeplastida	Glaucophyta	Glaucocystophyceae	Glaucocystophytes	Glaucocystaceae	Glaucocystis		1	1	1	1	1	1	1	0.71	99.5	Glaucocystis nostochinearum	Genus	Glaucocystis
+18S_ASV0478	0	41	406	Eukaryota	Obazoa	Opisthokonta-Choanoflagellata	Choanoflagellatea	Craspedida				1	1	1	1	1	0.64	0.64	0.64	95.6	Salpingoecidae Group C1 X sp.	Order	Craspedida
+18S_ASV0479	40	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.35	0.29	97.8	Stylochaeta scirtetica	Class	Gastrotricha
+18S_ASV0480	40	0	350									0.7	0.7	0.2	0.13	0.08	0.07	0.07	0.02	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0482	15	25	410	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	0.97	0.97	0.91	0.45	0.44	99	Lagenidium sp.	Family	Peronosporales
+18S_ASV0483	8	32	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes			1	1	1	1	1	0.97	0.45	0.22	100	Arthrinium arundinis	Family	Sordariomycetes
+18S_ASV0484	0	40	368									0.79	0.79	0.76	0.72	0.71	0.7	0.7	0.7	83	Tremellomycetes X sp.	Unassigned	Unassigned
+18S_ASV0485	0	40	430									0.46	0.46	0.26	0.18	0.13	0.06	0.06	0.04			Unassigned	Unassigned
+18S_ASV0486	0	40	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	0.99	0.34	0.34	99.5	Phoma medicaginis	Family	Dothideomycetes
+18S_ASV0487	0	40	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Pleurotaenium	Pleurotaenium_ehrenbergii	1	1	1	1	1	1	1	0.89	100	Pleurotaenium ehrenbergii	Species	Pleurotaenium ehrenbergii
+18S_ASV0488	0	40	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.58	0.33	99.5	Chlamydomonas orbicularis	Order	Chlamydomonadales
+18S_ASV0489	0	40	384									0.77	0.77	0.72	0.51	0.51	0.51	0.51	0.51	82.7	Rozellomycota XXX sp.	Unassigned	Unassigned
+18S_ASV0490	0	40	386	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	0.98	0.98	0.98	0.98	0.98	99.7	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0491	0	40	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	1	0.62	0.62	97.3	Arachnomyxa cryptophaga	Family	Leptophryidae
+18S_ASV0492	0	40	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Closterium		1	1	1	1	1	1	1	0.95	99.2	Closterium sp.	Genus	Closterium
+18S_ASV0493	39	0	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	0.94	0.86	0.34	0.21	0.21	0.21	91.8	Rhizophlyctis rosea	Class	Chytridiomycota
+18S_ASV0494	39	0	413	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	0.99	0.5	0.5	0.5	0.5	0.5	89.4	Novel-Gran-234 X sp.	Division	Rhizaria-Cercozoa
+18S_ASV0496	39	0	358	Eukaryota	TSAR							0.8	0.8	0.34	0.11	0.06	0.06	0.06	0.06	71.4	Pleurostomatida X sp.	Supergroup	TSAR
+18S_ASV0497	39	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.99	0.99	0.99	0.96	0.61	0.61	0.61	0.61	96.3	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0498	0	39	403	Eukaryota	Obazoa	Opisthokonta-Fungi						0.98	0.98	0.95	0.65	0.35	0.26	0.26	0.26	88.1	Spizellomycetales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0499	0	39	389	Eukaryota	TSAR	Stramenopiles-Bigyra	Bicoecea	Pseudodendromonadales				1	1	1	1	1	1	0.99	0.99	95.9	Pseudodendromonadales XX sp.	Order	Pseudodendromonadales
+18S_ASV0500	0	39	400									0.56	0.56	0.47	0.12	0.07	0.03	0.03	0.03	71	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0501	0	39	435									0.61	0.61	0.51	0.22	0.09	0.05	0.05	0.05	71	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0502	0	39	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Peridiniales				1	1	1	1	0.94	0.66	0.66	0.66	100	Parvodinium inconspicuum	Order	Peridiniales
+18S_ASV0503	38	0	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	0.93	0.9	0.72	0.72	0.72	92.3	Rhizophydiales XX sp.	Order	Rhizophydiales
+18S_ASV0504	38	0	414	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	0.99	0.99	0.98	0.83	0.83	99.5	Peronosporales X sp.	Family	Peronosporales
+18S_ASV0506	0	38	403	Eukaryota	Obazoa	Opisthokonta-Fungi						0.99	0.99	0.97	0.73	0.45	0.21	0.1	0.08	87.8	Spizellomyces sp.	Division	Opisthokonta-Fungi
+18S_ASV0507	0	38	409	Eukaryota	Obazoa	Opisthokonta-Fungi						0.91	0.91	0.86	0.37	0.34	0.28	0.1	0.02	80.7	Chytridiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0508	37	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Colemanosphaera	Colemanosphaera_charkowiensis	1	1	1	1	1	1	0.95	0.95	100	Colemanosphaera charkowiensis	Species	Colemanosphaera charkowiensis
+18S_ASV0511	0	37	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Pleurotaenium		1	1	1	1	1	1	0.93	0.61	98.5	Pleurotaenium ehrenbergii	Genus	Pleurotaenium
+18S_ASV0512	0	37	436									0.68	0.68	0.57	0.12	0.12	0.12	0.12	0.12	70.4	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0513	0	37	436									0.62	0.62	0.56	0.17	0.06	0.05	0.05	0.05	70.3	Tremula longifila	Unassigned	Unassigned
+18S_ASV0515	36	0	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.6	0.6	97.1	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0516	33	3	399	Eukaryota	Obazoa	Opisthokonta-Choanoflagellata	Choanoflagellatea	Craspedida	Salpingoecidae_Group_C2			1	1	1	1	1	1	1	1	99.7	Salpingoecidae Group C2 X sp.	Family	Salpingoecidae Group C2
+18S_ASV0517	0	36	407	Eukaryota	Amoebozoa	Tubulinea	Elardia	Arcellinida	Sphaerothecina	Arcella		1	1	1	1	1	1	1	0.62	97.5	Arcella vulgaris	Genus	Arcella
+18S_ASV0518	0	36	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.42	0.34	99.5	Staurodesmus cuspidatus	Class	Zygnemophyceae
+18S_ASV0519	0	36	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.41	0.41	99.8	Ascomorpha ovalis	Class	Rotifera
+18S_ASV0520	0	36	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.51	0.5	100	Staurastrum clepsydra	Class	Zygnemophyceae
+18S_ASV0521	0	36	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	0.99	0.98	0.51	0.51	0.51	0.51	95	Gymnodinium sp.	Class	Dinophyceae
+18S_ASV0522	35	0	404	Eukaryota	Obazoa	Opisthokonta-Fungi						0.96	0.96	0.92	0.56	0.17	0.16	0.16	0.16	88.1	Spizellomycetales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0523	35	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.3	0.21	98.5	Polymerurus nodicaudus	Class	Gastrotricha
+18S_ASV0524	13	22	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.92	0.85	0.84	0.22	0.14	97.7	Bracteacoccus sp.	Order	Sphaeropleales
+18S_ASV0525	0	35	396	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	1	1	1	1	1	1	98.7	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0526	0	35	451	Eukaryota	Haptista	Centroplasthelida						1	1	1	0.94	0.94	0.94	0.94	0.94	87.1	Centroplasthelida XXXXX sp.	Division	Centroplasthelida
+18S_ASV0527	0	35	395									0.72	0.72	0.61	0.16	0.1	0.08	0.07	0.05	70.4	Novel-Gran-5 X sp.	Unassigned	Unassigned
+18S_ASV0528	0	35	401	Eukaryota	Obazoa							0.91	0.91	0.63	0.24	0.08	0.04	0.02	0.02	88.3	Fungi XXXX sp.	Supergroup	Obazoa
+18S_ASV0529	0	35	403	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae					1	1	1	1	0.76	0.66	0.39	0.31	95.3	Chromophyton vischeri	Class	Chrysophyceae
+18S_ASV0530	0	35	397									0.58	0.58	0.47	0.11	0.1	0.1	0.1	0.09	70.3	Euglypha rotunda	Unassigned	Unassigned
+18S_ASV0531	0	35	410	Eukaryota		Ancyromonadida			Ancyromonadida_Group-1	Ancyromonas		1	1	1	1	1	0.95	0.95	0.66	99.5	Ancyromonas sigmoides	Genus	Ancyromonas
+18S_ASV0532	0	35	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	0.99	0.98	0.98	0.98	0.31	0.06	95.7	Spondylosium pulchellum	Class	Zygnemophyceae
+18S_ASV0533	0	35	411	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	1	0.47	0.39	0.18	0.15	0.1	90.5	Euglyphida XX sp.	Division	Rhizaria-Cercozoa
+18S_ASV0534	29	5	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.72	0.72	98.3	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0535	0	34	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae	Leptophrys		1	1	1	1	1	1	1	1	98.8	Leptophrys vorax	Genus	Leptophrys
+18S_ASV0536	0	34	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae					1	1	1	0.96	0.95	0.95	0.66	0.66	95.5	Treubaria setigera	Class	Chlorophyceae
+18S_ASV0537	0	34	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.56	0.56	0.55	0.55	95.3	Azadinium dexteroporum	Class	Dinophyceae
+18S_ASV0538	0	34	401	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.94	0.22	96.8	Closterium gracile	Class	Zygnemophyceae
+18S_ASV0539	33	0	410	Eukaryota	Obazoa	Opisthokonta-Fungi	Mucoromycota	Mucoromycotina	Mucorales	Mucor		1	1	1	1	1	0.9	0.89	0.24	100	Mucor rufescens	Genus	Mucor
+18S_ASV0540	0	33	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.37	0.06	99.2	Micrasterias fimbriata	Class	Zygnemophyceae
+18S_ASV0541	0	33	400									0.51	0.51	0.45	0.12	0.05	0.05	0.05	0.03	71.2	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0542	0	33	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.45	0.17	99.5	Ascomorpha ovalis	Class	Rotifera
+18S_ASV0543	0	33	362	Eukaryota	TSAR							0.88	0.88	0.29	0.09	0.04	0.01	0.01	0.01	73.8	Cryptosporidium galli	Supergroup	TSAR
+18S_ASV0544	0	33	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.97	0.35	96.8	Closterium pusillum var. maius	Class	Zygnemophyceae
+18S_ASV0545	0	33	396	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	0.97	0.97	0.97	0.97	0.97	0.97	91.7	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0546	32	0	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina				1	1	1	1	1	0.97	0.23	0.21	94.5	Roumegueriella rufula	Order	Pezizomycotina
+18S_ASV0547	32	0	399	Eukaryota	TSAR	Alveolata-Chrompodellids	Colpodellidea	Colpodellida	Colpodellida_CHR1			1	1	0.95	0.95	0.95	0.89	0.89	0.89	100	Colpodellida CHR1 X sp.	Family	Colpodellida CHR1
+18S_ASV0548	32	0	391	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					0.99	0.99	0.93	0.93	0.93	0.91	0.91	0.91	92.2	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0549	32	0	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.72	0.71	99.8	Chlorella sp.	Order	Chlorellales
+18S_ASV0550	32	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.53	0.37	99.7	Chlamydomonadales XX sp.	Order	Chlamydomonadales
+18S_ASV0551	32	0	408	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	1	1	0.98	92.2	Vampyrella sp.	Order	Vampyrellida
+18S_ASV0552	0	32	410									0.46	0.46	0.18	0.07	0.03	0.03	0.03	0.01	72.9	Aulacoseira crenulata	Unassigned	Unassigned
+18S_ASV0553	0	32	390	Eukaryota	Obazoa	Opisthokonta-Fungi	Rozellomycota					1	1	1	0.88	0.88	0.88	0.88	0.88	98.5	Rozellomycota XXX sp.	Class	Rozellomycota
+18S_ASV0554	0	32	395									0.73	0.73	0.51	0.13	0.08	0.08	0.08	0.05	70.7	Protaspa-lineage X sp.	Unassigned	Unassigned
+18S_ASV0555	0	32	401	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Mougeotia		1	1	1	1	1	1	1	1	99.8	Mougeotia sp.	Genus	Mougeotia
+18S_ASV0556	0	32	413	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Rhabdocoela	Gieysztoria	Gieysztoria_ashokae	1	1	1	1	1	1	1	0.96	100	Gieysztoria ashokae	Species	Gieysztoria ashokae
+18S_ASV0557	31	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.79	0.43	98.3	Chaetonotus uncinus	Class	Gastrotricha
+18S_ASV0558	31	0	411	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales				1	1	1	1	1	1	1	1	99.3	Hyphochytrydiales XX sp.	Order	Hyphochytriales
+18S_ASV0559	31	0	399	Eukaryota	Obazoa	Opisthokonta-Fungi	Aphelidiomycota	Aphelidiales	Aphelidiaceae	Aphelidium	Aphelidium_parallelum	1	1	1	1	1	1	1	1	99.7	Aphelidium parallelum	Species	Aphelidium parallelum
+18S_ASV0560	31	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.55	0.51	99.2	Pseudopediastrum boryanum	Order	Sphaeropleales
+18S_ASV0561	29	2	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	1	1	1	1	99.8	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0562	27	4	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae			Choricystis		1	1	1	1	0.91	0.91	0.91	0.69	99.2	Choricystis sp.	Genus	Choricystis
+18S_ASV0563	0	31	405	Eukaryota	Haptista	Centroplasthelida	Pterocystida	Pterista	Pterocystidae			1	1	1	0.98	0.98	0.98	0.76	0.76	99.5	Pterocystis sp.	Family	Pterocystidae
+18S_ASV0564	0	31	400									0.67	0.67	0.57	0.17	0.15	0.08	0.08	0.07	71.2	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0565	0	31	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Oedogoniales				1	1	1	1	1	1	0.74	0.31	99.1	Oedogonium sp.	Order	Oedogoniales
+18S_ASV0566	0	31	397									0.72	0.72	0.62	0.12	0.05	0.05	0.05	0.05	70.5	Massisteria marina	Unassigned	Unassigned
+18S_ASV0567	0	31	412	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	0.97	0.57	0.5	0.43	0.43	0.43	89.4	Novel-Gran-234 X sp.	Division	Rhizaria-Cercozoa
+18S_ASV0568	0	31	387	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.56	0.56	0.56	0.56	0.56	98.7	Rozellomycota XXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0569	0	31	401	Eukaryota	Obazoa							0.93	0.93	0.68	0.26	0.07	0.05	0.03	0.03	88.6	Fungi XXXX sp.	Supergroup	Obazoa
+18S_ASV0570	0	31	395	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	1	1	1	1	1	1	97.7	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0571	30	0	408	Eukaryota	Amoebozoa	Tubulinea	Elardia	Arcellinida	Sphaerothecina	Arcella	Arcella_vulgaris	1	1	1	1	1	1	1	0.94	99.3	Arcella vulgaris	Species	Arcella vulgaris
+18S_ASV0572	0	30	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda	Mesocyclops		1	1	1	1	1	1	1	0.72	98.5	Mesocyclops pehpeiensis	Genus	Mesocyclops
+18S_ASV0573	0	30	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Cosmarium	Cosmarium_reniforme	1	1	1	1	1	1	0.93	0.82	99.8	Cosmarium reniforme	Species	Cosmarium reniforme
+18S_ASV0574	0	30	389	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Glissomonadida				0.92	0.92	0.9	0.89	0.89	0.89	0.88	0.88	72.2	Sandonidae X sp.	Order	Glissomonadida
+18S_ASV0575	0	30	399	Eukaryota	Obazoa	Opisthokonta-Ichthyosporea	Dermocystida	Rhynosporidae				1	1	1	1	1	1	0.88	0.88	99.2	Rhynosporidae XX sp.	Order	Rhynosporidae
+18S_ASV0576	0	30	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	1	0.97	0.97	99.3	Leptophryidae X sp.	Family	Leptophryidae
+18S_ASV0577	0	30	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales	Staurastromycetaceae	Staurastromyces		1	1	1	0.99	0.99	0.97	0.97	0.97	98.3	Staurastromyces oculus	Genus	Staurastromyces
+18S_ASV0578	0	30	401									0.59	0.59	0.45	0.12	0.07	0.03	0.03	0.01	71.3	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0579	0	30	403	Eukaryota	Obazoa	Opisthokonta-Metazoa	Annelida			Aeolosoma		1	1	1	1	1	1	0.98	0.51	99.8	Aeolosoma viride	Genus	Aeolosoma
+18S_ASV0580	0	30	401									0.61	0.61	0.53	0.19	0.11	0.05	0.04	0.02	71.1	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0581	29	0	411	Eukaryota	Amoebozoa	Evosea	Variosea	Flamellidae	Flamella-lineage	Flamella		1	1	1	1	1	1	1	0.53	99.5	Flamella sp.	Genus	Flamella
+18S_ASV0582	0	29	413	Eukaryota	Amoebozoa	Tubulinea	Elardia	Arcellinida				0.98	0.98	0.98	0.98	0.97	0.97	0.97	0.46	91	Arcella vulgaris	Order	Arcellinida
+18S_ASV0583	0	29	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae			Botryococcus	Botryococcus_braunii	1	1	1	1	1	1	1	1	100	Botryococcus braunii	Species	Botryococcus braunii
+18S_ASV0584	0	29	396									0.64	0.64	0.53	0.13	0.09	0.06	0.04	0.01	71.5	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0585	0	29	400									0.74	0.74	0.57	0.15	0.08	0.06	0.06	0.03	70.5	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0587	2	26	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.6	0.5	100	Chlamydomonas sordida	Order	Chlamydomonadales
+18S_ASV0588	0	28	414	Eukaryota	Obazoa	Opisthokonta-Ichthyosporea						0.89	0.89	0.8	0.79	0.38	0.14	0.09	0.06	82.1	Pseudoperkinsidae XX sp.	Division	Opisthokonta-Ichthyosporea
+18S_ASV0589	0	28	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.37	0.05	99.2	Micrasterias fimbriata	Class	Zygnemophyceae
+18S_ASV0590	0	28	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae					1	1	1	1	0.66	0.54	0.27	0.27	96.3	Chrysosphaera parvula	Class	Chrysophyceae
+18S_ASV0591	0	28	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Cosmarium		1	1	1	1	1	1	0.95	0.42	99.5	Cosmarium trilobulatum	Genus	Cosmarium
+18S_ASV0592	0	28	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.95	0.95	0.95	0.26	0.19	99.2	Sphaeropleales XX sp.	Order	Sphaeropleales
+18S_ASV0593	0	28	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Oedogoniales				1	1	1	1	1	1	0.51	0.51	98.8	Oedogonium howardii	Order	Oedogoniales
+18S_ASV0594	27	0	402	Eukaryota	TSAR							0.99	0.99	0.7	0.7	0.7	0.55	0.39	0.39	91.8	Alphamonadea ALPH2 sp.	Supergroup	TSAR
+18S_ASV0595	27	0	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.45	0.31	98.7	Vitreochlamys incisa	Order	Chlamydomonadales
+18S_ASV0596	27	0	395	Eukaryota	TSAR	Alveolata-Ciliophora	Spirotrichea	Choreotrichida-Tintinnina	Tintinnidiidae	Tintinnidium		1	1	1	1	1	1	0.86	0.4	99.2	Tintinnidiidae X sp.	Genus	Tintinnidium
+18S_ASV0597	27	0	403	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	0.93	0.93	0.93	0.93	97.3	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0598	27	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Radiococcus		1	1	1	1	0.99	0.99	0.99	0.99	100	Radiococcus sp.	Genus	Radiococcus
+18S_ASV0599	6	21	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes	Acremonium		1	1	1	1	1	1	0.99	0.47	100	Acremonium radiatum	Genus	Acremonium
+18S_ASV0600	1	26	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes			1	1	1	1	1	1	0.55	0.27	100	Sordariomycetes X sp.	Family	Sordariomycetes
+18S_ASV0601	0	27	407	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea				1	1	1	1	1	0.99	0.47	0.42	94.1	Microcyclops varicans	Order	Crustacea
+18S_ASV0602	0	27	393	Eukaryota	TSAR	Alveolata-Apicomplexa	Gregarinomorphea	Neogregarinorida	Actinocephalidae			1	1	1	1	1	1	0.95	0.93	95.4	Ascogregarina sp.	Family	Actinocephalidae
+18S_ASV0603	0	27	388	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peniculia				1	1	1	1	1	0.66	0.66	0.66	99.7	Frontonia atra	Order	Peniculia
+18S_ASV0604	0	27	397									0.6	0.6	0.42	0.14	0.1	0.1	0.1	0.06	70.5	Massisteria marina	Unassigned	Unassigned
+18S_ASV0605	0	27	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Micrasterias		0.99	0.99	0.99	0.99	0.99	0.99	0.92	0.29	99.8	Micrasterias decemdentata	Genus	Micrasterias
+18S_ASV0606	26	0	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	0.98	0.94	0.91	0.46	0.36	98.3	Chlorellales XX sp.	Order	Chlorellales
+18S_ASV0607	26	0	409	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales				1	1	1	0.88	0.88	0.78	0.43	0.43	96.1	Rhizidiomyces apophysatus	Order	Hyphochytriales
+18S_ASV0608	26	0	407	Eukaryota	Obazoa							0.85	0.85	0.77	0.43	0.27	0.27	0.27	0.27	82.8	Rhizophydiales XX sp.	Supergroup	Obazoa
+18S_ASV0609	0	26	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.49	0.39	99.8	Trichocerca elongata	Class	Rotifera
+18S_ASV0610	0	26	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.33	0.15	99.5	Staurodesmus mucronatus	Class	Zygnemophyceae
+18S_ASV0611	0	26	396									0.57	0.57	0.45	0.1	0.06	0.06	0.06	0.05	71.9	Novel-Gran-5 X sp.	Unassigned	Unassigned
+18S_ASV0612	0	26	408	Eukaryota	Amoebozoa	Tubulinea	Elardia	Arcellinida	Sphaerothecina	Arcella		1	1	1	1	1	1	1	0.64	99.6	Arcella vulgaris	Genus	Arcella
+18S_ASV0613	0	26	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.98	0.9	0.87	0.39	0.3	95.5	Follicularia botryoides	Order	Sphaeropleales
+18S_ASV0614	0	26	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	0.98	0.98	0.98	0.94	0.27	96.5	Closterium pusillum var. maius	Class	Zygnemophyceae
+18S_ASV0615	0	26	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Suessiales	Suessiaceae	Asulcocephalium	Asulcocephalium_miricentonis	1	1	1	1	1	1	0.99	0.84	99.8	Asulcocephalium miricentonis	Species	Asulcocephalium miricentonis
+18S_ASV0616	0	26	426	Eukaryota	Obazoa	Opisthokonta-Fungi						0.88	0.88	0.83	0.74	0.43	0.43	0.43	0.43	85.1	Gromochytrium mamkaevae	Division	Opisthokonta-Fungi
+18S_ASV0617	0	26	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.34	0.06	99	Cosmarium exiguum	Class	Zygnemophyceae
+18S_ASV0618	25	0	404	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	1	1	1	1	1	94.1	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0619	25	0	396	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	0.99	0.99	0.99	0.99	0.99	0.99	94.4	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0620	25	0	403	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	0.99	0.98	0.98	0.98	0.98	93.8	Rhizophydiales XX sp.	Order	Rhizophydiales
+18S_ASV0621	25	0	400	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.75	0.75	98.8	Rotaria rotatoria	Class	Rotifera
+18S_ASV0622	21	4	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Mychonastes		1	1	1	1	1	1	1	0.33	100	Mychonastes timauensis	Genus	Mychonastes
+18S_ASV0623	2	23	397	Eukaryota	TSAR	Alveolata-Ciliophora	Spirotrichea	Hypotrichia				1	1	1	1	1	0.64	0.64	0.64	100	Hypotrichia XX sp.	Order	Hypotrichia
+18S_ASV0624	0	25	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.39	0.23	98.5	Euastrum substellatum	Class	Zygnemophyceae
+18S_ASV0625	0	25	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.51	0.14	99	Cosmarium meneghinii	Class	Zygnemophyceae
+18S_ASV0626	0	25	397									0.71	0.71	0.62	0.19	0.14	0.07	0.07	0.03	70.5	Mesofilidae X sp.	Unassigned	Unassigned
+18S_ASV0627	0	25	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurastrum		1	1	1	1	1	1	0.92	0.19	99.8	Staurastrum punctulatum var. pygmaeum	Genus	Staurastrum
+18S_ASV0628	0	25	412	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Granofilosea	Filosa	Novel-Gran-5	Novel-Gran		1	1	1	1	1	1	1	1	100	Novel-Gran-5 X sp.	Genus	Novel-Gran
+18S_ASV0629	0	25	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales		Neglectella		1	1	1	1	1	1	0.82	0.67	98.5	Oocystis solitaria	Genus	Neglectella
+18S_ASV0630	24	0	398	Eukaryota	Archaeplastida	Chlorophyta						1	1	0.99	0.65	0.41	0.41	0.07	0.05	92.2	Pseudoschroederia antillarum	Division	Chlorophyta
+18S_ASV0631	24	0	399	Eukaryota	Obazoa	Opisthokonta-Fungi	Aphelidiomycota	Aphelidiales	Aphelidiaceae	Aphelidium	Aphelidium_parallelum	1	1	1	1	1	1	1	1	99.5	Aphelidium parallelum	Species	Aphelidium parallelum
+18S_ASV0632	24	0	399	Eukaryota	Obazoa	Opisthokonta-Ichthyosporea	Ichthyophonida	Pseudoperkinsidae				1	1	1	1	0.97	0.97	0.95	0.95	99.2	Pseudoperkinsidae XX sp.	Order	Pseudoperkinsidae
+18S_ASV0633	24	0	398	Eukaryota	TSAR							0.89	0.89	0.75	0.65	0.23	0.23	0.17	0.17	82.6	Dinophyceae XXX sp.	Supergroup	TSAR
+18S_ASV0634	23	1	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Rozellomycota					1	1	1	0.89	0.89	0.89	0.89	0.88	96.5	Rozella multimorpha	Class	Rozellomycota
+18S_ASV0635	23	1	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Saprolegniales			1	1	1	1	1	1	0.33	0.33	99.8	Saprolegnia sp.	Family	Saprolegniales
+18S_ASV0636	23	1	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.67	0.42	99.5	Vitreochlamys incisa	Order	Chlamydomonadales
+18S_ASV0637	0	24	399	Eukaryota	Archaeplastida	Chlorophyta						1	1	1	0.69	0.69	0.69	0.44	0.44	97.2	Pseudocharacium americanum	Division	Chlorophyta
+18S_ASV0638	0	24	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	1	1	1	1	1	98.5	Rhizophydiales XX sp.	Order	Rhizophydiales
+18S_ASV0639	0	24	400									0.65	0.65	0.51	0.09	0.07	0.04	0.04	0.03	70.8	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0640	0	24	402	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae					1	1	1	1	0.74	0.74	0.74	0.61	99.5	Synedra acus	Class	Bacillariophyceae
+18S_ASV0641	0	24	421	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	1	1	1	1	1	1	99	Cercozoa XXXX sp.	Division	Rhizaria-Cercozoa
+18S_ASV0642	0	24	397	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Surirellales	Surirellaceae	Stenopterobia		1	1	1	1	1	1	1	0.97	100	Stenopterobia sp.	Genus	Stenopterobia
+18S_ASV0643	0	24	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.37	0.03	98.5	Staurastrum iotanum	Class	Zygnemophyceae
+18S_ASV0644	0	24	400									0.62	0.62	0.49	0.12	0.07	0.07	0.07	0.05	70.8	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0645	0	24	411	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Granofilosea	Filosa	Novel-Gran-6	Novel-Gran		1	1	0.99	0.98	0.98	0.96	0.96	0.96	97.3	Novel-Gran-6 X sp.	Genus	Novel-Gran
+18S_ASV0646	0	24	416	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				1	1	1	1	1	1	0.87	0.87	90.4	Fibrophrys sp.	Order	Labyrinthulomycetes
+18S_ASV0647	23	0	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	0.95	0.38	0.33	99.2	Chlorellales XX sp.	Order	Chlorellales
+18S_ASV0648	23	0	406	Eukaryota	Obazoa	Opisthokonta-Fungi	Aphelidiomycota	Aphelidiales	Aphelidiaceae			1	1	1	0.99	0.99	0.99	0.99	0.99	95.8	Aphelidium sp.	Family	Aphelidiaceae
+18S_ASV0650	23	0	411	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonadales	Paraphysomonadaceae			1	1	1	1	1	1	1	0.52	95.7	Paraphysomonas solis	Family	Paraphysomonadaceae
+18S_ASV0651	23	0	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				0.99	0.99	0.99	0.98	0.87	0.87	0.74	0.74	99.2	Chlorellales XX sp.	Order	Chlorellales
+18S_ASV0652	18	5	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Pseudomuriella		1	1	1	1	0.99	0.99	0.98	0.98	100	Pseudomuriella sp.	Genus	Pseudomuriella
+18S_ASV0653	1	22	395	Eukaryota	TSAR	Alveolata-Ciliophora	Spirotrichea	Hypotrichia				1	1	1	1	1	1	1	1	98.7	Hypotrichia XX sp.	Order	Hypotrichia
+18S_ASV0654	0	23	398	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	1	1	1	1	1	100	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0655	0	23	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Oedogoniales				1	1	1	1	1	1	0.71	0.52	98	Oedogonium howardii	Order	Oedogoniales
+18S_ASV0656	0	23	400									0.53	0.53	0.17	0.08	0.03	0.03	0.01	0.01	74	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0657	0	23	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes			1	1	1	1	1	1	0.73	0.48	100	Fusarium sp.	Family	Sordariomycetes
+18S_ASV0658	0	23	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Cosmarium		1	1	1	1	1	1	0.95	0.65	99	Cosmarium humile	Genus	Cosmarium
+18S_ASV0659	0	23	395									0.75	0.75	0.62	0.15	0.11	0.04	0.04	0.04			Unassigned	Unassigned
+18S_ASV0660	22	0	361	Eukaryota	Obazoa	Opisthokonta-Fungi						0.82	0.82	0.82	0.64	0.64	0.64	0.64	0.64	84.2	Rozellomycota XXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0661	22	0	449	Eukaryota	Obazoa	Opisthokonta-Choanoflagellata	Choanoflagellatea	Craspedida				1	1	1	1	0.82	0.77	0.42	0.42	89.6	Salpingoecidae Group C1 X sp.	Order	Craspedida
+18S_ASV0662	22	0	362									0.68	0.68	0.22	0.15	0.08	0.06	0.06	0.02	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0663	22	0	416	Eukaryota	Obazoa	Opisthokonta-Choanoflagellata	Choanoflagellatea		Choanoflagellata_XX_Clade-2			1	1	1	1	1	1	1	1	96.9	Sphaeroeca leprechaunica	Family	Choanoflagellata XX Clade-2
+18S_ASV0664	22	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae					1	1	1	0.85	0.68	0.68	0.31	0.23	97	Carteria oliveri	Class	Chlorophyceae
+18S_ASV0665	0	22	401									0.66	0.66	0.53	0.16	0.09	0.05	0.05	0.04	70.9	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0666	0	22	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda			1	1	1	1	1	0.98	0.97	0.66	96.1	Mesocyclops dissimilis	Family	Maxillopoda
+18S_ASV0667	0	22	400									0.66	0.66	0.58	0.15	0.1	0.1	0.1	0.09	70.7	Novel-Gran-6 X sp.	Unassigned	Unassigned
+18S_ASV0668	0	22	397									0.64	0.64	0.52	0.14	0.09	0.06	0.06	0.03	70.7	Massisteria marina	Unassigned	Unassigned
+18S_ASV0669	0	22	421	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea				1	1	0.99	0.97	0.97	0.96	0.62	0.57	87.6	Macrocyclops albidus	Order	Crustacea
+18S_ASV0670	0	22	400									0.66	0.66	0.55	0.2	0.12	0.12	0.12	0.09	71.2	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0671	21	0	401	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	0.99	0.99	0.99	0.99	0.99	0.99	98	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0672	21	0	365	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.74	0.74	0.74	0.74	0.74	98.9	Chytridiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0673	21	0	413	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.87	0.59	0.59	98.8	Peronosporales X sp.	Family	Peronosporales
+18S_ASV0674	21	0	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.7	0.7	98.8	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0675	3	18	402	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	1	1	1	1	1	1	97.3	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0676	2	19	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.58	0.58	98.5	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0677	0	21	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Rhabdocoela	Strongylostoma		1	1	1	1	1	1	1	0.54	97.8	Strongylostoma radiatum	Genus	Strongylostoma
+18S_ASV0678	0	21	414	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Rhabdocoela	Gieysztoria		1	1	1	1	1	1	1	0.93	99.5	Gieysztoria sp.	Genus	Gieysztoria
+18S_ASV0679	0	21	398									0.65	0.65	0.48	0.11	0.06	0.04	0.04	0.02	71.1	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0680	0	21	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.37	0.17	99.5	Spondylosium pulchellum	Class	Zygnemophyceae
+18S_ASV0681	0	21	401	Eukaryota	Archaeplastida	Chlorophyta						1	1	1	0.68	0.67	0.67	0.67	0.55	98	Geminella sp.	Division	Chlorophyta
+18S_ASV0682	0	21	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	0.99	0.99	0.28	0.24	92	Oocystis sp.	Order	Chlorellales
+18S_ASV0683	0	21	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.31	0.04	99.2	Xanthidium cristatum var. ornatum	Class	Zygnemophyceae
+18S_ASV0684	0	21	389	Eukaryota	TSAR	Stramenopiles-Bigyra	Bicoecea	Pseudodendromonadales				0.99	0.99	0.99	0.99	0.99	0.99	0.99	0.99	96.2	Pseudodendromonadales XX sp.	Order	Pseudodendromonadales
+18S_ASV0685	20	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Spizellomycetales				1	1	1	1	1	1	1	1	100	Spizellomycetales XX sp.	Order	Spizellomycetales
+18S_ASV0687	20	0	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.49	0.29	98	Chaetonotus sp.	Class	Gastrotricha
+18S_ASV0688	20	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.95	0.86	0.86	0.22	0.11	96.5	Sphaeropleales XX sp.	Order	Sphaeropleales
+18S_ASV0689	20	0	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.4	0.3	98.5	Polymerurus nodicaudus	Class	Gastrotricha
+18S_ASV0690	20	0	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae					0.99	0.99	0.99	0.99	0.78	0.78	0.3	0.26	100	Chlorellales XX sp.	Class	Trebouxiophyceae
+18S_ASV0692	5	15	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Aphelidiomycota	Aphelidiales	Aphelidiaceae	Aphelidium		1	1	1	0.98	0.98	0.98	0.98	0.98	98.2	Aphelidium sp.	Genus	Aphelidium
+18S_ASV0693	0	20	401									0.69	0.69	0.61	0.15	0.1	0.06	0.05	0.05	71	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0694	0	20	397									0.63	0.63	0.52	0.17	0.12	0.07	0.07	0.04	70.3	Mesofilidae X sp.	Unassigned	Unassigned
+18S_ASV0695	0	20	381									0.33	0.33	0.31	0.29	0.15	0.15	0.11	0.11			Unassigned	Unassigned
+18S_ASV0696	0	20	397									0.63	0.63	0.53	0.15	0.1	0.06	0.04	0.01	70.5	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0697	0	20	402	Eukaryota	TSAR							0.98	0.98	0.74	0.74	0.74	0.47	0.39	0.39	91.8	Alphamonadea ALPH2 sp.	Supergroup	TSAR
+18S_ASV0698	0	20	394	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Cymbellales	Gomphonemataceae	Encyonema		1	1	1	1	0.92	0.85	0.85	0.4	98.7	Encyonema minutum	Genus	Encyonema
+18S_ASV0699	0	20	394									0.7	0.7	0.55	0.14	0.09	0.07	0.07	0.06	70	Micropyxidiella edaphonis	Unassigned	Unassigned
+18S_ASV0700	0	20	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae			Botryococcus	Botryococcus_braunii	1	1	1	1	1	1	1	0.99	99.8	Botryococcus braunii	Species	Botryococcus braunii
+18S_ASV0701	0	20	405	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Granofilosea	Limnofilida	Limnofilidae			1	1	1	1	1	1	0.54	0.54	100	Limnofila longa	Family	Limnofilidae
+18S_ASV0702	0	20	411	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales				1	1	1	1	1	1	1	1	99.3	Hyphochytrydiales XX sp.	Order	Hyphochytriales
+18S_ASV0703	19	0	409	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.91	0.47	0.46	97.8	Lagenidium sp.	Family	Peronosporales
+18S_ASV0704	19	0	406	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Cercomonadida				1	1	1	0.96	0.96	0.93	0.93	0.93	92.1	Paracercomonas sp.	Order	Cercomonadida
+18S_ASV0705	2	17	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Blastocladiomycota	Blastocladiomycotina	Blastocladiomycetes	Hyaloraphidium		1	1	1	0.85	0.85	0.85	0.85	0.85	97	Hyaloraphidium curvatum	Genus	Hyaloraphidium
+18S_ASV0706	1	18	365	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.57	0.57	0.57	0.57	0.57	99.5	Chytridiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0707	0	19	408	Eukaryota	Obazoa	Opisthokonta-Fungi						0.91	0.91	0.9	0.34	0.32	0.27	0.14	0.03	80.6	Chytridiales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0708	0	19	397									0.58	0.58	0.46	0.18	0.11	0.07	0.07	0.06	70.8	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0709	0	19	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.88	0.8	0.78	0.24	0.16	96.2	Bracteacoccus sp.	Order	Sphaeropleales
+18S_ASV0710	0	19	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Oedogoniales		Oedogonium		1	1	1	1	1	1	0.82	0.43	98	Oedogonium brevicingulatum	Genus	Oedogonium
+18S_ASV0711	18	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	1	1	1	1	1	100	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0712	18	0	389	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peniculia	Frontoniidae_2			1	1	1	1	1	1	1	1	99.7	Frontoniidae 2 X sp.	Family	Frontoniidae 2
+18S_ASV0713	18	0	403	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	1	1	1	1	1	94.8	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0714	11	7	407	Eukaryota	TSAR	Stramenopiles-Gyrista						0.99	0.99	0.98	0.53	0.53	0.53	0.18	0.18	91.7	Eustigmatophyceae XXX sp.	Division	Stramenopiles-Gyrista
+18S_ASV0715	0	18	406	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.71	0.2	95.6	Chaetonotus microchaetus	Class	Gastrotricha
+18S_ASV0716	0	18	406									0.51	0.51	0.1	0.09	0.09	0.09	0.09	0.03			Unassigned	Unassigned
+18S_ASV0717	0	18	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	0.99	0.95	0.86	0.86	0.86	96.3	Rhizophydiales XX sp.	Order	Rhizophydiales
+18S_ASV0718	0	18	430									0.36	0.36	0.18	0.05	0.04	0.04	0.02	0.02			Unassigned	Unassigned
+18S_ASV0719	0	18	401	Eukaryota	Obazoa							0.94	0.94	0.63	0.19	0.04	0.03	0.03	0.03	88.3	Fungi XXXX sp.	Supergroup	Obazoa
+18S_ASV0720	0	18	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurodesmus		1	1	1	1	1	1	0.96	0.44	99.7	Staurodesmus isthmosus	Genus	Staurodesmus
+18S_ASV0721	0	18	400									0.7	0.7	0.55	0.12	0.06	0.06	0.06	0.05	70.6	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0722	0	18	383	Eukaryota	TSAR	Alveolata-Apicomplexa	Gregarinomorphea	Neogregarinorida	Actinocephalidae	Hoplorhynchus	Hoplorhynchus_acanthatholius	1	1	1	1	1	1	0.93	0.93	99.3	Hyplorynchus sp.	Species	Hoplorhynchus acanthatholius
+18S_ASV0723	0	18	400									0.61	0.61	0.5	0.15	0.07	0.07	0.07	0.06	70.7	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0724	0	18	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.78	0.72	100	Staurodesmus validus	Class	Zygnemophyceae
+18S_ASV0725	0	18	406	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	sm27-lineage	sm27		1	1	1	1	1	1	1	1	100	sm27-lineage X sp.	Genus	sm27
+18S_ASV0726	17	0	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.46	0.46	99.5	Oocystaceae sp.	Order	Chlorellales
+18S_ASV0727	17	0	403	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	1	0.97	0.97	0.97	0.97	96	Rhizophydiales XX sp.	Order	Rhizophydiales
+18S_ASV0728	17	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	0.99	0.97	0.97	0.59	0.4	99.2	Chlamydomonas leiostraca	Order	Chlamydomonadales
+18S_ASV0729	17	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae					1	1	1	0.98	0.78	0.45	0.22	0.14	96.5	Minidiscus variabilis	Class	Mediophyceae
+18S_ASV0730	16	1	410	Eukaryota	TSAR	Rhizaria-Cercozoa	Novel-clade-10-12	Tremulida	Tremulidae			1	1	0.99	0.99	0.99	0.99	0.99	0.92	95.9	Tremula longifila	Family	Tremulidae
+18S_ASV0731	13	4	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda			1	1	1	1	1	0.98	0.65	0.48	97.3	Mesocyclops pehpeiensis	Family	Maxillopoda
+18S_ASV0732	2	15	394	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Cymbellales	Gomphonemataceae	Gomphonema		1	1	1	1	1	0.9	0.9	0.54	100	Gomphonema parvulum	Genus	Gomphonema
+18S_ASV0733	0	17	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.63	0.63	0.26	0.26	98.5	Cystodinium phaseolus	Class	Dinophyceae
+18S_ASV0734	0	17	389	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.55	0.55	0.55	0.54	0.54	95.2	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0735	0	17	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Staurodesmus	Staurodesmus_bulnheimii	1	1	1	1	1	1	0.99	0.99	100	Staurodesmus bulnheimii	Species	Staurodesmus bulnheimii
+18S_ASV0736	0	17	399	Eukaryota	Obazoa	Opisthokonta-Fungi	Rozellomycota					1	1	1	1	1	1	1	1	98	Rozellomycota XXX sp.	Class	Rozellomycota
+18S_ASV0737	0	17	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.94	0.94	0.93	0.82	0.79	0.79	0.79	0.79	91.4	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV0738	0	17	397									0.75	0.75	0.54	0.11	0.07	0.04	0.04	0.04	70.5	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0739	0	17	394	Eukaryota	TSAR							1	1	0.73	0.73	0.73	0.73	0.73	0.73	87.4	Perkinsida XXX sp.	Supergroup	TSAR
+18S_ASV0740	0	17	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.45	0.36	100	Chlamydomonadales XX sp.	Order	Chlamydomonadales
+18S_ASV0741	0	17	403	Eukaryota	Obazoa	Opisthokonta-Fungi						0.97	0.97	0.94	0.65	0.23	0.19	0.19	0.19	90.4	Spizellomycetales XX sp.	Division	Opisthokonta-Fungi
+18S_ASV0742	0	17	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae			Botryococcus	Botryococcus_braunii	1	1	1	1	1	1	1	0.9	99	Botryococcus braunii	Species	Botryococcus braunii
+18S_ASV0743	0	17	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	0.99	0.98	0.57	0.57	98.2	Characiopodium hindakii	Order	Sphaeropleales
+18S_ASV0744	0	17	457	Eukaryota	Obazoa	Opisthokonta-Fungi						0.84	0.84	0.8	0.63	0.38	0.38	0.29	0.29	78.6	Endocoenobium eudorinae	Division	Opisthokonta-Fungi
+18S_ASV0745	0	17	405	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	1	1	1	1	1	99.3	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0747	16	0	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.6	0.38	99.8	Micractinium sp.	Order	Chlorellales
+18S_ASV0748	16	0	403	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	1	1	0.94	94.3	Vampyrella sp.	Order	Vampyrellida
+18S_ASV0749	16	0	408	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				1	1	1	1	1	1	1	1	94.4	Amphifilaceae X sp.	Order	Labyrinthulomycetes
+18S_ASV0750	2	14	389	Eukaryota	TSAR	Alveolata-Ciliophora	Oligohymenophorea	Peniculia				1	1	1	1	1	0.52	0.52	0.45	98.5	Frontoniidae 1 X sp.	Order	Peniculia
+18S_ASV0751	1	15	408	Eukaryota	Amoebozoa	Tubulinea	Elardia	Euamoebida				1	1	1	1	0.99	0.95	0.95	0.69	85.7	Copromyxa laresi	Order	Euamoebida
+18S_ASV0752	0	16	406	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae			Paraeustigmatos	Paraeustigmatos_columelliferus	1	1	1	1	1	1	1	1	100	Paraeustigmatos columelliferus	Species	Paraeustigmatos columelliferus
+18S_ASV0753	0	16	403	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	0.98	0.72	0.25	0.16	0.16	0.16	91.3	Rhizophlyctis rosea	Division	Opisthokonta-Fungi
+18S_ASV0754	0	16	405	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	0.99	0.86	0.75	0.26	0.26	0.26	91.1	Chytridiales XX sp.	Class	Chytridiomycota
+18S_ASV0755	0	16	412									0.51	0.51	0.49	0.49	0.18	0.12	0.12	0.12	79.6	Variosea XXX sp.	Unassigned	Unassigned
+18S_ASV0756	0	16	397									0.7	0.7	0.57	0.19	0.12	0.07	0.07	0.05	70.5	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0757	0	16	404	Eukaryota	Obazoa	Opisthokonta-Metazoa						0.99	0.99	0.99	0.72	0.61	0.61	0.3	0.28	86.7	Eumonhystera sp.	Division	Opisthokonta-Metazoa
+18S_ASV0758	0	16	400	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	0.99	0.99	0.99	0.48	0.31	100	Alternaria longissima	Family	Dothideomycetes
+18S_ASV0759	0	16	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.88	0.88	100	Rotifera XXX sp.	Class	Rotifera
+18S_ASV0760	0	16	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Rozellomycota					1	1	1	1	1	1	1	1	94.3	Rozellomycota XXX sp.	Class	Rozellomycota
+18S_ASV0761	0	16	401									0.61	0.61	0.52	0.17	0.08	0.05	0.05	0.03	70.7	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0762	0	16	407	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.29	0.29	96.3	Ichthydium squamigerum	Class	Gastrotricha
+18S_ASV0763	0	16	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	0.98	0.98	0.58	0.44	97	Radiococcus polycoccus	Order	Sphaeropleales
+18S_ASV0764	0	16	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.27	0.04	99.2	Triploceras gracile	Class	Zygnemophyceae
+18S_ASV0765	0	16	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.26	0.16	95	Protosiphon botryoides	Order	Chlamydomonadales
+18S_ASV0766	15	0	401	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.39	0.21	99.5	Sphaeroplea robusta	Order	Sphaeropleales
+18S_ASV0767	15	0	386	Eukaryota	Obazoa	Opisthokonta-Fungi						0.96	0.96	0.93	0.66	0.66	0.66	0.66	0.66	90.7	Rozellomycota XXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0768	15	0	401	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	1	1	1	1	1	1	99	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0769	15	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae					1	1	1	1	0.7	0.7	0.45	0.19	96	Pteromonas protracta	Class	Chlorophyceae
+18S_ASV0770	15	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	0.56	0.15	0.1	100	Monoraphidium minutum	Order	Sphaeropleales
+18S_ASV0771	0	15	398	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.6	0.21	98.5	Staurastrum cristatum	Class	Zygnemophyceae
+18S_ASV0772	0	15	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes	Acremonium	Acremonium_curvulum	1	1	1	1	1	1	0.99	0.99	99.8	Acremonium curvulum	Species	Acremonium curvulum
+18S_ASV0773	0	15	410	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	0.82	0.3	0.3	87.3	Leptophryidae X sp.	Order	Vampyrellida
+18S_ASV0774	0	15	408	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	0.66	0.66	0.66	0.66	98	Catenomyces sp.	Class	Chytridiomycota
+18S_ASV0775	0	15	395									0.7	0.7	0.56	0.14	0.13	0.07	0.07	0.04	70.5	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0776	0	15	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	0.98	0.58	0.58	94.6	Leptophryidae X sp.	Order	Vampyrellida
+18S_ASV0777	0	15	401	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.45	0.21	98.3	Cosmarium contractum	Class	Zygnemophyceae
+18S_ASV0778	0	15	363									0.42	0.42	0.27	0.14	0.14	0.14	0.14	0.14	73.7	Rozellomycota XXX sp.	Unassigned	Unassigned
+18S_ASV0779	0	15	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Leptophryidae			1	1	1	1	1	0.99	0.72	0.72	96.1	Leptophryidae X sp.	Family	Leptophryidae
+18S_ASV0780	0	15	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Glissomonadida	Allapsidae			1	1	1	1	1	1	0.84	0.84	97.6	Allapsidae X sp.	Family	Allapsidae
+18S_ASV0781	0	15	408	Eukaryota	Amoebozoa	Tubulinea	Echinamoebida		Echinamoebidae	Echinamoeba		1	1	1	1	1	1	1	0.51	100	Echinamoeba exundans	Genus	Echinamoeba
+18S_ASV0782	14	0	403	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	1	1	0.91	93.8	Vampyrella sp.	Order	Vampyrellida
+18S_ASV0783	14	0	408	Eukaryota	Obazoa	Opisthokonta-Fungi	Aphelidiomycota	Aphelidiales				1	1	1	0.96	0.96	0.96	0.96	0.96	91.5	Aphelidium sp.	Order	Aphelidiales
+18S_ASV0784	14	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.39	0.31	98.8	Polymerurus nodicaudus	Class	Gastrotricha
+18S_ASV0785	14	0	392									0.61	0.61	0.21	0.2	0.09	0.08	0.08	0.06			Unassigned	Unassigned
+18S_ASV0786	14	0	353									0.78	0.78	0.24	0.08	0.06	0.06	0.06	0.06	70.3	Perkinsida XXX sp.	Unassigned	Unassigned
+18S_ASV0787	13	1	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	0.99	0.98	0.98	0.43	0.43	99.5	Chlamydomonadales XX sp.	Order	Chlamydomonadales
+18S_ASV0788	13	1	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	0.66	0.66	0.29	100	Monoraphidium griffithii	Order	Sphaeropleales
+18S_ASV0789	11	3	389	Eukaryota	TSAR	Alveolata-Ciliophora	Prostomatea_1		Colepidae	Coleps		1	1	1	1	1	1	0.84	0.66	99.5	Coleps hirtus	Genus	Coleps
+18S_ASV0790	1	13	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	1	1	1	0.68	0.6	99.8	Trachydiscus sp.	Class	Eustigmatophyceae
+18S_ASV0791	0	14	401	Eukaryota	Archaeplastida	Chlorophyta						1	1	1	0.57	0.56	0.51	0.51	0.33	97.5	Microspora stagnorum	Division	Chlorophyta
+18S_ASV0792	0	14	406	Eukaryota	TSAR	Stramenopiles-Gyrista						1	1	0.99	0.36	0.36	0.36	0.21	0.21	91.7	Eustigmatophyceae XXX sp.	Division	Stramenopiles-Gyrista
+18S_ASV0793	0	14	412	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida	Penardia-lineage	Penardia		1	1	1	1	1	1	1	1	97.1	Penardia-lineage X sp.	Genus	Penardia
+18S_ASV0794	13	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Mychonastes		1	1	1	1	1	1	0.95	0.6	100	Mychonastes ovahimbae	Genus	Mychonastes
+18S_ASV0795	13	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	1	0.76	0.44	0.44	0.44	97	Chytridiales XX sp.	Class	Chytridiomycota
+18S_ASV0796	13	0	400	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.98	0.98	0.98	0.98	0.98	94	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0797	13	0	384	Eukaryota	TSAR	Alveolata-Ciliophora	Heterotrichea		Condylostomatidae	Linostomella		1	1	1	1	1	1	1	1	98.7	Linostomella sp.	Genus	Linostomella
+18S_ASV0798	1	12	387	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	1	1	1	1	1	100	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0799	0	13	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.51	0.17	99	Micrasterias fimbriata	Class	Zygnemophyceae
+18S_ASV0800	0	13	411	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.64	0.38	99.5	Chaetonotus heideri	Class	Gastrotricha
+18S_ASV0801	0	13	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda	Mesocyclops		1	1	1	1	1	1	0.84	0.53	98.3	Mesocyclops dissimilis	Genus	Mesocyclops
+18S_ASV0802	0	13	396									0.62	0.62	0.49	0.2	0.11	0.08	0.08	0.05	70.8	Filoreta turcica	Unassigned	Unassigned
+18S_ASV0803	0	13	439	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.98	0.98	0.98	0.97	0.59	0.59	0.59	0.58	86.6	Gromochytrium mamkaevae	Class	Chytridiomycota
+18S_ASV0804	0	13	410	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	1	0.67	0.6	0.42	0.42	0.15	87.4	Paulinella micropora	Division	Rhizaria-Cercozoa
+18S_ASV0805	0	13	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Monoblepharidales				1	1	1	0.99	0.99	0.57	0.36	0.1	97	Monoblepharella elongata	Order	Monoblepharidales
+18S_ASV0806	0	13	400	Eukaryota	Obazoa	Opisthokonta-Fungi						0.99	0.99	0.99	0.69	0.69	0.69	0.69	0.69	91.8	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0807	0	13	400	Eukaryota	Archaeplastida	Streptophyta	Embryophyceae					0.9	0.9	0.9	0.9	0.9	0.9	0.5	0.5	100	Talipariti tiliaceum	Class	Embryophyceae
+18S_ASV0808	0	13	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.46	0.46	98	Monommata maculata	Class	Rotifera
+18S_ASV0809	0	13	402									0.79	0.79	0.44	0.24	0.22	0.12	0.12	0.12	80	Colpodellida CHR1 X sp.	Unassigned	Unassigned
+18S_ASV0810	0	13	401	Eukaryota	Obazoa	Opisthokonta-Choanoflagellata	Choanoflagellatea	Craspedida	Salpingoecidae_Group_C1			1	1	1	1	1	1	1	1	99.5	Salpingoecidae Group C1 X sp.	Family	Salpingoecidae Group C1
+18S_ASV0811	0	13	412	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Granofilosea	Filosa				1	1	1	0.97	0.94	0.91	0.91	0.91	94.9	Novel-Gran-6 X sp.	Order	Filosa
+18S_ASV0812	0	13	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Desmidium	Desmidium_swartzii	1	1	1	1	1	1	0.84	0.83	100	Desmidium swartzii	Species	Desmidium swartzii
+18S_ASV0813	12	0	438	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.99	0.99	0.99	0.99	0.32	0.32	0.32	0.32	90.4	Gromochytrium mamkaevae	Class	Chytridiomycota
+18S_ASV0814	12	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.4	0.39	97.1	Polymerurus nodicaudus	Class	Gastrotricha
+18S_ASV0815	12	0	409	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	1	0.73	0.56	0.41	0.25	0.25	92.4	Allapsidae X sp.	Division	Rhizaria-Cercozoa
+18S_ASV0816	2	10	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Eurotiomycetes			1	1	1	1	1	0.99	0.35	0.35	99.5	Sarcinomyces sp.	Family	Eurotiomycetes
+18S_ASV0817	1	11	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.86	0.86	99.8	Rotifera XXX sp.	Class	Rotifera
+18S_ASV0818	1	11	410	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.93	0.46	0.44	98.3	Lagenidium sp.	Family	Peronosporales
+18S_ASV0819	0	12	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	0.98	0.82	0.6	0.33	0.28	0.12	94.5	Spizellomycetales XX sp.	Class	Chytridiomycota
+18S_ASV0820	0	12	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales		Ankistrodesmus		1	1	1	1	1	0.92	0.88	0.71	99.7	Ankistrodesmus densus	Genus	Ankistrodesmus
+18S_ASV0821	0	12	408	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Rhabdocoela	Mesostoma		1	1	1	1	1	1	1	0.53	100	Mesostoma lingua	Genus	Mesostoma
+18S_ASV0822	0	12	408	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Rhabdocoela	Mesostoma		1	1	1	1	1	1	0.97	0.52	99	Mesostoma lingua	Genus	Mesostoma
+18S_ASV0823	0	12	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.98	0.88	0.88	0.17	0.07	97	Sphaeropleales XX sp.	Order	Sphaeropleales
+18S_ASV0824	0	12	390	Eukaryota	Obazoa	Opisthokonta-Fungi	Rozellomycota					1	1	1	1	1	1	1	1	99	Rozellomycota XXX sp.	Class	Rozellomycota
+18S_ASV0825	0	12	378									0.61	0.61	0.54	0.26	0.26	0.26	0.26	0.26	78.1	Taphrina deformans	Unassigned	Unassigned
+18S_ASV0826	11	0	410	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	1	1	0.95	92.2	Vampyrella sp.	Order	Vampyrellida
+18S_ASV0827	11	0	407	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				1	1	1	1	1	1	1	1	90.3	Amphifilaceae X sp.	Order	Labyrinthulomycetes
+18S_ASV0828	11	0	402	Eukaryota	TSAR							0.95	0.95	0.66	0.66	0.66	0.48	0.43	0.43	92	Colpodellida CHR1 X sp.	Supergroup	TSAR
+18S_ASV0829	11	0	392	Eukaryota	TSAR	Stramenopiles-Gyrista						0.93	0.93	0.84	0.6	0.49	0.26	0.26	0.13	84.8	Thalassiosira sp.	Division	Stramenopiles-Gyrista
+18S_ASV0830	11	0	416	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Filosa	Filosa	Filosa		0.95	0.95	0.95	0.95	0.95	0.95	0.95	0.95	98.8	Filosa-Sarcomonadea XXX sp.	Genus	Filosa
+18S_ASV0831	0	11	396									0.65	0.65	0.53	0.1	0.04	0.04	0.04	0.04	70.3	Ventricleftida XX sp.	Unassigned	Unassigned
+18S_ASV0832	0	11	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.45	0.45	98.3	Rotifera XXX sp.	Class	Rotifera
+18S_ASV0833	0	11	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.49	0.49	99.3	Collotheca campanulata	Class	Rotifera
+18S_ASV0834	0	11	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.54	0.54	99.2	Gonium pectorale	Order	Chlamydomonadales
+18S_ASV0835	0	11	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Craniata		Teleostei			0.96	0.96	0.92	0.92	0.92	0.91	0.1	0.09	100	Gadopsis marmoratus	Family	Teleostei
+18S_ASV0836	0	11	393	Eukaryota	TSAR	Alveolata-Ciliophora	Spirotrichea	Oligotrichida	Pelagostrombidiidae			1	1	1	1	1	0.96	0.84	0.84	100	Pelagostrombidiidae X sp.	Family	Pelagostrombidiidae
+18S_ASV0837	0	11	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina				0.99	0.99	0.99	0.99	0.99	0.61	0.28	0.28	99.5	Rhexocercosporidium carotae	Order	Pezizomycotina
+18S_ASV0838	10	0	381	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				0.99	0.99	0.97	0.97	0.97	0.97	0.48	0.48	88	Thraustochytriaceae LAB19 sp.	Order	Labyrinthulomycetes
+18S_ASV0839	10	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.75	0.75	100	Scenedesmus sp.	Order	Sphaeropleales
+18S_ASV0841	10	0	392	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.48	0.42	0.37	0.16	92.5	Unruhdinium penardii	Class	Dinophyceae
+18S_ASV0842	10	0	411	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Glissomonadida	Sandonidae			1	1	1	1	1	0.99	0.59	0.51	99	Neoheteromita globosa	Family	Sandonidae
+18S_ASV0843	8	2	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.68	0.52	97.5	Chlamydomonas raudensis	Order	Chlamydomonadales
+18S_ASV0844	0	10	407	Eukaryota	TSAR	Rhizaria-Cercozoa						0.99	0.99	0.95	0.38	0.2	0.15	0.07	0.07	86.4	Novel-Clade-4 X sp.	Division	Rhizaria-Cercozoa
+18S_ASV0845	0	10	416									0.78	0.78	0.64	0.63	0.62	0.62	0.62	0.62	78.1	Glissomonadida XX sp.	Unassigned	Unassigned
+18S_ASV0846	0	10	421	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				0.99	0.99	0.98	0.98	0.98	0.98	0.49	0.48	83	Amphifilaceae X sp.	Order	Labyrinthulomycetes
+18S_ASV0847	0	10	419	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				1	1	1	1	1	1	1	1	86.4	Amphifilaceae X sp.	Order	Labyrinthulomycetes
+18S_ASV0848	0	10	399	Eukaryota	TSAR							0.9	0.9	0.43	0.43	0.43	0.21	0.21	0.21	84.1	Perkinsida XXX sp.	Supergroup	TSAR
+18S_ASV0849	0	10	391	Eukaryota	Obazoa	Opisthokonta-Fungi						0.96	0.96	0.96	0.77	0.59	0.58	0.58	0.57	93.3	Rhizophydium sp.	Division	Opisthokonta-Fungi
+18S_ASV0850	0	10	399	Eukaryota	Obazoa	Opisthokonta-Ichthyosporea	Ichthyophonida	Pseudoperkinsidae		Anurofeca		1	1	1	1	1	1	0.97	0.75	98.7	Anurofeca sp.	Genus	Anurofeca
+18S_ASV0851	0	10	400									0.35	0.35	0.19	0.09	0.05	0.02	0.02	0.02			Unassigned	Unassigned
+18S_ASV0852	0	10	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.66	0.23	99.2	Chlamydomonas reinhardtii	Order	Chlamydomonadales
+18S_ASV0853	0	10	396									0.69	0.69	0.56	0.12	0.07	0.04	0.04	0.02	71.5	Massisteria sp.	Unassigned	Unassigned
+18S_ASV0854	0	10	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	0.99	0.42	0.42	0.42	0.42	93	Dinophyceae XXX sp.	Class	Dinophyceae
+18S_ASV0855	0	10	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Oedogoniales		Oedogonium		1	1	1	1	1	1	0.95	0.68	97.2	Oedogonium sp.	Genus	Oedogonium
+18S_ASV0856	9	0	402	Eukaryota	TSAR							0.97	0.97	0.66	0.66	0.66	0.46	0.42	0.42	92	Colpodellida CHR1 X sp.	Supergroup	TSAR
+18S_ASV0858	9	0	401	Eukaryota	TSAR	Alveolata-Chrompodellids	Colpodellidea	Colpodellida	Alphamonaceae	Alphamonas		1	1	1	1	1	1	0.96	0.95	98.8	Alphamonas sp.	Genus	Alphamonas
+18S_ASV0859	7	2	394	Eukaryota	TSAR	Alveolata-Ciliophora	Spirotrichea	Hypotrichia		Hypotrichidium		1	1	1	1	1	0.88	0.82	0.46	99.7	Hypotrichidium paraconicum	Genus	Hypotrichidium
+18S_ASV0860	6	3	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	0.99	0.94	0.94	0.3	0.21	98.7	Gungnir kasakii	Order	Chlamydomonadales
+18S_ASV0861	4	5	398	Eukaryota	TSAR							0.97	0.97	0.77	0.76	0.76	0.74	0.74	0.74	83.8	Perkinsida XXX sp.	Supergroup	TSAR
+18S_ASV0862	3	6	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Eurotiomycetes			1	1	1	1	1	1	0.44	0.44	99.8	Chaetothyriales sp.	Family	Eurotiomycetes
+18S_ASV0863	1	8	404	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.52	0.52	0.52	0.52	0.52	94.8	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0864	1	8	401	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	1	0.42	0.3	100	Ankyra lanceolata	Order	Sphaeropleales
+18S_ASV0865	0	9	399									0.58	0.58	0.54	0.18	0.14	0.07	0.04	0.03	79.8	Rhizophydium sp.	Unassigned	Unassigned
+18S_ASV0866	0	9	400	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae					1	1	1	1	0.79	0.77	0.44	0.44	97.5	Pseudomuriella sp.	Class	Chlorophyceae
+18S_ASV0867	0	9	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.35	0.35	99	Haplotaenium minutum	Class	Zygnemophyceae
+18S_ASV0868	0	9	396	Eukaryota	Obazoa	Opisthokonta-Fungi						0.97	0.97	0.96	0.74	0.74	0.74	0.74	0.74	89.5	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0869	0	9	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				0.99	0.99	0.99	0.99	0.99	0.41	0.41	0.34	89.2	Vampyrella sp.	Order	Vampyrellida
+18S_ASV0870	0	9	403									0.56	0.56	0.27	0.13	0.1	0.1	0.1	0.1	73.7	Urostipulosphaera sp.	Unassigned	Unassigned
+18S_ASV0871	0	9	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	1	1	0.52	0.25	0.12	99.7	Kirchneriella dianae	Order	Sphaeropleales
+18S_ASV0872	0	9	409									0.61	0.61	0.47	0.21	0.18	0.06	0.02	0.02	81	Polychytrium aggregatum	Unassigned	Unassigned
+18S_ASV0873	0	9	408	Eukaryota	Obazoa	Opisthokonta-Metazoa	Craniata					0.95	0.95	0.93	0.93	0.93	0.74	0.42	0.42	100	Vicugna pacos	Class	Craniata
+18S_ASV0874	0	9	424	Eukaryota	Amoebozoa	Tubulinea	Elardia	Euamoebida				0.81	0.81	0.8	0.8	0.8	0.5	0.48	0.2	76.8	Copromyxa sp.	Order	Euamoebida
+18S_ASV0875	0	9	401	Eukaryota	Obazoa							0.9	0.9	0.65	0.3	0.13	0.07	0.05	0.05	88.1	Gaertneriomyces spectabile	Supergroup	Obazoa
+18S_ASV0876	0	9	413	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Cercomonadida				1	1	0.99	0.99	0.99	0.99	0.96	0.7	94.2	Paracercomonas sp.	Order	Cercomonadida
+18S_ASV0877	0	9	403									0.52	0.52	0.39	0.15	0.09	0.09	0.09	0.07	71.1	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0878	0	9	401	Eukaryota	Haptista	Haptophyta	Pavlovophyceae	Pavlovales	Pavlovaceae	Diacronema	Diacronema_noctivaga	1	1	1	1	1	1	1	0.95	99	Diacronema noctivaga	Species	Diacronema noctivaga
+18S_ASV0879	0	9	400	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae			Choricystis		1	1	1	1	0.97	0.97	0.95	0.4	99.5	Choricystis minor	Genus	Choricystis
+18S_ASV0880	8	0	387	Eukaryota	TSAR	Stramenopiles-Gyrista						0.96	0.96	0.84	0.66	0.57	0.27	0.25	0.09	86.4	Discostella stelligera	Division	Stramenopiles-Gyrista
+18S_ASV0881	8	0	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales	Stephanodiscaceae			1	1	1	1	1	0.99	0.99	0.76	95.8	Cyclotella meneghiniana	Family	Stephanodiscaceae
+18S_ASV0882	8	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.99	0.93	0.93	0.36	0.27	97.7	Scenedesmus pupukensis	Order	Sphaeropleales
+18S_ASV0883	3	5	409	Eukaryota	TSAR	Stramenopiles-Gyrista	Hyphochytriomyceta	Hyphochytriales	Hyphochrytriaceae	Hyphochytrium	Hyphochytrium_catenoides	1	1	1	1	1	1	1	1	99	Hyphochytrium catenoides	Species	Hyphochytrium catenoides
+18S_ASV0884	2	6	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Sordariomycetes			1	1	1	1	1	0.99	0.49	0.17	100	Ophiostomatales sp.	Family	Sordariomycetes
+18S_ASV0885	0	8	390	Eukaryota	TSAR	Alveolata-Ciliophora	Colpodea		Bursariomorphida			1	1	1	1	1	1	0.79	0.59	95.9	Bryometopus atypicus	Family	Bursariomorphida
+18S_ASV0886	0	8	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales		Carteria		1	1	1	1	0.98	0.98	0.96	0.58	100	Carteria oliveri	Genus	Carteria
+18S_ASV0887	0	8	400									0.35	0.35	0.24	0.08	0.05	0.04	0.02	0.01			Unassigned	Unassigned
+18S_ASV0888	0	8	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.48	0.29	99	Spondylosium panduriforme	Class	Zygnemophyceae
+18S_ASV0889	0	8	396	Eukaryota	Cryptista	Cryptophyta	Cryptophyceae	Cryptomonadales				1	1	1	1	0.98	0.96	0.86	0.32	95.5	Cryptomonas phaseolus	Order	Cryptomonadales
+18S_ASV0890	0	8	396	Eukaryota	TSAR							0.94	0.94	0.63	0.48	0.27	0.27	0.27	0.27	79	Perkinsida XXX sp.	Supergroup	TSAR
+18S_ASV0891	0	8	447	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	1	0.77	0.47	0.28	0.28	0.28	83.9	Novel-Gran-6 X sp.	Division	Rhizaria-Cercozoa
+18S_ASV0892	0	8	390	Eukaryota	TSAR	Alveolata-Ciliophora	CONThreeP			Askenasia		1	1	1	1	1	1	1	1	100	Askenasia sp.	Genus	Askenasia
+18S_ASV0893	0	8	400	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.75	0.75	98.5	Rotaria rotatoria	Class	Rotifera
+18S_ASV0894	0	8	402	Eukaryota	Obazoa	Opisthokonta-Metazoa	Cnidaria		Hydrozoa			1	1	1	1	1	1	0.65	0.65	98.8	Craspedacusta sinensis	Family	Hydrozoa
+18S_ASV0895	0	8	408	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Catenulida	Stenostomum	Stenostomum_simplex	1	1	1	1	1	1	0.97	0.82	99.5	Stenostomum simplex	Species	Stenostomum simplex
+18S_ASV0896	0	8	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.61	0.27	98	Cosmarium punctulatum	Class	Zygnemophyceae
+18S_ASV0897	0	8	420									0.5	0.5	0.4	0.16	0.13	0.13	0.02	0.02	73.1	Hexarthra intermedia	Unassigned	Unassigned
+18S_ASV0898	0	8	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.99	0.97	0.96	0.31	0.31	98.5	Characiopodium hindakii	Order	Sphaeropleales
+18S_ASV0899	0	8	401	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae					1	1	1	0.94	0.78	0.76	0.21	0.19	98.3	Chlorellales XX sp.	Class	Trebouxiophyceae
+18S_ASV0900	0	8	406	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda			1	1	1	1	1	1	0.31	0.17	100	Eudiaptomus graciloides	Family	Maxillopoda
+18S_ASV0901	0	8	395									0.67	0.67	0.52	0.12	0.05	0.05	0.05	0.04	70.3	Micropyxidiella edaphonis	Unassigned	Unassigned
+18S_ASV0902	0	8	403	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.18	0.18	96	Floscularia decora	Class	Rotifera
+18S_ASV0904	0	8	386	Eukaryota	TSAR	Alveolata-Ciliophora	Heterotrichea		Stentoridae	Stentor		1	1	1	1	1	1	1	0.49	98.7	Stentor amethystinus	Genus	Stentor
+18S_ASV0905	0	8	400	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.44	0.11	98	Staurastrum iotanum	Class	Zygnemophyceae
+18S_ASV0906	0	8	411	Eukaryota	TSAR	Rhizaria-Cercozoa						1	1	1	0.58	0.58	0.58	0.58	0.58	99	Glissomonadida XX sp.	Division	Rhizaria-Cercozoa
+18S_ASV0908	0	8	400	Eukaryota	Obazoa	Opisthokonta-Fungi						0.99	0.99	0.99	0.53	0.53	0.53	0.29	0.29	92	Aphelidiaceae X sp.	Division	Opisthokonta-Fungi
+18S_ASV0909	0	8	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Chrysosaccales	Chrysosaccaceae			1	1	1	1	0.9	0.81	0.51	0.51	97.5	Chrysosphaera parvula	Family	Chrysosaccaceae
+18S_ASV0910	0	8	403	Eukaryota	Obazoa							0.86	0.86	0.78	0.39	0.39	0.39	0.39	0.39	85.1	Rozellomycota XXX sp.	Supergroup	Obazoa
+18S_ASV0911	7	0	381									0.77	0.77	0.29	0.25	0.14	0.14	0.14	0.14	75.9	Kofoidinium pavillardii	Unassigned	Unassigned
+18S_ASV0912	7	0	379	Eukaryota	TSAR	Alveolata-Ciliophora	Phyllopharyngea	Cyrtophoria_4	Chilodonellidae	Phascolodon	Phascolodon_vorticella	1	1	1	1	1	1	0.96	0.96	100	Chilodonellidae X sp.	Species	Phascolodon vorticella
+18S_ASV0914	7	0	400	Eukaryota	TSAR	Stramenopiles-Gyrista						0.96	0.96	0.83	0.7	0.49	0.28	0.19	0.19	87.2	Mediophyceae XXX sp.	Division	Stramenopiles-Gyrista
+18S_ASV0915	2	5	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales				1	1	1	0.93	0.8	0.73	0.18	0.18	98	Radiococcus sp.	Order	Sphaeropleales
+18S_ASV0916	1	6	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.34	0.26	99	Chlamydomonadales XX sp.	Order	Chlamydomonadales
+18S_ASV0917	1	6	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	0.95	0.93	0.93	0.93	0.93	93.3	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0918	0	7	402	Eukaryota	Obazoa	Opisthokonta-Fungi						0.94	0.94	0.84	0.45	0.3	0.09	0.01	0.01	84.4	Phlyctochytrium planicorne	Division	Opisthokonta-Fungi
+18S_ASV0919	0	7	374									0.46	0.46	0.3	0.2	0.2	0.07	0.02	0.02			Unassigned	Unassigned
+18S_ASV0920	0	7	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	1	0.98	0.97	0.97	0.97	95.8	Rhizophydiales XX sp.	Order	Rhizophydiales
+18S_ASV0921	0	7	409	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	0.75	0.35	0.35	96.3	Arachnula impatiens	Order	Vampyrellida
+18S_ASV0922	0	7	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae					1	1	1	1	0.7	0.7	0.69	0.69	96.8	Dinophyceae XXX sp.	Class	Dinophyceae
+18S_ASV0923	0	7	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.75	0.75	99.2	Spondylosium panduriforme	Class	Zygnemophyceae
+18S_ASV0924	0	7	396	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	1	0.75	0.75	0.75	0.75	0.75	90.5	Fungi XXXX sp.	Division	Opisthokonta-Fungi
+18S_ASV0925	0	7	384	Eukaryota	TSAR	Alveolata-Ciliophora						0.99	0.99	0.99	0.64	0.64	0.64	0.64	0.62	92.7	Placus striatus	Division	Alveolata-Ciliophora
+18S_ASV0926	0	7	407	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Rhabdocoela	Rhynchomesostoma	Rhynchomesostoma_rostratum	1	1	1	1	1	1	0.97	0.97	100	Rhynchomesostoma rostratum	Species	Rhynchomesostoma rostratum
+18S_ASV0927	0	7	435	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				1	1	0.98	0.98	0.98	0.91	0.91	0.91	85.2	Diplophrys sp.	Order	Labyrinthulomycetes
+18S_ASV0928	0	7	436									0.6	0.6	0.54	0.16	0.14	0.11	0.11	0.11	70.7	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0929	0	7	406	Eukaryota	TSAR	Stramenopiles-Bigyra	Opalozoa		MAST-12	MAST-12C		1	1	1	1	1	1	1	1	98.5	MAST-12C sp.	Genus	MAST-12C
+18S_ASV0931	6	0	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	0.98	0.93	0.93	0.13	0.13	98.2	Lobocharacium coloradoense	Order	Chlamydomonadales
+18S_ASV0933	6	0	409	Eukaryota	Haptista	Centroplasthelida						1	1	1	0.9	0.9	0.9	0.9	0.9	98.3	Centroplasthelida XXXXX sp.	Division	Centroplasthelida
+18S_ASV0934	6	0	410	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes	Amphifilaceae			1	1	1	1	1	1	1	1	95.1	Amphifilaceae X sp.	Family	Amphifilaceae
+18S_ASV0935	6	0	402	Eukaryota	TSAR							0.94	0.94	0.72	0.72	0.72	0.46	0.35	0.35	92	Colpodellida CHR1 X sp.	Supergroup	TSAR
+18S_ASV0936	6	0	410	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Glissomonadida	Sandonidae			1	1	1	1	1	1	0.72	0.72	98.8	Sandonidae X sp.	Family	Sandonidae
+18S_ASV0937	6	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Spizellomycetales				1	1	1	1	1	1	1	1	97.5	Spizellomycetales XX sp.	Order	Spizellomycetales
+18S_ASV0938	6	0	408	Eukaryota	TSAR	Stramenopiles-Gyrista	Eustigmatophyceae					1	1	1	0.93	0.93	0.93	0.6	0.6	97.8	Eustigmatophyceae XXX sp.	Class	Eustigmatophyceae
+18S_ASV0939	6	0	376									0.49	0.49	0.13	0.09	0.09	0.05	0.05	0.05			Unassigned	Unassigned
+18S_ASV0940	5	1	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.42	0.41	97.5	Oocystella oogama	Order	Chlorellales
+18S_ASV0941	5	1	407	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	1	1	0.92	0.73	0.23	96.1	Pythium inflatum	Family	Peronosporales
+18S_ASV0942	1	5	434	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.96	0.33	0.33	0.26	0.26	89.2	Gromochytrium mamkaevae	Class	Chytridiomycota
+18S_ASV0943	0	6	406	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				0.98	0.98	0.97	0.95	0.95	0.47	0.47	0.47	86.5	op14-lineage X sp.	Order	Vampyrellida
+18S_ASV0944	0	6	372									0.61	0.61	0.61	0.61	0.61	0.61	0.61	0.61	90.1	Parvamoeba sp.	Unassigned	Unassigned
+18S_ASV0945	0	6	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	1	1	1	0.58	0.41	99.8	Acrospermum compressum	Family	Dothideomycetes
+18S_ASV0946	0	6	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Arthropoda	Crustacea	Maxillopoda			1	1	1	1	1	1	0.95	0.89	95.4	Mesocyclops dissimilis	Family	Maxillopoda
+18S_ASV0947	0	6	365	Eukaryota	TSAR							0.8	0.8	0.29	0.21	0.09	0.09	0.09	0.04	73.4	Cryptosporidium fragile	Supergroup	TSAR
+18S_ASV0948	0	6	409	Eukaryota	TSAR	Stramenopiles-Gyrista						0.97	0.97	0.81	0.2	0.2	0.13	0.1	0.1	90.3	Hyphochytrydiales XX sp.	Division	Stramenopiles-Gyrista
+18S_ASV0950	0	6	404	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				0.93	0.93	0.88	0.83	0.83	0.65	0.62	0.62	81.7	Penardia-lineage X sp.	Order	Vampyrellida
+18S_ASV0951	0	6	421	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				1	1	1	1	1	1	0.95	0.95	91.4	Fibrophrys sp.	Order	Labyrinthulomycetes
+18S_ASV0952	0	6	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae			Cosmarium		1	1	1	1	1	1	0.98	0.38	99.5	Cosmarium isthmium	Genus	Cosmarium
+18S_ASV0953	0	6	404	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	1	0.97	93.3	Spirotaenia condensata	Class	Zygnemophyceae
+18S_ASV0954	0	6	396	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				0.98	0.98	0.96	0.96	0.96	0.87	0.61	0.61	78.1	Taphrina deformans	Order	Labyrinthulomycetes
+18S_ASV0955	0	6	419	Eukaryota	Haptista	Centroplasthelida						1	1	1	0.87	0.87	0.87	0.87	0.87	95.8	Centroplasthelida XXXXX sp.	Division	Centroplasthelida
+18S_ASV0956	0	6	393	Eukaryota	TSAR	Alveolata-Ciliophora	Colpodea		Colpodida	Colpoda		1	1	1	1	1	1	0.94	0.5	99	Colpoda magna	Genus	Colpoda
+18S_ASV0957	0	6	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.66	0.66	99	Spondylosium pulchrum	Class	Zygnemophyceae
+18S_ASV0958	0	6	386	Eukaryota	Obazoa	Opisthokonta-Fungi	Rozellomycota					1	1	1	0.91	0.91	0.91	0.91	0.91	93.8	Rozellomycota XXX sp.	Class	Rozellomycota
+18S_ASV0959	0	6	406	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes		Peronosporales			1	1	1	0.97	0.97	0.9	0.57	0.19	96.6	Lagenidium sp.	Family	Peronosporales
+18S_ASV0962	5	0	396	Eukaryota	Obazoa	Opisthokonta-Metazoa	Platyhelminthes	Turbellaria	Seriata	Dugesia	Dugesia_notogaea	1	1	1	1	1	1	1	1	99	Dugesia notogaea	Species	Dugesia notogaea
+18S_ASV0963	5	0	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales				1	1	1	1	1	1	0.45	0.41	98	Oocystis sp.	Order	Chlorellales
+18S_ASV0964	1	4	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.35	0.35	98.8	Monommata maculata	Class	Rotifera
+18S_ASV0965	0	5	433									0.4	0.4	0.25	0.19	0.18	0.08	0.03	0.03			Unassigned	Unassigned
+18S_ASV0966	0	5	396									0.68	0.68	0.56	0.15	0.08	0.08	0.08	0.05	70.6	Cercozoa XXXX sp.	Unassigned	Unassigned
+18S_ASV0967	0	5	413	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes					1	1	1	1	1	0.76	0.57	0.19	97.6	Apodachlya brachynema	Class	Peronosporomycetes
+18S_ASV0968	0	5	388	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	1	1	1	1	1	97.7	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0969	0	5	398	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Chlamydomonadales				1	1	1	1	1	1	0.41	0.22	99.2	Vitreochlamys nekrassovii	Order	Chlamydomonadales
+18S_ASV0970	0	5	406	Eukaryota	TSAR	Stramenopiles-Bigyra	Opalozoa		MAST-12	MAST-12C		1	1	1	1	1	1	1	1	98.8	MAST-12C sp.	Genus	MAST-12C
+18S_ASV0971	0	5	403	Eukaryota	Obazoa	Opisthokonta-Fungi	Basidiomycota	Pucciniomycotina	Cystobasidiomycetes	Sporobolomyces		1	1	1	1	1	0.91	0.91	0.51	100	Sporobolomyces sp.	Genus	Sporobolomyces
+18S_ASV0972	0	5	403	Eukaryota	Obazoa	Opisthokonta-Fungi						0.99	0.99	0.96	0.73	0.24	0.17	0.17	0.17	90.8	Catenomyces sp.	Division	Opisthokonta-Fungi
+18S_ASV0973	0	5	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.29	0.28	97.7	Desmidium swartzii	Class	Zygnemophyceae
+18S_ASV0974	0	5	426									0.58	0.58	0.35	0.26	0.23	0.1	0.02	0.01			Unassigned	Unassigned
+18S_ASV0975	0	5	405									0.51	0.51	0.31	0.23	0.13	0.13	0.13	0.13			Unassigned	Unassigned
+18S_ASV0976	0	5	445	Eukaryota	Amoebozoa	Evosea	Variosea		Mb5C-lineage	Mb5C		1	1	1	1	1	1	1	1	98	Mb5C-lineage X sp.	Genus	Mb5C
+18S_ASV0977	0	5	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.96	0.96	0.95	0.93	0.67	0.67	0.67	0.67	98	Spizellomycetales XX sp.	Class	Chytridiomycota
+18S_ASV0978	4	0	398	Eukaryota	TSAR	Alveolata-Perkinsea	Perkinsida					1	1	0.98	0.98	0.98	0.98	0.98	0.98	97	Perkinsida XXX sp.	Class	Perkinsida
+18S_ASV0980	4	0	400	Eukaryota	TSAR	Stramenopiles-Bigyra	Bicoecea	Bicoecales	Bicoecaceae			1	1	1	1	1	1	1	1	99.8	Bicoecaceae X sp.	Family	Bicoecaceae
+18S_ASV0981	4	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.45	0.38	96.8	Chaetonotus sp.	Class	Gastrotricha
+18S_ASV0982	4	0	418	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Glissomonadida				1	1	1	0.99	0.97	0.6	0.6	0.6	93.9	Allapsidae X sp.	Order	Glissomonadida
+18S_ASV0984	0	4	401	Eukaryota	Obazoa	Opisthokonta-Fungi	Blastocladiomycota	Blastocladiomycotina	Blastocladiomycetes	Hyaloraphidium		1	1	1	0.99	0.99	0.99	0.99	0.99	98	Hyaloraphidium curvatum	Genus	Hyaloraphidium
+18S_ASV0985	0	4	404	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Chrysosaccales				1	1	1	0.98	0.81	0.79	0.54	0.54	94.6	Chromophyton vischeri	Order	Chrysosaccales
+18S_ASV0986	0	4	384	Eukaryota	TSAR	Alveolata-Ciliophora	Heterotrichea		Spirostomidae	Spirostomum		1	1	1	1	1	1	1	0.57	99.5	Spirostomum sp.	Genus	Spirostomum
+18S_ASV0987	0	4	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera			Microcodon	Microcodon_clavus	1	1	1	1	1	1	0.98	0.98	100	Microcodon clavus	Species	Microcodon clavus
+18S_ASV0988	0	4	400									0.64	0.64	0.42	0.13	0.04	0.03	0.02	0.02	74.8	Chrysophyceae Clade-EC2H XX sp.	Unassigned	Unassigned
+18S_ASV0989	0	4	399	Eukaryota	Archaeplastida	Chlorophyta	Chlorophyceae	Sphaeropleales	Selenastraceae	Monoraphidium		1	1	1	1	1	0.8	0.8	0.61	98.5	Monoraphidium saxatile	Genus	Monoraphidium
+18S_ASV0990	0	4	413	Eukaryota	TSAR	Stramenopiles-Gyrista	Peronosporomycetes					1	1	1	0.99	0.99	0.49	0.3	0.11	95.2	Leptomitales X sp.	Class	Peronosporomycetes
+18S_ASV0991	3	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	1	1	1	0.36	0.3	98	Kijanebalola devestiva	Class	Gastrotricha
+18S_ASV0992	3	0	373	Eukaryota	Amoebozoa	Tubulinea	Elardia	Euamoebida	LOS7N/I-lineage	Ptolemeba		1	1	1	1	1	1	1	1	97.9	Ptolemeba noxubium	Genus	Ptolemeba
+18S_ASV0995	3	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Chytridiales				1	1	1	1	1	1	1	1	99.8	Chytridiales XX sp.	Order	Chytridiales
+18S_ASV0996	3	0	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.73	0.58	98.8	Lepadella rhomboides	Class	Rotifera
+18S_ASV0997	3	0	399	Eukaryota	Archaeplastida	Chlorophyta	Trebouxiophyceae	Chlorellales		Oocystaceae		1	1	1	1	1	1	0.83	0.83	98.5	Oocystaceae sp.	Genus	Oocystaceae
+18S_ASV0998	3	0	384	Eukaryota	TSAR	Stramenopiles-Gyrista	Chrysophyceae	Paraphysomonadales				1	1	0.99	0.96	0.8	0.75	0.75	0.46	81.4	Paraphysomonas uniformis	Order	Paraphysomonadales
+18S_ASV0999	0	3	433									0.35	0.35	0.22	0.18	0.16	0.06	0.05	0.05			Unassigned	Unassigned
+18S_ASV1000	0	3	360									0.5	0.5	0.5	0.42	0.25	0.25	0.14	0.07			Unassigned	Unassigned
+18S_ASV1001	0	3	431									0.68	0.68	0.23	0.13	0.08	0.03	0.03	0.03	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV1002	0	3	463	Eukaryota	Amoebozoa	Tubulinea	Elardia					0.95	0.95	0.94	0.94	0.65	0.64	0.55	0.55	78.1	Taphrina deformans	Class	Elardia
+18S_ASV1003	0	3	417	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Cercomonadida				1	1	0.99	0.99	0.99	0.99	0.98	0.47	92.3	Paracercomonas compacta	Order	Cercomonadida
+18S_ASV1004	0	3	401	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	0.99	0.55	0.55	0.55	0.54	0.54	95.3	Hyaloraphidium curvatum	Division	Opisthokonta-Fungi
+18S_ASV1005	0	3	399	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					0.99	0.99	0.88	0.81	0.81	0.79	0.31	0.08	92	Staurastrum crenulatum	Class	Zygnemophyceae
+18S_ASV1006	0	3	389	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				0.99	0.99	0.95	0.95	0.95	0.89	0.64	0.64	78.1	Taphrina deformans	Order	Labyrinthulomycetes
+18S_ASV1007	0	3	403	Eukaryota	Obazoa							0.99	0.99	0.77	0.75	0.75	0.39	0.19	0.19	86.4	Cladosporium cladosporioides	Supergroup	Obazoa
+18S_ASV1008	0	3	450									0.36	0.36	0.16	0.11	0.09	0.03	0.03	0.03	72.6	Taphrina deformans	Unassigned	Unassigned
+18S_ASV1009	0	3	407	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	1	1	1	0.99	0.99	0.99	94.6	sm27-lineage X sp.	Order	Vampyrellida
+18S_ASV1012	2	0	409	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					0.99	0.99	0.99	0.99	0.99	0.99	0.88	0.75	94.6	Chaetonotus uncinus	Class	Gastrotricha
+18S_ASV1013	2	0	401	Eukaryota	TSAR	Stramenopiles-Gyrista	Mediophyceae	Thalassiosirales				1	1	1	0.97	0.88	0.73	0.73	0.52	85.6	Cyclotella meneghiniana	Order	Thalassiosirales
+18S_ASV1014	2	0	392	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					1	1	1	0.98	0.74	0.74	0.74	0.74	90.8	Chytridiomycota XXX sp.	Class	Chytridiomycota
+18S_ASV1015	2	0	398	Eukaryota	TSAR	Stramenopiles-Gyrista	Bacillariophyceae	Naviculales	Sellaphoraceae	Sellaphora		1	1	1	1	0.92	0.92	0.91	0.56	98.7	Sellaphora pupula	Genus	Sellaphora
+18S_ASV1017	2	0	393	Eukaryota	TSAR	Stramenopiles-Bigyra	Sagenista	Labyrinthulomycetes				1	1	0.98	0.98	0.98	0.98	0.98	0.98	88.6	Archerella sp.	Order	Labyrinthulomycetes
+18S_ASV1018	2	0	408	Eukaryota	CRuMs	Rigifilida						0.99	0.99	0.99	0.99	0.99	0.99	0.99	0.99	86.7	Micronuclearia podoventralis	Division	Rigifilida
+18S_ASV1019	0	2	401	Eukaryota	Archaeplastida	Streptophyta	Zygnemophyceae					1	1	1	1	1	1	0.51	0.29	98.5	Cosmarium quadrum f. dilatatum	Class	Zygnemophyceae
+18S_ASV1020	0	2	459									0.36	0.36	0.21	0.07	0.02	0.01	0.01	0.01			Unassigned	Unassigned
+18S_ASV1021	0	2	396									0.62	0.62	0.48	0.48	0.48	0.48	0.38	0.38	88.9	Colpodida X sp.	Unassigned	Unassigned
+18S_ASV1022	0	2	416	Eukaryota	TSAR	Rhizaria-Cercozoa	Endomyxa	Vampyrellida				1	1	0.99	0.96	0.96	0.93	0.92	0.92	83.5	Penardia-lineage X sp.	Order	Vampyrellida
+18S_ASV1023	0	2	404									0.78	0.78	0.78	0.78	0.78	0.46	0.2	0.1	83.1	Pythium monospermum	Unassigned	Unassigned
+18S_ASV1025	0	2	405	Eukaryota	Obazoa	Opisthokonta-Metazoa	Rotifera					1	1	1	1	1	1	0.25	0.11	96.5	Ascomorpha ovalis	Class	Rotifera
+18S_ASV1026	0	2	406	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	0.86	0.86	0.86	0.41	0.41	91.6	Gastrotricha XXX sp.	Class	Gastrotricha
+18S_ASV1027	1	0	402	Eukaryota	TSAR	Alveolata-Dinoflagellata	Dinophyceae	Peridiniales				1	1	1	1	0.89	0.74	0.74	0.36	98.8	Unruhdinium penardii	Order	Peridiniales
+18S_ASV1028	1	0	402	Eukaryota	Obazoa	Opisthokonta-Fungi						1	1	0.98	0.74	0.34	0.25	0.25	0.25	96.5	Dangeardia mamillata	Division	Opisthokonta-Fungi
+18S_ASV1029	1	0	453	Eukaryota	Obazoa	Opisthokonta-Choanoflagellata	Choanoflagellatea	Craspedida				1	1	0.99	0.99	0.99	0.98	0.88	0.88	94.9	Salpingoecidae Group C1 X sp.	Order	Craspedida
+18S_ASV1030	1	0	426	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota					0.98	0.98	0.96	0.94	0.38	0.38	0.35	0.19	92	Gromochytrium sp.	Class	Chytridiomycota
+18S_ASV1031	1	0	399	Eukaryota	Obazoa	Opisthokonta-Fungi	Chytridiomycota	Rhizophydiales				1	1	1	1	0.94	0.64	0.64	0.35	98	Rhizophydium chlorogonii	Order	Rhizophydiales
+18S_ASV1032	1	0	410	Eukaryota	Obazoa	Opisthokonta-Metazoa	Gastrotricha					1	1	1	0.99	0.99	0.99	0.79	0.52	93.9	Chaetonotus uncinus	Class	Gastrotricha
+18S_ASV1033	0	1	410	Eukaryota	TSAR	Rhizaria-Cercozoa	Filosa-Sarcomonadea	Glissomonadida				0.98	0.98	0.83	0.83	0.83	0.83	0.78	0.78	93.7	Sandonidae X sp.	Order	Glissomonadida
+18S_ASV1034	0	1	426	Eukaryota	Haptista	Centroplasthelida						1	1	1	0.77	0.76	0.76	0.75	0.75	98.1	Sphaerastrum fockii	Division	Centroplasthelida
+18S_ASV1035	0	1	402	Eukaryota	Obazoa	Opisthokonta-Fungi	Ascomycota	Pezizomycotina	Dothideomycetes			1	1	1	0.99	0.99	0.92	0.22	0.22	98	Uwebraunia dekkeri	Family	Dothideomycetes

@@ -1,0 +1,139 @@
+marker	group	Genus	Species	asvs	W1_reads	W2_reads	W1_pct	W2_pct	best_identity
+18S	Rhizaria-Cercozoa	Neoheteromita		1	13350	2171	15.07	2.65	99.8
+18S	Stramenopiles-Gyrista	Cyclotella		5	4154	0	4.69	0	100
+18S	Chlorophyta	Desmodesmus		3	2395	3	2.7	0	100
+18S	Chlorophyta	Chlamydomonas		5	2298	55	2.59	0.07	100
+18S	Chlorophyta	Pteromonas		2	2254	0	2.55	0	100
+18S	Stramenopiles-Gyrista	Cyclotella	Cyclotella meneghiniana	4	1721	1	1.94	0	100
+18S	Opisthokonta-Metazoa	Mesocyclops		5	1544	463	1.74	0.57	98.8
+18S	Opisthokonta-Metazoa	Filinia	Filinia longiseta	3	1210	0	1.37	0	100
+18S	Opisthokonta-Fungi	Aphelidium		4	807	15	0.91	0.02	98.8
+18S	Alveolata-Dinoflagellata	Unruhdinium		1	682	0	0.77	0	100
+18S	Stramenopiles-Gyrista	Nitzschia	Nitzschia palea	5	561	28	0.63	0.03	100
+18S	Chlorophyta	Chloromonas	Chloromonas vernalis	2	524	0	0.59	0	99.5
+18S	Stramenopiles-Gyrista	Conticribra		1	408	0	0.46	0	100
+18S	Stramenopiles-Gyrista	Aulacoseira		1	400	0	0.45	0	100
+18S	Stramenopiles-Gyrista	Paraphysomonas	Paraphysomonas uniformis	1	316	0	0.36	0	100
+18S	Stramenopiles-Gyrista	Aulacoseira	Aulacoseira granulata	1	239	0	0.27	0	100
+18S	Opisthokonta-Fungi	Mortierella		1	223	0	0.25	0	100
+18S	Alveolata-Ciliophora	Cyclidium_3	Cyclidium glaucoma	2	205	0	0.23	0	100
+18S	Streptophyta	Closterium		4	165	125	0.19	0.15	99.8
+18S	Opisthokonta-Metazoa	Lepidodermella	Lepidodermella squamata	1	161	0	0.18	0	99.8
+18S	Alveolata-Chrompodellids	Alphamonas		3	151	0	0.17	0	99.2
+18S	Stramenopiles-Gyrista	Ophiocytium		1	102	0	0.12	0	98.1
+18S	Opisthokonta-Metazoa	Mesocyclops	Mesocyclops pehpeiensis	1	91	5	0.1	0.01	99.3
+18S	Opisthokonta-Metazoa	Chaetonotus		1	70	4	0.08	0	99.5
+18S	Opisthokonta-Fungi	Aphelidium	Aphelidium parallelum	2	55	0	0.06	0	99.7
+18S	Stramenopiles-Gyrista	Poteriospumella	Poteriospumella lacustris	1	48	0	0.05	0	100
+18S	Chlorophyta	Chloromonas	Chloromonas oogama	1	45	0	0.05	0	100
+18S	Chlorophyta	Colemanosphaera	Colemanosphaera charkowiensis	1	37	0	0.04	0	100
+18S	Opisthokonta-Fungi	Mucor		1	33	0	0.04	0	100
+18S	Chlorophyta	Mychonastes		2	34	4	0.04	0	100
+18S	Tubulinea	Arcella	Arcella vulgaris	1	30	0	0.03	0	99.3
+18S	Evosea	Flamella		1	29	0	0.03	0	99.5
+18S	Chlorophyta	Choricystis		2	27	13	0.03	0.02	99.5
+18S	Alveolata-Ciliophora	Tintinnidium		1	27	0	0.03	0	99.2
+18S	Chlorophyta	Radiococcus		1	27	0	0.03	0	100
+18S	Tubulinea	Arcella	Arcella hemisphaerica	1	20	123	0.02	0.15	100
+18S	Chlorophyta	Pseudomuriella		1	18	5	0.02	0.01	100
+18S	Opisthokonta-Fungi	Hyaloraphidium		3	14	71	0.02	0.09	98.3
+18S	Alveolata-Ciliophora	Linostomella		1	13	0	0.01	0	98.7
+18S	Alveolata-Ciliophora	Coleps		1	11	3	0.01	0	99.5
+18S	Rhizaria-Cercozoa	Filosa		1	11	0	0.01	0	98.8
+18S	Chlorophyta	Westella	Westella botryoides	1	8	81	0.01	0.1	100
+18S	Alveolata-Ciliophora	Hypotrichidium		1	7	2	0.01	0	99.7
+18S	Alveolata-Ciliophora	Phascolodon	Phascolodon vorticella	1	7	0	0.01	0	100
+18S	Stramenopiles-Gyrista	Paraphysomonas		1	6	1223	0.01	1.49	99.8
+18S	Stramenopiles-Gyrista	Pinnularia		2	6	89	0.01	0.11	98.7
+18S	Opisthokonta-Fungi	Acremonium		1	6	21	0.01	0.03	100
+18S	Opisthokonta-Fungi	Plectosphaerella		1	5	63	0.01	0.08	100
+18S	Opisthokonta-Metazoa	Dugesia	Dugesia notogaea	1	5	0	0.01	0	99
+18S	Opisthokonta-Metazoa	Microcyclops		1	4	50	0	0.06	98.8
+18S	Stramenopiles-Gyrista	Hyphochytrium	Hyphochytrium catenoides	1	3	5	0	0.01	99
+18S	Tubulinea	Ptolemeba		1	3	0	0	0	97.9
+18S	Chlorophyta	Oocystaceae		1	3	0	0	0	98.5
+18S	Rigifilida	Micronuclearia	Micronuclearia podoventralis	1	2	160	0	0.2	100
+18S	Stramenopiles-Gyrista	Gomphonema		1	2	15	0	0.02	100
+18S	Stramenopiles-Gyrista	Sellaphora		1	2	0	0	0	98.7
+18S	Streptophyta	Staurastrum		10	1	2466	0	3.01	100
+18S	Rhizaria-Cercozoa	Planctomyxa		1	1	42	0	0.05	98.8
+18S	Stramenopiles-Gyrista	Aphanomyces		2	0	6310	0	7.71	100
+18S	Opisthokonta-Fungi	Rhizophydium		1	0	2794	0	3.41	97.8
+18S	Stramenopiles-Gyrista	Lepidochromonas		3	0	2069	0	2.53	98.3
+18S	Chlorophyta	Coenochloris		2	0	1111	0	1.36	99
+18S	Streptophyta	Cosmarium		6	0	976	0	1.19	100
+18S	Opisthokonta-Metazoa	Aeolosoma		2	0	573	0	0.7	99.8
+18S	Stramenopiles-Gyrista	Leptolegnia		1	0	432	0	0.53	99.3
+18S	Stramenopiles-Gyrista	Haptoglossa		1	0	303	0	0.37	97.1
+18S	Streptophyta	Spondylosium	Spondylosium panduriforme	1	0	290	0	0.35	99.7
+18S	Streptophyta	Cosmocladium		1	0	270	0	0.33	99.8
+18S	Streptophyta	Pleurotaenium		2	0	270	0	0.33	98.5
+18S	Opisthokonta-Fungi	Chytriomyces		1	0	228	0	0.28	97.7
+18S	Chlorophyta	Botryococcus	Botryococcus braunii	4	0	248	0	0.3	100
+18S	Alveolata-Dinoflagellata	Asulcocephalium		1	0	171	0	0.21	98.3
+18S	Alveolata-Dinoflagellata	Glenodiniopsis	Glenodiniopsis uliginosa	1	0	167	0	0.2	99.3
+18S	Rhizaria-Cercozoa	Vampyrella		1	0	161	0	0.2	98.5
+18S	Tubulinea	Arcella		4	0	262	0	0.32	99.6
+18S	Rhizaria-Cercozoa	Rhogostoma	Rhogostoma absidea	1	0	118	0	0.14	100
+18S	Streptophyta	Micrasterias		3	0	203	0	0.25	100
+18S	Glaucophyta	Cyanoptyche		1	0	95	0	0.12	98.3
+18S	Opisthokonta-Metazoa	Stenostomum		2	0	147	0	0.18	100
+18S	Glaucophyta	Glaucocystis		2	0	118	0	0.14	99.5
+18S	Streptophyta	Onychonema		1	0	69	0	0.08	99.5
+18S	Opisthokonta-Metazoa	Hexarthra	Hexarthra intermedia	1	0	55	0	0.07	99.8
+18S	Opisthokonta-Metazoa	Eucyclops		1	0	51	0	0.06	97.8
+18S	Stramenopiles-Gyrista	Gonyostomum	Gonyostomum semen	1	0	51	0	0.06	100
+18S	Alveolata-Dinoflagellata	Piscinoodinium		1	0	48	0	0.06	99.5
+18S	Chlorophyta	Neglectella		2	0	67	0	0.08	98.5
+18S	Streptophyta	Pleurotaenium	Pleurotaenium ehrenbergii	1	0	40	0	0.05	100
+18S	Ancyromonadida	Ancyromonas		1	0	35	0	0.04	99.5
+18S	Rhizaria-Cercozoa	Leptophrys		1	0	34	0	0.04	98.8
+18S	Streptophyta	Mougeotia		1	0	32	0	0.04	99.8
+18S	Opisthokonta-Metazoa	Gieysztoria	Gieysztoria ashokae	1	0	32	0	0.04	100
+18S	Streptophyta	Cosmarium	Cosmarium reniforme	1	0	30	0	0.04	99.8
+18S	Opisthokonta-Fungi	Staurastromyces		1	0	30	0	0.04	98.3
+18S	Alveolata-Dinoflagellata	Asulcocephalium	Asulcocephalium miricentonis	1	0	26	0	0.03	99.8
+18S	Rhizaria-Cercozoa	Novel-Gran		2	0	49	0	0.06	100
+18S	Stramenopiles-Gyrista	Stenopterobia		1	0	24	0	0.03	100
+18S	Opisthokonta-Metazoa	Strongylostoma		1	0	21	0	0.03	97.8
+18S	Opisthokonta-Metazoa	Gieysztoria		1	0	21	0	0.03	99.5
+18S	Stramenopiles-Gyrista	Encyonema		1	0	20	0	0.02	98.7
+18S	Chlorophyta	Oedogonium		2	0	29	0	0.04	98
+18S	Streptophyta	Staurodesmus		1	0	18	0	0.02	99.7
+18S	Alveolata-Apicomplexa	Hoplorhynchus	Hoplorhynchus acanthatholius	1	0	18	0	0.02	99.3
+18S	Rhizaria-Cercozoa	sm27		1	0	18	0	0.02	100
+18S	Streptophyta	Staurodesmus	Staurodesmus bulnheimii	1	0	17	0	0.02	100
+18S	Stramenopiles-Gyrista	Paraeustigmatos	Paraeustigmatos columelliferus	1	0	16	0	0.02	100
+18S	Opisthokonta-Fungi	Acremonium	Acremonium curvulum	1	0	15	0	0.02	99.8
+18S	Tubulinea	Echinamoeba		1	0	15	0	0.02	100
+18S	Rhizaria-Cercozoa	Penardia		1	0	14	0	0.02	97.1
+18S	Streptophyta	Desmidium	Desmidium swartzii	1	0	13	0	0.02	100
+18S	Chlorophyta	Ankistrodesmus		1	0	12	0	0.01	99.7
+18S	Opisthokonta-Metazoa	Mesostoma		2	0	24	0	0.03	100
+18S	Opisthokonta-Ichthyosporea	Anurofeca		1	0	10	0	0.01	98.7
+18S	Haptophyta	Diacronema	Diacronema noctivaga	1	0	9	0	0.01	99
+18S	Chlorophyta	Carteria		1	0	8	0	0.01	100
+18S	Alveolata-Ciliophora	Askenasia		1	0	8	0	0.01	100
+18S	Opisthokonta-Metazoa	Stenostomum	Stenostomum simplex	1	0	8	0	0.01	99.5
+18S	Alveolata-Ciliophora	Stentor		1	0	8	0	0.01	98.7
+18S	Opisthokonta-Metazoa	Rhynchomesostoma	Rhynchomesostoma rostratum	1	0	7	0	0.01	100
+18S	Stramenopiles-Bigyra	MAST-12C		2	0	12	0	0.01	98.8
+18S	Alveolata-Ciliophora	Colpoda		1	0	6	0	0.01	99
+18S	Opisthokonta-Fungi	Sporobolomyces		1	0	5	0	0.01	100
+18S	Evosea	Mb5C		1	0	5	0	0.01	98
+18S	Alveolata-Ciliophora	Spirostomum		1	0	4	0	0	99.5
+18S	Opisthokonta-Metazoa	Microcodon	Microcodon clavus	1	0	4	0	0	100
+18S	Chlorophyta	Monoraphidium		1	0	4	0	0	98.5
+COI	Rotifera	Brachionus		3	9368	13464	8.01	13.1	98.2
+COI	Rotifera	Brachionus	Brachionus caudatus	4	5296	7644	4.53	7.44	97.5
+COI	Rotifera	Keratella		4	2866	6202	2.45	6.04	96.8
+COI	Rotifera	Brachionus	Brachionus calyciflorus	7	1346	1783	1.15	1.74	100
+COI	Rotifera	Brachionus	Brachionus quadridentatus	3	1339	484	1.14	0.47	98.7
+COI	Rotifera	Keratella	Keratella tropica	5	1299	2423	1.11	2.36	100
+COI	Rotifera	Polyarthra	Polyarthra vulgaris	3	1061	554	0.91	0.54	99.6
+COI	Rotifera	Polyarthra	Polyarthra dolichoptera	9	446	279	0.38	0.27	100
+COI	Bacillariophyta	Nitzschia_diatoms	Nitzschia palea	6	188	84	0.16	0.08	100
+COI	Rotifera	Asplanchna		1	50	17	0.04	0.02	95.1
+COI	Arthropoda	Cloeon	Cloeon navasi	2	28	24	0.02	0.02	99
+COI	Arthropoda	Mesocyclops	Mesocyclops pehpeiensis	1	15	2	0.01	0	98.4
+COI	Bacillariophyta	Sellaphora	Sellaphora pupula	1	7	2	0.01	0	97.8
