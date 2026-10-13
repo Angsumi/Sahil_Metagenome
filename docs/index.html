@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sahil Metagenome — Processing</title>
+<meta name="description" content="18S and COI amplicon processing for Chandubi Beel and Deepor Beel, Assam: scripts, results and figures for each step.">
+<style>
+:root { --bg:#fdfdfc; --fg:#1d1d1f; --muted:#6b6b70; --line:#e6e6e3; --accent:#2b6c8f; --code:#f4f4f2; --note:#f3f7fa; }
+@media (prefers-color-scheme: dark) { :root { --bg:#161618; --fg:#e8e8ea; --muted:#9a9aa0; --line:#2c2c30; --accent:#7fb6d6; --code:#1f1f22; --note:#1b2329; }
+  figure img { background:#fff; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif; }
+main { max-width:880px; margin:0 auto; padding:48px 16px 96px; }
+h1 { font-size:1.9rem; line-height:1.2; margin:0 0 8px; letter-spacing:-0.01em; }
+h2 { font-size:1.35rem; margin:0 0 12px; padding-top:8px; }
+h4 { margin:18px 0 6px; font-size:0.95rem; color:var(--muted); }
+section { border-top:1px solid var(--line); padding:36px 0 8px; margin-top:28px; }
+a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+.lede { color:var(--muted); margin:0 0 20px; }
+.meta { font-size:0.88rem; color:var(--muted); }
+.label { text-transform:uppercase; font-size:0.72rem; letter-spacing:0.08em; color:var(--muted); margin:26px 0 6px; font-weight:600; }
+nav ol { list-style:none; padding-left:0; margin:12px 0; } nav li { margin:2px 0; }
+code { font:0.86em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:var(--code); border:1px solid var(--line); border-radius:6px; padding:14px; overflow:auto; font-size:0.85rem; line-height:1.5; margin:8px 0 0; }
+details { border:1px solid var(--line); border-radius:6px; padding:8px 12px; margin:6px 0; }
+details[open] { padding-bottom:12px; } summary { cursor:pointer; font-size:0.92rem; }
+.tbl { overflow-x:auto; margin:10px 0 2px; }
+table { border-collapse:collapse; font-size:0.88rem; width:100%; }
+th, td { text-align:left; padding:6px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { font-weight:600; color:var(--muted); font-size:0.8rem; }
+td.n { text-align:right; font-variant-numeric:tabular-nums; }
+.src { font-size:0.78rem; color:var(--muted); margin:2px 0 14px; }
+figure { margin:16px 0; } figure img { max-width:100%; height:auto; border:1px solid var(--line); border-radius:4px; display:block; }
+figcaption { font-size:0.85rem; color:var(--muted); margin-top:6px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; } .grid figure { margin:0; }
+@media (max-width:640px) { .grid { grid-template-columns:1fr; } main { padding-top:28px; } }
+.files { font-size:0.88rem; padding-left:20px; margin:4px 0; }
+.note { background:var(--note); border-left:3px solid var(--accent); padding:4px 16px; border-radius:4px; margin:20px 0; }
+footer { border-top:1px solid var(--line); margin-top:40px; padding-top:16px; font-size:0.85rem; color:var(--muted); }
+</style></head>
+<body><main>
+<h1>Plankton metabarcoding — read processing</h1>
+<p class="lede">Raw 18S rRNA (V4) and COI amplicon reads from <strong>Chandubi Beel (W1)</strong> and
+<strong>Deepor Beel (W2)</strong>, Assam, processed from FASTQ to curated ASV tables.
+Each step lists its script, its result and its figures.</p>
+<p class="meta">Illumina MiSeq 2 × 301 bp · 2 markers × 2 sites · one sample per site ·
+<a href="https://github.com/Angsumi/Sahil_Metagenome">GitHub repository</a> · <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/environment.yml">environment.yml</a> ·
+<a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/run_all.sh">run_all.sh</a></p>
+<nav><ol><li><a href='#qc'>1 · Raw read quality control</a></li><li><a href='#primers'>2 · Primer removal (Cutadapt)</a></li><li><a href='#dada2'>3 · Denoising into ASVs (DADA2)</a></li><li><a href='#curation'>4 · ASV curation</a></li><li><a href='#summary'>5 · Processing summary</a></li></ol></nav>
+<section id='qc'><h2>1 · Raw read quality control</h2>
+<p>Checks that the eight raw files are intact and describes them before anything is changed.
+Checksums are compared against the vendor's <code>MD5SUM_Raw.txt</code>; FastQC/MultiQC report
+per-file quality; DADA2 plots quality along the read, which sets the truncation lengths in step 3.</p>
+<p class='label'>Script</p><details><summary><code>scripts/01_qc.sh</code> · 40 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/01_qc.sh'>view on GitHub</a></summary><pre><code>#!/usr/bin/env bash
+# Step 1 — Raw read QC: checksum verification, FastQC + MultiQC, per-file read stats,
+# and DADA2 quality profiles. Inputs: NEW/&lt;marker&gt;/&lt;site&gt;/*.fastq.gz
+set -euo pipefail
+cd &quot;$(dirname &quot;$0&quot;)/..&quot;
+
+OUT=results/01_qc
+mkdir -p &quot;$OUT&quot; work/01_fastqc docs/img
+
+# 1a. MD5 verification against the vendor checksum files
+: &gt; &quot;$OUT/md5_check.tsv&quot;
+for m in 18S COI; do
+  while read -r hash file; do
+    path=$(ls NEW/&quot;$m&quot;/*/&quot;$file&quot;)
+    got=$(md5sum &lt; &quot;$path&quot; | cut -d&#x27; &#x27; -f1)
+    status=$([ &quot;$got&quot; = &quot;$hash&quot; ] &amp;&amp; echo OK || echo FAIL)
+    printf &#x27;%s\t%s\t%s\n&#x27; &quot;$m&quot; &quot;$path&quot; &quot;$status&quot; &gt;&gt; &quot;$OUT/md5_check.tsv&quot;
+  done &lt; NEW/&quot;$m&quot;/MD5SUM_Raw.txt
+done
+
+# 1b. FastQC on every raw file, summarised with MultiQC
+find NEW -name &#x27;*.fastq.gz&#x27; -print0 | xargs -0 fastqc -q -t 8 --outdir work/01_fastqc
+multiqc -q -f -o &quot;$OUT/multiqc&quot; -n multiqc_raw.html work/01_fastqc
+
+# 1c. Read count / length / GC / mean quality per file
+printf &#x27;marker\tsite\tsample\tread\treads\tmean_len\tgc_pct\tmean_q\n&#x27; &gt; &quot;$OUT/read_stats.tsv&quot;
+for f in NEW/*/*/*.fastq.gz; do
+  marker=$(echo &quot;$f&quot; | cut -d/ -f2); site=$(echo &quot;$f&quot; | cut -d/ -f3)
+  base=$(basename &quot;$f&quot; .fastq.gz); sample=${base%_R*}; read=${base##*_}
+  zcat &quot;$f&quot; | awk -v m=&quot;$marker&quot; -v s=&quot;$site&quot; -v sm=&quot;$sample&quot; -v r=&quot;$read&quot; &#x27;
+    BEGIN { for (i = 33; i &lt; 127; i++) ord[sprintf(&quot;%c&quot;, i)] = i - 33 }
+    NR % 4 == 2 { n++; len += length($0); gc += gsub(/[GCgc]/, &quot;&quot;) }
+    NR % 4 == 0 { for (i = 1; i &lt;= length($0); i++) q += ord[substr($0, i, 1)]; qn += length($0) }
+    END { printf &quot;%s\t%s\t%s\t%s\t%d\t%.1f\t%.1f\t%.1f\n&quot;, m, s, sm, r, n, len/n, 100*gc/len, q/qn }&#x27; \
+    &gt;&gt; &quot;$OUT/read_stats.tsv&quot;
+done
+
+# 1d. Per-position quality profiles (DADA2)
+Rscript scripts/01_quality_profiles.R
+</code></pre></details><details><summary><code>scripts/01_quality_profiles.R</code> · 12 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/01_quality_profiles.R'>view on GitHub</a></summary><pre><code># Step 1d — DADA2 per-position quality profiles of the raw reads (R1 and R2, both sites).
+suppressPackageStartupMessages({ library(dada2); library(ggplot2) })
+
+for (marker in c(&quot;18S&quot;, &quot;COI&quot;)) {
+  files &lt;- sort(list.files(file.path(&quot;NEW&quot;, marker), pattern = &quot;fastq.gz$&quot;,
+                           recursive = TRUE, full.names = TRUE))
+  p &lt;- plotQualityProfile(files, n = 50000) +
+    ggtitle(sprintf(&quot;%s raw reads — per-position quality&quot;, marker)) +
+    theme(plot.title = element_text(size = 12))
+  ggsave(sprintf(&quot;docs/img/01_quality_%s.png&quot;, marker), p, width = 10, height = 7, dpi = 120)
+}
+</code></pre></details>
+<p class='label'>Result</p>
+<div class='tbl'><table><thead><tr><th>18S</th><th>NEW/18S/Chandubi/W1_R1.fastq.gz</th><th>OK</th></tr></thead><tbody><tr><td>18S</td><td>NEW/18S/Chandubi/W1_R2.fastq.gz</td><td>OK</td></tr><tr><td>18S</td><td>NEW/18S/Dipor Beel/W2_R1.fastq.gz</td><td>OK</td></tr><tr><td>18S</td><td>NEW/18S/Dipor Beel/W2_R2.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Chandubi/W1_R1.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Chandubi/W1_R2.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Dipor Beel/W2_R1.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Dipor Beel/W2_R2.fastq.gz</td><td>OK</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/01_qc/md5_check.tsv'>results/01_qc/md5_check.tsv</a></p>
+<div class='tbl'><table><thead><tr><th>marker</th><th>site</th><th>sample</th><th>read</th><th>reads</th><th>mean length</th><th>GC %</th><th>mean Q</th></tr></thead><tbody><tr><td>18S</td><td>Chandubi</td><td>W1</td><td>R1</td><td class='n'>166,108</td><td class='n'>301.0</td><td class='n'>44.4</td><td class='n'>34.4</td></tr><tr><td>18S</td><td>Chandubi</td><td>W1</td><td>R2</td><td class='n'>166,108</td><td class='n'>301.0</td><td class='n'>43.1</td><td class='n'>28.5</td></tr><tr><td>18S</td><td>Dipor Beel</td><td>W2</td><td>R1</td><td class='n'>143,035</td><td class='n'>301.0</td><td class='n'>47.2</td><td class='n'>34.3</td></tr><tr><td>18S</td><td>Dipor Beel</td><td>W2</td><td>R2</td><td class='n'>143,035</td><td class='n'>301.0</td><td class='n'>44.7</td><td class='n'>28.5</td></tr><tr><td>COI</td><td>Chandubi</td><td>W1</td><td>R1</td><td class='n'>167,886</td><td class='n'>301.0</td><td class='n'>38.6</td><td class='n'>34.8</td></tr><tr><td>COI</td><td>Chandubi</td><td>W1</td><td>R2</td><td class='n'>167,886</td><td class='n'>301.0</td><td class='n'>38.8</td><td class='n'>29.4</td></tr><tr><td>COI</td><td>Dipor Beel</td><td>W2</td><td>R1</td><td class='n'>143,351</td><td class='n'>301.0</td><td class='n'>39.0</td><td class='n'>34.9</td></tr><tr><td>COI</td><td>Dipor Beel</td><td>W2</td><td>R2</td><td class='n'>143,351</td><td class='n'>301.0</td><td class='n'>39.1</td><td class='n'>29.2</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/01_qc/read_stats.tsv'>results/01_qc/read_stats.tsv</a></p>
+<p>All eight files pass their checksums. Every file comes from a single MiSeq run
+(<code>M04635:72:000000000-MDYKK</code>), 2 × 301 bp. Forward reads stay above Q30 almost to the end;
+reverse reads drop below Q20 after ~250 cycles, so R2 is truncated harder.</p>
+<p class='label'>Visualisation</p>
+<figure><a href='img/01_quality_18S.png'><img src='img/01_quality_18S.png' alt='18S — quality along the read. Green: mean; orange: median and quartiles.' loading='lazy'></a><figcaption>18S — quality along the read. Green: mean; orange: median and quartiles.</figcaption></figure>
+<figure><a href='img/01_quality_COI.png'><img src='img/01_quality_COI.png' alt='COI — quality along the read.' loading='lazy'></a><figcaption>COI — quality along the read.</figcaption></figure>
+<p><a href='reports/multiqc_raw.html'>Open the full MultiQC report →</a></p>
+</section><section id='primers'><h2>2 · Primer removal (Cutadapt)</h2>
+<p>Primer sequence is not biological signal and must be removed before denoising. Each read must
+<em>begin</em> with its primer; pairs where either primer is missing are discarded as off-target.
+Primers were identified from the reads themselves:</p>
+<div class='tbl'><table><thead><tr><th>Marker</th><th>Forward</th><th>Reverse</th><th>Region</th></tr></thead><tbody>
+<tr><td>18S</td><td>E572F <code>CYGCGGTAATTCCAGCTC</code></td><td>E1009R <code>AYGGTATCTRWTCRTCTTYG</code></td><td>V4, Comeau et al. 2011</td></tr>
+<tr><td>COI</td><td>mlCOIintF <code>GGWACWGGWTGAACWGTWTAYCCYCC</code></td><td>jgHCO2198 <code>TANACYTCNGGRTGNCCRAARAAYCA</code></td><td>Leray fragment, Leray et al. 2013</td></tr>
+</tbody></table></div>
+<p class='label'>Script</p><details><summary><code>scripts/02_primer_removal.sh</code> · 47 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/02_primer_removal.sh'>view on GitHub</a></summary><pre><code>#!/usr/bin/env bash
+# Step 2 — Primer removal with Cutadapt.
+# Each read must start with its primer (anchored 5&#x27;); pairs where either primer is
+# missing are discarded. If a read runs through into the opposite primer, that
+# (reverse-complemented) primer and everything after it is trimmed too.
+#   18S V4 : E572F  CYGCGGTAATTCCAGCTC     / E1009R   AYGGTATCTRWTCRTCTTYG   (Comeau et al. 2011)
+#   COI    : mlCOIintF GGWACWGGWTGAACWGTWTAYCCYCC / jgHCO2198 TAIACYTCIGGRTGICCRAARAAYCA (Leray et al. 2013; I -&gt; N)
+set -euo pipefail
+cd &quot;$(dirname &quot;$0&quot;)/..&quot;
+
+OUT=results/02_primer_removal
+mkdir -p &quot;$OUT&quot; work/02_trimmed
+
+revcomp() { echo &quot;$1&quot; | rev | tr ACGTRYKMBVDHN TGCAYRMKVBHDN; }
+
+declare -A FWD=( [18S]=CYGCGGTAATTCCAGCTC [COI]=GGWACWGGWTGAACWGTWTAYCCYCC )
+declare -A REV=( [18S]=AYGGTATCTRWTCRTCTTYG [COI]=TANACYTCNGGRTGNCCRAARAAYCA )
+
+printf &#x27;marker\tsample\tpairs_in\tpairs_with_both_primers\tpct_kept\n&#x27; &gt; &quot;$OUT/cutadapt_summary.tsv&quot;
+for m in 18S COI; do
+  F=${FWD[$m]}; R=${REV[$m]}
+  mkdir -p &quot;work/02_trimmed/$m&quot;
+  for r1 in NEW/&quot;$m&quot;/*/*_R1.fastq.gz; do
+    s=$(basename &quot;$r1&quot; _R1.fastq.gz); r2=${r1/_R1/_R2}
+    cutadapt -j 8 --discard-untrimmed -e 0.15 --minimum-length 50 \
+      -g &quot;^${F};required...$(revcomp &quot;$R&quot;);optional&quot; -G &quot;^${R};required...$(revcomp &quot;$F&quot;);optional&quot; \
+      --json &quot;$OUT/${m}_${s}.cutadapt.json&quot; \
+      -o &quot;work/02_trimmed/$m/${s}_R1.fastq.gz&quot; -p &quot;work/02_trimmed/$m/${s}_R2.fastq.gz&quot; \
+      &quot;$r1&quot; &quot;$r2&quot; &gt; &quot;$OUT/${m}_${s}.cutadapt.log&quot;
+    python3 - &quot;$OUT/${m}_${s}.cutadapt.json&quot; &quot;$m&quot; &quot;$s&quot; &gt;&gt; &quot;$OUT/cutadapt_summary.tsv&quot; &lt;&lt;&#x27;PY&#x27;
+import json, sys
+j = json.load(open(sys.argv[1]))[&quot;read_counts&quot;]
+print(f&quot;{sys.argv[2]}\t{sys.argv[3]}\t{j[&#x27;input&#x27;]}\t{j[&#x27;output&#x27;]}\t{100*j[&#x27;output&#x27;]/j[&#x27;input&#x27;]:.1f}&quot;)
+PY
+  done
+done
+
+# Post-trim length distribution (input to choosing DADA2 truncation lengths)
+printf &#x27;marker\tsample\tread\tlength\tcount\n&#x27; &gt; &quot;$OUT/trimmed_lengths.tsv&quot;
+for f in work/02_trimmed/*/*.fastq.gz; do
+  m=$(basename &quot;$(dirname &quot;$f&quot;)&quot;); b=$(basename &quot;$f&quot; .fastq.gz)
+  zcat &quot;$f&quot; | awk -v m=&quot;$m&quot; -v s=&quot;${b%_R*}&quot; -v r=&quot;${b##*_}&quot; \
+    &#x27;NR%4==2{c[length($0)]++} END{for(l in c) printf &quot;%s\t%s\t%s\t%d\t%d\n&quot;, m, s, r, l, c[l]}&#x27; \
+    &gt;&gt; &quot;$OUT/trimmed_lengths.tsv&quot;
+done
+Rscript scripts/02_plot_lengths.R
+</code></pre></details><details><summary><code>scripts/02_plot_lengths.R</code> · 29 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/02_plot_lengths.R'>view on GitHub</a></summary><pre><code># Step 2 — Plot read-retention after primer removal and trimmed read-length distribution.
+suppressPackageStartupMessages({ library(ggplot2); library(data.table) })
+
+s &lt;- fread(&quot;results/02_primer_removal/cutadapt_summary.tsv&quot;)
+s[, discarded := pairs_in - pairs_with_both_primers]
+long &lt;- melt(s, id.vars = c(&quot;marker&quot;, &quot;sample&quot;),
+             measure.vars = c(&quot;pairs_with_both_primers&quot;, &quot;discarded&quot;),
+             variable.name = &quot;fate&quot;, value.name = &quot;pairs&quot;)
+long[, fate := factor(fate, levels = c(&quot;discarded&quot;, &quot;pairs_with_both_primers&quot;),
+                      labels = c(&quot;discarded (primer not found)&quot;, &quot;kept&quot;))]
+p1 &lt;- ggplot(long, aes(sample, pairs, fill = fate)) +
+  geom_col(width = 0.6) + facet_wrap(~marker) +
+  scale_fill_manual(values = c(&quot;#d9d9d9&quot;, &quot;#2b6c8f&quot;)) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(x = NULL, y = &quot;Read pairs&quot;, fill = NULL, title = &quot;Read pairs kept after primer removal&quot;) +
+  theme_minimal(base_size = 12) + theme(legend.position = &quot;bottom&quot;)
+ggsave(&quot;docs/img/02_primer_retention.png&quot;, p1, width = 7, height = 4.5, dpi = 120)
+
+l &lt;- fread(&quot;results/02_primer_removal/trimmed_lengths.tsv&quot;)
+p2 &lt;- ggplot(l[length &gt;= 150], aes(length, count, colour = sample)) +
+  geom_line() + facet_grid(read ~ marker, scales = &quot;free_y&quot;) +
+  scale_y_log10(labels = scales::comma) +
+  scale_colour_manual(values = c(W1 = &quot;#2b6c8f&quot;, W2 = &quot;#c2662d&quot;),
+                      labels = c(W1 = &quot;Chandubi (W1)&quot;, W2 = &quot;Deepor Beel (W2)&quot;)) +
+  labs(x = &quot;Read length after primer removal (bp)&quot;, y = &quot;Reads (log scale)&quot;, colour = NULL,
+       title = &quot;Trimmed read-length distribution&quot;) +
+  theme_minimal(base_size = 12) + theme(legend.position = &quot;bottom&quot;)
+ggsave(&quot;docs/img/02_trimmed_lengths.png&quot;, p2, width = 8, height = 5, dpi = 120)
+</code></pre></details>
+<p class='label'>Result</p>
+<div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>pairs in</th><th>pairs with both primers</th><th>% kept</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>166,108</td><td class='n'>145,813</td><td class='n'>87.8</td></tr><tr><td>18S</td><td>W2</td><td class='n'>143,035</td><td class='n'>128,222</td><td class='n'>89.6</td></tr><tr><td>COI</td><td>W1</td><td class='n'>167,886</td><td class='n'>148,980</td><td class='n'>88.7</td></tr><tr><td>COI</td><td>W2</td><td class='n'>143,351</td><td class='n'>127,418</td><td class='n'>88.9</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/02_primer_removal/cutadapt_summary.tsv'>results/02_primer_removal/cutadapt_summary.tsv</a></p>
+<p>88–90 % of pairs carry both primers. After trimming, 18S reads are ~283/281 bp and COI reads ~275/275 bp.</p>
+<p class='label'>Visualisation</p>
+<figure><a href='img/02_primer_retention.png'><img src='img/02_primer_retention.png' alt='Read pairs kept vs discarded at primer removal.' loading='lazy'></a><figcaption>Read pairs kept vs discarded at primer removal.</figcaption></figure>
+<figure><a href='img/02_trimmed_lengths.png'><img src='img/02_trimmed_lengths.png' alt='Length of reads after primer removal (log scale).' loading='lazy'></a><figcaption>Length of reads after primer removal (log scale).</figcaption></figure>
+<p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/02_primer_removal/cutadapt_summary.tsv'>results/02_primer_removal/cutadapt_summary.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/02_primer_removal/trimmed_lengths.tsv'>results/02_primer_removal/trimmed_lengths.tsv</a></li></ul>
+</section><section id='dada2'><h2>3 · Denoising into ASVs (DADA2)</h2>
+<p>Reads are quality-filtered, an error model is learned from the data, and true sequence variants
+(ASVs) are separated from sequencing errors. <strong>Both sites are denoised together</strong>
+(<code>pool = TRUE</code>), so the same organism gets the same ASV in both lakes and the sites can be
+compared directly. Pairs are then merged and chimeras removed.</p>
+<div class='tbl'><table><thead><tr><th>Parameter</th><th>18S</th><th>COI</th></tr></thead><tbody>
+<tr><td>truncLen (R1, R2)</td><td>270, 210</td><td>250, 200</td></tr>
+<tr><td>maxEE (R1, R2)</td><td>2, 4</td><td>2, 4</td></tr>
+<tr><td>Expected amplicon (no primers)</td><td>~380–430 bp</td><td>313 bp</td></tr>
+<tr><td>ASVs before → after chimera removal</td><td>2043 → 1035</td><td>481 → 376</td></tr>
+<tr><td>Reads lost as chimeras</td><td>9.32 %</td><td>3.84 %</td></tr>
+</tbody></table></div>
+<p class='label'>Script</p><details><summary><code>scripts/03_dada2.R</code> · 73 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/03_dada2.R'>view on GitHub</a></summary><pre><code># Step 3 — DADA2: filter/trim, learn errors, denoise both sites JOINTLY (pool = TRUE),
+# merge pairs, remove chimeras. One run per marker so ASVs are comparable across sites.
+# Usage: Rscript scripts/03_dada2.R &lt;marker&gt; &lt;truncF&gt; &lt;truncR&gt; &lt;maxEE_F&gt; &lt;maxEE_R&gt;
+suppressPackageStartupMessages({ library(dada2); library(ggplot2); library(data.table) })
+
+args &lt;- commandArgs(trailingOnly = TRUE)
+marker &lt;- args[1]
+truncLen &lt;- as.integer(args[2:3])
+maxEE &lt;- as.numeric(args[4:5])
+set.seed(2026)
+
+inDir &lt;- file.path(&quot;work/02_trimmed&quot;, marker)
+filtDir &lt;- file.path(&quot;work/03_filtered&quot;, marker)
+out &lt;- file.path(&quot;results/03_dada2&quot;, marker)
+dir.create(filtDir, recursive = TRUE, showWarnings = FALSE)
+dir.create(out, recursive = TRUE, showWarnings = FALSE)
+
+fnF &lt;- sort(list.files(inDir, &quot;_R1.fastq.gz$&quot;, full.names = TRUE))
+fnR &lt;- sort(list.files(inDir, &quot;_R2.fastq.gz$&quot;, full.names = TRUE))
+samples &lt;- sub(&quot;_R1.fastq.gz$&quot;, &quot;&quot;, basename(fnF))
+filtF &lt;- file.path(filtDir, paste0(samples, &quot;_F.fastq.gz&quot;))
+filtR &lt;- file.path(filtDir, paste0(samples, &quot;_R.fastq.gz&quot;))
+names(filtF) &lt;- names(filtR) &lt;- samples
+
+# 3a. Quality filtering
+filt &lt;- filterAndTrim(fnF, filtF, fnR, filtR, truncLen = truncLen, maxEE = maxEE,
+                      maxN = 0, truncQ = 2, rm.phix = TRUE, compress = TRUE, multithread = TRUE)
+
+# 3b. Error models
+errF &lt;- learnErrors(filtF, multithread = TRUE, randomize = TRUE, verbose = FALSE)
+errR &lt;- learnErrors(filtR, multithread = TRUE, randomize = TRUE, verbose = FALSE)
+for (d in list(list(errF, &quot;R1&quot;), list(errR, &quot;R2&quot;))) {
+  p &lt;- plotErrors(d[[1]], nominalQ = TRUE) +
+    ggtitle(sprintf(&quot;%s %s — learned error rates (points) vs fitted model (black line)&quot;, marker, d[[2]]))
+  ggsave(sprintf(&quot;docs/img/03_errors_%s_%s.png&quot;, marker, d[[2]]), p, width = 9, height = 7, dpi = 110)
+}
+
+# 3c. Joint denoising of both sites
+dadaF &lt;- dada(filtF, err = errF, pool = TRUE, multithread = TRUE, verbose = FALSE)
+dadaR &lt;- dada(filtR, err = errR, pool = TRUE, multithread = TRUE, verbose = FALSE)
+
+# 3d. Merge pairs, build table, remove chimeras
+mergers &lt;- mergePairs(dadaF, filtF, dadaR, filtR, minOverlap = 12, maxMismatch = 0)
+seqtab &lt;- makeSequenceTable(mergers)
+nochim &lt;- removeBimeraDenovo(seqtab, method = &quot;consensus&quot;, multithread = TRUE)
+
+# 3e. Outputs: ASV table, ASV FASTA, length table, read tracking
+getN &lt;- function(x) sum(getUniques(x))
+track &lt;- data.table(marker = marker, sample = samples,
+                    input = filt[, 1], filtered = filt[, 2],
+                    denoisedF = sapply(dadaF, getN), denoisedR = sapply(dadaR, getN),
+                    merged = sapply(mergers, getN), nonchim = rowSums(nochim))
+fwrite(track, file.path(out, &quot;track.tsv&quot;), sep = &quot;\t&quot;)
+
+asv_seqs &lt;- colnames(nochim)
+asv_ids &lt;- sprintf(&quot;%s_ASV%04d&quot;, marker, seq_along(asv_seqs))
+counts &lt;- data.table(asv = asv_ids, t(nochim))
+setnames(counts, c(&quot;asv&quot;, rownames(nochim)))
+counts[, length := nchar(asv_seqs)][, sequence := asv_seqs]
+fwrite(counts, file.path(out, &quot;asv_table.tsv&quot;), sep = &quot;\t&quot;)
+writeLines(paste0(&quot;&gt;&quot;, asv_ids, &quot;\n&quot;, asv_seqs), file.path(out, &quot;asv_seqs.fasta&quot;))
+
+lens &lt;- data.table(length = nchar(colnames(seqtab)), reads = colSums(seqtab),
+                   chimera = !colnames(seqtab) %in% asv_seqs)
+fwrite(lens[, .(asvs = .N, reads = sum(reads)), by = .(length, chimera)][order(length)],
+       file.path(out, &quot;merged_lengths.tsv&quot;), sep = &quot;\t&quot;)
+
+summary &lt;- list(marker = marker, truncLen = truncLen, maxEE = maxEE,
+                asvs_before_chimera = ncol(seqtab), asvs_final = ncol(nochim),
+                chimeric_read_pct = round(100 * (1 - sum(nochim) / sum(seqtab)), 2))
+jsonlite::write_json(summary, file.path(out, &quot;summary.json&quot;), auto_unbox = TRUE, pretty = TRUE)
+print(track); str(summary)
+</code></pre></details>
+<p class='label'>Result</p>
+<h4>18S</h4><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>input</th><th>filtered</th><th>denoisedF</th><th>denoisedR</th><th>merged</th><th>nonchim</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>145,813</td><td class='n'>115,951</td><td class='n'>114,021</td><td class='n'>113,934</td><td class='n'>104,117</td><td class='n'>93,012</td></tr><tr><td>18S</td><td>W2</td><td class='n'>128,222</td><td class='n'>101,027</td><td class='n'>99,064</td><td class='n'>99,785</td><td class='n'>88,768</td><td class='n'>81,898</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/track.tsv'>results/03_dada2/18S/track.tsv</a></p>
+<h4>COI</h4><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>input</th><th>filtered</th><th>denoisedF</th><th>denoisedR</th><th>merged</th><th>nonchim</th></tr></thead><tbody><tr><td>COI</td><td>W1</td><td class='n'>148,980</td><td class='n'>125,051</td><td class='n'>124,414</td><td class='n'>124,337</td><td class='n'>123,126</td><td class='n'>117,653</td></tr><tr><td>COI</td><td>W2</td><td class='n'>127,418</td><td class='n'>107,049</td><td class='n'>106,932</td><td class='n'>106,813</td><td class='n'>106,300</td><td class='n'>102,969</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/track.tsv'>results/03_dada2/COI/track.tsv</a></p>
+<p>Merging succeeded for 88–90 % (18S) and 98–99 % (COI) of filtered reads. Merged 18S ASVs cluster at
+399–411 bp; COI ASVs at 313 bp (the standard Leray fragment) and 316 bp (one extra codon).</p>
+<p class='label'>Visualisation</p>
+<p>Error models: black lines (fitted model) should follow the points (observed error rates) and fall
+as quality rises.</p>
+<div class='grid'>
+<figure><a href='img/03_errors_18S_R1.png'><img src='img/03_errors_18S_R1.png' alt='18S R1 error model' loading='lazy'></a><figcaption>18S R1 error model</figcaption></figure><figure><a href='img/03_errors_18S_R2.png'><img src='img/03_errors_18S_R2.png' alt='18S R2 error model' loading='lazy'></a><figcaption>18S R2 error model</figcaption></figure>
+<figure><a href='img/03_errors_COI_R1.png'><img src='img/03_errors_COI_R1.png' alt='COI R1 error model' loading='lazy'></a><figcaption>COI R1 error model</figcaption></figure><figure><a href='img/03_errors_COI_R2.png'><img src='img/03_errors_COI_R2.png' alt='COI R2 error model' loading='lazy'></a><figcaption>COI R2 error model</figcaption></figure>
+</div>
+<p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/asv_table.tsv'>results/03_dada2/18S/asv_table.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/asv_seqs.fasta'>results/03_dada2/18S/asv_seqs.fasta</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/asv_table.tsv'>results/03_dada2/COI/asv_table.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/asv_seqs.fasta'>results/03_dada2/COI/asv_seqs.fasta</a></li></ul>
+</section><section id='curation'><h2>4 · ASV curation</h2>
+<p>Removes ASVs that cannot be the targeted gene.</p>
+<ul>
+<li><strong>COI</strong> is protein-coding. A genuine ASV differs from 313 bp only by whole codons
+and translates with no stop codon under the invertebrate mitochondrial code (NCBI table 5).
+ASVs failing either test are likely pseudogenes (NUMTs) or artefacts. Detected coi coding frame: +2.</li>
+<li><strong>18S</strong> ASVs are kept within the expected V4 length window, 350–480 bp.</li>
+</ul>
+<p class='label'>Script</p><details><summary><code>scripts/04_asv_curation.R</code> · 60 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/04_asv_curation.R'>view on GitHub</a></summary><pre><code># Step 4 — ASV curation.
+#  COI : a real COI ASV is protein-coding. Keep ASVs whose length differs from the 313 bp
+#        Leray fragment by whole codons (±10 codons) AND translate with no stop codon
+#        under the invertebrate mitochondrial code (NCBI table 5). Others are likely
+#        NUMTs / pseudogenes or artefacts.
+#  18S : keep ASVs within the expected V4 (E572F–E1009R) length window, 350–480 bp.
+suppressPackageStartupMessages({ library(Biostrings); library(data.table); library(ggplot2) })
+
+out &lt;- &quot;results/04_curation&quot;
+dir.create(out, recursive = TRUE, showWarnings = FALSE)
+read_asv &lt;- function(m) fread(file.path(&quot;results/03_dada2&quot;, m, &quot;asv_table.tsv&quot;))
+
+# ---- COI ----
+coi &lt;- read_asv(&quot;COI&quot;)
+dna &lt;- DNAStringSet(coi$sequence)
+code5 &lt;- getGeneticCode(&quot;5&quot;)
+stops_in_frame &lt;- sapply(1:3, function(f)
+  vcountPattern(&quot;*&quot;, suppressWarnings(translate(subseq(dna, f), genetic.code = code5,
+                                                if.fuzzy.codon = &quot;X&quot;))))
+# The coding frame is the one that is stop-free for the most reads
+frame &lt;- which.max(colSums((stops_in_frame == 0) * (coi$W1 + coi$W2)))
+coi[, `:=`(stops = stops_in_frame[, frame],
+           codon_ok = abs(length - 313) %% 3 == 0 &amp; abs(length - 313) &lt;= 30)]
+coi[, keep := codon_ok &amp; stops == 0]
+coi[, reason := fifelse(keep, &quot;kept&quot;, fifelse(!codon_ok, &quot;length not codon-compatible&quot;, &quot;stop codon in frame&quot;))]
+
+# ---- 18S ----
+s18 &lt;- read_asv(&quot;18S&quot;)
+s18[, keep := length &gt;= 350 &amp; length &lt;= 480]
+s18[, reason := fifelse(keep, &quot;kept&quot;, &quot;outside 350–480 bp&quot;)]
+
+# ---- Write curated tables + summary ----
+summ &lt;- rbindlist(lapply(list(COI = coi, `18S` = s18), function(d)
+  d[, .(asvs = .N, W1_reads = sum(W1), W2_reads = sum(W2)), by = reason]), idcol = &quot;marker&quot;)
+fwrite(summ, file.path(out, &quot;curation_summary.tsv&quot;), sep = &quot;\t&quot;)
+fwrite(coi[, .(asv, length, stops, reason)], file.path(out, &quot;COI_frame_check.tsv&quot;), sep = &quot;\t&quot;)
+cat(sprintf(&quot;COI coding frame: +%d\n&quot;, frame), file = file.path(out, &quot;COI_frame.txt&quot;))
+
+for (m in c(&quot;COI&quot;, &quot;18S&quot;)) {
+  d &lt;- if (m == &quot;COI&quot;) coi else s18
+  k &lt;- d[keep == TRUE]
+  fwrite(k[, .(asv, W1, W2, length, sequence)], file.path(out, sprintf(&quot;%s_asv_table_curated.tsv&quot;, m)), sep = &quot;\t&quot;)
+  writeLines(paste0(&quot;&gt;&quot;, k$asv, &quot;\n&quot;, k$sequence), file.path(out, sprintf(&quot;%s_asv_seqs_curated.fasta&quot;, m)))
+}
+
+# ---- Plot: ASV length vs reads, coloured by curation outcome ----
+both &lt;- rbind(coi[, .(marker = &quot;COI&quot;, length, reads = W1 + W2, reason)],
+              s18[, .(marker = &quot;18S&quot;, length, reads = W1 + W2, reason)])
+p &lt;- ggplot(both, aes(length, reads, colour = reason)) +
+  geom_point(alpha = 0.7, size = 1.8) + facet_wrap(~marker, scales = &quot;free_x&quot;) +
+  scale_y_log10(labels = scales::comma) +
+  scale_colour_manual(values = c(kept = &quot;#2b6c8f&quot;, `stop codon in frame` = &quot;#d95f02&quot;,
+                                 `length not codon-compatible` = &quot;#e7a33e&quot;,
+                                 `outside 350–480 bp` = &quot;#e7a33e&quot;)) +
+  labs(x = &quot;ASV length (bp)&quot;, y = &quot;Reads (log scale)&quot;, colour = NULL,
+       title = &quot;ASV curation — each point is one ASV&quot;) +
+  theme_minimal(base_size = 12) + theme(legend.position = &quot;bottom&quot;)
+ggsave(&quot;docs/img/04_curation.png&quot;, p, width = 9, height = 4.8, dpi = 120)
+print(summ)
+</code></pre></details>
+<p class='label'>Result</p>
+<div class='tbl'><table><thead><tr><th>marker</th><th>reason</th><th>asvs</th><th>Chandubi reads</th><th>Deepor reads</th></tr></thead><tbody><tr><td>COI</td><td>kept</td><td class='n'>345</td><td class='n'>116,954</td><td class='n'>102,761</td></tr><tr><td>COI</td><td>length not codon-compatible</td><td class='n'>29</td><td class='n'>690</td><td class='n'>207</td></tr><tr><td>COI</td><td>stop codon in frame</td><td class='n'>2</td><td class='n'>9</td><td class='n'>1</td></tr><tr><td>18S</td><td>kept</td><td class='n'>982</td><td class='n'>88,564</td><td class='n'>81,828</td></tr><tr><td>18S</td><td>outside 350–480 bp</td><td class='n'>53</td><td class='n'>4,448</td><td class='n'>70</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/curation_summary.tsv'>results/04_curation/curation_summary.tsv</a></p>
+<p>Curation removes few reads: 0.4 % for COI and 2.6 % for 18S (almost all short ASVs from Chandubi).</p>
+<p class='label'>Visualisation</p>
+<figure><a href='img/04_curation.png'><img src='img/04_curation.png' alt='Every ASV by length and abundance, coloured by curation outcome.' loading='lazy'></a><figcaption>Every ASV by length and abundance, coloured by curation outcome.</figcaption></figure>
+<p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/18S_asv_table_curated.tsv'>results/04_curation/18S_asv_table_curated.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/18S_asv_seqs_curated.fasta'>results/04_curation/18S_asv_seqs_curated.fasta</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/COI_asv_table_curated.tsv'>results/04_curation/COI_asv_table_curated.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/COI_asv_seqs_curated.fasta'>results/04_curation/COI_asv_seqs_curated.fasta</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/COI_frame_check.tsv'>results/04_curation/COI_frame_check.tsv</a></li></ul>
+</section><section id='summary'><h2>5 · Processing summary</h2>
+<p>Follows every read from raw file to curated ASV table, counts ASVs per site, and checks with
+rarefaction whether sequencing depth was enough.</p>
+<p class='label'>Script</p><details><summary><code>scripts/05_summary.R</code> · 76 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/05_summary.R'>view on GitHub</a></summary><pre><code># Step 5 — Processing summary: reads surviving each step, ASVs per site and shared
+# between sites, and rarefaction curves (was sequencing depth sufficient?).
+suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(vegan) })
+
+out &lt;- &quot;results/05_summary&quot;
+dir.create(out, recursive = TRUE, showWarnings = FALSE)
+raw &lt;- fread(&quot;results/01_qc/read_stats.tsv&quot;)[read == &quot;R1&quot;, .(marker, sample, raw = reads)]
+site_of &lt;- c(W1 = &quot;Chandubi (W1)&quot;, W2 = &quot;Deepor Beel (W2)&quot;)
+
+rows &lt;- list()
+for (m in c(&quot;18S&quot;, &quot;COI&quot;)) {
+  tr &lt;- fread(file.path(&quot;results/03_dada2&quot;, m, &quot;track.tsv&quot;))
+  cur &lt;- fread(file.path(&quot;results/04_curation&quot;, sprintf(&quot;%s_asv_table_curated.tsv&quot;, m)))
+  tr[, curated := c(W1 = sum(cur$W1), W2 = sum(cur$W2))[sample]]
+  rows[[m]] &lt;- merge(raw[marker == m], tr, by = c(&quot;marker&quot;, &quot;sample&quot;))
+}
+track &lt;- rbindlist(rows)[, .(marker, sample, raw, primers_found = input, filtered,
+                             merged, nonchim, curated)]
+track[, pct_retained := round(100 * curated / raw, 1)]
+fwrite(track, file.path(out, &quot;read_tracking.tsv&quot;), sep = &quot;\t&quot;)
+
+tl &lt;- melt(track, id.vars = c(&quot;marker&quot;, &quot;sample&quot;),
+           measure.vars = c(&quot;raw&quot;, &quot;primers_found&quot;, &quot;filtered&quot;, &quot;merged&quot;, &quot;nonchim&quot;, &quot;curated&quot;),
+           variable.name = &quot;step&quot;, value.name = &quot;reads&quot;)
+tl[, site := site_of[sample]]
+p1 &lt;- ggplot(tl, aes(step, reads, group = site, colour = site)) +
+  geom_line(linewidth = 1) + geom_point(size = 2) + facet_wrap(~marker) +
+  scale_y_continuous(labels = scales::comma, limits = c(0, NA)) +
+  scale_colour_manual(values = c(&quot;#2b6c8f&quot;, &quot;#c2662d&quot;)) +
+  labs(x = NULL, y = &quot;Read pairs&quot;, colour = NULL, title = &quot;Reads surviving each processing step&quot;) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = &quot;bottom&quot;, axis.text.x = element_text(angle = 30, hjust = 1))
+ggsave(&quot;docs/img/05_read_tracking.png&quot;, p1, width = 9, height = 4.8, dpi = 120)
+
+asv_stats &lt;- list(); curves &lt;- list()
+for (m in c(&quot;18S&quot;, &quot;COI&quot;)) {
+  cur &lt;- fread(file.path(&quot;results/04_curation&quot;, sprintf(&quot;%s_asv_table_curated.tsv&quot;, m)))
+  asv_stats[[m]] &lt;- data.table(marker = m,
+    W1_asvs = sum(cur$W1 &gt; 0), W2_asvs = sum(cur$W2 &gt; 0),
+    shared_asvs = sum(cur$W1 &gt; 0 &amp; cur$W2 &gt; 0), total_asvs = nrow(cur),
+    shared_reads_pct_W1 = round(100 * sum(cur$W1[cur$W2 &gt; 0]) / sum(cur$W1), 1),
+    shared_reads_pct_W2 = round(100 * sum(cur$W2[cur$W1 &gt; 0]) / sum(cur$W2), 1))
+  mat &lt;- t(as.matrix(cur[, .(W1, W2)]))
+  asv_stats[[m]][, `:=`(
+    bray_curtis = round(as.numeric(vegdist(decostand(mat, &quot;total&quot;), &quot;bray&quot;)), 3),
+    jaccard = round(as.numeric(vegdist(mat, &quot;jaccard&quot;, binary = TRUE)), 3))]
+  for (s in rownames(mat)) {
+    depth &lt;- unique(round(seq(1, sum(mat[s, ]), length.out = 60)))
+    curves[[paste(m, s)]] &lt;- data.table(marker = m, site = site_of[s], depth = depth,
+                                        asvs = as.numeric(rarefy(mat[s, ], depth)))
+  }
+}
+asv_stats &lt;- rbindlist(asv_stats)
+fwrite(asv_stats, file.path(out, &quot;asv_counts.tsv&quot;), sep = &quot;\t&quot;)
+
+p2 &lt;- ggplot(rbindlist(curves), aes(depth, asvs, colour = site)) +
+  geom_line(linewidth = 1) + facet_wrap(~marker, scales = &quot;free&quot;) +
+  scale_x_continuous(labels = scales::comma) +
+  scale_colour_manual(values = c(&quot;#2b6c8f&quot;, &quot;#c2662d&quot;)) +
+  labs(x = &quot;Reads sampled&quot;, y = &quot;ASVs observed&quot;, colour = NULL,
+       title = &quot;Rarefaction — curves flattening = depth was sufficient&quot;) +
+  theme_minimal(base_size = 12) + theme(legend.position = &quot;bottom&quot;)
+ggsave(&quot;docs/img/05_rarefaction.png&quot;, p2, width = 9, height = 4.5, dpi = 120)
+
+al &lt;- melt(asv_stats, id.vars = &quot;marker&quot;,
+           measure.vars = c(&quot;W1_asvs&quot;, &quot;W2_asvs&quot;, &quot;shared_asvs&quot;), value.name = &quot;asvs&quot;)
+al[, variable := factor(variable, labels = c(&quot;Chandubi (W1)&quot;, &quot;Deepor Beel (W2)&quot;, &quot;shared by both&quot;))]
+p3 &lt;- ggplot(al, aes(variable, asvs, fill = variable)) +
+  geom_col(width = 0.6, show.legend = FALSE) + geom_text(aes(label = asvs), vjust = -0.4) +
+  facet_wrap(~marker, scales = &quot;free_y&quot;) +
+  scale_fill_manual(values = c(&quot;#2b6c8f&quot;, &quot;#c2662d&quot;, &quot;#7a7a7a&quot;)) +
+  labs(x = NULL, y = &quot;ASVs&quot;, title = &quot;ASVs per site after curation&quot;) +
+  theme_minimal(base_size = 12)
+ggsave(&quot;docs/img/05_asv_counts.png&quot;, p3, width = 8, height = 4.2, dpi = 120)
+print(track); print(asv_stats)
+</code></pre></details>
+<p class='label'>Result</p>
+<div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>raw</th><th>primers found</th><th>filtered</th><th>merged</th><th>non-chimeric</th><th>curated</th><th>% of raw retained</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>166,108</td><td class='n'>145,813</td><td class='n'>115,951</td><td class='n'>104,117</td><td class='n'>93,012</td><td class='n'>88,564</td><td class='n'>53.3</td></tr><tr><td>18S</td><td>W2</td><td class='n'>143,035</td><td class='n'>128,222</td><td class='n'>101,027</td><td class='n'>88,768</td><td class='n'>81,898</td><td class='n'>81,828</td><td class='n'>57.2</td></tr><tr><td>COI</td><td>W1</td><td class='n'>167,886</td><td class='n'>148,980</td><td class='n'>125,051</td><td class='n'>123,126</td><td class='n'>117,653</td><td class='n'>116,954</td><td class='n'>69.7</td></tr><tr><td>COI</td><td>W2</td><td class='n'>143,351</td><td class='n'>127,418</td><td class='n'>107,049</td><td class='n'>106,300</td><td class='n'>102,969</td><td class='n'>102,761</td><td class='n'>71.7</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/read_tracking.tsv'>results/05_summary/read_tracking.tsv</a></p>
+<div class='tbl'><table><thead><tr><th>marker</th><th>Chandubi ASVs</th><th>Deepor ASVs</th><th>shared</th><th>total</th><th>% Chandubi reads in shared ASVs</th><th>% Deepor reads in shared ASVs</th><th>Bray–Curtis</th><th>Jaccard</th></tr></thead><tbody><tr><td>18S</td><td class='n'>439</td><td class='n'>685</td><td class='n'>142</td><td class='n'>982</td><td class='n'>36.5</td><td class='n'>24.6</td><td class='n'>0.955</td><td class='n'>0.855</td></tr><tr><td>COI</td><td class='n'>330</td><td class='n'>281</td><td class='n'>266</td><td class='n'>345</td><td class='n'>99.4</td><td class='n'>99.9</td><td class='n'>0.235</td><td class='n'>0.229</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/asv_counts.tsv'>results/05_summary/asv_counts.tsv</a></p>
+<p class='label'>Visualisation</p>
+<figure><a href='img/05_read_tracking.png'><img src='img/05_read_tracking.png' alt='Reads remaining after each step.' loading='lazy'></a><figcaption>Reads remaining after each step.</figcaption></figure>
+<figure><a href='img/05_rarefaction.png'><img src='img/05_rarefaction.png' alt='Rarefaction curves for curated ASVs.' loading='lazy'></a><figcaption>Rarefaction curves for curated ASVs.</figcaption></figure>
+<figure><a href='img/05_asv_counts.png'><img src='img/05_asv_counts.png' alt='ASVs per site and shared between sites.' loading='lazy'></a><figcaption>ASVs per site and shared between sites.</figcaption></figure>
+<div class='note'><p><strong>Observations.</strong></p><ul>
+<li>53–57 % (18S) and 70–72 % (COI) of raw read pairs reach the final table, against ~40 % in the vendor's COI processing.</li>
+<li>All four rarefaction curves flatten: sequencing depth was sufficient for both markers at both sites.</li>
+<li>With joint denoising, <strong>266 of 345 COI ASVs occur in both lakes</strong>
+(vendor table: 2 of 272), confirming that the vendor's near-zero overlap was an artefact of denoising the samples separately.</li>
+<li><strong>The two markers disagree on how similar the lakes are.</strong> COI: Bray–Curtis 0.235,
+shared ASVs at similar abundance in both lakes. 18S: Bray–Curtis 0.955, only 142 shared ASVs.
+The COI overlap does not look like tag-jumping (that leaves a trace count on one side, not matched abundances).
+It may be a genuinely shared zooplankton pool, or the COI libraries may share template DNA; without
+extraction/PCR blanks this cannot be told apart. Worth raising with the sequencing provider.</li>
+<li>One sample per lake: these are descriptions, not tested differences.</li>
+</ul></div>
+<p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/read_tracking.tsv'>results/05_summary/read_tracking.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/asv_counts.tsv'>results/05_summary/asv_counts.tsv</a></li></ul>
+</section>
+<footer>Built 2026-10-13 by <code>scripts/06_build_site.py</code>.
+Next stage (not yet run): taxonomic assignment — 18S against PR2, COI against MIDORI2/BOLD.</footer>
+</main></body></html>

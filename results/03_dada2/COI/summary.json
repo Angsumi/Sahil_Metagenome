@@ -1,0 +1,8 @@
+{
+  "marker": "COI",
+  "truncLen": [250, 200],
+  "maxEE": [2, 4],
+  "asvs_before_chimera": 481,
+  "asvs_final": 376,
+  "chimeric_read_pct": 3.84
+}

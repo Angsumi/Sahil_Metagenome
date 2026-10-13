@@ -1,0 +1,15 @@
+name: metabar
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - cutadapt=5.2
+  - fastqc
+  - multiqc=1.35
+  - pigz
+  - bioconductor-dada2=1.38
+  - bioconductor-biostrings
+  - r-ggplot2
+  - r-data.table
+  - r-jsonlite
+  - r-vegan

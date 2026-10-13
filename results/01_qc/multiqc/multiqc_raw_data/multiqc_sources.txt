@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	W1_R1	/home/angsuman/extra_spac/SAHIL/Sahil_Metagenome/work/01_fastqc/W1_R1_fastqc.zip
+FastQC	all_sections	W1_R2	/home/angsuman/extra_spac/SAHIL/Sahil_Metagenome/work/01_fastqc/W1_R2_fastqc.zip
+FastQC	all_sections	W2_R1	/home/angsuman/extra_spac/SAHIL/Sahil_Metagenome/work/01_fastqc/W2_R1_fastqc.zip
+FastQC	all_sections	W2_R2	/home/angsuman/extra_spac/SAHIL/Sahil_Metagenome/work/01_fastqc/W2_R2_fastqc.zip

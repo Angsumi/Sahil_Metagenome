@@ -1,0 +1,9 @@
+marker	site	sample	read	reads	mean_len	gc_pct	mean_q
+18S	Chandubi	W1	R1	166108	301.0	44.4	34.4
+18S	Chandubi	W1	R2	166108	301.0	43.1	28.5
+18S	Dipor Beel	W2	R1	143035	301.0	47.2	34.3
+18S	Dipor Beel	W2	R2	143035	301.0	44.7	28.5
+COI	Chandubi	W1	R1	167886	301.0	38.6	34.8
+COI	Chandubi	W1	R2	167886	301.0	38.8	29.4
+COI	Dipor Beel	W2	R1	143351	301.0	39.0	34.9
+COI	Dipor Beel	W2	R2	143351	301.0	39.1	29.2

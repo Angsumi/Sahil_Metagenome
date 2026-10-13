@@ -1,45 +1,47 @@
 # 🧬 Sahil_Metagenome
 
-Metabarcoding and environmental metagenomics analysis repository for **Deepor Beel** and **Chandubi Lake** (Assam, India).
+eDNA metabarcoding of plankton in two wetlands of Assam, India — **Chandubi Beel (W1)** and **Deepor Beel (W2, Ramsar site)** — using two markers:
 
-Investigates eukaryotic and prokaryotic micro-ecological biodiversity across freshwater ecosystems using **18S rRNA** and **COI (Cytochrome c Oxidase I)** amplicon sequencing pipelines.
+- **18S rRNA V4** (E572F / E1009R) — micro-eukaryotes: algae, protists, fungi, small metazoans
+- **COI** Leray fragment (mlCOIintF / jgHCO2198) — metazoan zooplankton
+
+Illumina MiSeq 2 × 301 bp, one sample per site per marker.
+
+**📄 Processing report (scripts, results and figures for every step): https://angsumi.github.io/Sahil_Metagenome/**
 
 ---
 
-## 📂 Repository Architecture
+## Repository layout
 
 ```text
 Sahil_Metagenome/
-├── NEW/
-│   ├── 18S/                     # 18S rRNA Amplicon Metabarcoding
-│   │   ├── Chandubi/            # Chandubi lake samples (W1_R1, W1_R2)
-│   │   ├── Dipor Beel/          # Deepor Beel wetland samples (W2_R1, W2_R2)
-│   │   └── MD5SUM_Raw.txt       # Raw fastq integrity checksums
-│   │
-│   └── COI/                     # Cytochrome c Oxidase I (COI) Amplicon Sequencing
-│       ├── Chandubi/            # Chandubi lake samples
-│       ├── Dipor Beel/          # Deepor Beel wetland samples
-│       └── MD5SUM_Raw.txt       # Raw fastq integrity checksums
-│
-└── OLD/
-    ├── Files-20261003T144336Z-1-001.zip  # Canonical raw archive (tracked via Git LFS)
-    └── Files/
-        ├── 1/                   # Dataset run 1 (1_Raw_Data, 2_HQ_Data, 2_Analysis_Reports, Barplots, Krona, Rarefaction, Heatmap)
-        ├── 2/                   # Dataset run 2 (1_Raw_Data, 2_HQ_Data, 2_Analysis_Reports, Barplots, Krona, Rarefaction, Heatmap)
-        ├── Analysis_and_Manuscript/      # Research manuscript drafts, comparative spreadsheets, 300 DPI publication figures
-        ├── Claude outputs/               # Statistical synthesis & manuscript deliverables
-        └── Literature_and_Article_Plan.md # Research design, literature review, and sequencing protocols
+├── NEW/                      # Raw reads (MD5-verified)
+│   ├── 18S/{Chandubi,Dipor Beel}/W*_R{1,2}.fastq.gz
+│   └── COI/{Chandubi,Dipor Beel}/W*_R{1,2}.fastq.gz
+├── scripts/                  # Pipeline, one script per step
+│   ├── 01_qc.sh              # checksums, FastQC/MultiQC, read stats, quality profiles
+│   ├── 02_primer_removal.sh  # Cutadapt, anchored primers, discard pairs without primers
+│   ├── 03_dada2.R            # filter, learn errors, joint (pooled) denoising, merge, chimeras
+│   ├── 04_asv_curation.R     # COI reading-frame/stop-codon filter, 18S length filter
+│   ├── 05_summary.R          # read tracking, ASVs per site, rarefaction
+│   ├── 06_build_site.py      # builds docs/index.html
+│   └── run_all.sh            # runs everything
+├── results/                  # Tables and ASV FASTA files from each step
+├── docs/                     # GitHub Pages site
+└── environment.yml           # conda/micromamba environment
 ```
 
----
+## Reproduce
 
-## 🔬 Study Focus & Locations
-- **Deepor Beel (W2)**: A designated Ramsar wetland on the southwestern edge of Guwahati, Assam, characterized by diverse aquatic macrophytes and rich avifaunal habitat.
-- **Chandubi Lake (W1)**: A natural tectonic lake located at the base of the Garo Hills in Kamrup district, Assam.
+```bash
+micromamba create -f environment.yml
+micromamba run -n metabar bash scripts/run_all.sh
+```
 
----
+Intermediate FASTQs are written to `work/` (git-ignored).
 
-## 🛠️ Methods & Pipelines
-- **Sequencing Targets**: 18S rRNA (eukaryotic microbial diversity) & COI (metazoan/invertebrate diversity).
-- **Bioinformatics Engine**: QIIME 2 / DADA2 quality filtering, feature clustering, taxonomic assignment against Silva/NCBI/BOLD databases.
-- **Visualizations**: Krona interactive taxonomic charts, rarefaction curves, hierarchical heatmaps, and relative abundance stacked barplots.
+## Status
+
+- [x] Processing: QC → primer removal → DADA2 (joint) → ASV curation
+- [ ] Taxonomic assignment (18S: PR2; COI: MIDORI2 / BOLD + BLAST of unassigned ASVs)
+- [ ] Diversity and composition analysis

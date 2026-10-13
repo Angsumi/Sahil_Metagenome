@@ -1,0 +1,8 @@
+{
+  "marker": "18S",
+  "truncLen": [270, 210],
+  "maxEE": [2, 4],
+  "asvs_before_chimera": 2043,
+  "asvs_final": 1035,
+  "chimeric_read_pct": 9.32
+}

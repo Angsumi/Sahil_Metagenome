@@ -1,0 +1,3 @@
+marker	W1_asvs	W2_asvs	shared_asvs	total_asvs	shared_reads_pct_W1	shared_reads_pct_W2	bray_curtis	jaccard
+18S	439	685	142	982	36.5	24.6	0.955	0.855
+COI	330	281	266	345	99.4	99.9	0.235	0.229

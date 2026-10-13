@@ -1,0 +1,249 @@
+This is cutadapt 5.2 with Python 3.13.16
+Command line parameters: -j 8 --discard-untrimmed -e 0.15 --minimum-length 50 -g ^CYGCGGTAATTCCAGCTC;required...CRAAGAYGAWYAGATACCRT;optional -G ^AYGGTATCTRWTCRTCTTYG;required...GAGCTGGAATTACCGCRG;optional --json results/02_primer_removal/18S_W2.cutadapt.json -o work/02_trimmed/18S/W2_R1.fastq.gz -p work/02_trimmed/18S/W2_R2.fastq.gz NEW/18S/Dipor Beel/W2_R1.fastq.gz NEW/18S/Dipor Beel/W2_R2.fastq.gz
+Processing paired-end reads on 8 cores ...
+
+=== Summary ===
+
+Total read pairs processed:            143,035
+  Read 1 with adapter:                 134,367 (93.9%)
+  Read 2 with adapter:                 128,463 (89.8%)
+
+== Read fate breakdown ==
+Pairs that were too short:                   8 (0.0%)
+Pairs discarded as untrimmed:           14,805 (10.4%)
+Pairs written (passing filters):       128,222 (89.6%)
+
+Total basepairs processed:    86,107,070 bp
+  Read 1:    43,053,535 bp
+  Read 2:    43,053,535 bp
+Total written (filtered):     72,213,716 bp (83.9%)
+  Read 1:    36,230,210 bp
+  Read 2:    35,983,506 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CYGCGGTAATTCCAGCTC...CRAAGAYGAWYAGATACCRT; Type: linked; Length: 18+20; 5' trimmed: 134367 times; 3' trimmed: 2254 times
+
+Minimum overlap: 18+3
+No. of allowed errors: 2
+
+No. of allowed errors:
+1-5 bp: 0; 6-12 bp: 1; 13-19 bp: 2; 20 bp: 3
+
+Overview of removed sequences at 5' end
+length	count	expect	max.err	error counts
+16	52	0.0	2	0 0 52
+17	1637	0.0	2	0 1501 136
+18	132620	0.0	2	118657 13097 866
+19	58	0.0	2	0 57 1
+
+
+
+Overview of removed sequences at 3' end
+length	count	expect	max.err	error counts
+3	1263	2234.9	0	1263
+4	53	558.7	0	53
+5	4	139.7	0	4
+6	50	34.9	0	0 50
+7	18	8.7	1	0 18
+8	5	2.2	1	0 5
+9	9	0.5	1	6 3
+10	2	0.1	1	0 2
+12	3	0.0	1	0 0 3
+14	81	0.0	2	2 0 79
+15	1	0.0	2	0 0 1
+16	2	0.0	2	1 0 1
+17	2	0.0	2	0 1 1
+19	2	0.0	2	0 0 0 2
+21	2	0.0	3	0 1 0 1
+23	1	0.0	3	0 0 0 1
+24	6	0.0	3	5 1
+27	1	0.0	3	1
+28	1	0.0	3	1
+31	3	0.0	3	1 1 0 1
+35	14	0.0	3	9 3 2
+36	2	0.0	3	0 2
+37	6	0.0	3	5 1
+38	2	0.0	3	1 1
+39	1	0.0	3	1
+41	5	0.0	3	0 5
+42	1	0.0	3	1
+45	5	0.0	3	5
+46	10	0.0	3	7 3
+47	174	0.0	3	145 22 5 2
+48	27	0.0	3	24 2 1
+50	2	0.0	3	0 2
+53	277	0.0	3	227 34 12 4
+54	3	0.0	3	3
+55	1	0.0	3	1
+56	3	0.0	3	1 1 0 1
+59	14	0.0	3	13 1
+61	1	0.0	3	1
+62	2	0.0	3	1 1
+64	1	0.0	3	1
+65	1	0.0	3	1
+68	2	0.0	3	1 1
+77	1	0.0	3	0 1
+78	4	0.0	3	1 2 0 1
+80	4	0.0	3	2 0 1 1
+81	4	0.0	3	2 1 0 1
+93	2	0.0	3	2
+94	1	0.0	3	0 1
+95	1	0.0	3	1
+96	1	0.0	3	0 0 0 1
+99	1	0.0	3	1
+101	2	0.0	3	2
+105	2	0.0	3	0 1 1
+110	1	0.0	3	1
+116	27	0.0	3	17 8 1 1
+117	1	0.0	3	1
+119	1	0.0	3	1
+122	2	0.0	3	2
+125	8	0.0	3	7 1
+126	1	0.0	3	1
+128	3	0.0	3	3
+134	1	0.0	3	0 1
+135	1	0.0	3	1
+138	7	0.0	3	3 3 1
+140	12	0.0	3	6 6
+143	9	0.0	3	8 0 0 1
+146	9	0.0	3	9
+147	1	0.0	3	1
+148	3	0.0	3	3
+158	40	0.0	3	2 36 1 1
+159	1	0.0	3	0 1
+161	1	0.0	3	1
+170	5	0.0	3	5
+175	1	0.0	3	0 0 1
+179	2	0.0	3	1 1
+182	2	0.0	3	2
+183	2	0.0	3	2
+189	1	0.0	3	0 1
+194	2	0.0	3	2
+203	2	0.0	3	2
+209	2	0.0	3	0 2
+210	1	0.0	3	1
+211	1	0.0	3	1
+213	1	0.0	3	1
+218	2	0.0	3	2
+221	1	0.0	3	1
+224	1	0.0	3	0 1
+225	1	0.0	3	1
+227	1	0.0	3	0 0 1
+228	1	0.0	3	0 0 1
+230	1	0.0	3	1
+231	1	0.0	3	1
+249	2	0.0	3	2
+252	2	0.0	3	2
+253	1	0.0	3	0 1
+272	2	0.0	3	0 2
+275	1	0.0	3	1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: AYGGTATCTRWTCRTCTTYG...GAGCTGGAATTACCGCRG; Type: linked; Length: 20+18; 5' trimmed: 128463 times; 3' trimmed: 2134 times
+
+Minimum overlap: 20+3
+No. of allowed errors: 3
+
+No. of allowed errors:
+1-5 bp: 0; 6-12 bp: 1; 13-18 bp: 2
+
+Overview of removed sequences at 5' end
+length	count	expect	max.err	error counts
+17	7	0.0	2	0 0 0 7
+18	25	0.0	2	0 0 23 2
+19	1462	0.0	2	0 1335 78 49
+20	126911	0.0	3	112959 9595 2675 1682
+21	58	0.0	3	0 53 3 2
+
+
+
+Overview of removed sequences at 3' end
+length	count	expect	max.err	error counts
+3	863	2234.9	0	863
+4	624	558.7	0	624
+5	28	139.7	0	28
+6	8	34.9	0	2 6
+7	20	8.7	1	0 20
+8	5	2.2	1	0 5
+9	2	0.5	1	0 2
+12	1	0.0	1	1
+14	1	0.0	2	1
+15	2	0.0	2	0 2
+22	3	0.0	2	1 0 2
+26	1	0.0	2	0 0 1
+32	1	0.0	2	0 1
+33	1	0.0	2	0 1
+34	1	0.0	2	0 0 1
+35	5	0.0	2	0 3 2
+37	1	0.0	2	0 0 1
+39	5	0.0	2	0 4 1
+40	1	0.0	2	1
+43	5	0.0	2	1 3 1
+44	8	0.0	2	6 2
+45	115	0.0	2	44 40 31
+46	26	0.0	2	12 13 1
+48	2	0.0	2	0 2
+51	219	0.0	2	84 80 55
+52	1	0.0	2	1
+53	1	0.0	2	0 1
+54	2	0.0	2	1 0 1
+57	7	0.0	2	0 3 4
+59	1	0.0	2	0 0 1
+60	2	0.0	2	1 1
+62	1	0.0	2	0 1
+66	2	0.0	2	2
+76	4	0.0	2	0 1 3
+77	2	0.0	2	0 1 1
+78	1	0.0	2	1
+79	2	0.0	2	1 1
+80	1	0.0	2	0 1
+91	1	0.0	2	0 1
+92	1	0.0	2	0 1
+93	1	0.0	2	1
+97	1	0.0	2	1
+99	1	0.0	2	1
+103	1	0.0	2	1
+108	1	0.0	2	1
+114	25	0.0	2	19 6
+115	1	0.0	2	0 0 1
+117	1	0.0	2	0 1
+120	1	0.0	2	1
+123	8	0.0	2	7 1
+126	3	0.0	2	3
+132	1	0.0	2	0 1
+133	1	0.0	2	1
+136	6	0.0	2	4 1 1
+138	6	0.0	2	6
+139	5	0.0	2	0 4 1
+141	7	0.0	2	0 6 1
+144	10	0.0	2	9 1
+146	3	0.0	2	1 2
+156	37	0.0	2	30 5 2
+168	4	0.0	2	4
+173	1	0.0	2	1
+177	2	0.0	2	2
+180	2	0.0	2	0 2
+181	2	0.0	2	2
+187	1	0.0	2	1
+192	2	0.0	2	0 2
+201	1	0.0	2	0 1
+207	2	0.0	2	1 1
+208	2	0.0	2	1 1
+211	1	0.0	2	0 1
+216	2	0.0	2	2
+219	1	0.0	2	0 0 1
+222	1	0.0	2	1
+223	1	0.0	2	0 1
+224	1	0.0	2	0 0 1
+226	1	0.0	2	0 1
+228	1	0.0	2	1
+229	1	0.0	2	1
+247	2	0.0	2	2
+250	2	0.0	2	2
+252	1	0.0	2	1
+269	1	0.0	2	0 1
+270	1	0.0	2	1
+273	1	0.0	2	0 1

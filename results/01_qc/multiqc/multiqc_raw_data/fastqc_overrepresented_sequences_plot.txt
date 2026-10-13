@@ -1,0 +1,5 @@
+Sample	Top overrepresented sequence	Sum of remaining overrepresented sequences
+W1_R1	17.26	57.67
+W1_R2	1.28	51.65
+W2_R1	19.17	57.82000000000001
+W2_R2	1.44	54.86

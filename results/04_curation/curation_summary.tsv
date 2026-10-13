@@ -1,0 +1,6 @@
+marker	reason	asvs	W1_reads	W2_reads
+COI	kept	345	116954	102761
+COI	length not codon-compatible	29	690	207
+COI	stop codon in frame	2	9	1
+18S	kept	982	88564	81828
+18S	outside 350–480 bp	53	4448	70
