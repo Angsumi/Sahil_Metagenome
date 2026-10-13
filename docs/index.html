@@ -1,56 +1,136 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sahil Metagenome — Processing</title>
-<meta name="description" content="18S and COI amplicon processing for Chandubi Beel and Deepor Beel, Assam: scripts, results and figures for each step.">
+<title>Lake DNA Timeline</title>
+<meta name="description" content="How raw DNA sequencing data from Chandubi Beel and Deepor Beel, Assam, was cleaned into a reliable picture of plankton life — step by step, in plain language.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root { --bg:#fdfdfc; --fg:#1d1d1f; --muted:#6b6b70; --line:#e6e6e3; --accent:#2b6c8f; --code:#f4f4f2; --note:#f3f7fa; }
-@media (prefers-color-scheme: dark) { :root { --bg:#161618; --fg:#e8e8ea; --muted:#9a9aa0; --line:#2c2c30; --accent:#7fb6d6; --code:#1f1f22; --note:#1b2329; }
-  figure img { background:#fff; } }
+:root { --bg:#f7f5f0; --card:#ffffff; --fg:#22262a; --muted:#6b7177; --line:#e4e0d6; --accent:#2b6c8f;
+  --accent-soft:#e6eff4; --warm:#c2662d; --warm-soft:#f8ece3; --code:#f3f1ec; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141619; --card:#1c1f23; --fg:#e7e9eb; --muted:#9aa1a8;
+  --line:#2d3237; --accent:#7fb6d6; --accent-soft:#1d2a33; --warm:#e09a6a; --warm-soft:#2e231c; --code:#16181b; } }
 * { box-sizing:border-box; }
-body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif; }
-main { max-width:880px; margin:0 auto; padding:48px 16px 96px; }
-h1 { font-size:1.9rem; line-height:1.2; margin:0 0 8px; letter-spacing:-0.01em; }
-h2 { font-size:1.35rem; margin:0 0 12px; padding-top:8px; }
-h4 { margin:18px 0 6px; font-size:0.95rem; color:var(--muted); }
-section { border-top:1px solid var(--line); padding:36px 0 8px; margin-top:28px; }
-a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
-.lede { color:var(--muted); margin:0 0 20px; }
-.meta { font-size:0.88rem; color:var(--muted); }
-.label { text-transform:uppercase; font-size:0.72rem; letter-spacing:0.08em; color:var(--muted); margin:26px 0 6px; font-weight:600; }
-nav ol { list-style:none; padding-left:0; margin:12px 0; } nav li { margin:2px 0; }
-code { font:0.86em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
-pre { background:var(--code); border:1px solid var(--line); border-radius:6px; padding:14px; overflow:auto; font-size:0.85rem; line-height:1.5; margin:8px 0 0; }
-details { border:1px solid var(--line); border-radius:6px; padding:8px 12px; margin:6px 0; }
-details[open] { padding-bottom:12px; } summary { cursor:pointer; font-size:0.92rem; }
-.tbl { overflow-x:auto; margin:10px 0 2px; }
-table { border-collapse:collapse; font-size:0.88rem; width:100%; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.7 Inter,-apple-system,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--accent); }
+.wrap { max-width:860px; margin:0 auto; padding:0 16px; }
+header { padding:72px 0 40px; }
+.eyebrow { text-transform:uppercase; letter-spacing:.14em; font-size:.75rem; color:var(--muted); font-weight:600; margin:0 0 14px; }
+h1, h2, h4 { font-family:Fraunces,Georgia,serif; font-weight:600; letter-spacing:-.01em; }
+h1 { font-size:clamp(2rem,5vw,3rem); line-height:1.1; margin:0 0 18px; }
+.lede { font-size:1.15rem; color:var(--muted); max-width:640px; margin:0 0 28px; }
+.lakes { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:0 0 28px; }
+.lake { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; }
+.lake b { font-family:Fraunces,Georgia,serif; font-size:1.2rem; display:block; }
+.lake span { font-size:.9rem; color:var(--muted); }
+.lake.a { border-top:4px solid var(--accent); } .lake.b { border-top:4px solid var(--warm); }
+.journey { display:flex; flex-wrap:wrap; align-items:center; gap:8px; font-size:.88rem; color:var(--muted); margin:0 0 8px; }
+.journey span { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:4px 12px; }
+.journey i { font-style:normal; opacity:.6; }
+.toc { display:flex; flex-wrap:wrap; gap:6px 16px; font-size:.88rem; padding:18px 0 0; border-top:1px solid var(--line); margin-top:28px; }
+.toc a { text-decoration:none; color:var(--muted); } .toc a:hover { color:var(--accent); }
+ol.timeline { list-style:none; margin:24px 0 0; padding:0 0 0 34px; position:relative; }
+ol.timeline::before { content:""; position:absolute; left:9px; top:8px; bottom:8px; width:2px;
+  background:linear-gradient(var(--accent), var(--warm)); opacity:.35; }
+.node { position:relative; margin:0 0 34px; scroll-margin-top:20px; }
+.dot { position:absolute; left:-34px; top:26px; width:20px; height:20px; border-radius:50%; background:var(--bg);
+  border:3px solid var(--accent); }
+.node:nth-last-child(-n+2) .dot { border-color:var(--warm); }
+.card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 28px; }
+.kicker { margin:0; text-transform:uppercase; letter-spacing:.12em; font-size:.72rem; font-weight:600; color:var(--accent); }
+.node:nth-last-child(-n+2) .kicker { color:var(--warm); }
+h2 { font-size:1.6rem; line-height:1.25; margin:4px 0 14px; }
+h4 { font-size:1.05rem; margin:0 0 4px; }
+p { margin:0 0 14px; }
+.plain { background:var(--accent-soft); border-radius:12px; padding:14px 18px; }
+.plain span { display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; font-weight:600; color:var(--accent); margin-bottom:2px; }
+.pair { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:6px 0 16px; }
+.pair > div { background:var(--bg); border-radius:12px; padding:14px 16px; }
+.pair p { margin:0; font-size:.94rem; }
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:20px 0; }
+.stat { border-top:2px solid var(--line); padding-top:10px; }
+.stat b { display:block; font-family:Fraunces,Georgia,serif; font-size:1.7rem; line-height:1.15; font-weight:600; }
+.stat span { font-size:.85rem; color:var(--muted); }
+figure { margin:18px 0; }
+figure img { width:100%; height:auto; display:block; border-radius:10px; border:1px solid var(--line); background:#fff; }
+figcaption { font-size:.88rem; color:var(--muted); margin-top:8px; line-height:1.55; }
+details.spec { margin-top:18px; border-top:1px dashed var(--line); padding-top:12px; }
+details.spec > summary { cursor:pointer; font-size:.88rem; color:var(--muted); font-weight:500; list-style:none; }
+details.spec > summary::before { content:"+ "; color:var(--accent); font-weight:600; }
+details.spec[open] > summary::before { content:"− "; }
+.spec-body { font-size:.92rem; padding-top:10px; }
+details.code { border:1px solid var(--line); border-radius:10px; padding:8px 12px; margin:8px 0; }
+details.code summary { cursor:pointer; font-size:.88rem; }
+details.code summary span { font-weight:600; }
+code { font:.84em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:var(--code); border-radius:8px; padding:14px; overflow:auto; font-size:.82rem; line-height:1.5; margin:8px 0; }
+.tbl { overflow-x:auto; margin:10px 0 0; }
+table { border-collapse:collapse; font-size:.84rem; width:100%; }
 th, td { text-align:left; padding:6px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
-th { font-weight:600; color:var(--muted); font-size:0.8rem; }
+th { font-weight:600; color:var(--muted); font-size:.78rem; }
 td.n { text-align:right; font-variant-numeric:tabular-nums; }
-.src { font-size:0.78rem; color:var(--muted); margin:2px 0 14px; }
-figure { margin:16px 0; } figure img { max-width:100%; height:auto; border:1px solid var(--line); border-radius:4px; display:block; }
-figcaption { font-size:0.85rem; color:var(--muted); margin-top:6px; }
-.grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; } .grid figure { margin:0; }
-@media (max-width:640px) { .grid { grid-template-columns:1fr; } main { padding-top:28px; } }
-.files { font-size:0.88rem; padding-left:20px; margin:4px 0; }
-.note { background:var(--note); border-left:3px solid var(--accent); padding:4px 16px; border-radius:4px; margin:20px 0; }
-footer { border-top:1px solid var(--line); margin-top:40px; padding-top:16px; font-size:0.85rem; color:var(--muted); }
+.src { font-size:.78rem; margin:4px 0 12px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; } .grid figure { margin:6px 0; }
+.label { font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin:16px 0 4px; font-weight:600; }
+.files { font-size:.85rem; padding-left:18px; margin:0; }
+.finding { border-left:3px solid var(--accent); padding:2px 0 2px 16px; margin:0 0 18px; }
+.finding p { margin:0; }
+.finding.warn { border-color:var(--warm); background:var(--warm-soft); border-radius:0 10px 10px 0; padding:12px 16px; }
+.glossary { padding:40px 0 10px; border-top:1px solid var(--line); margin-top:20px; }
+.glossary h2 { margin-top:0; }
+dl { display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; margin:0; }
+dt { font-weight:600; } dd { margin:0; color:var(--muted); font-size:.93rem; }
+footer { padding:30px 0 60px; font-size:.85rem; color:var(--muted); }
+@media (max-width:640px) {
+  body { font-size:16px; } header { padding:44px 0 28px; }
+  .lakes, .pair, .grid, dl { grid-template-columns:1fr; }
+  .stats { grid-template-columns:1fr 1fr; } .stat b { font-size:1.4rem; }
+  ol.timeline { padding-left:24px; } .dot { left:-24px; width:16px; height:16px; } ol.timeline::before { left:7px; }
+  .card { padding:20px 18px; } h2 { font-size:1.35rem; }
+}
 </style></head>
-<body><main>
-<h1>Plankton metabarcoding — read processing</h1>
-<p class="lede">Raw 18S rRNA (V4) and COI amplicon reads from <strong>Chandubi Beel (W1)</strong> and
-<strong>Deepor Beel (W2)</strong>, Assam, processed from FASTQ to curated ASV tables.
-Each step lists its script, its result and its figures.</p>
-<p class="meta">Illumina MiSeq 2 × 301 bp · 2 markers × 2 sites · one sample per site ·
-<a href="https://github.com/Angsumi/Sahil_Metagenome">GitHub repository</a> · <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/environment.yml">environment.yml</a> ·
-<a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/run_all.sh">run_all.sh</a></p>
-<nav><ol><li><a href='#qc'>1 · Raw read quality control</a></li><li><a href='#primers'>2 · Primer removal (Cutadapt)</a></li><li><a href='#dada2'>3 · Denoising into ASVs (DADA2)</a></li><li><a href='#curation'>4 · ASV curation</a></li><li><a href='#summary'>5 · Processing summary</a></li></ol></nav>
-<section id='qc'><h2>1 · Raw read quality control</h2>
-<p>Checks that the eight raw files are intact and describes them before anything is changed.
-Checksums are compared against the vendor's <code>MD5SUM_Raw.txt</code>; FastQC/MultiQC report
-per-file quality; DADA2 plots quality along the read, which sets the truncation lengths in step 3.</p>
-<p class='label'>Script</p><details><summary><code>scripts/01_qc.sh</code> · 40 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/01_qc.sh'>view on GitHub</a></summary><pre><code>#!/usr/bin/env bash
+<body>
+<div class="wrap">
+<header>
+  <p class="eyebrow">Plankton DNA study · Assam, India</p>
+  <h1>Reading the life of two lakes from a bottle of water</h1>
+  <p class="lede">The tiny plants and animals drifting in a lake are too small and too many to count by eye.
+  Instead, we read the DNA they leave in the water. This page follows that DNA from the sequencing machine to a
+  clean, trustworthy dataset — one step at a time.</p>
+  <div class="lakes">
+    <div class="lake a"><b>Chandubi Beel</b><span>Sample W1 · a natural lake at the foot of the Garo Hills, relatively undisturbed</span></div>
+    <div class="lake b"><b>Deepor Beel</b><span>Sample W2 · a Ramsar wetland on the edge of Guwahati, under urban pressure</span></div>
+  </div>
+  <div class="journey"><span>Lake water</span><i>→</i><span>DNA</span><i>→</i><span>Sequencer</span><i>→</i>
+    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Clean dataset</span></div>
+  <nav class="toc"><a href='#field'>Water, DNA and a sequencing machine</a><a href='#qc'>Checking the raw data</a><a href='#primers'>Removing the copying labels</a><a href='#dada2'>Separating real DNA from typos</a><a href='#curation'>Weeding out fakes</a><a href='#summary'>What we ended up with</a><a href='#findings'>What the clean data already tells us</a><a href='#next'>Putting names to the signatures</a></nav>
+</header>
+<main>
+<ol class="timeline"><li class='node' id='field'><div class='dot'></div><div class='card'><p class='kicker'>Before the computer</p><h2>Water, DNA and a sequencing machine</h2>
+<p>Every living thing sheds DNA into the water around it — skin cells, mucus, waste, whole tiny bodies.
+A single bottle of lake water therefore carries a genetic trace of the community living there.
+This approach is called <strong>environmental DNA (eDNA)</strong>.</p>
+<p>Water was collected from each lake, the DNA extracted, and two short <em>barcode</em> genes copied
+millions of times and read by an Illumina MiSeq sequencer at Eurofins Genomics:</p>
+<div class='pair'>
+  <div><h4>18S rRNA</h4><p>A barcode shared by almost all complex life. It catches <strong>microscopic algae, protists
+  and fungi</strong> as well as small animals — the base of the food web.</p></div>
+  <div><h4>COI</h4><p>The classic “animal barcode”. It catches <strong>zooplankton</strong> — rotifers,
+  water fleas, copepods, mites and insect larvae.</p></div>
+</div>
+<p>The machine returns its output as text files of DNA letters (A, C, G, T). Everything below is about turning
+those raw files into a clean, trustworthy list of the distinct DNA signatures present in each lake.</p>
+</div></li><li class='node' id='qc'><div class='dot'></div><div class='card'><p class='kicker'>Step 1</p><h2>Checking the raw data</h2>
+<p class='plain'><span>In plain words</span>Before using any data you check it arrived intact and is of good quality —
+like checking a set of photos for damage and blur before choosing which to print.</p>
+<p>Each file’s digital fingerprint (checksum) was compared to the one supplied by the lab: all eight match,
+so nothing was corrupted in transfer. Each DNA fragment is read from both ends, giving two 301-letter
+<em>reads</em> per fragment. The machine’s confidence is high for most of the read but fades towards the
+end, especially on the second read — so the tail ends will be trimmed in step 3.</p>
+<div class='stats'><div class='stat'><b>8 / 8</b><span>files intact</span></div><div class='stat'><b>620,380</b><span>DNA fragments read</span></div><div class='stat'><b>2 × 301</b><span>letters per fragment</span></div></div>
+<figure><a href='img/01_quality_18S.png' target='_blank'><img src='img/01_quality_18S.png' alt='&lt;b&gt;How to read this:&lt;/b&gt; left to right is position along the read; height is the machine’s confidence (above 30 = fewer than 1 error in 1,000 letters). The green line holds up on the left panels (first read) but sinks on the right (second read) after about letter 230.' loading='lazy'></a><figcaption><b>How to read this:</b> left to right is position along the read; height is the machine’s confidence (above 30 = fewer than 1 error in 1,000 letters). The green line holds up on the left panels (first read) but sinks on the right (second read) after about letter 230.</figcaption></figure>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>Checksums vs vendor <code>MD5SUM_Raw.txt</code>; FastQC + MultiQC; per-file read statistics; DADA2 quality profiles (50,000 reads per file). All files come from one MiSeq run, <code>M04635:72:000000000-MDYKK</code>.</p><details class='code'><summary><span>Script</span> <code>scripts/01_qc.sh</code></summary><pre><code>#!/usr/bin/env bash
 # Step 1 — Raw read QC: checksum verification, FastQC + MultiQC, per-file read stats,
 # and DADA2 quality profiles. Inputs: NEW/&lt;marker&gt;/&lt;site&gt;/*.fastq.gz
 set -euo pipefail
@@ -89,7 +169,7 @@ done
 
 # 1d. Per-position quality profiles (DADA2)
 Rscript scripts/01_quality_profiles.R
-</code></pre></details><details><summary><code>scripts/01_quality_profiles.R</code> · 12 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/01_quality_profiles.R'>view on GitHub</a></summary><pre><code># Step 1d — DADA2 per-position quality profiles of the raw reads (R1 and R2, both sites).
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/01_qc.sh'>View on GitHub</a></p></details><details class='code'><summary><span>Script</span> <code>scripts/01_quality_profiles.R</code></summary><pre><code># Step 1d — DADA2 per-position quality profiles of the raw reads (R1 and R2, both sites).
 suppressPackageStartupMessages({ library(dada2); library(ggplot2) })
 
 for (marker in c(&quot;18S&quot;, &quot;COI&quot;)) {
@@ -100,26 +180,16 @@ for (marker in c(&quot;18S&quot;, &quot;COI&quot;)) {
     theme(plot.title = element_text(size = 12))
   ggsave(sprintf(&quot;docs/img/01_quality_%s.png&quot;, marker), p, width = 10, height = 7, dpi = 120)
 }
-</code></pre></details>
-<p class='label'>Result</p>
-<div class='tbl'><table><thead><tr><th>18S</th><th>NEW/18S/Chandubi/W1_R1.fastq.gz</th><th>OK</th></tr></thead><tbody><tr><td>18S</td><td>NEW/18S/Chandubi/W1_R2.fastq.gz</td><td>OK</td></tr><tr><td>18S</td><td>NEW/18S/Dipor Beel/W2_R1.fastq.gz</td><td>OK</td></tr><tr><td>18S</td><td>NEW/18S/Dipor Beel/W2_R2.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Chandubi/W1_R1.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Chandubi/W1_R2.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Dipor Beel/W2_R1.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Dipor Beel/W2_R2.fastq.gz</td><td>OK</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/01_qc/md5_check.tsv'>results/01_qc/md5_check.tsv</a></p>
-<div class='tbl'><table><thead><tr><th>marker</th><th>site</th><th>sample</th><th>read</th><th>reads</th><th>mean length</th><th>GC %</th><th>mean Q</th></tr></thead><tbody><tr><td>18S</td><td>Chandubi</td><td>W1</td><td>R1</td><td class='n'>166,108</td><td class='n'>301.0</td><td class='n'>44.4</td><td class='n'>34.4</td></tr><tr><td>18S</td><td>Chandubi</td><td>W1</td><td>R2</td><td class='n'>166,108</td><td class='n'>301.0</td><td class='n'>43.1</td><td class='n'>28.5</td></tr><tr><td>18S</td><td>Dipor Beel</td><td>W2</td><td>R1</td><td class='n'>143,035</td><td class='n'>301.0</td><td class='n'>47.2</td><td class='n'>34.3</td></tr><tr><td>18S</td><td>Dipor Beel</td><td>W2</td><td>R2</td><td class='n'>143,035</td><td class='n'>301.0</td><td class='n'>44.7</td><td class='n'>28.5</td></tr><tr><td>COI</td><td>Chandubi</td><td>W1</td><td>R1</td><td class='n'>167,886</td><td class='n'>301.0</td><td class='n'>38.6</td><td class='n'>34.8</td></tr><tr><td>COI</td><td>Chandubi</td><td>W1</td><td>R2</td><td class='n'>167,886</td><td class='n'>301.0</td><td class='n'>38.8</td><td class='n'>29.4</td></tr><tr><td>COI</td><td>Dipor Beel</td><td>W2</td><td>R1</td><td class='n'>143,351</td><td class='n'>301.0</td><td class='n'>39.0</td><td class='n'>34.9</td></tr><tr><td>COI</td><td>Dipor Beel</td><td>W2</td><td>R2</td><td class='n'>143,351</td><td class='n'>301.0</td><td class='n'>39.1</td><td class='n'>29.2</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/01_qc/read_stats.tsv'>results/01_qc/read_stats.tsv</a></p>
-<p>All eight files pass their checksums. Every file comes from a single MiSeq run
-(<code>M04635:72:000000000-MDYKK</code>), 2 × 301 bp. Forward reads stay above Q30 almost to the end;
-reverse reads drop below Q20 after ~250 cycles, so R2 is truncated harder.</p>
-<p class='label'>Visualisation</p>
-<figure><a href='img/01_quality_18S.png'><img src='img/01_quality_18S.png' alt='18S — quality along the read. Green: mean; orange: median and quartiles.' loading='lazy'></a><figcaption>18S — quality along the read. Green: mean; orange: median and quartiles.</figcaption></figure>
-<figure><a href='img/01_quality_COI.png'><img src='img/01_quality_COI.png' alt='COI — quality along the read.' loading='lazy'></a><figcaption>COI — quality along the read.</figcaption></figure>
-<p><a href='reports/multiqc_raw.html'>Open the full MultiQC report →</a></p>
-</section><section id='primers'><h2>2 · Primer removal (Cutadapt)</h2>
-<p>Primer sequence is not biological signal and must be removed before denoising. Each read must
-<em>begin</em> with its primer; pairs where either primer is missing are discarded as off-target.
-Primers were identified from the reads themselves:</p>
-<div class='tbl'><table><thead><tr><th>Marker</th><th>Forward</th><th>Reverse</th><th>Region</th></tr></thead><tbody>
-<tr><td>18S</td><td>E572F <code>CYGCGGTAATTCCAGCTC</code></td><td>E1009R <code>AYGGTATCTRWTCRTCTTYG</code></td><td>V4, Comeau et al. 2011</td></tr>
-<tr><td>COI</td><td>mlCOIintF <code>GGWACWGGWTGAACWGTWTAYCCYCC</code></td><td>jgHCO2198 <code>TANACYTCNGGRTGNCCRAARAAYCA</code></td><td>Leray fragment, Leray et al. 2013</td></tr>
-</tbody></table></div>
-<p class='label'>Script</p><details><summary><code>scripts/02_primer_removal.sh</code> · 47 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/02_primer_removal.sh'>view on GitHub</a></summary><pre><code>#!/usr/bin/env bash
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/01_quality_profiles.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>18S</th><th>NEW/18S/Chandubi/W1_R1.fastq.gz</th><th>OK</th></tr></thead><tbody><tr><td>18S</td><td>NEW/18S/Chandubi/W1_R2.fastq.gz</td><td>OK</td></tr><tr><td>18S</td><td>NEW/18S/Dipor Beel/W2_R1.fastq.gz</td><td>OK</td></tr><tr><td>18S</td><td>NEW/18S/Dipor Beel/W2_R2.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Chandubi/W1_R1.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Chandubi/W1_R2.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Dipor Beel/W2_R1.fastq.gz</td><td>OK</td></tr><tr><td>COI</td><td>NEW/COI/Dipor Beel/W2_R2.fastq.gz</td><td>OK</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/01_qc/md5_check.tsv'>results/01_qc/md5_check.tsv</a></p><div class='tbl'><table><thead><tr><th>marker</th><th>site</th><th>sample</th><th>read</th><th>reads</th><th>mean length</th><th>GC %</th><th>mean Q</th></tr></thead><tbody><tr><td>18S</td><td>Chandubi</td><td>W1</td><td>R1</td><td class='n'>166,108</td><td class='n'>301.0</td><td class='n'>44.4</td><td class='n'>34.4</td></tr><tr><td>18S</td><td>Chandubi</td><td>W1</td><td>R2</td><td class='n'>166,108</td><td class='n'>301.0</td><td class='n'>43.1</td><td class='n'>28.5</td></tr><tr><td>18S</td><td>Dipor Beel</td><td>W2</td><td>R1</td><td class='n'>143,035</td><td class='n'>301.0</td><td class='n'>47.2</td><td class='n'>34.3</td></tr><tr><td>18S</td><td>Dipor Beel</td><td>W2</td><td>R2</td><td class='n'>143,035</td><td class='n'>301.0</td><td class='n'>44.7</td><td class='n'>28.5</td></tr><tr><td>COI</td><td>Chandubi</td><td>W1</td><td>R1</td><td class='n'>167,886</td><td class='n'>301.0</td><td class='n'>38.6</td><td class='n'>34.8</td></tr><tr><td>COI</td><td>Chandubi</td><td>W1</td><td>R2</td><td class='n'>167,886</td><td class='n'>301.0</td><td class='n'>38.8</td><td class='n'>29.4</td></tr><tr><td>COI</td><td>Dipor Beel</td><td>W2</td><td>R1</td><td class='n'>143,351</td><td class='n'>301.0</td><td class='n'>39.0</td><td class='n'>34.9</td></tr><tr><td>COI</td><td>Dipor Beel</td><td>W2</td><td>R2</td><td class='n'>143,351</td><td class='n'>301.0</td><td class='n'>39.1</td><td class='n'>29.2</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/01_qc/read_stats.tsv'>results/01_qc/read_stats.tsv</a></p><figure><a href='img/01_quality_COI.png' target='_blank'><img src='img/01_quality_COI.png' alt='COI quality profiles.' loading='lazy'></a><figcaption>COI quality profiles.</figcaption></figure><p><a href='reports/multiqc_raw.html'>Full MultiQC report →</a></p></div></details>
+</div></li><li class='node' id='primers'><div class='dot'></div><div class='card'><p class='kicker'>Step 2</p><h2>Removing the copying labels</h2>
+<p class='plain'><span>In plain words</span>To copy a barcode gene, the lab uses short “starter” pieces of DNA
+called <em>primers</em> — think of them as address labels stuck to each end. They are not part of the organism’s DNA,
+so they are cut off. Any fragment missing its labels was copied by mistake and is thrown away.</p>
+<p>Nearly nine in ten fragments carried both labels exactly where expected — a sign the lab work went well.
+The primers were identified by reading the data itself, not taken on trust.</p>
+<div class='stats'><div class='stat'><b>89%</b><span>fragments kept</span></div><div class='stat'><b>2</b><span>primer pairs found</span></div><div class='stat'><b>~280</b><span>letters left per read</span></div></div>
+<figure><a href='img/02_primer_retention.png' target='_blank'><img src='img/02_primer_retention.png' alt='Blue: fragments that carried both labels and were kept. Grey: discarded. Both lakes and both barcodes behave alike.' loading='lazy'></a><figcaption>Blue: fragments that carried both labels and were kept. Grey: discarded. Both lakes and both barcodes behave alike.</figcaption></figure>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><div class='tbl'><table><thead><tr><th>Marker</th><th>Forward</th><th>Reverse</th><th>Reference</th></tr></thead><tbody><tr><td>18S V4</td><td>E572F <code>CYGCGGTAATTCCAGCTC</code></td><td>E1009R <code>AYGGTATCTRWTCRTCTTYG</code></td><td>Comeau et al. 2011</td></tr><tr><td>COI</td><td>mlCOIintF <code>GGWACWGGWTGAACWGTWTAYCCYCC</code></td><td>jgHCO2198 <code>TANACYTCNGGRTGNCCRAARAAYCA</code></td><td>Leray et al. 2013</td></tr></tbody></table></div><p>Cutadapt linked adapters: 5′ primer anchored and required, read-through primer optional; max error 0.15; untrimmed pairs discarded.</p><details class='code'><summary><span>Script</span> <code>scripts/02_primer_removal.sh</code></summary><pre><code>#!/usr/bin/env bash
 # Step 2 — Primer removal with Cutadapt.
 # Each read must start with its primer (anchored 5&#x27;); pairs where either primer is
 # missing are discarded. If a read runs through into the opposite primer, that
@@ -165,7 +235,7 @@ for f in work/02_trimmed/*/*.fastq.gz; do
     &gt;&gt; &quot;$OUT/trimmed_lengths.tsv&quot;
 done
 Rscript scripts/02_plot_lengths.R
-</code></pre></details><details><summary><code>scripts/02_plot_lengths.R</code> · 29 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/02_plot_lengths.R'>view on GitHub</a></summary><pre><code># Step 2 — Plot read-retention after primer removal and trimmed read-length distribution.
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/02_primer_removal.sh'>View on GitHub</a></p></details><details class='code'><summary><span>Script</span> <code>scripts/02_plot_lengths.R</code></summary><pre><code># Step 2 — Plot read-retention after primer removal and trimmed read-length distribution.
 suppressPackageStartupMessages({ library(ggplot2); library(data.table) })
 
 s &lt;- fread(&quot;results/02_primer_removal/cutadapt_summary.tsv&quot;)
@@ -193,27 +263,19 @@ p2 &lt;- ggplot(l[length &gt;= 150], aes(length, count, colour = sample)) +
        title = &quot;Trimmed read-length distribution&quot;) +
   theme_minimal(base_size = 12) + theme(legend.position = &quot;bottom&quot;)
 ggsave(&quot;docs/img/02_trimmed_lengths.png&quot;, p2, width = 8, height = 5, dpi = 120)
-</code></pre></details>
-<p class='label'>Result</p>
-<div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>pairs in</th><th>pairs with both primers</th><th>% kept</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>166,108</td><td class='n'>145,813</td><td class='n'>87.8</td></tr><tr><td>18S</td><td>W2</td><td class='n'>143,035</td><td class='n'>128,222</td><td class='n'>89.6</td></tr><tr><td>COI</td><td>W1</td><td class='n'>167,886</td><td class='n'>148,980</td><td class='n'>88.7</td></tr><tr><td>COI</td><td>W2</td><td class='n'>143,351</td><td class='n'>127,418</td><td class='n'>88.9</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/02_primer_removal/cutadapt_summary.tsv'>results/02_primer_removal/cutadapt_summary.tsv</a></p>
-<p>88–90 % of pairs carry both primers. After trimming, 18S reads are ~283/281 bp and COI reads ~275/275 bp.</p>
-<p class='label'>Visualisation</p>
-<figure><a href='img/02_primer_retention.png'><img src='img/02_primer_retention.png' alt='Read pairs kept vs discarded at primer removal.' loading='lazy'></a><figcaption>Read pairs kept vs discarded at primer removal.</figcaption></figure>
-<figure><a href='img/02_trimmed_lengths.png'><img src='img/02_trimmed_lengths.png' alt='Length of reads after primer removal (log scale).' loading='lazy'></a><figcaption>Length of reads after primer removal (log scale).</figcaption></figure>
-<p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/02_primer_removal/cutadapt_summary.tsv'>results/02_primer_removal/cutadapt_summary.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/02_primer_removal/trimmed_lengths.tsv'>results/02_primer_removal/trimmed_lengths.tsv</a></li></ul>
-</section><section id='dada2'><h2>3 · Denoising into ASVs (DADA2)</h2>
-<p>Reads are quality-filtered, an error model is learned from the data, and true sequence variants
-(ASVs) are separated from sequencing errors. <strong>Both sites are denoised together</strong>
-(<code>pool = TRUE</code>), so the same organism gets the same ASV in both lakes and the sites can be
-compared directly. Pairs are then merged and chimeras removed.</p>
-<div class='tbl'><table><thead><tr><th>Parameter</th><th>18S</th><th>COI</th></tr></thead><tbody>
-<tr><td>truncLen (R1, R2)</td><td>270, 210</td><td>250, 200</td></tr>
-<tr><td>maxEE (R1, R2)</td><td>2, 4</td><td>2, 4</td></tr>
-<tr><td>Expected amplicon (no primers)</td><td>~380–430 bp</td><td>313 bp</td></tr>
-<tr><td>ASVs before → after chimera removal</td><td>2043 → 1035</td><td>481 → 376</td></tr>
-<tr><td>Reads lost as chimeras</td><td>9.32 %</td><td>3.84 %</td></tr>
-</tbody></table></div>
-<p class='label'>Script</p><details><summary><code>scripts/03_dada2.R</code> · 73 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/03_dada2.R'>view on GitHub</a></summary><pre><code># Step 3 — DADA2: filter/trim, learn errors, denoise both sites JOINTLY (pool = TRUE),
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/02_plot_lengths.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>pairs in</th><th>kept</th><th>% kept</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>166,108</td><td class='n'>145,813</td><td class='n'>87.8</td></tr><tr><td>18S</td><td>W2</td><td class='n'>143,035</td><td class='n'>128,222</td><td class='n'>89.6</td></tr><tr><td>COI</td><td>W1</td><td class='n'>167,886</td><td class='n'>148,980</td><td class='n'>88.7</td></tr><tr><td>COI</td><td>W2</td><td class='n'>143,351</td><td class='n'>127,418</td><td class='n'>88.9</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/02_primer_removal/cutadapt_summary.tsv'>results/02_primer_removal/cutadapt_summary.tsv</a></p><figure><a href='img/02_trimmed_lengths.png' target='_blank'><img src='img/02_trimmed_lengths.png' alt='Read lengths after primer removal (log scale).' loading='lazy'></a><figcaption>Read lengths after primer removal (log scale).</figcaption></figure></div></details>
+</div></li><li class='node' id='dada2'><div class='dot'></div><div class='card'><p class='kicker'>Step 3</p><h2>Separating real DNA from typos</h2>
+<p class='plain'><span>In plain words</span>Sequencers make occasional typos. If you counted every slightly different
+spelling as a new organism you would invent thousands of species that don’t exist. This step learns the machine’s
+typo habits from the data itself, then decides which sequences are real and which are just misspellings of them.</p>
+<p>What survives is a list of <strong>ASVs</strong> (amplicon sequence variants) — each one an exact, unique DNA signature,
+roughly “one distinct kind of organism”. The two reads of each fragment are then joined into one full sequence, and
+<em>chimeras</em> — artificial sequences glued together from two different organisms during copying — are removed.</p>
+<p>Importantly, <strong>both lakes were processed together</strong>, so the same organism gets the same signature in
+both lakes and they can be compared fairly.</p>
+<div class='stats'><div class='stat'><b>1,035</b><span>18S signatures</span></div><div class='stat'><b>376</b><span>COI signatures</span></div><div class='stat'><b>9.32%</b><span>18S reads were chimeras</span></div></div>
+<figure><a href='img/03_errors_COI_R1.png' target='_blank'><img src='img/03_errors_COI_R1.png' alt='&lt;b&gt;The typo model.&lt;/b&gt; Each panel is one kind of substitution (e.g. A read as C). Dots are observed error rates; the black line is the model learned from the data. They agree, and errors fall as the machine’s confidence (x-axis) rises — the model can be trusted.' loading='lazy'></a><figcaption><b>The typo model.</b> Each panel is one kind of substitution (e.g. A read as C). Dots are observed error rates; the black line is the model learned from the data. They agree, and errors fall as the machine’s confidence (x-axis) rises — the model can be trusted.</figcaption></figure>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><div class='tbl'><table><thead><tr><th>Parameter</th><th>18S</th><th>COI</th></tr></thead><tbody><tr><td>truncLen (R1, R2)</td><td>270, 210</td><td>250, 200</td></tr><tr><td>maxEE (R1, R2)</td><td>2, 4</td><td>2, 4</td></tr><tr><td>Denoising</td><td colspan='2'>pooled across both sites (<code>pool = TRUE</code>)</td></tr><tr><td>Merging</td><td colspan='2'>minOverlap 12, maxMismatch 0</td></tr><tr><td>ASVs before → after chimera removal</td><td>2043 → 1035</td><td>481 → 376</td></tr></tbody></table></div><details class='code'><summary><span>Script</span> <code>scripts/03_dada2.R</code></summary><pre><code># Step 3 — DADA2: filter/trim, learn errors, denoise both sites JOINTLY (pool = TRUE),
 # merge pairs, remove chimeras. One run per marker so ASVs are comparable across sites.
 # Usage: Rscript scripts/03_dada2.R &lt;marker&gt; &lt;truncF&gt; &lt;truncR&gt; &lt;maxEE_F&gt; &lt;maxEE_R&gt;
 suppressPackageStartupMessages({ library(dada2); library(ggplot2); library(data.table) })
@@ -285,29 +347,16 @@ summary &lt;- list(marker = marker, truncLen = truncLen, maxEE = maxEE,
                 chimeric_read_pct = round(100 * (1 - sum(nochim) / sum(seqtab)), 2))
 jsonlite::write_json(summary, file.path(out, &quot;summary.json&quot;), auto_unbox = TRUE, pretty = TRUE)
 print(track); str(summary)
-</code></pre></details>
-<p class='label'>Result</p>
-<h4>18S</h4><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>input</th><th>filtered</th><th>denoisedF</th><th>denoisedR</th><th>merged</th><th>nonchim</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>145,813</td><td class='n'>115,951</td><td class='n'>114,021</td><td class='n'>113,934</td><td class='n'>104,117</td><td class='n'>93,012</td></tr><tr><td>18S</td><td>W2</td><td class='n'>128,222</td><td class='n'>101,027</td><td class='n'>99,064</td><td class='n'>99,785</td><td class='n'>88,768</td><td class='n'>81,898</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/track.tsv'>results/03_dada2/18S/track.tsv</a></p>
-<h4>COI</h4><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>input</th><th>filtered</th><th>denoisedF</th><th>denoisedR</th><th>merged</th><th>nonchim</th></tr></thead><tbody><tr><td>COI</td><td>W1</td><td class='n'>148,980</td><td class='n'>125,051</td><td class='n'>124,414</td><td class='n'>124,337</td><td class='n'>123,126</td><td class='n'>117,653</td></tr><tr><td>COI</td><td>W2</td><td class='n'>127,418</td><td class='n'>107,049</td><td class='n'>106,932</td><td class='n'>106,813</td><td class='n'>106,300</td><td class='n'>102,969</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/track.tsv'>results/03_dada2/COI/track.tsv</a></p>
-<p>Merging succeeded for 88–90 % (18S) and 98–99 % (COI) of filtered reads. Merged 18S ASVs cluster at
-399–411 bp; COI ASVs at 313 bp (the standard Leray fragment) and 316 bp (one extra codon).</p>
-<p class='label'>Visualisation</p>
-<p>Error models: black lines (fitted model) should follow the points (observed error rates) and fall
-as quality rises.</p>
-<div class='grid'>
-<figure><a href='img/03_errors_18S_R1.png'><img src='img/03_errors_18S_R1.png' alt='18S R1 error model' loading='lazy'></a><figcaption>18S R1 error model</figcaption></figure><figure><a href='img/03_errors_18S_R2.png'><img src='img/03_errors_18S_R2.png' alt='18S R2 error model' loading='lazy'></a><figcaption>18S R2 error model</figcaption></figure>
-<figure><a href='img/03_errors_COI_R1.png'><img src='img/03_errors_COI_R1.png' alt='COI R1 error model' loading='lazy'></a><figcaption>COI R1 error model</figcaption></figure><figure><a href='img/03_errors_COI_R2.png'><img src='img/03_errors_COI_R2.png' alt='COI R2 error model' loading='lazy'></a><figcaption>COI R2 error model</figcaption></figure>
-</div>
-<p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/asv_table.tsv'>results/03_dada2/18S/asv_table.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/asv_seqs.fasta'>results/03_dada2/18S/asv_seqs.fasta</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/asv_table.tsv'>results/03_dada2/COI/asv_table.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/asv_seqs.fasta'>results/03_dada2/COI/asv_seqs.fasta</a></li></ul>
-</section><section id='curation'><h2>4 · ASV curation</h2>
-<p>Removes ASVs that cannot be the targeted gene.</p>
-<ul>
-<li><strong>COI</strong> is protein-coding. A genuine ASV differs from 313 bp only by whole codons
-and translates with no stop codon under the invertebrate mitochondrial code (NCBI table 5).
-ASVs failing either test are likely pseudogenes (NUMTs) or artefacts. Detected coi coding frame: +2.</li>
-<li><strong>18S</strong> ASVs are kept within the expected V4 length window, 350–480 bp.</li>
-</ul>
-<p class='label'>Script</p><details><summary><code>scripts/04_asv_curation.R</code> · 60 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/04_asv_curation.R'>view on GitHub</a></summary><pre><code># Step 4 — ASV curation.
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/03_dada2.R'>View on GitHub</a></p></details><h4>18S read tracking</h4><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>input</th><th>filtered</th><th>denoisedF</th><th>denoisedR</th><th>merged</th><th>nonchim</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>145,813</td><td class='n'>115,951</td><td class='n'>114,021</td><td class='n'>113,934</td><td class='n'>104,117</td><td class='n'>93,012</td></tr><tr><td>18S</td><td>W2</td><td class='n'>128,222</td><td class='n'>101,027</td><td class='n'>99,064</td><td class='n'>99,785</td><td class='n'>88,768</td><td class='n'>81,898</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/track.tsv'>results/03_dada2/18S/track.tsv</a></p><h4>COI read tracking</h4><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>input</th><th>filtered</th><th>denoisedF</th><th>denoisedR</th><th>merged</th><th>nonchim</th></tr></thead><tbody><tr><td>COI</td><td>W1</td><td class='n'>148,980</td><td class='n'>125,051</td><td class='n'>124,414</td><td class='n'>124,337</td><td class='n'>123,126</td><td class='n'>117,653</td></tr><tr><td>COI</td><td>W2</td><td class='n'>127,418</td><td class='n'>107,049</td><td class='n'>106,932</td><td class='n'>106,813</td><td class='n'>106,300</td><td class='n'>102,969</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/track.tsv'>results/03_dada2/COI/track.tsv</a></p><div class='grid'><figure><a href='img/03_errors_18S_R1.png' target='_blank'><img src='img/03_errors_18S_R1.png' alt='18S R1' loading='lazy'></a><figcaption>18S R1</figcaption></figure><figure><a href='img/03_errors_18S_R2.png' target='_blank'><img src='img/03_errors_18S_R2.png' alt='18S R2' loading='lazy'></a><figcaption>18S R2</figcaption></figure><figure><a href='img/03_errors_COI_R1.png' target='_blank'><img src='img/03_errors_COI_R1.png' alt='COI R1' loading='lazy'></a><figcaption>COI R1</figcaption></figure><figure><a href='img/03_errors_COI_R2.png' target='_blank'><img src='img/03_errors_COI_R2.png' alt='COI R2' loading='lazy'></a><figcaption>COI R2</figcaption></figure></div><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/asv_table.tsv'>results/03_dada2/18S/asv_table.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/18S/asv_seqs.fasta'>results/03_dada2/18S/asv_seqs.fasta</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/asv_table.tsv'>results/03_dada2/COI/asv_table.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/03_dada2/COI/asv_seqs.fasta'>results/03_dada2/COI/asv_seqs.fasta</a></li></ul></div></details>
+</div></li><li class='node' id='curation'><div class='dot'></div><div class='card'><p class='kicker'>Step 4</p><h2>Weeding out fakes</h2>
+<p class='plain'><span>In plain words</span>The COI barcode is a recipe for a protein. A genuine recipe reads like a
+sentence with no “STOP” in the middle. Sequences that contain a stop, or whose length breaks the three-letter
+rhythm of the code, are broken copies (old “ghost” genes or errors) and are removed. For 18S, sequences far too
+short or too long to be the real barcode are removed.</p>
+<p>Very little had to go — the data was already clean after step 3.</p>
+<div class='stats'><div class='stat'><b>31</b><span>COI fakes removed</span></div><div class='stat'><b>53</b><span>18S off-length removed</span></div><div class='stat'><b>1,327</b><span>signatures kept</span></div></div>
+<figure><a href='img/04_curation.png' target='_blank'><img src='img/04_curation.png' alt='Each dot is one DNA signature: how long it is (x) and how common (y, log scale). Blue were kept. The kept COI signatures line up neatly at 313 and 316 letters — exactly the expected size, differing by one three-letter “word”.' loading='lazy'></a><figcaption>Each dot is one DNA signature: how long it is (x) and how common (y, log scale). Blue were kept. The kept COI signatures line up neatly at 313 and 316 letters — exactly the expected size, differing by one three-letter “word”.</figcaption></figure>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>COI: length must differ from 313 bp by whole codons (±10) and translate stop-free under NCBI genetic code 5 (invertebrate mitochondrial); coi coding frame: +2. 18S: 350–480 bp.</p><details class='code'><summary><span>Script</span> <code>scripts/04_asv_curation.R</code></summary><pre><code># Step 4 — ASV curation.
 #  COI : a real COI ASV is protein-coding. Keep ASVs whose length differs from the 313 bp
 #        Leray fragment by whole codons (±10 codons) AND translate with no stop codon
 #        under the invertebrate mitochondrial code (NCBI table 5). Others are likely
@@ -366,17 +415,15 @@ p &lt;- ggplot(both, aes(length, reads, colour = reason)) +
   theme_minimal(base_size = 12) + theme(legend.position = &quot;bottom&quot;)
 ggsave(&quot;docs/img/04_curation.png&quot;, p, width = 9, height = 4.8, dpi = 120)
 print(summ)
-</code></pre></details>
-<p class='label'>Result</p>
-<div class='tbl'><table><thead><tr><th>marker</th><th>reason</th><th>asvs</th><th>Chandubi reads</th><th>Deepor reads</th></tr></thead><tbody><tr><td>COI</td><td>kept</td><td class='n'>345</td><td class='n'>116,954</td><td class='n'>102,761</td></tr><tr><td>COI</td><td>length not codon-compatible</td><td class='n'>29</td><td class='n'>690</td><td class='n'>207</td></tr><tr><td>COI</td><td>stop codon in frame</td><td class='n'>2</td><td class='n'>9</td><td class='n'>1</td></tr><tr><td>18S</td><td>kept</td><td class='n'>982</td><td class='n'>88,564</td><td class='n'>81,828</td></tr><tr><td>18S</td><td>outside 350–480 bp</td><td class='n'>53</td><td class='n'>4,448</td><td class='n'>70</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/curation_summary.tsv'>results/04_curation/curation_summary.tsv</a></p>
-<p>Curation removes few reads: 0.4 % for COI and 2.6 % for 18S (almost all short ASVs from Chandubi).</p>
-<p class='label'>Visualisation</p>
-<figure><a href='img/04_curation.png'><img src='img/04_curation.png' alt='Every ASV by length and abundance, coloured by curation outcome.' loading='lazy'></a><figcaption>Every ASV by length and abundance, coloured by curation outcome.</figcaption></figure>
-<p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/18S_asv_table_curated.tsv'>results/04_curation/18S_asv_table_curated.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/18S_asv_seqs_curated.fasta'>results/04_curation/18S_asv_seqs_curated.fasta</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/COI_asv_table_curated.tsv'>results/04_curation/COI_asv_table_curated.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/COI_asv_seqs_curated.fasta'>results/04_curation/COI_asv_seqs_curated.fasta</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/COI_frame_check.tsv'>results/04_curation/COI_frame_check.tsv</a></li></ul>
-</section><section id='summary'><h2>5 · Processing summary</h2>
-<p>Follows every read from raw file to curated ASV table, counts ASVs per site, and checks with
-rarefaction whether sequencing depth was enough.</p>
-<p class='label'>Script</p><details><summary><code>scripts/05_summary.R</code> · 76 lines · <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/05_summary.R'>view on GitHub</a></summary><pre><code># Step 5 — Processing summary: reads surviving each step, ASVs per site and shared
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/04_asv_curation.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>marker</th><th>reason</th><th>asvs</th><th>Chandubi reads</th><th>Deepor reads</th></tr></thead><tbody><tr><td>COI</td><td>kept</td><td class='n'>345</td><td class='n'>116,954</td><td class='n'>102,761</td></tr><tr><td>COI</td><td>length not codon-compatible</td><td class='n'>29</td><td class='n'>690</td><td class='n'>207</td></tr><tr><td>COI</td><td>stop codon in frame</td><td class='n'>2</td><td class='n'>9</td><td class='n'>1</td></tr><tr><td>18S</td><td>kept</td><td class='n'>982</td><td class='n'>88,564</td><td class='n'>81,828</td></tr><tr><td>18S</td><td>outside 350–480 bp</td><td class='n'>53</td><td class='n'>4,448</td><td class='n'>70</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/curation_summary.tsv'>results/04_curation/curation_summary.tsv</a></p><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/18S_asv_table_curated.tsv'>results/04_curation/18S_asv_table_curated.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/18S_asv_seqs_curated.fasta'>results/04_curation/18S_asv_seqs_curated.fasta</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/COI_asv_table_curated.tsv'>results/04_curation/COI_asv_table_curated.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/04_curation/COI_asv_seqs_curated.fasta'>results/04_curation/COI_asv_seqs_curated.fasta</a></li></ul></div></details>
+</div></li><li class='node' id='summary'><div class='dot'></div><div class='card'><p class='kicker'>Step 5</p><h2>What we ended up with</h2>
+<p class='plain'><span>In plain words</span>A final check: how much of the raw data made it through, how many
+signatures each lake has, and — the key question — did we sequence deeply enough to find nearly everything?</p>
+<div class='stats'><div class='stat'><b>63%</b><span>of raw data used</span></div><div class='stat'><b>982</b><span>18S signatures</span></div><div class='stat'><b>345</b><span>COI signatures</span></div></div>
+<figure><a href='img/05_rarefaction.png' target='_blank'><img src='img/05_rarefaction.png' alt='&lt;b&gt;Did we look hard enough?&lt;/b&gt; Like a birdwatcher counting new species: at first every few minutes brings a new one, later almost none. Each line climbs quickly then flattens — sequencing more would have found very few new signatures. Depth was sufficient in both lakes for both barcodes.' loading='lazy'></a><figcaption><b>Did we look hard enough?</b> Like a birdwatcher counting new species: at first every few minutes brings a new one, later almost none. Each line climbs quickly then flattens — sequencing more would have found very few new signatures. Depth was sufficient in both lakes for both barcodes.</figcaption></figure>
+<figure><a href='img/05_asv_counts.png' target='_blank'><img src='img/05_asv_counts.png' alt='Signatures found only in Chandubi (blue), only in Deepor (orange), and the ones in both lakes (grey).' loading='lazy'></a><figcaption>Signatures found only in Chandubi (blue), only in Deepor (orange), and the ones in both lakes (grey).</figcaption></figure>
+<figure><a href='img/05_read_tracking.png' target='_blank'><img src='img/05_read_tracking.png' alt='How many DNA fragments remained after each step.' loading='lazy'></a><figcaption>How many DNA fragments remained after each step.</figcaption></figure>
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><details class='code'><summary><span>Script</span> <code>scripts/05_summary.R</code></summary><pre><code># Step 5 — Processing summary: reads surviving each step, ASVs per site and shared
 # between sites, and rarefaction curves (was sequencing depth sufficient?).
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(vegan) })
 
@@ -451,28 +498,30 @@ p3 &lt;- ggplot(al, aes(variable, asvs, fill = variable)) +
   theme_minimal(base_size = 12)
 ggsave(&quot;docs/img/05_asv_counts.png&quot;, p3, width = 8, height = 4.2, dpi = 120)
 print(track); print(asv_stats)
-</code></pre></details>
-<p class='label'>Result</p>
-<div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>raw</th><th>primers found</th><th>filtered</th><th>merged</th><th>non-chimeric</th><th>curated</th><th>% of raw retained</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>166,108</td><td class='n'>145,813</td><td class='n'>115,951</td><td class='n'>104,117</td><td class='n'>93,012</td><td class='n'>88,564</td><td class='n'>53.3</td></tr><tr><td>18S</td><td>W2</td><td class='n'>143,035</td><td class='n'>128,222</td><td class='n'>101,027</td><td class='n'>88,768</td><td class='n'>81,898</td><td class='n'>81,828</td><td class='n'>57.2</td></tr><tr><td>COI</td><td>W1</td><td class='n'>167,886</td><td class='n'>148,980</td><td class='n'>125,051</td><td class='n'>123,126</td><td class='n'>117,653</td><td class='n'>116,954</td><td class='n'>69.7</td></tr><tr><td>COI</td><td>W2</td><td class='n'>143,351</td><td class='n'>127,418</td><td class='n'>107,049</td><td class='n'>106,300</td><td class='n'>102,969</td><td class='n'>102,761</td><td class='n'>71.7</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/read_tracking.tsv'>results/05_summary/read_tracking.tsv</a></p>
-<div class='tbl'><table><thead><tr><th>marker</th><th>Chandubi ASVs</th><th>Deepor ASVs</th><th>shared</th><th>total</th><th>% Chandubi reads in shared ASVs</th><th>% Deepor reads in shared ASVs</th><th>Bray–Curtis</th><th>Jaccard</th></tr></thead><tbody><tr><td>18S</td><td class='n'>439</td><td class='n'>685</td><td class='n'>142</td><td class='n'>982</td><td class='n'>36.5</td><td class='n'>24.6</td><td class='n'>0.955</td><td class='n'>0.855</td></tr><tr><td>COI</td><td class='n'>330</td><td class='n'>281</td><td class='n'>266</td><td class='n'>345</td><td class='n'>99.4</td><td class='n'>99.9</td><td class='n'>0.235</td><td class='n'>0.229</td></tr></tbody></table></div><p class='src'>Source: <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/asv_counts.tsv'>results/05_summary/asv_counts.tsv</a></p>
-<p class='label'>Visualisation</p>
-<figure><a href='img/05_read_tracking.png'><img src='img/05_read_tracking.png' alt='Reads remaining after each step.' loading='lazy'></a><figcaption>Reads remaining after each step.</figcaption></figure>
-<figure><a href='img/05_rarefaction.png'><img src='img/05_rarefaction.png' alt='Rarefaction curves for curated ASVs.' loading='lazy'></a><figcaption>Rarefaction curves for curated ASVs.</figcaption></figure>
-<figure><a href='img/05_asv_counts.png'><img src='img/05_asv_counts.png' alt='ASVs per site and shared between sites.' loading='lazy'></a><figcaption>ASVs per site and shared between sites.</figcaption></figure>
-<div class='note'><p><strong>Observations.</strong></p><ul>
-<li>53–57 % (18S) and 70–72 % (COI) of raw read pairs reach the final table, against ~40 % in the vendor's COI processing.</li>
-<li>All four rarefaction curves flatten: sequencing depth was sufficient for both markers at both sites.</li>
-<li>With joint denoising, <strong>266 of 345 COI ASVs occur in both lakes</strong>
-(vendor table: 2 of 272), confirming that the vendor's near-zero overlap was an artefact of denoising the samples separately.</li>
-<li><strong>The two markers disagree on how similar the lakes are.</strong> COI: Bray–Curtis 0.235,
-shared ASVs at similar abundance in both lakes. 18S: Bray–Curtis 0.955, only 142 shared ASVs.
-The COI overlap does not look like tag-jumping (that leaves a trace count on one side, not matched abundances).
-It may be a genuinely shared zooplankton pool, or the COI libraries may share template DNA; without
-extraction/PCR blanks this cannot be told apart. Worth raising with the sequencing provider.</li>
-<li>One sample per lake: these are descriptions, not tested differences.</li>
-</ul></div>
-<p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/read_tracking.tsv'>results/05_summary/read_tracking.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/asv_counts.tsv'>results/05_summary/asv_counts.tsv</a></li></ul>
-</section>
-<footer>Built 2026-10-13 by <code>scripts/06_build_site.py</code>.
-Next stage (not yet run): taxonomic assignment — 18S against PR2, COI against MIDORI2/BOLD.</footer>
-</main></body></html>
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/05_summary.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>marker</th><th>sample</th><th>raw</th><th>primers found</th><th>filtered</th><th>merged</th><th>non-chimeric</th><th>curated</th><th>% of raw retained</th></tr></thead><tbody><tr><td>18S</td><td>W1</td><td class='n'>166,108</td><td class='n'>145,813</td><td class='n'>115,951</td><td class='n'>104,117</td><td class='n'>93,012</td><td class='n'>88,564</td><td class='n'>53.3</td></tr><tr><td>18S</td><td>W2</td><td class='n'>143,035</td><td class='n'>128,222</td><td class='n'>101,027</td><td class='n'>88,768</td><td class='n'>81,898</td><td class='n'>81,828</td><td class='n'>57.2</td></tr><tr><td>COI</td><td>W1</td><td class='n'>167,886</td><td class='n'>148,980</td><td class='n'>125,051</td><td class='n'>123,126</td><td class='n'>117,653</td><td class='n'>116,954</td><td class='n'>69.7</td></tr><tr><td>COI</td><td>W2</td><td class='n'>143,351</td><td class='n'>127,418</td><td class='n'>107,049</td><td class='n'>106,300</td><td class='n'>102,969</td><td class='n'>102,761</td><td class='n'>71.7</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/read_tracking.tsv'>results/05_summary/read_tracking.tsv</a></p><div class='tbl'><table><thead><tr><th>marker</th><th>Chandubi</th><th>Deepor</th><th>shared</th><th>total</th><th>% Chandubi reads shared</th><th>% Deepor reads shared</th><th>Bray–Curtis</th><th>Jaccard</th></tr></thead><tbody><tr><td>18S</td><td class='n'>439</td><td class='n'>685</td><td class='n'>142</td><td class='n'>982</td><td class='n'>36.5</td><td class='n'>24.6</td><td class='n'>0.955</td><td class='n'>0.855</td></tr><tr><td>COI</td><td class='n'>330</td><td class='n'>281</td><td class='n'>266</td><td class='n'>345</td><td class='n'>99.4</td><td class='n'>99.9</td><td class='n'>0.235</td><td class='n'>0.229</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/05_summary/asv_counts.tsv'>results/05_summary/asv_counts.tsv</a></p></div></details>
+</div></li><li class='node' id='findings'><div class='dot'></div><div class='card'><p class='kicker'>So far</p><h2>What the clean data already tells us</h2>
+<div class='finding'><h4>Better use of the data</h4>
+<p>63% of the raw data reached the final tables (COI: 70–72%), compared with about 40% in the
+lab’s original COI processing.</p></div>
+<div class='finding'><h4>Algae &amp; protists: the lakes are very different</h4>
+<p>By the 18S barcode, Chandubi and Deepor share only 142 of 982 signatures —
+their microscopic communities are largely distinct.</p></div>
+<div class='finding warn'><h4>Zooplankton: surprisingly similar — needs checking</h4>
+<p>By the COI barcode, 266 of 345 signatures appear in <em>both</em> lakes at similar levels.
+The lab’s earlier report showed almost no overlap, but that came from processing the lakes separately. The remaining
+question is whether the zooplankton truly are similar, or whether DNA crossed between the two samples in the lab.
+No blank (control) samples were sequenced, so this can’t yet be told apart — it is a question for Eurofins.</p></div>
+<div class='finding'><h4>A caution on comparisons</h4>
+<p>There is one water sample per lake. Differences describe these two samples; they cannot yet be tested statistically.</p></div>
+</div></li><li class='node' id='next'><div class='dot'></div><div class='card'><p class='kicker'>Next</p><h2>Putting names to the signatures</h2>
+<p>So far each signature is just a string of DNA letters. The next stage compares them against reference libraries of
+known organisms — <strong>PR2</strong> for 18S and <strong>MIDORI2 / BOLD</strong> for COI — to name them
+(“this is the rotifer <em>Keratella tropica</em>”). After that come diversity comparisons and the ecological story of the two lakes.</p>
+</div></li></ol>
+<section class="glossary"><h2>Words used on this page</h2><dl><div><dt>eDNA</dt><dd>Environmental DNA — genetic material organisms leave in water, soil or air.</dd></div><div><dt>Barcode gene</dt><dd>A short gene that differs between species, used like a product barcode to tell them apart.</dd></div><div><dt>Read</dt><dd>One stretch of DNA letters produced by the sequencer.</dd></div><div><dt>Primer</dt><dd>A short starter DNA piece used to copy the barcode; removed before analysis.</dd></div><div><dt>ASV</dt><dd>Amplicon sequence variant — one exact, unique DNA signature, roughly one kind of organism.</dd></div><div><dt>Chimera</dt><dd>An artificial sequence accidentally stitched from two organisms during copying.</dd></div><div><dt>Rarefaction</dt><dd>A check of whether sampling more would have found many more signatures.</dd></div></dl></section>
+</main>
+<footer>Scripts, results and raw data: <a href="https://github.com/Angsumi/Sahil_Metagenome">github.com/Angsumi/Sahil_Metagenome</a> ·
+Reproduce with <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/run_all.sh">run_all.sh</a> and <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/environment.yml">environment.yml</a> ·
+Page built 2026-10-13.</footer>
+</div>
+</body></html>
