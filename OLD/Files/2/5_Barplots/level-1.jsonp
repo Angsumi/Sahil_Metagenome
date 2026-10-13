@@ -1,1 +1,0 @@
-load_data(1,["d__Eukaryota"],["index", "d__Eukaryota", "BarcodeSequence", "LinkerPrimerSequence", "Description"],[{"index":"W1","d__Eukaryota":23633.0,"BarcodeSequence":"CCGCCCCCAACC","LinkerPrimerSequence":"CTACATAATCGGRATT","Description":"W1"},{"index":"W2","d__Eukaryota":11274.0,"BarcodeSequence":"CCGCCCCCAACC","LinkerPrimerSequence":"CTACATAATCGGRATT","Description":"W2"}]);

@@ -1,1 +1,0 @@
-load_data(1,["k__Animalia"],["index", "k__Animalia", "BarcodeSequence", "LinkerPrimerSequence", "Description"],[{"index":"W1","k__Animalia":69975.0,"BarcodeSequence":"CCGCCCCCAACC","LinkerPrimerSequence":"CTACATAATCGGRATT","Description":"W1"},{"index":"W2","k__Animalia":56262.0,"BarcodeSequence":"CCGCCCCCAACC","LinkerPrimerSequence":"CTACATAATCGGRATT","Description":"W2"}]);

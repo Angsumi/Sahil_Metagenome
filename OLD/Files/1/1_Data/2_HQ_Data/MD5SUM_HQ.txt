@@ -1,4 +1,0 @@
-287cf6541688632ad0dea6e4b8bb04aa  W1_R1.fq.gz
-17dcc6df6b0521d994f9c2bcaf55febd  W1_R2.fq.gz
-8f2e4e17306810bf87161a368d286af7  W2_R1.fq.gz
-0d01e1cbc515eec04a566821bced5064  W2_R2.fq.gz
