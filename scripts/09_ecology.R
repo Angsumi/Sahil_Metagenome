@@ -7,6 +7,7 @@
 #  (d) Marker complementarity: which animal genera each barcode detected.
 #  (e) Indicator taxa: genera/species commonly used as water-quality indicators, with
 #      their share in each lake. Interpretation notes are general, not site-specific evidence.
+dir.create("work/plots", recursive = TRUE, showWarnings = FALSE)
 suppressPackageStartupMessages({ library(data.table); library(ggplot2) })
 
 out <- "results/09_ecology"
@@ -61,6 +62,7 @@ p1 <- ggplot(rl, aes(pct, site, fill = role)) +
        title = "Who does what: the microscopic community by ecological role (18S)") +
   theme_minimal(base_size = 12) +
   theme(legend.position = "bottom", plot.title.position = "plot") + guides(fill = guide_legend(ncol = 3))
+saveRDS(p1, "work/plots/09_18S_roles.rds")
 ggsave("docs/img/09_18S_roles.png", p1, width = 10, height = 4.6, dpi = 120)
 
 # ---- (b) COI animal groups (library + BLAST) ----
@@ -100,6 +102,7 @@ p2 <- ggplot(gl, aes(pct, site, fill = group)) +
        title = "Zooplankton by group (COI, reference library + GenBank look-up)") +
   theme_minimal(base_size = 12) +
   theme(legend.position = "bottom", plot.title.position = "plot") + guides(fill = guide_legend(ncol = 3))
+saveRDS(p2, "work/plots/09_COI_groups.rds")
 ggsave("docs/img/09_COI_groups.png", p2, width = 10, height = 4.4, dpi = 120)
 
 # ---- (c) heatmap of top genera, both markers ----
@@ -125,6 +128,7 @@ p3 <- ggplot(hm, aes(site, lab, fill = pmax(pct, 0.001))) +
   labs(x = NULL, y = NULL, title = "The 30 most abundant named genera",
        subtitle = "% of all reads of that barcode in each lake. Top: Chandubi-leaning; bottom: Deepor-leaning") +
   theme_minimal(base_size = 11) + theme(panel.grid = element_blank(), plot.title.position = "plot")
+saveRDS(p3, "work/plots/09_genera_heatmap.rds")
 ggsave("docs/img/09_genera_heatmap.png", p3, width = 9, height = 9.5, dpi = 120)
 
 # ---- (d) marker complementarity for animals ----

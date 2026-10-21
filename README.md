@@ -29,9 +29,15 @@ Sahil_Metagenome/
 │   ├── 08_diversity.R        # alpha diversity (rarefied, Hill numbers), overlap by level
 │   ├── 09_ecology.R          # ecological roles, zooplankton groups, genera heatmap, indicators
 │   ├── indicator_taxa.tsv    # indicator taxa list used by step 9
-│   ├── 10_build_site.py      # builds docs/index.html
+│   ├── 10_protein_search.sh  # protein-level (DIAMOND blastx) identification of unknown COI ASVs
+│   ├── 11_rotifer_index.sh/.R# 97 % MOTUs and the Brachionus:Trichocerca index (QB/T)
+│   ├── 12_manuscript.R       # publication figures, tables, supplementary workbook
+│   ├── 13_sra_prep.py        # NCBI BioSample / SRA sheets and upload file names
+│   ├── 99_build_site.py      # builds docs/index.html
 │   └── run_all.sh            # runs everything
 ├── results/                  # Tables and ASV FASTA files from each step
+│   ├── 12_manuscript/        # figures (300 dpi), tables, Methods draft
+│   └── 13_sra/               # SRA submission sheets
 ├── docs/                     # GitHub Pages site
 └── environment.yml           # conda/micromamba environment
 ```
@@ -50,4 +56,7 @@ Intermediate FASTQs and reference databases are written to `work/` (git-ignored)
 - [x] Processing: QC → primer removal → DADA2 (joint) → ASV curation
 - [x] Taxonomic assignment (18S: PR2 v5.1.1; COI: Eukaryote CO1 Reference Set v5.1.0) + NCBI BLAST of unassigned COI ASVs
 - [x] Diversity, composition, ecological roles, indicator taxa, marker complementarity
-- [ ] Link to water-quality data; comparison with microscopy; SRA submission
+- [x] Protein-level identification of unknowns, rotifer trophic index (QB/T)
+- [x] Manuscript package (`results/12_manuscript/`) and SRA sheets (`results/13_sra/`)
+- [ ] Authors: fill [TO ADD] items in Methods and TO_FILL fields in SRA sheets; upload to SRA
+- [ ] Link to water-quality data; comparison with microscopy

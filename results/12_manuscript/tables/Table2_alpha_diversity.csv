@@ -1,0 +1,5 @@
+Marker,Site,Rarefied depth,Observed ASVs,Shannon,Simpson (1-D),Pielou J',Hill q1,Hill q2
+18S,Chandubi Beel,81828,436,4.3,0.96,0.71,73.9,25.2
+18S,Deepor Beel,81828,685,4.8,0.976,0.74,121.7,42.2
+COI,Chandubi Beel,102761,329,3.76,0.949,0.65,43.1,19.8
+COI,Deepor Beel,102761,281,3.42,0.93,0.61,30.5,14.3

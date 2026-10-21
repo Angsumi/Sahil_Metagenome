@@ -32,18 +32,24 @@ fasta = open(query).read()
 qlen = {m.group(1): len(m.group(2).replace("\n", ""))
         for m in re.finditer(r">(\S+)[^\n]*\n([^>]*)", fasta)}
 
-mode = {"MEGABLAST": "off", "WORD_SIZE": 11} if sensitive else {"MEGABLAST": "on"}
-resp = call({"CMD": "Put", "PROGRAM": "blastn", **mode, "DATABASE": "core_nt",
+if sensitive:
+    mode = {"PROGRAM": "blastn", "DATABASE": "core_nt", "MEGABLAST": "off", "WORD_SIZE": 11}
+else:
+    mode = {"PROGRAM": "blastn", "DATABASE": "core_nt", "MEGABLAST": "on"}
+resp = call({"CMD": "Put", **mode,
              "QUERY": fasta, "HITLIST_SIZE": max_hits, "EXPECT": "1e-20",
              "EMAIL": "", "TOOL": "Sahil_Metagenome"}, data=True).decode()
 rid = re.search(r"RID = (\S+)", resp).group(1)
 wait = int(re.search(r"RTOE = (\d+)", resp).group(1))
 print(f"RID {rid}, estimated {wait}s", file=sys.stderr)
 time.sleep(max(wait, 30))
+deadline = time.time() + 90 * 60  # give up after 90 minutes
 while True:
+    if time.time() > deadline:
+        sys.exit(f"BLAST RID {rid} did not finish within 90 minutes")
     status = call({"CMD": "Get", "RID": rid, "FORMAT_OBJECT": "SearchInfo"}).decode()
     s = re.search(r"Status=(\w+)", status).group(1)
-    print(f"status {s}", file=sys.stderr)
+    print(f"{time.strftime('%H:%M')} status {s}", file=sys.stderr, flush=True)
     if s == "READY":
         break
     if s in ("FAILED", "UNKNOWN"):

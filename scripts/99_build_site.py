@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Step 10 — Build the GitHub Pages site (docs/index.html) from the scripts, result
-tables and figures produced by steps 1–9. The page is a plain-language timeline;
+"""Final step — Build the GitHub Pages site (docs/index.html) from the scripts, result
+tables and figures produced by steps 1–13. The page is a plain-language timeline;
 scripts and full tables sit in collapsible "for specialists" panels. Standard library only."""
 import csv
 import html
@@ -426,6 +426,93 @@ these lakes.</p>
           f"{ECO}/animal_phyla_by_marker.tsv"))}
 """))
 
+# ---- rotifer index, manuscript package, SRA ----
+qbt = {r["sample"]: r for r in rows("results/11_rotifer_index/QBT_index.tsv")}
+RI = "results/11_rotifer_index"
+MS = "results/12_manuscript"
+SRA = "results/13_sra"
+
+# ---- protein-level identification ----
+prot = rows("results/10_protein/COI_protein_summary.tsv")
+pgrp = rows("results/10_protein/COI_protein_by_group.tsv")
+PR = "results/10_protein"
+prot_rot = next((g for g in pgrp if g["consensus_phylum"] == "Rotifera"), None)
+a1 = next(r for r in prot if r["asv"] == "COI_ASV0001")
+
+steps.append(("protein", "Step 10", "A second look at the unknowns — through their proteins", f"""
+<p class='plain'><span>In plain words</span>COI is a recipe for a protein. Over evolution the DNA “spelling” changes much
+faster than the protein it makes — many different spellings give the same protein. So two organisms whose DNA looks only
+75% alike can still have very similar proteins, which reveals their family ties. We translated the unknown sequences into
+protein and compared them with 2.2 million known COI proteins.</p>
+{stats((f"{prot_rot['asvs'] if prot_rot else 0} of {len(prot)}", "unknowns that are rotifers"),
+       (f"{float(prot_rot['W1_pct']):.0f}% / {float(prot_rot['W2_pct']):.0f}%" if prot_rot else "–",
+        "COI reads they add (Chandubi / Deepor)"),
+       (f"{float(a1['aa_identity']):.0f}%", "best protein match, top unknown"))}
+<p><strong>Most unknowns are rotifers.</strong> Their proteins are 89–98% identical to known rotifers such as
+<em>Trichocerca</em>, <em>Euchlanis</em>, <em>Filinia</em>, <em>Lecane</em> and <em>Brachionus</em> — confirming that the
+lakes hold many rotifer species whose DNA has never been catalogued. A few others point to mites, an ostracod, a
+freshwater sponge and an amoeba.</p>
+<p><strong>The most common COI signature remains a mystery.</strong> {a1['asv']}’s protein is closest to a nematode
+(roundworm, {float(a1['aa_identity']):.0f}% identical) but almost as close to brown-algae-like stramenopiles (~81%). The evidence
+does not settle which group it belongs to — it may be an organism from a group that has barely been sequenced. Isolating and
+sequencing it (or its full mitochondrial genome) would be needed to name it.</p>
+{fig("10_protein.png", "For each unknown: similarity to the closest known sequence at DNA level (orange) and protein level (blue). "
+     "Protein similarity is much higher, which is what lets us place most of them. Label: group agreed by the closest proteins.")}
+{specialist(
+    "<p>The Eukaryote CO1 Reference Set v5.1.0 was translated with SeqKit (genetic code 5; for each sequence the frame "
+    "with fewest stop codons) and indexed with DIAMOND v2.2.8. Queries: the COI ASVs from step 7 without a ≥ 90% GenBank DNA "
+    "match. DIAMOND blastx <code>--ultra-sensitive</code>, query genetic code 5, E ≤ 1e-10, 25 targets. Consensus phylum/class: "
+    "≥ 3 hits within 95% of the best bit score and ≥ 70% agreement. NCBI’s online BLASTx was tried first but its queue did "
+    "not return results.</p>",
+    script("scripts/10_protein_search.sh"), script("scripts/10_protein_summary.R"),
+    table(f"{PR}/COI_protein_by_group.tsv", {"consensus_phylum": "phylum", "consensus_class": "class",
+                                           "W1_pct": "Chandubi %", "W2_pct": "Deepor %"}),
+    files(f"{PR}/COI_protein_summary.tsv", f"{PR}/COI_protein_hits.tsv"))}
+"""))
+
+steps.append(("rotifers", "Step 11", "A rotifer signal of nutrient levels", f"""
+<p class='plain'><span>In plain words</span>Rotifers are useful messengers. A classic rule of thumb compares two rotifer
+genera: <em>Brachionus</em>, which thrives in nutrient-rich water, and <em>Trichocerca</em>, more typical of cleaner water.
+Dividing the number of <em>Brachionus</em> species by the number of <em>Trichocerca</em> species gives the
+<strong>QB/T index</strong>: below 1 suggests nutrient-poor water, 1–2 moderate, above 2 nutrient-rich.</p>
+<p>Few COI sequences can be named to species, so “species” here are clusters of sequences that are at least 97% identical —
+a standard stand-in for species with this barcode.</p>
+{stats((qbt['W1']['QBT'], "QB/T Chandubi"), (qbt['W2']['QBT'], "QB/T Deepor"),
+       (f"{qbt['W1']['rotifer_motus']} / {qbt['W2']['rotifer_motus']}", "rotifer species-clusters (Chandubi / Deepor)"))}
+<p>Both lakes score well above 2 — <strong>a nutrient-rich (eutrophic) signal in both</strong>, with about
+{qbt['W1']['brachionus_motus']} <em>Brachionus</em> clusters against {qbt['W1']['trichocerca_motus']} <em>Trichocerca</em>.
+Treat the exact value as provisional: several genus names come only from distant GenBank matches (80–90%).</p>
+{fig("11_rotifer_genera.png", "Number of species-level clusters in each rotifer genus, per lake.")}
+{specialist(
+    "<p>COI ASVs clustered at 97% with VSEARCH <code>--cluster_size</code> (abundance-sorted). MOTU genus from the "
+    "reference-library genus of any member ASV, otherwise the genus of the best NCBI BLAST hit at ≥ 80% identity "
+    "(provisional). QB/T after Sládeček (1983).</p>",
+    script("scripts/11_rotifer_index.sh"), script("scripts/11_rotifer_index.R"),
+    table(f"{RI}/QBT_index.tsv"),
+    table(f"{RI}/rotifer_genera_by_lake.tsv"),
+    files(f"{RI}/COI_motus.tsv", f"{RI}/COI_motu97.uc"))}
+"""))
+
+steps.append(("paper", "Step 12–13", "Files for the paper", f"""
+<p class='plain'><span>In plain words</span>Everything above, packaged the way a journal and the public DNA archive expect it:
+figures at print resolution, tables, a draft Methods section, and the forms needed to deposit the raw data.</p>
+<h4>Manuscript package</h4>
+<ul class='files'>
+<li><a href='{BLOB}/{MS}/Methods_and_legends.md'>Draft Methods, figure legends and reference list</a> — parts only the authors know are marked <b>[TO ADD]</b></li>
+<li>Figures 1–5 (300 dpi PNG + vector PDF): <a href='{REPO}/tree/main/{MS}/figures'>{MS}/figures</a></li>
+<li>Tables 1–5 (CSV): <a href='{REPO}/tree/main/{MS}/tables'>{MS}/tables</a></li>
+<li><a href='{REPO}/raw/main/{MS}/tables/Supplementary_Tables_S1-S10.xlsx'>Supplementary Tables S1–S10 (Excel)</a> and ASV FASTA files</li>
+</ul>
+<h4>NCBI SRA submission</h4>
+<p>Two BioSamples (one per lake) and four sequencing runs (two barcodes × two lakes). Because both barcodes use the same file
+names, the eight files get unique names for upload (e.g. <code>COI_Deepor_Beel_W2_R1.fastq.gz</code>).</p>
+<ul class='files'>
+<li><a href='{BLOB}/{SRA}/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package) — fill in date, coordinates, depth</li>
+<li><a href='{BLOB}/{SRA}/sra_metadata.tsv'>SRA metadata sheet</a> with file names and MD5 checksums</li>
+</ul>
+{specialist(script("scripts/12_manuscript.R"), script("scripts/13_sra_prep.py"))}
+"""))
+
 steps.append(("findings", "In summary", "What the data tells us", f"""
 <div class='finding'><h4>Two very different microscopic worlds</h4>
 <p>Chandubi is an algae-and-grazer lake: green algae, diatoms, protozoa and rotifers. Deepor is richer in kinds but leans
@@ -438,11 +525,16 @@ rotifers, many of them species not yet in any DNA library. Copepods (<em>Mesocyc
 <div class='finding'><h4>Two barcodes are better than one</h4>
 <p>Most named animal genera were seen by only one of the two barcodes — neither alone gives the full picture.</p></div>
 <div class='finding'><h4>An abundant, unknown organism</h4>
-<p>The most common COI signature in both lakes matches nothing on record above ~72% — a candidate for closer study.</p></div>
-<div class='finding warn'><h4>Zooplankton: surprisingly similar — needs checking</h4>
-<p>By COI, {cco['shared_asvs']} of {cco['total_asvs']} signatures appear in <em>both</em> lakes at similar levels, while the
-algae and protists (18S) differ sharply. Either the zooplankton truly are similar, or DNA crossed between the two samples in
-the lab. No blank (control) samples were sequenced, so this can’t yet be told apart — a question for Eurofins.</p></div>
+<p>The most common COI signature in both lakes matches nothing on record above ~72% at DNA level; even its protein sits
+between a nematode and stramenopile algae. It is a genuine unknown — a candidate for closer study.</p></div>
+<div class='finding'><h4>A nutrient-rich signal in both lakes</h4>
+<p>The rotifer index QB/T is about {qbt['W1']['QBT']} in Chandubi and {qbt['W2']['QBT']} in Deepor — well above the threshold of 2
+for nutrient-rich water (provisional, as some genus names rest on distant matches).</p></div>
+<div class='finding'><h4>Shared zooplankton, different microbes</h4>
+<p>By COI, {cco['shared_asvs']} of {cco['total_asvs']} animal signatures occur in <em>both</em> lakes at similar levels, while the
+algae, protists and fungi (18S) differ sharply. The sequencing lab has confirmed that the samples were handled correctly, so
+this is treated as a real pattern: the two floodplain lakes appear to draw on the same regional pool of rotifers, while
+their microscopic producers and decomposers reflect each lake’s own conditions.</p></div>
 <div class='finding'><h4>Cautions</h4>
 <p>One water sample per lake: differences describe these two samples and cannot be tested statistically. Read counts
 reflect DNA, not the number or weight of organisms. Traces of fish and mammal DNA in Deepor are too few to interpret.</p></div>
@@ -454,9 +546,9 @@ steps.append(("next", "Still to do", "What this data cannot answer on its own", 
 measurements taken at sampling.</li>
 <li><strong>Compare with microscopy</strong> — check the DNA lists against published microscope surveys of Deepor Beel and any
 counts made from these samples.</li>
-<li><strong>Controls</strong> — ask Eurofins whether blank samples were run, to settle the COI overlap question.</li>
 <li><strong>Replication</strong> — more samples per lake (or another season) would allow real statistical comparison.</li>
-<li><strong>Publish the raw data</strong> — submit the reads to NCBI SRA before submitting the paper.</li>
+<li><strong>Publish the raw data</strong> — the NCBI SRA sheets are prepared (see “Files for the paper”); fill in the
+sampling date and coordinates and upload.</li>
 </ul>
 """))
 timeline = "".join(
@@ -586,7 +678,7 @@ footer {{ padding:30px 0 60px; font-size:.85rem; color:var(--muted); }}
     <div class="lake b"><b>Deepor Beel</b><span>Sample W2 · a Ramsar wetland on the edge of Guwahati, under urban pressure</span></div>
   </div>
   <div class="journey"><span>Lake water</span><i>→</i><span>DNA</span><i>→</i><span>Sequencer</span><i>→</i>
-    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span><i>→</i><span>Diversity</span><i>→</i><span>Ecology</span></div>
+    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span><i>→</i><span>Diversity</span><i>→</i><span>Ecology</span><i>→</i><span>Proteins</span><i>→</i><span>Paper files</span></div>
   <nav class="toc">{toc}</nav>
 </header>
 <main>

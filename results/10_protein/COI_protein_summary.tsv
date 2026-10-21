@@ -1,0 +1,33 @@
+asv	reads_pct_W1	reads_pct_W2	dna_identity	dna_best_hit	best_hit	aa_identity	qcov	evalue	best_phylum	best_class	consensus_phylum	consensus_class	top_hits	reading
+COI_ASV0001	14.66	18.73	71.88	Bursaphelenchus cocophilus	Bursaphelenchus cocophilus	85.6	99.7	3.28e-56	Nematoda	Chromadorea			1	same family/order likely
+COI_ASV0003	9.59	7.74	74.76	Keratella cochlearis	Filinia hofmanni	90.5	99.7	1.13e-57	Rotifera	Eurotatoria	Rotifera	Eurotatoria	13	same family/order likely
+COI_ASV0009	3.09	1.61	81.61	Trichocerca sp. WM-2017b	Proales similis	89.5	99.7	6.99e-62	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0016	2.22	0.62	83.17	Plationus patulus macracanthus	Euchlanis dilatata	94.3	99.7	4.97e-63	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0008	2.06	3.44	84.47	Brachionus calyciflorus	Trichocerca stylata	94.3	99.7	1.44e-63	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0013	1.89	2.09	80.72	Oerstedia viridifusca	Filinia hofmanni	90.5	99.7	3.97e-58	Rotifera	Eurotatoria	Rotifera	Eurotatoria	13	same family/order likely
+COI_ASV0010	1.44	3.44	86.67	Polyarthra dolichoptera complex sp. UO-2013	Filinia hofmanni	90.5	99.7	1.39e-58	Rotifera	Eurotatoria	Rotifera	Eurotatoria	17	same family/order likely
+COI_ASV0030	1.11	0.14	76.14	Trichocerca sp. WM-2017b	Cephalodella catellina	97.1	99.7	5.5e-62	Rotifera	Eurotatoria	Rotifera	Eurotatoria	4	close relative (genus level)
+COI_ASV0025	1.04	0.69	80.45	Brachionus angularis	Lecane leontina	93.3	99.7	2.84e-62	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0023	1.03	0.79	86.62	Rotifera environmental sample	Trichocerca stylata	96.2	99.7	2.49e-64	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	close relative (genus level)
+COI_ASV0022	0.93	0.98	85.43	invertebrate environmental sample	Trichocerca stylata	95.2	99.7	5.03e-64	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	close relative (genus level)
+COI_ASV0024	0.81	1.03	86.31	Rotifera environmental sample	Trichocerca stylata	96.2	99.7	2.49e-64	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	close relative (genus level)
+COI_ASV0033	0.8	0.21	88.92	Anuraeopsis sp. WM-2017a	Euchlanis dilatata	94.3	99.7	4.97e-63	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0032	0.79	0.38	76.39	Dysdera gollumi	Amblyomma mixtum	80.8	99.7	1.83e-51	Arthropoda	Arachnida	Arthropoda	Arachnida	25	phylum/class hint only
+COI_ASV0037	0.74	0.22	81.65	Keratella sp. STE97	Euchlanis dilatata	94.3	99.7	4.97e-63	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0035	0.62	0.37	76.39	Dysdera gollumi	Amblyomma mixtum	80.8	99.7	1.83e-51	Arthropoda	Arachnida	Arthropoda	Arachnida	25	phylum/class hint only
+COI_ASV0036	0.51	0.5	75.56	Ototyphlonemertes fila	Neobisium simoni	67.3	99.7	5.59e-41	Arthropoda	Arachnida			25	phylum/class hint only
+COI_ASV0044	0.45	0.18	89.24	Anuraeopsis sp. WM-2017a	Euchlanis dilatata	94.3	99.7	4.97e-63	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0040	0.35	0.51	88.14	Brachionus budapestinensis	Brachionus budapestinensis	97.1	99.7	8.33e-64	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	close relative (genus level)
+COI_ASV0049	0.34	0.18	83.81	Phytophthora cocois	Botrydium granulatum	88.5	99.7	1.29e-57	Xanthophyceae	Xanthophyceae			25	same family/order likely
+COI_ASV0053	0.28	0.1	85.53	Mytilina ventralis	Brachionus patulus	91.4	99.7	1.63e-61	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0048	0.25	0.3	83.91	Epiphanes senta	Polyarthra vulgaris	98.1	99.7	3.75e-64	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	close relative (genus level)
+COI_ASV0061	0.24	0.04	81.61	Trichocerca sp. WM-2017h	Trichocerca stylata	94.3	99.7	1.44e-63	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0054	0.22	0.15	83.86	Trichocerca dixonnuttalli	Brachionus patulus	92.4	99.7	1.63e-61	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0058	0.22	0.11	84.18	Trichocerca dixonnuttalli	Brachionus patulus	92.4	99.7	1.63e-61	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0060	0.19	0.12	85.53	Brachionus angularis	Brachionus caudatus	98.1	99.7	6.06e-64	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	close relative (genus level)
+COI_ASV0057	0.18	0.16	82.85	Scytosiphon sp.	Choristocarpus tenellus	89.4	99.7	5.14e-61	Phaeophyceae	Phaeophyceae	Phaeophyceae	Phaeophyceae	25	same family/order likely
+COI_ASV0059	0.18	0.14	84.62	Goniochloridales sp. WTwin 8/9 T-7m6.8	Nannochloropsis oculata	90.4	99.7	1.01e-59	Eustigmatophyceae	Eustigmatophyceae	Phaeophyceae	Phaeophyceae	25	same family/order likely
+COI_ASV0062	0.17	0.11	80.77	Brachionus angularis	Lecane leontina	93.3	99.7	2.84e-62	Rotifera	Eurotatoria	Rotifera	Eurotatoria	25	same family/order likely
+COI_ASV0056	0.14	0.2	81.64	Tulasnella sp. 419	Hymeniacidon perlevis	83.7	99.7	3.12e-58	Porifera	Demospongiae	Porifera	Demospongiae	25	phylum/class hint only
+COI_ASV0066	0.09	0.18	83.22	Physocypria biwaensis	Physocypria biwaensis	100	99.7	6.07e-62	Arthropoda	Ostracoda	Arthropoda	Ostracoda	25	close relative (genus level)
+COI_ASV0071	0.05	0.18	82.43	Korotnevella heteracantha	Korotnevella novazelandica	84.6	99.7	3.12e-54	Discosea	Flabellinia			2	phylum/class hint only

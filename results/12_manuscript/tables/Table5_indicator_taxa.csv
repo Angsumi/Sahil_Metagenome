@@ -1,0 +1,16 @@
+name,level,marker,group,general_association,chandubi_pct,deepor_pct
+Brachionus,Genus,COI,Rotifer,Genus widely used in the Brachionus:Trichocerca ratio; dominance usually read as nutrient-rich (eutrophic) water,14.834,22.747
+Brachionus_calyciflorus,Species,COI,Rotifer,"Common in eutrophic, organically enriched waters",1.151,1.735
+Brachionus_caudatus,Species,COI,Rotifer,Warm-water species typical of tropical nutrient-rich ponds and lakes,4.528,7.439
+Keratella_tropica,Species,COI,Rotifer,Warm-water species often abundant in eutrophic tropical lakes,1.111,2.358
+Polyarthra_vulgaris,Species,COI,Rotifer,"Widespread, tolerant of a broad range of conditions",0.907,0.539
+Filinia_longiseta,Species,18S,Rotifer,"Frequently associated with eutrophic, turbid waters",1.366,0
+Mesocyclops,Genus,18S,Copepod,Predatory cyclopoid copepod common in tropical lakes and ponds,1.846,0.572
+Cyclotella_meneghiniana,Species,18S,Diatom,Tolerant of high nutrients and organic pollution; common in eutrophic waters,1.943,0.001
+Nitzschia_palea,Species,18S,Diatom,Classic pollution-tolerant diatom used in diatom water-quality indices,0.633,0.034
+Aulacoseira_granulata,Species,18S,Diatom,"Typical of eutrophic, well-mixed and turbid waters",0.27,0
+Staurastrum,Genus,18S,Desmid,"Desmid genus; desmid-rich communities are often linked to macrophyte-rich, less enriched waters",0.001,3.014
+Cosmarium,Genus,18S,Desmid,Desmid genus with species spanning clean to moderately enriched waters,0,1.229
+Gonyostomum_semen,Species,18S,Raphidophyte,"Nuisance flagellate of humic, brown-water lakes; can form blooms",0,0.062
+Botryococcus_braunii,Species,18S,Green alga,Colonial oil-rich green alga of lakes and ponds; can form surface blooms,0,0.303
+Rhizophydium,Genus,18S,Chytrid fungus,Parasite of phytoplankton (including diatoms and green algae),0,3.414

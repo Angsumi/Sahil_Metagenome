@@ -1,0 +1,21 @@
+sample	genus	motus	reads	source
+W1	unassigned rotifer	17	31442	""
+W1	Brachionus	10	22056	BLAST (provisional); reference library
+W1	Polyarthra	5	3243	BLAST (provisional); reference library
+W1	Keratella	3	4165	reference library
+W1	Trichocerca	2	3893	BLAST (provisional)
+W1	Plationus	1	4934	BLAST (provisional)
+W1	Anuraeopsis	1	768	BLAST (provisional)
+W1	Epiphanes	1	287	BLAST (provisional)
+W1	Mytilina	1	978	BLAST (provisional)
+W1	Asplanchna	1	50	reference library
+W2	unassigned rotifer	14	21313	""
+W2	Brachionus	10	28513	BLAST (provisional); reference library
+W2	Polyarthra	5	4477	BLAST (provisional); reference library
+W2	Keratella	3	8625	reference library
+W2	Trichocerca	2	1694	BLAST (provisional)
+W2	Plationus	1	1278	BLAST (provisional)
+W2	Anuraeopsis	1	262	BLAST (provisional)
+W2	Epiphanes	1	308	BLAST (provisional)
+W2	Mytilina	1	439	BLAST (provisional)
+W2	Asplanchna	1	17	reference library

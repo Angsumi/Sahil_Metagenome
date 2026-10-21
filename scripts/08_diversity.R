@@ -6,6 +6,7 @@
 #  (b) Overlap between lakes at ASV, genus and species level (shared / unique, Jaccard,
 #      Bray–Curtis). One sample per lake: descriptive only, no significance tests.
 # Chao1 is not reported: DADA2 discards singletons, which Chao1 depends on.
+dir.create("work/plots", recursive = TRUE, showWarnings = FALSE)
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(vegan) })
 
 out <- "results/08_diversity"
@@ -46,6 +47,7 @@ p1 <- ggplot(hl, aes(q, value, fill = site)) +
        title = "How diverse is each lake?",
        subtitle = "Both lakes subsampled to equal depth. Left to right: counting every type → only the common ones.") +
   theme_minimal(base_size = 12) + theme(legend.position = "bottom", plot.title.position = "plot")
+saveRDS(p1, "work/plots/08_alpha.rds")
 ggsave("docs/img/08_alpha.png", p1, width = 9.5, height = 5, dpi = 120)
 
 # ---- (b) overlap at several levels ----
@@ -82,5 +84,6 @@ p2 <- ggplot(ol, aes(pct, level, fill = where)) +
   labs(x = "Share of types (numbers = count)", y = NULL, fill = NULL,
        title = "What do the two lakes have in common?") +
   theme_minimal(base_size = 12) + theme(legend.position = "bottom", plot.title.position = "plot")
+saveRDS(p2, "work/plots/08_overlap.rds")
 ggsave("docs/img/08_overlap.png", p2, width = 9, height = 5.5, dpi = 120)
 print(alpha); print(overlap)

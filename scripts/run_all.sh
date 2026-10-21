@@ -16,4 +16,8 @@ bash scripts/06_taxonomy.sh          # downloads PR2 + CO1 references on first r
 bash scripts/06b_blast_unknowns.sh   # NCBI BLAST (internet access required)
 Rscript scripts/08_diversity.R
 Rscript scripts/09_ecology.R
-python3 scripts/10_build_site.py
+bash scripts/10_protein_search.sh    # translates the CO1 reference on first run
+bash scripts/11_rotifer_index.sh
+Rscript scripts/12_manuscript.R
+python3 scripts/13_sra_prep.py
+python3 scripts/99_build_site.py

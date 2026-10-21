@@ -1,5 +1,6 @@
 # Step 5 — Processing summary: reads surviving each step, ASVs per site and shared
 # between sites, and rarefaction curves (was sequencing depth sufficient?).
+dir.create("work/plots", recursive = TRUE, showWarnings = FALSE)
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(vegan) })
 
 out <- "results/05_summary"
@@ -30,6 +31,7 @@ p1 <- ggplot(tl, aes(step, reads, group = site, colour = site)) +
   labs(x = NULL, y = "Read pairs", colour = NULL, title = "Reads surviving each processing step") +
   theme_minimal(base_size = 12) +
   theme(legend.position = "bottom", axis.text.x = element_text(angle = 30, hjust = 1))
+saveRDS(p1, "work/plots/05_read_tracking.rds")
 ggsave("docs/img/05_read_tracking.png", p1, width = 9, height = 4.8, dpi = 120)
 
 asv_stats <- list(); curves <- list()
@@ -60,6 +62,7 @@ p2 <- ggplot(rbindlist(curves), aes(depth, asvs, colour = site)) +
   labs(x = "Reads sampled", y = "ASVs observed", colour = NULL,
        title = "Rarefaction — curves flattening = depth was sufficient") +
   theme_minimal(base_size = 12) + theme(legend.position = "bottom")
+saveRDS(p2, "work/plots/05_rarefaction.rds")
 ggsave("docs/img/05_rarefaction.png", p2, width = 9, height = 4.5, dpi = 120)
 
 al <- melt(asv_stats, id.vars = "marker",
