@@ -8,9 +8,13 @@ dependencies:
   - multiqc=1.35
   - pigz
   - vsearch=2.32
+  - diamond=2.2.8
+  - seqkit=2.14
   - bioconductor-dada2=1.38
   - bioconductor-biostrings
   - r-ggplot2
   - r-data.table
   - r-jsonlite
   - r-vegan
+  - r-patchwork
+  - r-openxlsx
