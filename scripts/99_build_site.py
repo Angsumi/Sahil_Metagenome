@@ -499,9 +499,9 @@ figures at print resolution, tables, a draft Methods section, and the forms need
 <h4>Manuscript package</h4>
 <ul class='files'>
 <li><a href='{BLOB}/{MS}/Methods_and_legends.md'>Draft Methods, figure legends and reference list</a> — parts only the authors know are marked <b>[TO ADD]</b></li>
-<li>Figures 1–5 (300 dpi PNG + vector PDF): <a href='{REPO}/tree/main/{MS}/figures'>{MS}/figures</a></li>
+<li>Figures 1–7 (300 dpi PNG + vector PDF): <a href='{REPO}/tree/main/{MS}/figures'>{MS}/figures</a></li>
 <li>Tables 1–5 (CSV): <a href='{REPO}/tree/main/{MS}/tables'>{MS}/tables</a></li>
-<li><a href='{REPO}/raw/main/{MS}/tables/Supplementary_Tables_S1-S10.xlsx'>Supplementary Tables S1–S10 (Excel)</a> and ASV FASTA files</li>
+<li><a href='{REPO}/raw/main/{MS}/tables/Supplementary_Tables_S1-S12.xlsx'>Supplementary Tables S1–S12 (Excel)</a> and ASV FASTA files</li>
 </ul>
 <h4>NCBI SRA submission</h4>
 <p>Two BioSamples (one per lake) and four sequencing runs (two barcodes × two lakes). Because both barcodes use the same file
@@ -511,6 +511,66 @@ names, the eight files get unique names for upload (e.g. <code>COI_Deepor_Beel_W
 <li><a href='{BLOB}/{SRA}/sra_metadata.tsv'>SRA metadata sheet</a> with file names and MD5 checksums</li>
 </ul>
 {specialist(script("scripts/12_manuscript.R"), script("scripts/13_sra_prep.py"))}
+"""))
+
+# ---- references and microscopy comparison ----
+refs = rows("results/14_references/references_verified.tsv")
+n_ver = sum(1 for r in refs if r["status"].startswith(("VERIFIED", "FOUND")))
+n_bad = len(refs) - n_ver
+cmp_rows = rows("results/15_microscopy/comparison_summary.tsv")
+rotm = rows("results/15_microscopy/rotifers_microscopy_vs_DNA.tsv")
+algm = rows("results/15_microscopy/algae_genera_microscopy_vs_DNA.tsv")
+alg_both = [r["genus"] for r in algm if r["found_by"] == "both"]
+desmids_both = [r["genus"] for r in algm if r["found_by"] == "both" and r["role"].startswith("Desmids")]
+alg_dna_only = sum(1 for r in algm if r["found_by"] == "DNA only")
+alg_blind = sum(1 for r in algm if r["found_by"] == "microscopy only" and r["note"])
+MI = "results/15_microscopy"
+REF = "results/14_references"
+
+steps.append(("references", "Step 14", "Checking every reference", f"""
+<p class='plain'><span>In plain words</span>A reference list is only as good as its weakest entry. Every work cited in the
+draft and in the Methods was looked up in Crossref, the registry behind DOIs, and its title, first author and year compared
+with what we cite. The final list is built from those records, not typed by hand.</p>
+{stats((f"{n_ver} of {len(refs)}", "references confirmed"), (str(n_bad), "could not be confirmed"),
+       ("1", "new regional source found"))}
+<ul>
+<li>One cited title was incomplete (Leray et al. 2013 — full title restored); the Deepor algae paper is
+<strong>Baruah et al. 2020</strong>, not 2021.</li>
+<li>Two regional papers (<em>Tropical Ecology</em> 2011, <em>Indian Journal of Fisheries</em> 2015) are not registered in
+Crossref and could not be confirmed electronically — check them against the printed journals before citing.</li>
+<li>While checking, a directly relevant microscopy survey turned up: Sharma &amp; Sharma (2010), <em>Rotifer communities of
+Deepor Beel</em> — used in the next step.</li>
+</ul>
+{specialist(script("scripts/14_verify_references.py"),
+            files(f"{REF}/references_formatted.md", f"{REF}/references_verified.tsv"))}
+"""))
+
+steps.append(("microscopy", "Step 15", "Does DNA agree with the microscope?", f"""
+<p class='plain'><span>In plain words</span>Before DNA methods, biologists counted plankton under the microscope. Two such
+surveys exist for Deepor Beel: rotifers in 2002–03 and algae published in 2020. If DNA is reliable, it should find much of
+what they found — and may find more.</p>
+<p><strong>Algae — strong agreement on what matters.</strong> The microscopists found desmids, above all
+<em>Cosmarium</em>, to be the richest group in Deepor; DNA independently picks out the same desmids
+(<em>{", ".join(desmids_both[:5])}</em>…). In all, {len(alg_both)} algal genera are shared, and DNA adds {alg_dna_only} genera the
+survey did not list. Of the genera seen only under the microscope, {alg_blind} are cyanobacteria or euglenoids, which
+this DNA marker cannot see or sees poorly — cyanobacteria are bacteria and have no 18S gene at all.</p>
+<p><strong>Rotifers — agreement at the genus level.</strong> Of the five rotifer genera the microscopists found most important,
+DNA detects four (<em>Brachionus</em>, <em>Keratella</em>, <em>Asplanchna</em> and, provisionally, <em>Lecane</em>). At species level only
+<em>Keratella tropica</em> and <em>Polyarthra vulgaris</em> are confirmed, because most rotifer species have no DNA in the reference
+libraries yet — the same gap seen in Steps 7 and 10.</p>
+{fig("15_microscopy.png", "Taxa recorded by microscopy in Deepor Beel, and how many of them the DNA data also detected.")}
+<p class='src'>The surveys were made in other years and seasons; only presence is compared. Historical water quality from the
+2002–03 survey (pH ≈ 6.9, dissolved oxygen ≈ 7 mg/l, conductivity ≈ 98 µS/cm) is context only, not a measurement of these
+samples.</p>
+{specialist(
+    "<p>Literature taxa in <a href='" + BLOB + "/scripts/literature_deepor.tsv'>scripts/literature_deepor.tsv</a>: rotifer "
+    "families, genera and species from Sharma &amp; Sharma (2010, Table 3); algal genera from the species accounts of Baruah et "
+    "al. (2020). DNA detections in Deepor (W2) only.</p>",
+    script("scripts/15_microscopy_comparison.R"),
+    table(f"{MI}/comparison_summary.tsv", {"also_by_DNA_named": "DNA (named)", "also_by_DNA_provisional": "DNA (provisional)",
+                                         "DNA_only": "DNA only"}),
+    table(f"{MI}/rotifers_microscopy_vs_DNA.tsv", {"dna_detection": "DNA"}),
+    files(f"{MI}/algae_genera_microscopy_vs_DNA.tsv", f"{MI}/rotifer_genera_DNA_Deepor.tsv"))}
 """))
 
 steps.append(("findings", "In summary", "What the data tells us", f"""
@@ -535,20 +595,24 @@ for nutrient-rich water (provisional, as some genus names rest on distant matche
 algae, protists and fungi (18S) differ sharply. The sequencing lab has confirmed that the samples were handled correctly, so
 this is treated as a real pattern: the two floodplain lakes appear to draw on the same regional pool of rotifers, while
 their microscopic producers and decomposers reflect each lake’s own conditions.</p></div>
+<div class='finding'><h4>DNA agrees with the microscope</h4>
+<p>In Deepor, DNA recovers the desmids that microscopists found dominant and four of the five key rotifer genera — and adds
+genera the surveys did not list.</p></div>
 <div class='finding'><h4>Cautions</h4>
 <p>One water sample per lake: differences describe these two samples and cannot be tested statistically. Read counts
 reflect DNA, not the number or weight of organisms. Traces of fish and mammal DNA in Deepor are too few to interpret.</p></div>
 """))
 
-steps.append(("next", "Still to do", "What this data cannot answer on its own", """
+steps.append(("next", "Still to do", "What only the research team can supply", """
 <ul>
-<li><strong>Link to water quality</strong> — set the indicator organisms against the pH, oxygen, BOD/COD and nutrient
-measurements taken at sampling.</li>
-<li><strong>Compare with microscopy</strong> — check the DNA lists against published microscope surveys of Deepor Beel and any
-counts made from these samples.</li>
+<li><strong>Sampling details</strong> — date, GPS coordinates, depth, volume filtered, filter type, DNA extraction kit and PCR
+conditions (marked [TO ADD] in the draft Methods and TO_FILL in the SRA sheets).</li>
+<li><strong>Water quality</strong> — the pH, oxygen, BOD/COD and nutrient values measured at sampling, to set beside the indicator
+organisms.</li>
+<li><strong>Deposit the raw data</strong> — register a BioProject and upload the eight files to NCBI SRA using the prepared sheets.</li>
+<li><strong>Two regional references</strong> — confirm the 2011 and 2015 Deepor Beel papers against the printed journals.</li>
+<li><strong>Target journal</strong> — to format text, figures and references to its rules.</li>
 <li><strong>Replication</strong> — more samples per lake (or another season) would allow real statistical comparison.</li>
-<li><strong>Publish the raw data</strong> — the NCBI SRA sheets are prepared (see “Files for the paper”); fill in the
-sampling date and coordinates and upload.</li>
 </ul>
 """))
 timeline = "".join(
@@ -678,7 +742,7 @@ footer {{ padding:30px 0 60px; font-size:.85rem; color:var(--muted); }}
     <div class="lake b"><b>Deepor Beel</b><span>Sample W2 · a Ramsar wetland on the edge of Guwahati, under urban pressure</span></div>
   </div>
   <div class="journey"><span>Lake water</span><i>→</i><span>DNA</span><i>→</i><span>Sequencer</span><i>→</i>
-    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span><i>→</i><span>Diversity</span><i>→</i><span>Ecology</span><i>→</i><span>Proteins</span><i>→</i><span>Paper files</span></div>
+    <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span><i>→</i><span>Diversity</span><i>→</i><span>Ecology</span><i>→</i><span>Proteins</span><i>→</i><span>Paper files</span><i>→</i><span>Microscopy check</span></div>
   <nav class="toc">{toc}</nav>
 </header>
 <main>

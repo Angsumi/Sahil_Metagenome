@@ -1,0 +1,87 @@
+genus	role	dna_reads	microscopy	found_by	note
+Lepidochromonas	Golden & other algae	2069	FALSE	DNA only	""
+Paraphysomonas	Golden & other algae	1223	FALSE	DNA only	""
+Coenochloris	Green algae	1111	FALSE	DNA only	""
+Pleurotaenium	Desmids & conjugating algae	310	FALSE	DNA only	""
+Spondylosium	Desmids & conjugating algae	290	FALSE	DNA only	""
+Cosmocladium	Desmids & conjugating algae	270	FALSE	DNA only	""
+Asulcocephalium	Dinoflagellates	197	FALSE	DNA only	""
+Glenodiniopsis	Dinoflagellates	167	FALSE	DNA only	""
+Glaucocystis	Golden & other algae	118	FALSE	DNA only	""
+Cyanoptyche	Golden & other algae	95	FALSE	DNA only	""
+Westella	Green algae	81	FALSE	DNA only	""
+Neglectella	Green algae	67	FALSE	DNA only	""
+Piscinoodinium	Dinoflagellates	48	FALSE	DNA only	""
+Mougeotia	Desmids & conjugating algae	32	FALSE	DNA only	""
+Oedogonium	Green algae	29	FALSE	DNA only	""
+Nitzschia	Diatoms	28	FALSE	DNA only	""
+Stenopterobia	Diatoms	24	FALSE	DNA only	""
+Paraeustigmatos	Golden & other algae	16	FALSE	DNA only	""
+Choricystis	Green algae	13	FALSE	DNA only	""
+Diacronema	Golden & other algae	9	FALSE	DNA only	""
+Pseudomuriella	Green algae	5	FALSE	DNA only	""
+Mychonastes	Green algae	4	FALSE	DNA only	""
+Cyclotella	Diatoms	1	FALSE	DNA only	""
+Staurastrum	Desmids & conjugating algae	2466	TRUE	both	""
+Cosmarium	Desmids & conjugating algae	1006	TRUE	both	""
+Botryococcus	Green algae	248	TRUE	both	""
+Micrasterias	Desmids & conjugating algae	203	TRUE	both	""
+Closterium	Desmids & conjugating algae	125	TRUE	both	""
+Pinnularia	Diatoms	89	TRUE	both	""
+Onychonema	Desmids & conjugating algae	69	TRUE	both	""
+Chlamydomonas	Green algae	55	TRUE	both	""
+Staurodesmus	Desmids & conjugating algae	35	TRUE	both	""
+Encyonema	Diatoms	20	TRUE	both	""
+Gomphonema	Diatoms	15	TRUE	both	""
+Desmidium	Desmids & conjugating algae	13	TRUE	both	""
+Ankistrodesmus	Green algae	12	TRUE	both	""
+Carteria	Green algae	8	TRUE	both	""
+Monoraphidium	Green algae	4	TRUE	both	""
+Desmodesmus	Green algae	3	TRUE	both	""
+Actinastrum			TRUE	microscopy only	""
+Aphanocapsa			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Asterococcus			TRUE	microscopy only	""
+Aulacoseira			TRUE	microscopy only	""
+Aulosira			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Bracteacoccus			TRUE	microscopy only	""
+Catena			TRUE	microscopy only	""
+Chroococcus			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Coelastrum			TRUE	microscopy only	""
+Cylindrospermum			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Cymbella			TRUE	microscopy only	""
+Dictyochloris			TRUE	microscopy only	""
+Dysmorphococcus			TRUE	microscopy only	""
+Euastrum			TRUE	microscopy only	""
+Euglena			TRUE	microscopy only	euglenoid: poorly amplified by 18S V4 primers
+Fragilaria			TRUE	microscopy only	""
+Goniochloris			TRUE	microscopy only	""
+Gyropaigne			TRUE	microscopy only	euglenoid: poorly amplified by 18S V4 primers
+Kirchneriella			TRUE	microscopy only	""
+Lepocinclis			TRUE	microscopy only	euglenoid: poorly amplified by 18S V4 primers
+Mallomonas			TRUE	microscopy only	""
+Melosira			TRUE	microscopy only	""
+Merismopedia			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Microcystis			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Monactinus			TRUE	microscopy only	""
+Muriella			TRUE	microscopy only	""
+Nephrochlamys			TRUE	microscopy only	""
+Nephrodiella			TRUE	microscopy only	""
+Nostoc			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Oocystaceae			TRUE	microscopy only	""
+Oscillatoria			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Pandorina			TRUE	microscopy only	""
+Phacus			TRUE	microscopy only	euglenoid: poorly amplified by 18S V4 primers
+Phormidium			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Pleurocapsa			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Pleurochloris			TRUE	microscopy only	""
+Protococcus			TRUE	microscopy only	""
+Scenedesmus			TRUE	microscopy only	""
+Selenastrum			TRUE	microscopy only	""
+Sphaerocystis			TRUE	microscopy only	""
+Spirogyra			TRUE	microscopy only	""
+Spirulina			TRUE	microscopy only	cyanobacterium: no 18S gene, not detectable
+Stauroneis			TRUE	microscopy only	""
+Strombomonas			TRUE	microscopy only	euglenoid: poorly amplified by 18S V4 primers
+Tetradesmus			TRUE	microscopy only	""
+Tetraplektron			TRUE	microscopy only	""
+Trachelomonas			TRUE	microscopy only	euglenoid: poorly amplified by 18S V4 primers

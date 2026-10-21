@@ -33,6 +33,9 @@ Sahil_Metagenome/
 │   ├── 11_rotifer_index.sh/.R# 97 % MOTUs and the Brachionus:Trichocerca index (QB/T)
 │   ├── 12_manuscript.R       # publication figures, tables, supplementary workbook
 │   ├── 13_sra_prep.py        # NCBI BioSample / SRA sheets and upload file names
+│   ├── 14_verify_references.py # checks every reference against Crossref
+│   ├── 15_microscopy_comparison.R # DNA vs published microscopy surveys of Deepor Beel
+│   ├── literature_deepor.tsv # taxa listed by those surveys
 │   ├── 99_build_site.py      # builds docs/index.html
 │   └── run_all.sh            # runs everything
 ├── results/                  # Tables and ASV FASTA files from each step
@@ -58,5 +61,6 @@ Intermediate FASTQs and reference databases are written to `work/` (git-ignored)
 - [x] Diversity, composition, ecological roles, indicator taxa, marker complementarity
 - [x] Protein-level identification of unknowns, rotifer trophic index (QB/T)
 - [x] Manuscript package (`results/12_manuscript/`) and SRA sheets (`results/13_sra/`)
-- [ ] Authors: fill [TO ADD] items in Methods and TO_FILL fields in SRA sheets; upload to SRA
-- [ ] Link to water-quality data; comparison with microscopy
+- [x] References verified against Crossref (`results/14_references/`); comparison with published microscopy (`results/15_microscopy/`)
+- [ ] Authors: fill [TO ADD] items in Methods and TO_FILL fields in SRA sheets; register BioProject and upload to SRA
+- [ ] Link to water-quality data measured at sampling (not available in this repository); choose target journal

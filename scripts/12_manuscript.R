@@ -1,4 +1,4 @@
-# Step 12 — Manuscript package: multi-panel figures (300 dpi PNG + vector PDF), main tables
+# Step 12 — Manuscript package (re-run after step 15 to include the microscopy comparison): multi-panel figures (300 dpi PNG + vector PDF), main tables
 # (CSV) and one supplementary workbook (XLSX). Reads only the outputs of steps 1–11.
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork); library(openxlsx) })
 
@@ -25,6 +25,7 @@ save_fig(f3, "Figure3_diversity_overlap", 8, 9)
 save_fig(pl("09_genera_heatmap") + pub, "Figure4_top_genera_heatmap", 7.5, 8.5)
 save_fig(pl("10_protein") + pub, "Figure5_unknowns_DNA_vs_protein", 8, 7)
 save_fig(pl("11_rotifer_genera") + pub, "Figure6_rotifer_genera", 7.5, 4.5)
+save_fig(pl("15_microscopy") + pub, "Figure7_microscopy_vs_DNA", 8, 3.8)
 
 # ---- Table 1: sequencing and processing summary ----
 tr <- rd("results/05_summary/read_tracking.tsv")
@@ -73,6 +74,8 @@ sheets <- list(
   S8_rotifer_MOTUs = rd("results/11_rotifer_index/COI_motus.tsv"),
   S9_QBT_index = rd("results/11_rotifer_index/QBT_index.tsv"))
 sheets$S10_COI_protein_search <- rd("results/10_protein/COI_protein_summary.tsv")
+sheets$S11_Deepor_rotifers_vs_micro <- rd("results/15_microscopy/rotifers_microscopy_vs_DNA.tsv")
+sheets$S12_Deepor_algae_vs_micro <- rd("results/15_microscopy/algae_genera_microscopy_vs_DNA.tsv")
 wb <- createWorkbook()
 for (n in names(sheets)) {
   addWorksheet(wb, n)
@@ -80,7 +83,7 @@ for (n in names(sheets)) {
   freezePane(wb, n, firstRow = TRUE)
   setColWidths(wb, n, cols = seq_len(ncol(sheets[[n]])), widths = "auto")
 }
-saveWorkbook(wb, file.path(out, "tables", "Supplementary_Tables_S1-S10.xlsx"), overwrite = TRUE)
+saveWorkbook(wb, file.path(out, "tables", "Supplementary_Tables_S1-S12.xlsx"), overwrite = TRUE)
 
 # ASV sequences for deposition alongside the paper
 for (m in c("18S", "COI"))

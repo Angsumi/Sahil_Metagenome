@@ -1,0 +1,37 @@
+key	doi	status	crossref_first_author	crossref_year	crossref_title	crossref_journal	title_similarity
+Buchfink2021	10.1038/s41592-021-01101-x	VERIFIED	Buchfink	2021	Sensitive protein alignments at tree-of-life scale using DIAMOND	Nature Methods	1.00
+Callahan2016	10.1038/nmeth.3869	VERIFIED	Callahan	2016	DADA2: High-resolution sample inference from Illumina amplicon data	Nature Methods	1.00
+Chen2025	10.1111/2041-210x.70152	VERIFIED	Chen	2025	"Advancing aquatic biodiversity assessments of invertebrates using
+                    eDNA
+                    metabarcoding: A systematic evaluation of primers for marine and freshwater communities"	Methods in Ecology and Evolution	1.00
+Comeau2011	10.1371/journal.pone.0027492	VERIFIED	Comeau	2011	Arctic Ocean Microbial Community Structure before and after the 2007 Record Sea Ice Minimum	PLoS ONE	1.00
+Edgar2016	10.1101/074161	VERIFIED	Edgar	2016	SINTAX: a simple non-Bayesian taxonomy classifier for 16S and ITS sequences		1.00
+Ewels2016	10.1093/bioinformatics/btw354	VERIFIED	Ewels	2016	MultiQC: summarize analysis results for multiple tools and samples in a single report	Bioinformatics	1.00
+Geller2013	10.1111/1755-0998.12138	VERIFIED	Geller	2013	"Redesign of
+                    PCR
+                    primers for mitochondrial cytochrome
+                    c
+                    oxidase subunit
+                    I
+                    for marine invertebrates and application in all‐taxa biotic surveys"	Molecular Ecology Resources	1.00
+Guillou2013	10.1093/nar/gks1160	VERIFIED (Crossref dates it 2012; online and print issue fall in different years)	Guillou	2012	The Protist Ribosomal Reference database (PR2): a catalog of unicellular eukaryote Small Sub-Unit rRNA sequences with curated taxonomy	Nucleic Acids Research	1.00
+Jo2026	10.1007/s00267-025-02357-1	VERIFIED	Jo	2026	Seasonal and Spatiotemporal Dynamics of Plankton Communities Using eDNA Metabarcoding in Singal Reservoir	Environmental Management	1.00
+Lemonnier2025	10.1111/1755-0998.70077	VERIFIED	Lemonnier	2025	"Comparison of Metabarcoding and Shotgun Sequencing Confirms the Relevance of Chloroplastic
+                    rRNA
+                    Genes to Assess Community Structure of Lake Phytoplankton"	Molecular Ecology Resources	1.00
+Leray2013	10.1186/1742-9994-10-34	VERIFIED (cited title is incomplete — use the full Crossref title)	Leray	2013	A new versatile primer set targeting a short fragment of the mitochondrial COI region for metabarcoding metazoan diversity: application for characterizing coral reef fish gut contents	Frontiers in Zoology	0.80
+Lin2023	10.1002/ece3.10088	VERIFIED	Lin	2023	Environmental DNA metabarcoding revealed the impacts of anthropogenic activities on phytoplankton diversity in Dianchi Lake and its three inflow rivers	Ecology and Evolution	1.00
+Martin2011	10.14806/ej.17.1.200	VERIFIED	Martin	2011	Cutadapt removes adapter sequences from high-throughput sequencing reads	EMBnet.journal	1.00
+Porter2018	10.1038/s41598-018-22505-4	VERIFIED	Porter	2018	Automated high throughput animal CO1 metabarcode classification	Scientific Reports	1.00
+Rognes2016	10.7717/peerj.2584	VERIFIED	Rognes	2016	VSEARCH: a versatile open source tool for metagenomics	PeerJ	1.00
+Sahu2025	10.1007/s11356-025-36202-z	VERIFIED	Sahu	2025	Environmental DNA (eDNA): an eco-friendly approach for conservation of Indian freshwater diversity—a review	Environmental Science and Pollution Research	1.00
+Shen2016	10.1371/journal.pone.0163962	VERIFIED	Shen	2016	SeqKit: A Cross-Platform and Ultrafast Toolkit for FASTA/Q File Manipulation	PLOS ONE	1.00
+Sildever2021	10.3897/mbmg.5.72371	VERIFIED	Sildever	2021	Plankton biodiversity and species co-occurrence based on environmental DNA – a multiple marker study	Metabarcoding and Metagenomics	1.00
+Sladecek1983	10.1007/bf00027429	VERIFIED	Sládeček	1983	Rotifers as indicators of water quality	Hydrobiologia	1.00
+Stefanni2018	10.1038/s41598-018-30157-7	VERIFIED	Stefanni	2018	Multi-marker metabarcoding approach to study mesozooplankton at basin scale	Scientific Reports	1.00
+Zhang2018	10.1111/eva.12694	VERIFIED	Zhang	2018	Metabarcoding using multiplexed markers increases species detection in complex zooplankton communities	Evolutionary Applications	1.00
+Zhao2021	10.7717/peerj.11057	VERIFIED	Zhao	2021	DNA metabarcoding of zooplankton communities: species diversity and seasonal variation revealed by 18S rRNA and COI	PeerJ	1.00
+Deepor_zooplankton2011	10.11609/jott.o2411.1077-86	NOT FOUND — best Crossref match is a different work: similarity 0.68	Sharma	2010	Rotifer communities of Deepor Beel, Assam, India: richness, abundance and ecology	Journal of Threatened Taxa	0.68
+Deepor_phytoplankton2015	10.18535/ijetst/v4i9.36	NOT FOUND — best Crossref match is a different work: similarity 0.33		2017	Biochemical analysis of a few selected cyanobacterial species isolated from Deepor beel Ramsar site	International Journal of Emerging Trends in Science and Technology	0.33
+Deepor_algae2021	10.20324/nelumbo/v62/2020/153155	FOUND (no DOI given; year 2020): similarity 1.00	Baruah	2020	Algal Diversity in Deepor Beel of Assam: A Ramsar Site of North East India	Nelumbo	1.00
+Sharma2010	10.11609/jott.o2411.1077-86	VERIFIED	Sharma	2010	Rotifer communities of Deepor Beel, Assam, India: richness, abundance and ecology	Journal of Threatened Taxa	1.00

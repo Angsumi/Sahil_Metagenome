@@ -24,6 +24,10 @@ Analyses used vegan v2.7.5 (Oksanen et al.). Alpha diversity was computed after 
 
 18S ASVs were grouped into ecological roles from their PR2 division and class (green algae, desmids, diatoms, other algae, dinoflagellates, free-living protozoa, parasitic protists, fungi, oomycetes, animals). COI ASVs were grouped by animal group using the reference-set phylum or, for the BLAST-searched ASVs, the NCBI phylum of hits ≥ 80 % identity. For the rotifer trophic quotient QB/T (Sládeček 1983), COI ASVs were clustered into species-level MOTUs at 97 % identity with VSEARCH (`--cluster_size`), and Brachionus and Trichocerca MOTUs counted per lake; genus labels from BLAST hits of 80–90 % identity were treated as provisional.
 
+## Comparison with microscopy surveys
+
+DNA detections for Deepor Beel were compared with two published microscopy surveys of the same lake: rotifers (Sharma & Sharma 2010; the important families, genera and species listed in their Table 3) and algae (Baruah et al. 2020; genera from their species accounts). A taxon counted as detected by DNA if named by the reference set ("named") or, for rotifers, if the genus of the best GenBank DNA hit (≥ 80 % identity) or protein hit (≥ 89 % amino-acid identity, rotifer consensus) matched ("provisional"). The surveys differ in year, season and method, so only presence was compared.
+
 ## Data availability
 
 Raw reads: NCBI SRA **[TO ADD: BioProject accession]**. ASV sequences, tables, taxonomy and all scripts: https://github.com/Angsumi/Sahil_Metagenome (archive with a DOI before submission).
@@ -42,8 +46,14 @@ Raw reads: NCBI SRA **[TO ADD: BioProject accession]**. ASV sequences, tables, t
 
 **Figure 5.** Unknown COI ASVs: identity to the closest known sequence at DNA level (GenBank, BLASTn) and protein level (translated CO1 Reference Set, DIAMOND), labelled with the consensus phylum/class of the closest proteins.
 
+**Figure 7.** Taxa recorded by microscopy in Deepor Beel (Sharma & Sharma 2010; Baruah et al. 2020) and whether the DNA data also detected them.
+
 **Figure 6.** Rotifer genera represented by species-level MOTUs (COI, 97 % clusters) in each lake, with the Brachionus:Trichocerca quotient (QB/T).
 
-# References to verify before citing
+# References
 
-Callahan et al. 2016 (DADA2) · Comeau et al. 2011 (E572F/E1009R) · Edgar 2016 (SINTAX) · Geller et al. 2013 (jgHCO2198) · Guillou et al. 2013 (PR2) · Leray et al. 2013 (mlCOIintF) · Oksanen et al. (vegan) · Porter & Hajibabaei 2018 (CO1 classifier) · Rognes et al. 2016 (VSEARCH) · Buchfink et al. 2021 (DIAMOND) · Shen et al. 2016 (SeqKit) · Sládeček 1983 (QB/T) · Martin 2011 (Cutadapt) · Ewels et al. 2016 (MultiQC).
+All references were checked against Crossref; the verified, formatted list is in `results/14_references/references_formatted.md` and the check itself in `results/14_references/references_verified.tsv`.
+
+# References cited in these Methods
+
+Callahan et al. 2016 (DADA2) · Comeau et al. 2011 (E572F/E1009R) · Edgar 2016 (SINTAX) · Geller et al. 2013 (jgHCO2198) · Guillou et al. 2013 (PR2) · Leray et al. 2013 (mlCOIintF) · Oksanen et al. (vegan) · Porter & Hajibabaei 2018 (CO1 classifier) · Rognes et al. 2016 (VSEARCH) · Buchfink et al. 2021 (DIAMOND) · Shen et al. 2016 (SeqKit) · Sládeček 1983 (QB/T) · Martin 2011 (Cutadapt) · Ewels et al. 2016 (MultiQC) · Sharma & Sharma 2010 (Deepor rotifers) · Baruah et al. 2020 (Deepor algae).
