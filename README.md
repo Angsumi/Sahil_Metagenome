@@ -36,10 +36,11 @@ Sahil_Metagenome/
 │   ├── 14_verify_references.py # checks every reference against Crossref
 │   ├── 15_microscopy_comparison.R # DNA vs published microscopy surveys of Deepor Beel
 │   ├── literature_deepor.tsv # taxa listed by those surveys
+│   ├── 16_manuscript_docx.js # Word manuscript formatted for Environmental Monitoring and Assessment
 │   ├── 99_build_site.py      # builds docs/index.html
 │   └── run_all.sh            # runs everything
 ├── results/                  # Tables and ASV FASTA files from each step
-│   ├── 12_manuscript/        # figures (300 dpi), tables, Methods draft
+│   ├── 12_manuscript/        # Manuscript_EMAS.docx, figures (TIFF 600 dpi), tables
 │   └── 13_sra/               # SRA submission sheets
 ├── docs/                     # GitHub Pages site
 └── environment.yml           # conda/micromamba environment
@@ -62,5 +63,5 @@ Intermediate FASTQs and reference databases are written to `work/` (git-ignored)
 - [x] Protein-level identification of unknowns, rotifer trophic index (QB/T)
 - [x] Manuscript package (`results/12_manuscript/`) and SRA sheets (`results/13_sra/`)
 - [x] References verified against Crossref (`results/14_references/`); comparison with published microscopy (`results/15_microscopy/`)
-- [ ] Authors: fill [TO ADD] items in Methods and TO_FILL fields in SRA sheets; register BioProject and upload to SRA
-- [ ] Link to water-quality data measured at sampling (not available in this repository); choose target journal
+- [x] Manuscript formatted for Environmental Monitoring and Assessment (`results/12_manuscript/Manuscript_EMAS.docx`)
+- [ ] Authors: add sampling coordinates (manuscript + SRA sheet), author details; upload reads to SRA

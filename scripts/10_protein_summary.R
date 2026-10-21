@@ -55,11 +55,12 @@ pl[, lab := factor(lab, levels = rev(lab))]
 pl <- melt(pl, id.vars = "lab", measure.vars = c("dna_identity", "aa_identity"),
            variable.name = "level", value.name = "identity")
 pl[, level := factor(level, levels = c("dna_identity", "aa_identity"), labels = c("DNA (BLASTn, GenBank)", "Protein (DIAMOND)"))]
-p <- ggplot(pl, aes(identity, lab, colour = level)) +
-  geom_line(aes(group = lab), colour = "#c9c9c9") + geom_point(size = 2.6) +
+p <- ggplot(pl, aes(identity, lab, colour = level, shape = level)) +
+  geom_line(aes(group = lab), colour = "#c9c9c9") + geom_point(size = 2.6, stroke = 1) +
   scale_colour_manual(values = c("#c2662d", "#2b6c8f")) +
+  scale_shape_manual(values = c(1, 16)) +
   scale_x_continuous(labels = function(x) paste0(x, "%")) +
-  labs(x = "Identity to closest known sequence", y = NULL, colour = NULL,
+  labs(x = "Identity to closest known sequence", y = NULL, colour = NULL, shape = NULL,
        title = "Unknown COI sequences: DNA vs protein similarity",
        subtitle = "Label: consensus phylum / class of the closest proteins ('mixed' = no agreement)") +
   theme_minimal(base_size = 11) + theme(legend.position = "bottom", plot.title.position = "plot")

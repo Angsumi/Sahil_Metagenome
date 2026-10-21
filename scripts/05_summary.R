@@ -24,6 +24,8 @@ tl <- melt(track, id.vars = c("marker", "sample"),
            measure.vars = c("raw", "primers_found", "filtered", "merged", "nonchim", "curated"),
            variable.name = "step", value.name = "reads")
 tl[, site := site_of[sample]]
+tl[, step := factor(step, levels = c("raw", "primers_found", "filtered", "merged", "nonchim", "curated"),
+                    labels = c("Raw", "Primers found", "Filtered", "Merged", "Non-chimeric", "Curated"))]
 p1 <- ggplot(tl, aes(step, reads, group = site, colour = site)) +
   geom_line(linewidth = 1) + geom_point(size = 2) + facet_wrap(~marker) +
   scale_y_continuous(labels = scales::comma, limits = c(0, NA)) +

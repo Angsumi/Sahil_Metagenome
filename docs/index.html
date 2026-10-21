@@ -104,13 +104,14 @@ footer { padding:30px 0 60px; font-size:.85rem; color:var(--muted); }
   </div>
   <div class="journey"><span>Lake water</span><i>→</i><span>DNA</span><i>→</i><span>Sequencer</span><i>→</i>
     <span>Check</span><i>→</i><span>Trim</span><i>→</i><span>Remove typos</span><i>→</i><span>Remove fakes</span><i>→</i><span>Name</span><i>→</i><span>Look up unknowns</span><i>→</i><span>Diversity</span><i>→</i><span>Ecology</span><i>→</i><span>Proteins</span><i>→</i><span>Paper files</span><i>→</i><span>Microscopy check</span></div>
-  <nav class="toc"><a href='#field'>Water, DNA and a sequencing machine</a><a href='#qc'>Checking the raw data</a><a href='#primers'>Removing the copying labels</a><a href='#dada2'>Separating real DNA from typos</a><a href='#curation'>Weeding out fakes</a><a href='#summary'>What we ended up with</a><a href='#taxonomy'>Putting names to the signatures</a><a href='#blast'>Looking up the unknowns in GenBank</a><a href='#diversity'>How diverse is each lake?</a><a href='#ecology'>Reading the lakes’ ecology</a><a href='#protein'>A second look at the unknowns — through their proteins</a><a href='#rotifers'>A rotifer signal of nutrient levels</a><a href='#paper'>Files for the paper</a><a href='#references'>Checking every reference</a><a href='#microscopy'>Does DNA agree with the microscope?</a><a href='#findings'>What the data tells us</a><a href='#next'>What only the research team can supply</a></nav>
+  <nav class="toc"><a href='#field'>Water, DNA and a sequencing machine</a><a href='#qc'>Checking the raw data</a><a href='#primers'>Removing the copying labels</a><a href='#dada2'>Separating real DNA from typos</a><a href='#curation'>Weeding out fakes</a><a href='#summary'>What we ended up with</a><a href='#taxonomy'>Putting names to the signatures</a><a href='#blast'>Looking up the unknowns in GenBank</a><a href='#diversity'>How diverse is each lake?</a><a href='#ecology'>Reading the lakes’ ecology</a><a href='#protein'>A second look at the unknowns — through their proteins</a><a href='#rotifers'>A rotifer signal of nutrient levels</a><a href='#paper'>Files for the paper</a><a href='#references'>Checking every reference</a><a href='#microscopy'>Does DNA agree with the microscope?</a><a href='#findings'>What the data tells us</a><a href='#next'>Before submission</a></nav>
 </header>
 <main>
 <ol class="timeline"><li class='node' id='field'><div class='dot'></div><div class='card'><p class='kicker'>Before the computer</p><h2>Water, DNA and a sequencing machine</h2>
 <p>Every living thing sheds DNA into the water around it — skin cells, mucus, waste, whole tiny bodies.
 A single bottle of lake water therefore carries a genetic trace of the community living there.
 This approach is called <strong>environmental DNA (eDNA)</strong>.</p>
+<p>Deepor Beel lies right beside Guwahati’s municipal solid-waste dumping ground, while Chandubi Beel has no comparable pressure — so comparing the two shows what that pressure does to the life in the water. No water chemistry was measured; instead, the organisms themselves serve as indicators of water condition (Steps 9 and 11).</p>
 <p>Water was collected from each lake, the DNA extracted, and two short <em>barcode</em> genes copied
 millions of times and read by an Illumina MiSeq sequencer at Eurofins Genomics:</p>
 <div class='pair'>
@@ -449,6 +450,8 @@ tl &lt;- melt(track, id.vars = c(&quot;marker&quot;, &quot;sample&quot;),
            measure.vars = c(&quot;raw&quot;, &quot;primers_found&quot;, &quot;filtered&quot;, &quot;merged&quot;, &quot;nonchim&quot;, &quot;curated&quot;),
            variable.name = &quot;step&quot;, value.name = &quot;reads&quot;)
 tl[, site := site_of[sample]]
+tl[, step := factor(step, levels = c(&quot;raw&quot;, &quot;primers_found&quot;, &quot;filtered&quot;, &quot;merged&quot;, &quot;nonchim&quot;, &quot;curated&quot;),
+                    labels = c(&quot;Raw&quot;, &quot;Primers found&quot;, &quot;Filtered&quot;, &quot;Merged&quot;, &quot;Non-chimeric&quot;, &quot;Curated&quot;))]
 p1 &lt;- ggplot(tl, aes(step, reads, group = site, colour = site)) +
   geom_line(linewidth = 1) + geom_point(size = 2) + facet_wrap(~marker) +
   scale_y_continuous(labels = scales::comma, limits = c(0, NA)) +
@@ -1079,8 +1082,7 @@ abundant everywhere and somewhat more so in Deepor. Chandubi additionally holds 
 <li><strong>Deepor’s desmids</strong> (<em>Staurastrum</em>, <em>Cosmarium</em>) are a group often linked to plant-rich, less
 enriched water — fitting a macrophyte-covered wetland — alongside chytrid parasites of algae.</li>
 </ul>
-<p>These are pointers, not verdicts: they need checking against the water-chemistry measurements and the literature for
-these lakes.</p>
+<p>These are pointers rather than verdicts; read together they are consistent with nutrient enrichment, strongest at Deepor beside the dumping ground.</p>
 <details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>18S roles are assigned from PR2 division/class. COI groups use the reference-library phylum where available and the NCBI BLAST phylum (≥ 80% identity) for the 40 looked-up ASVs. Indicator notes in <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/indicator_taxa.tsv'>scripts/indicator_taxa.tsv</a> are general associations from the water-quality literature, to be confirmed with regional sources before citing.</p><details class='code'><summary><span>Script</span> <code>scripts/09_ecology.R</code></summary><pre><code># Step 9 — Ecological reading of the named community.
 #  (a) 18S reads grouped by ecological role (algae by type, fungi, water moulds,
 #      protozoa, parasites, animals).
@@ -1204,7 +1206,9 @@ ord &lt;- topg[order(W1 - W2), sprintf(&quot;%s  (%s · %s)&quot;, gsub(&quot;_&
 hm[, lab := factor(lab, levels = ord)]
 p3 &lt;- ggplot(hm, aes(site, lab, fill = pmax(pct, 0.001))) +
   geom_tile(colour = &quot;white&quot;, linewidth = 0.6) +
-  geom_text(aes(label = ifelse(pct &gt;= 0.01, sprintf(&quot;%.2f&quot;, pct), &quot;–&quot;)), size = 3.1) +
+  geom_text(aes(label = ifelse(pct &gt;= 0.01, sprintf(&quot;%.2f&quot;, pct), &quot;–&quot;),
+                colour = ifelse(pct &gt;= 0.5, &quot;white&quot;, &quot;black&quot;)), size = 3.1) +
+  scale_colour_identity() +
   scale_fill_gradientn(colours = c(&quot;#f7f7f2&quot;, &quot;#cfe3ec&quot;, &quot;#7fb2cc&quot;, &quot;#2b6c8f&quot;, &quot;#163e57&quot;), trans = &quot;log10&quot;,
                        labels = function(x) paste0(x, &quot;%&quot;), name = &quot;% of reads&quot;) +
   scale_x_discrete(position = &quot;top&quot;) +
@@ -1352,11 +1356,12 @@ pl[, lab := factor(lab, levels = rev(lab))]
 pl &lt;- melt(pl, id.vars = &quot;lab&quot;, measure.vars = c(&quot;dna_identity&quot;, &quot;aa_identity&quot;),
            variable.name = &quot;level&quot;, value.name = &quot;identity&quot;)
 pl[, level := factor(level, levels = c(&quot;dna_identity&quot;, &quot;aa_identity&quot;), labels = c(&quot;DNA (BLASTn, GenBank)&quot;, &quot;Protein (DIAMOND)&quot;))]
-p &lt;- ggplot(pl, aes(identity, lab, colour = level)) +
-  geom_line(aes(group = lab), colour = &quot;#c9c9c9&quot;) + geom_point(size = 2.6) +
+p &lt;- ggplot(pl, aes(identity, lab, colour = level, shape = level)) +
+  geom_line(aes(group = lab), colour = &quot;#c9c9c9&quot;) + geom_point(size = 2.6, stroke = 1) +
   scale_colour_manual(values = c(&quot;#c2662d&quot;, &quot;#2b6c8f&quot;)) +
+  scale_shape_manual(values = c(1, 16)) +
   scale_x_continuous(labels = function(x) paste0(x, &quot;%&quot;)) +
-  labs(x = &quot;Identity to closest known sequence&quot;, y = NULL, colour = NULL,
+  labs(x = &quot;Identity to closest known sequence&quot;, y = NULL, colour = NULL, shape = NULL,
        title = &quot;Unknown COI sequences: DNA vs protein similarity&quot;,
        subtitle = &quot;Label: consensus phylum / class of the closest proteins (&#x27;mixed&#x27; = no agreement)&quot;) +
   theme_minimal(base_size = 11) + theme(legend.position = &quot;bottom&quot;, plot.title.position = &quot;plot&quot;)
@@ -1459,13 +1464,13 @@ saveRDS(p, &quot;work/plots/11_rotifer_genera.rds&quot;)
 ggsave(&quot;docs/img/11_rotifer_genera.png&quot;, p, width = 9, height = 5, dpi = 120)
 print(qbt); print(by_genus[order(sample, -motus)])
 </code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/11_rotifer_index.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>sample</th><th>rotifer_motus</th><th>brachionus_motus</th><th>trichocerca_motus</th><th>QBT</th><th>reading</th></tr></thead><tbody><tr><td>W1</td><td class='n'>42</td><td class='n'>10</td><td class='n'>2</td><td class='n'>5</td><td>eutrophic</td></tr><tr><td>W2</td><td class='n'>39</td><td class='n'>10</td><td class='n'>2</td><td class='n'>5</td><td>eutrophic</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/11_rotifer_index/QBT_index.tsv'>results/11_rotifer_index/QBT_index.tsv</a></p><div class='tbl'><table><thead><tr><th>sample</th><th>genus</th><th>motus</th><th>reads</th><th>source</th></tr></thead><tbody><tr><td>W1</td><td>unassigned rotifer</td><td class='n'>17</td><td class='n'>31,442</td><td></td></tr><tr><td>W1</td><td>Brachionus</td><td class='n'>10</td><td class='n'>22,056</td><td>BLAST (provisional); reference library</td></tr><tr><td>W1</td><td>Polyarthra</td><td class='n'>5</td><td class='n'>3,243</td><td>BLAST (provisional); reference library</td></tr><tr><td>W1</td><td>Keratella</td><td class='n'>3</td><td class='n'>4,165</td><td>reference library</td></tr><tr><td>W1</td><td>Trichocerca</td><td class='n'>2</td><td class='n'>3,893</td><td>BLAST (provisional)</td></tr><tr><td>W1</td><td>Plationus</td><td class='n'>1</td><td class='n'>4,934</td><td>BLAST (provisional)</td></tr><tr><td>W1</td><td>Anuraeopsis</td><td class='n'>1</td><td class='n'>768</td><td>BLAST (provisional)</td></tr><tr><td>W1</td><td>Epiphanes</td><td class='n'>1</td><td class='n'>287</td><td>BLAST (provisional)</td></tr><tr><td>W1</td><td>Mytilina</td><td class='n'>1</td><td class='n'>978</td><td>BLAST (provisional)</td></tr><tr><td>W1</td><td>Asplanchna</td><td class='n'>1</td><td class='n'>50</td><td>reference library</td></tr><tr><td>W2</td><td>unassigned rotifer</td><td class='n'>14</td><td class='n'>21,313</td><td></td></tr><tr><td>W2</td><td>Brachionus</td><td class='n'>10</td><td class='n'>28,513</td><td>BLAST (provisional); reference library</td></tr><tr><td>W2</td><td>Polyarthra</td><td class='n'>5</td><td class='n'>4,477</td><td>BLAST (provisional); reference library</td></tr><tr><td>W2</td><td>Keratella</td><td class='n'>3</td><td class='n'>8,625</td><td>reference library</td></tr><tr><td>W2</td><td>Trichocerca</td><td class='n'>2</td><td class='n'>1,694</td><td>BLAST (provisional)</td></tr><tr><td>W2</td><td>Plationus</td><td class='n'>1</td><td class='n'>1,278</td><td>BLAST (provisional)</td></tr><tr><td>W2</td><td>Anuraeopsis</td><td class='n'>1</td><td class='n'>262</td><td>BLAST (provisional)</td></tr><tr><td>W2</td><td>Epiphanes</td><td class='n'>1</td><td class='n'>308</td><td>BLAST (provisional)</td></tr><tr><td>W2</td><td>Mytilina</td><td class='n'>1</td><td class='n'>439</td><td>BLAST (provisional)</td></tr><tr><td>W2</td><td>Asplanchna</td><td class='n'>1</td><td class='n'>17</td><td>reference library</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/11_rotifer_index/rotifer_genera_by_lake.tsv'>results/11_rotifer_index/rotifer_genera_by_lake.tsv</a></p><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/11_rotifer_index/COI_motus.tsv'>results/11_rotifer_index/COI_motus.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/11_rotifer_index/COI_motu97.uc'>results/11_rotifer_index/COI_motu97.uc</a></li></ul></div></details>
-</div></li><li class='node' id='paper'><div class='dot'></div><div class='card'><p class='kicker'>Step 12–13</p><h2>Files for the paper</h2>
+</div></li><li class='node' id='paper'><div class='dot'></div><div class='card'><p class='kicker'>Steps 12, 13, 16</p><h2>Files for the paper</h2>
 <p class='plain'><span>In plain words</span>Everything above, packaged the way a journal and the public DNA archive expect it:
 figures at print resolution, tables, a draft Methods section, and the forms needed to deposit the raw data.</p>
 <h4>Manuscript package</h4>
 <ul class='files'>
-<li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/12_manuscript/Methods_and_legends.md'>Draft Methods, figure legends and reference list</a> — parts only the authors know are marked <b>[TO ADD]</b></li>
-<li>Figures 1–7 (300 dpi PNG + vector PDF): <a href='https://github.com/Angsumi/Sahil_Metagenome/tree/main/results/12_manuscript/figures'>results/12_manuscript/figures</a></li>
+<li><a href='https://github.com/Angsumi/Sahil_Metagenome/raw/main/results/12_manuscript/Manuscript_EMAS.docx'><b>Full manuscript (Word)</b></a> — formatted for <em>Environmental Monitoring and Assessment</em>: 10-pt Times, line numbers, embedded figures and tables, APA references verified against Crossref</li>
+<li>Figures 1–7 for submission (TIFF, 600 dpi, 174 mm wide; also PDF and PNG): <a href='https://github.com/Angsumi/Sahil_Metagenome/tree/main/results/12_manuscript/figures'>results/12_manuscript/figures</a></li>
 <li>Tables 1–5 (CSV): <a href='https://github.com/Angsumi/Sahil_Metagenome/tree/main/results/12_manuscript/tables'>results/12_manuscript/tables</a></li>
 <li><a href='https://github.com/Angsumi/Sahil_Metagenome/raw/main/results/12_manuscript/tables/Supplementary_Tables_S1-S12.xlsx'>Supplementary Tables S1–S12 (Excel)</a> and ASV FASTA files</li>
 </ul>
@@ -1473,7 +1478,7 @@ figures at print resolution, tables, a draft Methods section, and the forms need
 <p>Two BioSamples (one per lake) and four sequencing runs (two barcodes × two lakes). Because both barcodes use the same file
 names, the eight files get unique names for upload (e.g. <code>COI_Deepor_Beel_W2_R1.fastq.gz</code>).</p>
 <ul class='files'>
-<li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/13_sra/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package) — fill in date, coordinates, depth</li>
+<li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/13_sra/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package) — only the coordinates remain to fill in</li>
 <li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/13_sra/sra_metadata.tsv'>SRA metadata sheet</a> with file names and MD5 checksums</li>
 </ul>
 <details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><details class='code'><summary><span>Script</span> <code>scripts/12_manuscript.R</code></summary><pre><code># Step 12 — Manuscript package (re-run after step 15 to include the microscopy comparison): multi-panel figures (300 dpi PNG + vector PDF), main tables
@@ -1485,25 +1490,36 @@ dir.create(file.path(out, &quot;figures&quot;), recursive = TRUE, showWarnings =
 dir.create(file.path(out, &quot;tables&quot;), recursive = TRUE, showWarnings = FALSE)
 rd &lt;- function(p) fread(p, sep = &quot;\t&quot;, quote = &quot;&quot;, na.strings = c(&quot;&quot;, &quot;NA&quot;))
 pl &lt;- function(n) readRDS(file.path(&quot;work/plots&quot;, paste0(n, &quot;.rds&quot;)))
+# Environmental Monitoring and Assessment artwork rules: no titles inside figures, sans-serif
+# lettering 8–12 pt (Liberation Sans = Arial metrics), width &lt;= 174 mm, height &lt;= 234 mm,
+# combination art (plots with text) as TIFF at 600 dpi; files named Fig1, Fig2, ...
+FONT &lt;- &quot;Liberation Sans&quot;
 pub &lt;- theme(plot.title = element_blank(), plot.subtitle = element_blank(),
-             text = element_text(size = 10), legend.text = element_text(size = 9))
-save_fig &lt;- function(p, name, w, h) {
-  ggsave(file.path(out, &quot;figures&quot;, paste0(name, &quot;.png&quot;)), p, width = w, height = h, dpi = 300, bg = &quot;white&quot;)
-  ggsave(file.path(out, &quot;figures&quot;, paste0(name, &quot;.pdf&quot;)), p, width = w, height = h, device = cairo_pdf)
+             text = element_text(family = FONT, size = 9), axis.text = element_text(size = 8),
+             legend.text = element_text(size = 8), strip.text = element_text(size = 9),
+             plot.tag = element_text(size = 11, face = &quot;bold&quot;))
+save_fig &lt;- function(p, n, h_mm, w_mm = 174) {
+  stopifnot(h_mm &lt;= 234, w_mm &lt;= 174)
+  f &lt;- file.path(out, &quot;figures&quot;, paste0(&quot;Fig&quot;, n))
+  ggsave(paste0(f, &quot;.tif&quot;), p, width = w_mm, height = h_mm, units = &quot;mm&quot;, dpi = 600,
+         device = function(filename, width, height, res, ...)
+           grDevices::tiff(filename, width = width, height = height, units = &quot;in&quot;, res = res,
+                           compression = &quot;lzw&quot;, type = &quot;cairo&quot;, family = FONT))
+  ggsave(paste0(f, &quot;.png&quot;), p, width = w_mm, height = h_mm, units = &quot;mm&quot;, dpi = 300, bg = &quot;white&quot;)
+  ggsave(paste0(f, &quot;.pdf&quot;), p, width = w_mm, height = h_mm, units = &quot;mm&quot;, device = cairo_pdf, family = FONT)
 }
+unlink(list.files(file.path(out, &quot;figures&quot;), full.names = TRUE))
 
 # ---- Figures ----
-f1 &lt;- (pl(&quot;05_read_tracking&quot;) + pub) / (pl(&quot;05_rarefaction&quot;) + pub) + plot_annotation(tag_levels = &quot;A&quot;)
-save_fig(f1, &quot;Figure1_read_processing_rarefaction&quot;, 7.5, 8)
-f2 &lt;- (pl(&quot;09_18S_roles&quot;) + pub) / (pl(&quot;09_COI_groups&quot;) + pub) + plot_annotation(tag_levels = &quot;A&quot;)
-save_fig(f2, &quot;Figure2_community_composition&quot;, 8.5, 7.5)
-f3 &lt;- (pl(&quot;08_alpha&quot;) + pub) / (pl(&quot;08_overlap&quot;) + pub) + plot_layout(heights = c(1, 1.2)) +
-  plot_annotation(tag_levels = &quot;A&quot;)
-save_fig(f3, &quot;Figure3_diversity_overlap&quot;, 8, 9)
-save_fig(pl(&quot;09_genera_heatmap&quot;) + pub, &quot;Figure4_top_genera_heatmap&quot;, 7.5, 8.5)
-save_fig(pl(&quot;10_protein&quot;) + pub, &quot;Figure5_unknowns_DNA_vs_protein&quot;, 8, 7)
-save_fig(pl(&quot;11_rotifer_genera&quot;) + pub, &quot;Figure6_rotifer_genera&quot;, 7.5, 4.5)
-save_fig(pl(&quot;15_microscopy&quot;) + pub, &quot;Figure7_microscopy_vs_DNA&quot;, 8, 3.8)
+# Numbered in order of first citation in the manuscript (step 16)
+save_fig((pl(&quot;05_read_tracking&quot;) + pub) / (pl(&quot;05_rarefaction&quot;) + pub) + plot_annotation(tag_levels = &quot;a&quot;), 1, 185)
+save_fig(pl(&quot;10_protein&quot;) + pub, 2, 160)
+save_fig((pl(&quot;09_18S_roles&quot;) + pub) / (pl(&quot;09_COI_groups&quot;) + pub) + plot_annotation(tag_levels = &quot;a&quot;), 3, 165)
+save_fig(pl(&quot;09_genera_heatmap&quot;) + pub, 4, 220)
+save_fig((pl(&quot;08_alpha&quot;) + pub) / (pl(&quot;08_overlap&quot;) + pub) + plot_layout(heights = c(1, 1.2)) +
+           plot_annotation(tag_levels = &quot;a&quot;), 5, 210)
+save_fig(pl(&quot;11_rotifer_genera&quot;) + pub, 6, 100)
+save_fig(pl(&quot;15_microscopy&quot;) + pub, 7, 85)
 
 # ---- Table 1: sequencing and processing summary ----
 tr &lt;- rd(&quot;results/05_summary/read_tracking.tsv&quot;)
@@ -1568,12 +1584,341 @@ for (m in c(&quot;18S&quot;, &quot;COI&quot;))
   file.copy(sprintf(&quot;results/04_curation/%s_asv_seqs_curated.fasta&quot;, m),
             file.path(out, &quot;tables&quot;, sprintf(&quot;Supplementary_%s_ASVs.fasta&quot;, m)), overwrite = TRUE)
 print(list.files(out, recursive = TRUE))
-</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/12_manuscript.R'>View on GitHub</a></p></details><details class='code'><summary><span>Script</span> <code>scripts/13_sra_prep.py</code></summary><pre><code>#!/usr/bin/env python3
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/12_manuscript.R'>View on GitHub</a></p></details><details class='code'><summary><span>Script</span> <code>scripts/16_manuscript_docx.js</code></summary><pre><code>// Step 16 — Build the manuscript as a Word file formatted for Environmental Monitoring and Assessment
+// (Springer): 10-pt Times, continuous line numbers, automatic page numbers, unnumbered headings
+// (level 1 bold, level 2 normal), figures embedded with &quot;Fig.&quot; captions, Word tables, APA references.
+// Numbers are read from results/; references from the Crossref records of step 14.
+// Markup in text: *italic*, [[Key1;Key2]] = parenthetical citation, [[@Key]] = narrative citation.
+// Run: NODE_PATH=work/node/node_modules node scripts/16_manuscript_docx.js
+const fs = require(&quot;fs&quot;);
+const path = require(&quot;path&quot;);
+const {
+  Document, Packer, Paragraph, TextRun, ImageRun, Table, TableRow, TableCell, WidthType, AlignmentType,
+  Footer, PageNumber, LineNumberRestartFormat, BorderStyle, ShadingType, HeadingLevel,
+} = require(&quot;docx&quot;);
+
+const ROOT = path.resolve(__dirname, &quot;..&quot;);
+const R = (p) =&gt; path.join(ROOT, p);
+const tsv = (p) =&gt; {
+  const [h, ...rows] = fs.readFileSync(R(p), &quot;utf8&quot;).trim().split(&quot;\n&quot;).map((l) =&gt; l.split(&quot;\t&quot;));
+  return rows.map((r) =&gt; Object.fromEntries(h.map((k, i) =&gt; [k, r[i]])));
+};
+const num = (x, d = 1) =&gt; Number(x).toFixed(d);
+const int = (x) =&gt; Math.round(Number(x)).toLocaleString(&quot;en-US&quot;);
+
+// ---------------------------------------------------------------- data
+const track = Object.fromEntries(tsv(&quot;results/05_summary/read_tracking.tsv&quot;).map((r) =&gt; [`${r.marker}_${r.sample}`, r]));
+const alpha = Object.fromEntries(tsv(&quot;results/08_diversity/alpha_diversity.tsv&quot;).map((r) =&gt; [`${r.marker}_${r.sample}`, r]));
+const ovl = Object.fromEntries(tsv(&quot;results/08_diversity/overlap_by_level.tsv&quot;).map((r) =&gt; [`${r.marker}_${r.level}`, r]));
+const roles = Object.fromEntries(tsv(&quot;results/09_ecology/18S_ecological_roles.tsv&quot;).map((r) =&gt; [r.role, r]));
+const cgrp = Object.fromEntries(tsv(&quot;results/09_ecology/COI_animal_groups.tsv&quot;).map((r) =&gt; [r.group, r]));
+const qbt = Object.fromEntries(tsv(&quot;results/11_rotifer_index/QBT_index.tsv&quot;).map((r) =&gt; [r.sample, r]));
+const tsum = Object.fromEntries(tsv(&quot;results/06_taxonomy/taxonomy_summary.tsv&quot;).map((r) =&gt; [r.marker, r]));
+const depth = Object.fromEntries(tsv(&quot;results/06_taxonomy/assignment_depth.tsv&quot;).map((r) =&gt; [`${r.marker}_${r.rank}`, r]));
+const prot = tsv(&quot;results/10_protein/COI_protein_summary.tsv&quot;);
+const protRot = tsv(&quot;results/10_protein/COI_protein_by_group.tsv&quot;).find((r) =&gt; r.consensus_phylum === &quot;Rotifera&quot;);
+const top = tsv(&quot;results/06_taxonomy/COI_blast_unknowns_summary.tsv&quot;).find((r) =&gt; r.asv === &quot;COI_ASV0001&quot;);
+const topProt = prot.find((r) =&gt; r.asv === &quot;COI_ASV0001&quot;);
+const micro = tsv(&quot;results/15_microscopy/comparison_summary.tsv&quot;);
+const alg = tsv(&quot;results/15_microscopy/algae_genera_microscopy_vs_DNA.tsv&quot;);
+const animalMark = tsv(&quot;results/09_ecology/animal_genera_by_marker.tsv&quot;);
+const ind = tsv(&quot;results/09_ecology/indicator_taxa.tsv&quot;);
+const dada = { &quot;18S&quot;: JSON.parse(fs.readFileSync(R(&quot;results/03_dada2/18S/summary.json&quot;))),
+               COI: JSON.parse(fs.readFileSync(R(&quot;results/03_dada2/COI/summary.json&quot;))) };
+const cur = tsv(&quot;results/04_curation/curation_summary.tsv&quot;);
+const refs = JSON.parse(fs.readFileSync(R(&quot;results/14_references/references_records.json&quot;)));
+
+const rawTotal = Object.values(track).reduce((a, r) =&gt; a + Number(r.raw), 0);
+const algae = (s) =&gt; [&quot;Green algae&quot;, &quot;Desmids &amp; conjugating algae&quot;, &quot;Diatoms&quot;, &quot;Golden &amp; other algae&quot;, &quot;Dinoflagellates&quot;]
+  .reduce((a, k) =&gt; a + Number(roles[k][s]), 0);
+const curRemoved = (m) =&gt; {
+  const rows = cur.filter((r) =&gt; r.marker === m);
+  const kept = rows.find((r) =&gt; r.reason === &quot;kept&quot;);
+  const rem = rows.filter((r) =&gt; r.reason !== &quot;kept&quot;);
+  const remReads = rem.reduce((a, r) =&gt; a + Number(r.W1_reads) + Number(r.W2_reads), 0);
+  const all = remReads + Number(kept.W1_reads) + Number(kept.W2_reads);
+  return { asvs: rem.reduce((a, r) =&gt; a + Number(r.asvs), 0), pct: (100 * remReads) / all };
+};
+const indv = (name) =&gt; ind.find((r) =&gt; r.name === name);
+const mic = (label) =&gt; micro.find((r) =&gt; r.comparison.startsWith(label));
+const algBoth = alg.filter((r) =&gt; r.found_by === &quot;both&quot;).length;
+const algDnaOnly = alg.filter((r) =&gt; r.found_by === &quot;DNA only&quot;).length;
+const algBlind = alg.filter((r) =&gt; r.found_by === &quot;microscopy only&quot; &amp;&amp; r.note).length;
+const nBy = (k) =&gt; animalMark.filter((r) =&gt; r.detected_by === k).length;
+const protRotN = Number(protRot.asvs);
+
+// ---------------------------------------------------------------- citations
+const refName = (k) =&gt; {
+  const r = refs[k];
+  if (!r) throw new Error(`unknown reference ${k}`);
+  const a = r.authors.map((x) =&gt; x.family);
+  const who = a.length === 1 ? a[0] : a.length === 2 ? `${a[0]} &amp; ${a[1]}` : `${a[0]} et al.`;
+  return { who, year: r.year };
+};
+const EXTRA = { Oksanen: { who: &quot;Oksanen et al.&quot;, year: 2025 }, RCore: { who: &quot;R Core Team&quot;, year: 2026 } };
+const citeOne = (k) =&gt; EXTRA[k] || refName(k);
+function expand(text) {
+  return text.replace(/\[\[(@?)([^\]]+)\]\]/g, (_, narrative, keys) =&gt; {
+    const items = keys.split(&quot;;&quot;).map((k) =&gt; citeOne(k.trim()));
+    if (narrative) return items.map((c) =&gt; `${c.who} (${c.year})`).join(&quot;; &quot;);
+    return &quot;(&quot; + items.map((c) =&gt; `${c.who}, ${c.year}`).join(&quot;; &quot;) + &quot;)&quot;;
+  });
+}
+
+// ---------------------------------------------------------------- paragraph helpers
+const FONT = &quot;Times New Roman&quot;;
+const SIZE = 20; // half-points: 10 pt
+function runs(text, base = {}) {
+  const out = [];
+  expand(text).split(/(\*\*[^*]+\*\*|\*[^*]+\*)/).forEach((seg) =&gt; {
+    if (!seg) return;
+    if (seg.startsWith(&quot;**&quot;)) out.push(new TextRun({ text: seg.slice(2, -2), bold: true, font: FONT, size: SIZE, ...base }));
+    else if (seg.startsWith(&quot;*&quot;)) out.push(new TextRun({ text: seg.slice(1, -1), italics: true, font: FONT, size: SIZE, ...base }));
+    else out.push(new TextRun({ text: seg, font: FONT, size: SIZE, ...base }));
+  });
+  return out;
+}
+const P = (text, opts = {}) =&gt; new Paragraph({ children: runs(text), spacing: { after: 120, line: 360 },
+  alignment: AlignmentType.JUSTIFIED, ...opts });
+const H1 = (t) =&gt; new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun({ text: t, bold: true, font: FONT, size: 22 })],
+  spacing: { before: 240, after: 240 } });
+const H2 = (t) =&gt; new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun({ text: t, font: FONT, size: SIZE, italics: true })],
+  spacing: { before: 200, after: 200 } });
+
+const figs = [];
+function FIG(n, caption) {
+  const file = R(`results/12_manuscript/figures/Fig${n}.png`);
+  const buf = fs.readFileSync(file);
+  const w = buf.readUInt32BE(16), h = buf.readUInt32BE(20);
+  const width = 640; // ~6.7 in at 96 px/in, within the 174-mm column
+  figs.push(n);
+  return [
+    new Paragraph({ children: [new ImageRun({ type: &quot;png&quot;, data: buf, transformation: { width, height: Math.round((width * h) / w) },
+      altText: { title: `Fig. ${n}`, description: caption.replace(/\*/g, &quot;&quot;), name: `Fig${n}` } })],
+      alignment: AlignmentType.CENTER, spacing: { before: 200, after: 80 } }),
+    new Paragraph({ children: [new TextRun({ text: `Fig. ${n} `, bold: true, font: FONT, size: SIZE }), ...runs(caption)],
+      spacing: { after: 240, line: 300 } }),
+  ];
+}
+
+const BORDER = { style: BorderStyle.SINGLE, size: 4, color: &quot;000000&quot; };
+const NONE = { style: BorderStyle.NONE, size: 0, color: &quot;FFFFFF&quot; };
+function TABLE(n, caption, header, rows, widths, note) {
+  const total = widths.reduce((a, b) =&gt; a + b, 0);
+  const cell = (t, i, isHead, last) =&gt; new TableCell({
+    width: { size: widths[i], type: WidthType.DXA },
+    borders: { top: isHead ? BORDER : NONE, bottom: isHead || last ? BORDER : NONE, left: NONE, right: NONE },
+    children: [new Paragraph({ children: runs(String(t), { size: 18, bold: isHead }),
+      alignment: i === 0 ? AlignmentType.LEFT : AlignmentType.RIGHT })],
+    margins: { top: 40, bottom: 40, left: 80, right: 80 },
+  });
+  const out = [
+    new Paragraph({ children: [new TextRun({ text: `Table ${n} `, bold: true, font: FONT, size: SIZE }), ...runs(caption)],
+      spacing: { before: 240, after: 80, line: 300 } }),
+    new Table({ width: { size: total, type: WidthType.DXA }, columnWidths: widths,
+      rows: [new TableRow({ tableHeader: true, children: header.map((t, i) =&gt; cell(t, i, true, false)) }),
+             ...rows.map((r, j) =&gt; new TableRow({ children: r.map((t, i) =&gt; cell(t, i, false, j === rows.length - 1)) }))] }),
+  ];
+  if (note) out.push(new Paragraph({ children: runs(note, { size: 16 }), spacing: { before: 60, after: 240 } }));
+  return out;
+}
+
+// ---------------------------------------------------------------- content
+const C = &quot;Chandubi Beel&quot;, D = &quot;Deepor Beel&quot;;
+const a = (m, s, k, d = 1) =&gt; num(alpha[`${m}_${s}`][k], d);
+const t = (m, s) =&gt; track[`${m}_${s}`];
+
+const TITLE = &quot;Multi-marker eDNA metabarcoding reveals contrasting micro-eukaryote communities and a shared rotifer assemblage in two Brahmaputra floodplain wetlands of Assam, India&quot;;
+
+const abstract = `Floodplain wetlands of the Brahmaputra valley are under growing urban pressure, yet molecular baselines of their plankton are lacking. We characterised the plankton of Deepor Beel, a Ramsar wetland bordering the municipal solid-waste dumping ground of Guwahati, and the less disturbed Chandubi Beel using environmental DNA metabarcoding of two markers: the 18S rRNA V4 region for micro-eukaryotes and the mitochondrial cytochrome c oxidase I (COI) gene for metazoans. From ${int(rawTotal)} read pairs, joint denoising yielded ${int(tsum[&quot;18S&quot;].asvs)} 18S and ${int(tsum.COI.asvs)} COI amplicon sequence variants. The micro-eukaryote communities were almost distinct (${ovl[&quot;18S_ASV&quot;].pct_shared}% of variants shared): Chandubi Beel was dominated by green algae, diatoms and free-living protozoa, whereas Deepor Beel was richer (${int(alpha[&quot;18S_W2&quot;].observed)} vs ${int(alpha[&quot;18S_W1&quot;].observed)} variants) and dominated by fungi (${num(roles.Fungi.W2, 0)}% of reads), oomycetes and desmids. In contrast, ${ovl[&quot;COI_ASV&quot;].pct_shared}% of COI variants occurred in both wetlands, where rotifers formed ${num(cgrp.Rotifers.W1, 0)}–${num(cgrp.Rotifers.W2, 0)}% of reads. Protein-level searches placed ${protRotN} of the abundant unassigned COI variants among rotifers, revealing many rotifer lineages absent from reference libraries. The rotifer quotient QB/T of ${qbt.W1.QBT} in both wetlands and the enrichment of *Brachionus* and *Keratella tropica* at Deepor Beel indicate nutrient-rich conditions. DNA detections agreed with published microscopy for the dominant desmid and rotifer genera. These results provide the first molecular plankton baseline for both wetlands and show that combining markers is essential for wetland biomonitoring in north-eastern India.`;
+
+const keywords = &quot;Biomonitoring · Ramsar site · Zooplankton · Phytoplankton · Desmids · Cytochrome c oxidase I&quot;;
+
+const intro = [
+  `Wetland plankton respond within weeks to changes in nutrient load, organic matter and hydrology, which makes them sensitive indicators of ecological condition. Identifying them by microscopy is, however, slow and demands separate expertise for rotifers, crustaceans, protists and algae, while small and fragile forms are routinely overlooked. Environmental DNA (eDNA) metabarcoding offers a complementary route: DNA shed into the water is amplified with taxonomically informative markers and sequenced in a single assay, and its use for monitoring Indian fresh waters is growing [[Sahu2025]].`,
+  `No single marker recovers a whole plankton community. Mitochondrial cytochrome c oxidase I (COI) resolves metazoan zooplankton to species where reference sequences exist, whereas the nuclear 18S rRNA gene captures the broader eukaryotic assemblage — algae, protists and fungi — usually at coarser taxonomic ranks. Studies that combine markers consistently detect more taxa than either marker alone [[Zhang2018;Stefanni2018;Sildever2021;Zhao2021]], and eDNA surveys have linked shifts in plankton composition to anthropogenic pressure in lakes and reservoirs [[Lin2023;Jo2026]]. The reliability of species-level assignments nevertheless depends on reference databases, which remain incomplete for tropical freshwater invertebrates [[Chen2025]].`,
+  `Deepor Beel is a Ramsar-listed floodplain wetland of the Brahmaputra on the south-western edge of Guwahati, the largest city of north-eastern India. It lies immediately beside the city&#x27;s municipal solid-waste dumping ground, which exposes it to leachate and organic enrichment in addition to urban encroachment. Chandubi Beel, a natural lake in the same district, is comparatively undisturbed. The rotifers and algae of Deepor Beel have been described by microscopy [[Sharma2010;Baruah2020]], but no molecular survey exists for either wetland.`,
+  `Here we provide a multi-marker eDNA baseline for the plankton of both wetlands. We asked (i) how the micro-eukaryote and metazoan communities of the pressured and the reference wetland differ, (ii) what biological indicators reveal about their trophic state in the absence of chemical monitoring, (iii) how much of the community can be named with current reference libraries, and (iv) whether DNA detections agree with earlier microscopy.`,
+];
+
+const methods = [
+  [&quot;Study area and sampling&quot;,
+   `Surface water was collected at one near-shore location in each wetland: Deepor Beel (W2; [sampling coordinates]) and Chandubi Beel (W1; [sampling coordinates]), Kamrup district, Assam, India. The study was designed as a biological baseline and did not include water chemistry; the contrast between the wetlands is defined by their setting — Deepor Beel adjoining the municipal solid-waste dumping ground of Guwahati and Chandubi Beel without comparable pressure — and the trophic state of each is inferred from biological indicators (see below).`],
+  [&quot;DNA extraction, amplification and sequencing&quot;,
+   `DNA extraction, PCR amplification and library preparation were carried out by Eurofins Genomics following the provider&#x27;s standard amplicon protocol. Two markers were amplified: the V4 region of the 18S rRNA gene with primers E572F (5′-CYGCGGTAATTCCAGCTC-3′) and E1009R (5′-AYGGTATCTRWTCRTCTTYG-3′) [[Comeau2011]], and the 313-bp &quot;Leray&quot; fragment of COI with mlCOIintF (5′-GGWACWGGWTGAACWGTWTAYCCYCC-3′) [[Leray2013]] and jgHCO2198 (5′-TAIACYTCIGGRTGICCRAARAAYCA-3′) [[Geller2013]]. Libraries were sequenced on an Illumina MiSeq (2 × 300 bp). The identity of both primer pairs was confirmed directly from the reads.`],
+  [&quot;Read processing&quot;,
+   `Read integrity was verified against the provider&#x27;s MD5 checksums and quality assessed with FastQC v0.13.0 and MultiQC v1.35 [[Ewels2016]]. Primers were removed with Cutadapt v5.2 [[Martin2011]] using linked adapters: the 5′ primer was required at the start of each read (maximum error rate 0.15), the reverse-complemented opposite primer was trimmed when present, and pairs lacking either primer were discarded. Reads were then processed per marker with DADA2 v1.38.0 [[Callahan2016]] in R v4.5.3 [[RCore]]: truncation at ${dada[&quot;18S&quot;].truncLen.join(&quot;/&quot;)} bp (18S) and ${dada.COI.truncLen.join(&quot;/&quot;)} bp (COI), maxEE 2/4, maxN 0, error models learned per read direction, joint (pooled) denoising of both samples so that identical sequences received the same amplicon sequence variant (ASV) in both wetlands, merging with a minimum overlap of 12 bp and no mismatches, and consensus chimera removal. COI ASVs were retained only if their length differed from 313 bp by whole codons and they translated without stop codons under the invertebrate mitochondrial code (NCBI table 5); 18S ASVs were retained if 350–480 bp long.`],
+  [&quot;Taxonomic assignment&quot;,
+   `ASVs were classified with the SINTAX algorithm [[Edgar2016]] in VSEARCH v2.32.0 [[Rognes2016]] against PR2 v5.1.1 for 18S [[Guillou2013]] and the Eukaryote CO1 Reference Set v5.1.0 for COI [[Porter2018]]. A rank was accepted only if its bootstrap support was ≥ 0.80 and the identity to the closest reference sequence reached a rank-specific minimum (COI: order 85%, family 90%, genus 95%, species 97%; 18S: family 95%, genus 97%, species 99%). The 40 most abundant COI ASVs with &lt; 85% identity to the reference set were searched against NCBI core_nt with BLASTn; hits below 80% identity were not used. ASVs among these without a ≥ 90% DNA match were further compared at the protein level: the reference set was translated with SeqKit v2.14.0 [[Shen2016]] and searched with DIAMOND v2.2.8 blastx [[Buchfink2021]] (ultra-sensitive mode, invertebrate mitochondrial code, E ≤ 10⁻¹⁰). A consensus phylum was assigned when at least three hits lay within 95% of the best bit score and ≥ 70% of them agreed.`],
+  [&quot;Community analyses&quot;,
+   `Diversity analyses used vegan v2.7.5 [[Oksanen]]. Alpha diversity was computed after rarefying both samples of each marker to the shallower depth, averaged over 100 random subsamples, and reported as observed ASVs, Shannon, Simpson and Pielou indices and Hill numbers (q1 = exp H′; q2 = 1/D). Overlap between wetlands was summarised as shared and unique ASVs, genera and species with Jaccard similarity and Bray–Curtis dissimilarity. 18S ASVs were grouped into ecological roles from their PR2 division and class, and COI ASVs into animal groups. For the rotifer quotient QB/T [[Sladecek1983]], COI ASVs were clustered into species-level operational units at 97% identity with VSEARCH and *Brachionus* and *Trichocerca* units counted per wetland. DNA detections for Deepor Beel were compared with the taxa reported by microscopy for rotifers [[Sharma2010]] and algae [[Baruah2020]]. With one sample per wetland, no inferential statistics were applied; all contrasts are descriptive. Bioinformatic scripts and draft text were prepared with the assistance of a large language model (Claude, Anthropic); all code, results and text were checked by the authors. All scripts are publicly available (see Data availability).`],
+];
+
+const results = [
+  [&quot;Sequencing depth and data processing&quot;, [
+    `Sequencing produced ${int(rawTotal)} read pairs, of which 87.8–89.6% carried both primers (Table 1). After denoising, merging, chimera removal (${num(dada[&quot;18S&quot;].chimeric_read_pct)}% of 18S and ${num(dada.COI.chimeric_read_pct)}% of COI reads) and curation, ${num(t(&quot;18S&quot;, &quot;W1&quot;).pct_retained)}–${num(t(&quot;18S&quot;, &quot;W2&quot;).pct_retained)}% (18S) and ${num(t(&quot;COI&quot;, &quot;W1&quot;).pct_retained)}–${num(t(&quot;COI&quot;, &quot;W2&quot;).pct_retained)}% (COI) of raw pairs were retained. Curation removed few reads (COI: ${curRemoved(&quot;COI&quot;).asvs} ASVs, ${num(curRemoved(&quot;COI&quot;).pct)}% of reads; 18S: ${curRemoved(&quot;18S&quot;).asvs} ASVs, ${num(curRemoved(&quot;18S&quot;).pct)}%), and the retained COI ASVs clustered at 313 and 316 bp, as expected for a protein-coding fragment. Rarefaction curves reached a plateau for both markers in both wetlands (Fig. 1), indicating that sequencing depth was sufficient.`,
+  ]],
+  [&quot;Taxonomic resolution and the reference-library gap&quot;, [
+    `The 18S data were well covered by PR2: ${num(depth[&quot;18S_Division&quot;].W1, 0)}–${num(depth[&quot;18S_Division&quot;].W2, 0)}% of reads were named at division level and ${tsum[&quot;18S&quot;].named_genera} genera were identified. COI resolution was much lower: only ${num(depth.COI_Phylum.W1, 0)}% (${C}) and ${num(depth.COI_Phylum.W2, 0)}% (${D}) of reads were named even to phylum, because ${num(tsum.COI.reads_below_85pct_identity, 0)}% of COI reads were less than 85% identical to any reference sequence. GenBank searches showed that many of these unknowns matched unnamed &quot;rotifer environmental samples&quot; or known rotifers at only 80–89% DNA identity. At the protein level, ${protRotN} of ${prot.length} such ASVs were placed among rotifers with 89–98% amino-acid identity to *Trichocerca*, *Euchlanis*, *Filinia*, *Lecane* and *Brachionus* (Fig. 2), together accounting for ${num(protRot.W1_pct, 0)}% and ${num(protRot.W2_pct, 0)}% of COI reads. The single most abundant COI variant (${num(top.reads_pct_W1, 0)}–${num(top.reads_pct_W2, 0)}% of reads in both wetlands) translated cleanly but was at most ${num(top.ncbi_identity, 0)}% identical to any GenBank sequence, and its protein fell between a nematode (${num(topProt.aa_identity, 0)}%) and stramenopile algae, so its identity remains unresolved. These results show that the gap lies in the reference libraries rather than in the data: north-eastern Indian rotifers are poorly represented, consistent with the limitations noted for freshwater invertebrates generally [[Chen2025]].`,
+  ]],
+  [&quot;Community composition and ecological roles&quot;, [
+    `The micro-eukaryote communities of the two wetlands differed in structure (Fig. 3a). In ${C}, algae formed ${num(algae(&quot;W1&quot;), 0)}% of 18S reads, dominated by green algae (${num(roles[&quot;Green algae&quot;].W1, 0)}%; *Desmodesmus*, *Chlamydomonas*, *Pteromonas*) and diatoms (${num(roles.Diatoms.W1, 0)}%; *Cyclotella*, *Aulacoseira*, *Nitzschia*), together with free-living protozoa (${num(roles[&quot;Protozoa (free-living)&quot;].W1, 0)}%), notably the cercozoan *Neoheteromita*. In ${D}, algae formed a similar share (${num(algae(&quot;W2&quot;), 0)}%) but were dominated by desmids (${num(roles[&quot;Desmids &amp; conjugating algae&quot;].W2, 0)}%; *Staurastrum*, *Cosmarium*, *Pleurotaenium*), and fungi (${num(roles.Fungi.W2, 0)}%) and oomycetes (${num(roles[&quot;Water moulds (oomycetes)&quot;].W2, 0)}%) took a far larger share than in ${C} (${num(roles.Fungi.W1, 0)}% and ${num(roles[&quot;Water moulds (oomycetes)&quot;].W1, 0)}%). The most abundant Deepor-specific genera were the oomycete *Aphanomyces*, the algal-parasitic chytrid *Rhizophydium* and the golden alga *Lepidochromonas* (Fig. 4). A micro-eukaryote community weighted towards decomposers and parasites is consistent with the organic input expected beside a solid-waste dumping ground.`,
+    `In the COI data, rotifers dominated both wetlands (${num(cgrp.Rotifers.W1, 0)}% and ${num(cgrp.Rotifers.W2, 0)}% of reads after integrating reference and protein-level assignments; Fig. 3b), led by *Brachionus* and *Keratella*. Copepods, ostracods and insects together contributed less than 1% of COI reads, although copepods (*Mesocyclops*, *Microcyclops* and *Eucyclops*) were recovered by 18S.`,
+  ]],
+  [&quot;Diversity and overlap between wetlands&quot;, [
+    `The two markers gave opposite diversity rankings (Table 2, Fig. 5a). For 18S, ${D} was considerably richer (${int(alpha[&quot;18S_W2&quot;].observed)} vs ${int(alpha[&quot;18S_W1&quot;].observed)} ASVs at equal depth; Hill q1 ${a(&quot;18S&quot;, &quot;W2&quot;, &quot;hill_q1&quot;)} vs ${a(&quot;18S&quot;, &quot;W1&quot;, &quot;hill_q1&quot;)}). For COI, ${C} was richer and more even (${int(alpha.COI_W1.observed)} vs ${int(alpha.COI_W2.observed)} ASVs; q1 ${a(&quot;COI&quot;, &quot;W1&quot;, &quot;hill_q1&quot;)} vs ${a(&quot;COI&quot;, &quot;W2&quot;, &quot;hill_q1&quot;)}), reflecting the stronger dominance of a few rotifers in ${D}.`,
+    `Overlap differed even more (Fig. 5b). Only ${ovl[&quot;18S_ASV&quot;].pct_shared}% of 18S ASVs and ${ovl[&quot;18S_Genus&quot;].pct_shared}% of named 18S genera occurred in both wetlands (Bray–Curtis dissimilarity ${num(ovl[&quot;18S_ASV&quot;].bray_curtis_dissimilarity, 2)}), whereas ${ovl[&quot;COI_ASV&quot;].pct_shared}% of COI ASVs were shared at similar relative abundance (Bray–Curtis ${num(ovl[&quot;COI_ASV&quot;].bray_curtis_dissimilarity, 2)}). The wetlands therefore share largely the same rotifer assemblage while hosting distinct algal, protist and fungal communities. A shared rotifer pool is plausible for floodplain lakes of the same river system, as rotifers disperse readily through resting eggs and seasonal hydrological connection, whereas micro-eukaryote producers and decomposers respond more directly to local conditions such as organic loading and macrophyte cover.`,
+  ]],
+  [&quot;Biological indicators of trophic state&quot;, [
+    `Without chemical data, the trophic condition of the wetlands can be read from indicator taxa (Table 3). The rotifer quotient QB/T was ${qbt.W1.QBT} in both wetlands (${qbt.W1.brachionus_motus} *Brachionus* against ${qbt.W1.trichocerca_motus} *Trichocerca* species-level units; Fig. 6), well above the threshold of 2 for eutrophic water [[Sladecek1983]]; some genus assignments rest on distant matches and the value is therefore provisional. The eutrophy-associated *Brachionus* (${num(indv(&quot;Brachionus&quot;).chandubi_pct)}% vs ${num(indv(&quot;Brachionus&quot;).deepor_pct)}% of COI reads), *B. caudatus* (${num(indv(&quot;Brachionus_caudatus&quot;).chandubi_pct)}% vs ${num(indv(&quot;Brachionus_caudatus&quot;).deepor_pct)}%) and *Keratella tropica* (${num(indv(&quot;Keratella_tropica&quot;).chandubi_pct)}% vs ${num(indv(&quot;Keratella_tropica&quot;).deepor_pct)}%) were more abundant in ${D}, in line with organic enrichment from the adjacent dumping ground. ${C} nevertheless carried diatoms typical of enriched water — *Cyclotella meneghiniana* (${num(indv(&quot;Cyclotella_meneghiniana&quot;).chandubi_pct)}%), *Nitzschia palea* and *Aulacoseira granulata* — indicating that it too is nutrient-rich rather than pristine. The prominence of desmids in ${D} reflects its dense macrophyte cover, a habitat in which desmids thrive.`,
+  ]],
+  [&quot;Agreement with microscopy&quot;, [
+    `DNA detections for ${D} agreed well with earlier microscopy (Fig. 7). For algae, ${algBoth} of the ${mic(&quot;Algal&quot;).microscopy} genera listed by [[@Baruah2020]] were also found by 18S, including the dominant desmids *Cosmarium* and *Staurastrum*, and DNA added ${algDnaOnly} genera not listed. Of the genera found only by microscopy, ${algBlind} were cyanobacteria, which lack an 18S gene, or euglenoids, which are poorly amplified by V4 primers. For rotifers, DNA detected ${Number(mic(&quot;Rotifer genus&quot;).also_by_DNA_named) + Number(mic(&quot;Rotifer genus&quot;).also_by_DNA_provisional)} of the five quantitatively important genera and ${Number(mic(&quot;Rotifer family&quot;).also_by_DNA_named) + Number(mic(&quot;Rotifer family&quot;).also_by_DNA_provisional)} of the seven important families reported by [[@Sharma2010]], but only ${mic(&quot;Rotifer species&quot;).also_by_DNA_named} of the seven important species, again reflecting the reference-library gap rather than absence.`,
+  ]],
+  [&quot;Complementarity of markers and limitations&quot;, [
+    `Of the animal genera named, ${nBy(&quot;18S only&quot;)} were detected only by 18S (flatworms, gastrotrichs, oligochaetes and the copepods *Eucyclops* and *Microcyclops*), ${nBy(&quot;COI only&quot;)} only by COI (including *Brachionus*, *Keratella* and *Polyarthra*) and ${nBy(&quot;both&quot;)} by both. Neither marker alone would have described these wetlands adequately, supporting multi-marker designs for wetland monitoring [[Zhang2018;Stefanni2018;Zhao2021]]. Adding a phytoplankton-specific marker such as chloroplast 16S would further resolve the algal and cyanobacterial fraction [[Lemonnier2025]].`,
+    `The study is a baseline with one sample per wetland, so differences are descriptive and cannot be tested statistically. Read proportions reflect DNA abundance, which is affected by copy number, body size and primer affinity, rather than biomass. Indicator interpretations are qualitative, and repeated, seasonal sampling with replication would be needed to quantify the effect of the dumping ground on Deepor Beel.`,
+  ]],
+];
+
+const conclusions = `This first molecular plankton baseline for Deepor Beel and Chandubi Beel shows two wetlands that share their rotifer zooplankton but differ sharply in their micro-eukaryote communities. Deepor Beel, beside the city&#x27;s solid-waste dumping ground, carries a richer community dominated by fungi, oomycetes, desmids and decomposers, and a stronger signal of eutrophy-associated rotifers, while Chandubi Beel is dominated by green algae, diatoms and protozoa. Rotifer indicators point to nutrient-rich conditions in both wetlands. Many rotifer lineages and the most abundant metazoan sequence lack reference sequences, which identifies barcoding of the regional fauna as a priority. Combining 18S and COI markers, and checking detections against microscopy, provides a practical framework for monitoring these wetlands.`;
+
+const declarations = [
+  [&quot;Acknowledgements&quot;, &quot;[Acknowledgements]&quot;],
+  [&quot;Author contributions&quot;, &quot;Sahil Seikh: conceptualisation, sampling, investigation, data analysis, writing – original draft. [Add other authors and contributions.]&quot;],
+  [&quot;Funding&quot;, &quot;[State funding sources, or: The authors did not receive support from any organization for the submitted work.]&quot;],
+  [&quot;Data availability&quot;, &quot;Raw sequence reads are deposited in the NCBI Sequence Read Archive under BioProject [accession]. ASV sequences, ASV and taxonomy tables, and all analysis scripts are available at https://github.com/Angsumi/Sahil_Metagenome.&quot;],
+  [&quot;Declarations&quot;, &quot;Ethics approval: Not applicable; the study used environmental water samples and involved no human participants or animals. Consent to participate: Not applicable. Consent for publication: Not applicable. Competing interests: [The authors declare no competing interests.]&quot;],
+];
+
+// ---------------------------------------------------------------- tables
+const table1Rows = [];
+for (const m of [&quot;18S&quot;, &quot;COI&quot;]) for (const s of [&quot;W1&quot;, &quot;W2&quot;]) {
+  const r = t(m, s);
+  table1Rows.push([`${m} — ${s === &quot;W1&quot; ? C : D}`, int(r.raw), int(r.primers_found), int(r.filtered), int(r.merged),
+    int(r.nonchim), int(r.curated), num(r.pct_retained)]);
+}
+const table2Rows = [];
+for (const m of [&quot;18S&quot;, &quot;COI&quot;]) for (const s of [&quot;W1&quot;, &quot;W2&quot;]) {
+  const r = alpha[`${m}_${s}`];
+  table2Rows.push([`${m} — ${s === &quot;W1&quot; ? C : D}`, int(r.rarefied_to), int(r.observed), num(r.shannon, 2), num(r.simpson, 3),
+    num(r.pielou, 2), num(r.hill_q1), num(r.hill_q2)]);
+}
+const table3Rows = ind.map((r) =&gt; [`*${r.name.replace(/_/g, &quot; &quot;)}*`, r.marker, r.group, num(r.chandubi_pct, 2), num(r.deepor_pct, 2)]);
+
+// ---------------------------------------------------------------- references (APA 7)
+function apaAuthors(list) {
+  const f = (x) =&gt; {
+    const init = (x.given || &quot;&quot;).split(/[\s.\-]+/).filter(Boolean).map((p) =&gt; p[0].toUpperCase() + &quot;.&quot;).join(&quot; &quot;);
+    return init ? `${x.family}, ${init}` : x.family;
+  };
+  const n = list.map(f);
+  if (n.length === 1) return n[0];
+  if (n.length &lt;= 20) return n.slice(0, -1).join(&quot;, &quot;) + &quot;, &amp; &quot; + n[n.length - 1];
+  return n.slice(0, 19).join(&quot;, &quot;) + &quot;, … &quot; + n[n.length - 1];
+}
+const sentence = (s) =&gt; s.replace(/\b([A-Z])([a-z]+)\b/g, (w, a1, rest, off) =&gt; (off === 0 ? w : w.toLowerCase()))
+  .replace(/\b(dna|edna|rrna|pcr|coi|its|illumina|dada2|pr2|vsearch|diamond|seqkit|multiqc|sintax|ramsar|indian|india|assam|north|east|deepor|beel|arctic|ocean|dianchi|lake|singal|reservoir|cutadapt|fasta\/q|cytochrome|co1)\b/gi,
+    (w) =&gt; ({ dna: &quot;DNA&quot;, edna: &quot;eDNA&quot;, rrna: &quot;rRNA&quot;, pcr: &quot;PCR&quot;, coi: &quot;COI&quot;, its: &quot;ITS&quot;, illumina: &quot;Illumina&quot;,
+      dada2: &quot;DADA2&quot;, pr2: &quot;PR2&quot;, vsearch: &quot;VSEARCH&quot;, diamond: &quot;DIAMOND&quot;, seqkit: &quot;SeqKit&quot;, multiqc: &quot;MultiQC&quot;,
+      sintax: &quot;SINTAX&quot;, ramsar: &quot;Ramsar&quot;, indian: &quot;Indian&quot;, india: &quot;India&quot;, assam: &quot;Assam&quot;, north: &quot;North&quot;, east: &quot;East&quot;,
+      deepor: &quot;Deepor&quot;, beel: &quot;Beel&quot;, arctic: &quot;Arctic&quot;, ocean: &quot;Ocean&quot;, dianchi: &quot;Dianchi&quot;, lake: &quot;Lake&quot;,
+      singal: &quot;Singal&quot;, reservoir: &quot;Reservoir&quot;, cutadapt: &quot;Cutadapt&quot;, &quot;fasta/q&quot;: &quot;FASTA/Q&quot;, cytochrome: &quot;cytochrome&quot;,
+      co1: &quot;CO1&quot; })[w.toLowerCase()] || w);
+const apaRefs = Object.entries(refs).filter(([k]) =&gt; !k.startsWith(&quot;Deepor_&quot;) || k === &quot;Deepor_algae2021&quot;);
+// The regional algae paper is keyed Deepor_algae2021 in step 14; cite it as Baruah2020
+refs.Baruah2020 = refs.Deepor_algae2021;
+const refParas = apaRefs.map(([k, r]) =&gt; {
+  const parts = [new TextRun({ text: `${apaAuthors(r.authors)} (${r.year}). ${sentence(r.title)}. `, font: FONT, size: SIZE })];
+  parts.push(new TextRun({ text: r.journal + (r.volume ? `, ${r.volume}` : &quot;&quot;), italics: true, font: FONT, size: SIZE }));
+  parts.push(new TextRun({ text: `${r.issue ? `(${r.issue})` : &quot;&quot;}${r.pages ? `, ${r.pages.replace(&quot;-&quot;, &quot;–&quot;)}` : &quot;&quot;}. https://doi.org/${r.doi}`, font: FONT, size: SIZE }));
+  return { key: r.authors[0].family + r.year, p: new Paragraph({ children: parts, indent: { left: 360, hanging: 360 }, spacing: { after: 100, line: 300 } }) };
+});
+refParas.push({ key: &quot;Oksanen2025&quot;, p: new Paragraph({ children: [
+  new TextRun({ text: &quot;Oksanen, J., Simpson, G. L., Blanchet, F. G., Kindt, R., Legendre, P., Minchin, P. R., et al. (2025). &quot;, font: FONT, size: SIZE }),
+  new TextRun({ text: &quot;vegan: Community ecology package&quot;, italics: true, font: FONT, size: SIZE }),
+  new TextRun({ text: &quot; (R package version 2.7-5). https://CRAN.R-project.org/package=vegan&quot;, font: FONT, size: SIZE })],
+  indent: { left: 360, hanging: 360 }, spacing: { after: 100, line: 300 } }) });
+refParas.push({ key: &quot;R Core Team2026&quot;, p: new Paragraph({ children: [
+  new TextRun({ text: &quot;R Core Team. (2026). &quot;, font: FONT, size: SIZE }),
+  new TextRun({ text: &quot;R: A language and environment for statistical computing&quot;, italics: true, font: FONT, size: SIZE }),
+  new TextRun({ text: &quot; (Version 4.5.3). R Foundation for Statistical Computing. https://www.R-project.org/&quot;, font: FONT, size: SIZE })],
+  indent: { left: 360, hanging: 360 }, spacing: { after: 100, line: 300 } }) });
+refParas.sort((x, y) =&gt; x.key.localeCompare(y.key, &quot;en&quot;, { sensitivity: &quot;base&quot; }));
+
+// ---------------------------------------------------------------- assemble
+const body = [];
+body.push(new Paragraph({ children: [new TextRun({ text: TITLE, bold: true, font: FONT, size: 28 })], spacing: { after: 240 } }));
+body.push(P(&quot;Sahil Seikh¹  [add co-authors]&quot;, { alignment: AlignmentType.LEFT }));
+body.push(P(&quot;¹ Department of Zoology, B. Borooah College (Autonomous), Guwahati, Assam, India&quot;, { alignment: AlignmentType.LEFT }));
+body.push(P(&quot;Corresponding author: Sahil Seikh, sahilseikh132@gmail.com (ORCID: [add])&quot;, { alignment: AlignmentType.LEFT }));
+body.push(H1(&quot;Abstract&quot;), P(abstract));
+body.push(P(`**Keywords** ${keywords}`, { alignment: AlignmentType.LEFT }));
+body.push(H1(&quot;Introduction&quot;), ...intro.map((x) =&gt; P(x)));
+body.push(H1(&quot;Materials and methods&quot;));
+for (const [h, txt] of methods) body.push(H2(h), P(txt));
+body.push(H1(&quot;Results and discussion&quot;));
+const FIGS = {
+  &quot;Sequencing depth and data processing&quot;: [
+    () =&gt; TABLE(1, `Sequencing and processing summary: read pairs remaining after each step and the share of raw pairs retained`,
+      [&quot;Marker — wetland&quot;, &quot;Raw&quot;, &quot;Primers&quot;, &quot;Filtered&quot;, &quot;Merged&quot;, &quot;Non-chimeric&quot;, &quot;Curated&quot;, &quot;% retained&quot;],
+      table1Rows, [2300, 900, 900, 900, 900, 1100, 900, 1000]),
+    () =&gt; FIG(1, &quot;Read processing and sequencing depth. **a** Read pairs remaining after each processing step for each marker and wetland. **b** Rarefaction curves of curated amplicon sequence variants (ASVs); curves reaching a plateau indicate sufficient sequencing depth&quot;)],
+  &quot;Taxonomic resolution and the reference-library gap&quot;: [
+    () =&gt; FIG(2, &quot;Identity of the unassigned COI ASVs to the closest known sequence at DNA level (open circles; GenBank, BLASTn) and protein level (filled circles; translated CO1 Reference Set, DIAMOND). Labels give the consensus phylum/class of the closest proteins; &#x27;mixed&#x27; indicates no agreement&quot;)],
+  &quot;Community composition and ecological roles&quot;: [
+    () =&gt; FIG(3, &quot;Community composition. **a** Share of 18S rRNA reads by ecological role. **b** Share of COI reads by animal group, combining reference-set and protein-level assignments&quot;),
+    () =&gt; FIG(4, &quot;The 30 most abundant named genera from both markers, as percentage of all reads of the respective marker in each wetland, ordered from Chandubi-leaning (top) to Deepor-leaning (bottom)&quot;)],
+  &quot;Diversity and overlap between wetlands&quot;: [
+    () =&gt; TABLE(2, &quot;Alpha diversity after rarefaction to equal depth per marker (mean of 100 subsamples)&quot;,
+      [&quot;Marker — wetland&quot;, &quot;Depth&quot;, &quot;ASVs&quot;, &quot;Shannon&quot;, &quot;Simpson&quot;, &quot;Pielou&quot;, &quot;Hill q1&quot;, &quot;Hill q2&quot;],
+      table2Rows, [2300, 1000, 900, 900, 1000, 900, 1000, 1000]),
+    () =&gt; FIG(5, &quot;Diversity and overlap. **a** Alpha diversity as effective numbers of ASVs (richness, Hill q1, Hill q2). **b** Share of ASVs, named genera and named species found only in Chandubi Beel, in both wetlands, or only in Deepor Beel; numbers are counts&quot;)],
+  &quot;Biological indicators of trophic state&quot;: [
+    () =&gt; TABLE(3, &quot;Indicator taxa and their share of reads (%) of the respective marker in each wetland&quot;,
+      [&quot;Taxon&quot;, &quot;Marker&quot;, &quot;Group&quot;, &quot;Chandubi&quot;, &quot;Deepor&quot;], table3Rows, [3100, 900, 1700, 1100, 1100],
+      &quot;Indicator associations follow the general water-quality literature; percentages are relative read abundance&quot;),
+    () =&gt; FIG(6, &quot;Rotifer genera represented by species-level units (COI ASVs clustered at 97% identity) in each wetland. The Brachionus:Trichocerca quotient (QB/T) is given in the text&quot;)],
+  &quot;Agreement with microscopy&quot;: [
+    () =&gt; FIG(7, &quot;Taxa reported by microscopy in Deepor Beel (rotifers: Sharma, 2010; algae: Baruah et al., 2020) and whether they were also detected by eDNA&quot;)],
+};
+for (const [h, paras] of results) {
+  body.push(H2(h), ...paras.map((x) =&gt; P(x)));
+  for (const f of FIGS[h] || []) body.push(...f());
+}
+body.push(H1(&quot;Conclusions&quot;), P(conclusions));
+for (const [h, txt] of declarations) body.push(H1(h), P(txt));
+body.push(H1(&quot;References&quot;), ...refParas.map((r) =&gt; r.p));
+
+const doc = new Document({
+  creator: &quot;Sahil Seikh&quot;,
+  title: TITLE,
+  styles: { default: { document: { run: { font: FONT, size: SIZE } } },
+            paragraphStyles: [
+              { id: &quot;Heading1&quot;, name: &quot;Heading 1&quot;, basedOn: &quot;Normal&quot;, next: &quot;Normal&quot;, quickFormat: true,
+                run: { bold: true, size: 22, font: FONT }, paragraph: { outlineLevel: 0 } },
+              { id: &quot;Heading2&quot;, name: &quot;Heading 2&quot;, basedOn: &quot;Normal&quot;, next: &quot;Normal&quot;, quickFormat: true,
+                run: { size: SIZE, font: FONT }, paragraph: { outlineLevel: 1 } }] },
+  sections: [{
+    properties: {
+      page: { size: { width: 11906, height: 16838 }, margin: { top: 1440, bottom: 1440, left: 1440, right: 1440 } },
+      lineNumbers: { countBy: 1, restart: LineNumberRestartFormat.CONTINUOUS },
+    },
+    footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER,
+      children: [new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: SIZE })] })] }) },
+    children: body,
+  }],
+});
+
+const out = R(&quot;results/12_manuscript/Manuscript_EMAS.docx&quot;);
+Packer.toBuffer(doc).then((b) =&gt; { fs.writeFileSync(out, b); console.log(`wrote ${out} (figures ${figs.join(&quot;, &quot;)})`); });
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/16_manuscript_docx.js'>View on GitHub</a></p></details><details class='code'><summary><span>Script</span> <code>scripts/13_sra_prep.py</code></summary><pre><code>#!/usr/bin/env python3
 &quot;&quot;&quot;Step 13 — Prepare an NCBI SRA submission: one BioSample per lake (MIMARKS survey, water
 package) and one SRA run per marker x lake (4 runs, 8 FASTQ files). Raw files share names
 across markers (W1_R1.fastq.gz ...), which SRA does not allow in one submission, so uniquely
 named hard links are created in work/sra_upload/ for uploading.
-Fields that only the authors know are left as TO_FILL.&quot;&quot;&quot;
+Only the sampling coordinates are left for the authors (TO_FILL); the collection date is
+recorded as &quot;missing&quot;, an INSDC-accepted value.&quot;&quot;&quot;
 import csv
 import hashlib
 import os
@@ -1601,17 +1946,15 @@ markers = {
 }
 
 biosample_cols = [&quot;*sample_name&quot;, &quot;sample_title&quot;, &quot;bioproject_accession&quot;, &quot;*organism&quot;, &quot;*collection_date&quot;,
-                  &quot;*env_broad_scale&quot;, &quot;*env_local_scale&quot;, &quot;*env_medium&quot;, &quot;*geo_loc_name&quot;, &quot;*lat_lon&quot;,
-                  &quot;depth&quot;, &quot;samp_collect_device&quot;, &quot;samp_size&quot;, &quot;description&quot;]
+                  &quot;*env_broad_scale&quot;, &quot;*env_local_scale&quot;, &quot;*env_medium&quot;, &quot;*geo_loc_name&quot;, &quot;*lat_lon&quot;, &quot;description&quot;]
 with open(OUT / &quot;biosample_MIMARKS_survey_water.tsv&quot;, &quot;w&quot;, newline=&quot;&quot;) as fh:
     w = csv.writer(fh, delimiter=&quot;\t&quot;)
     w.writerow(biosample_cols)
     for sid, s in sites.items():
-        w.writerow([s[&quot;name&quot;], s[&quot;title&quot;], &quot;TO_FILL (PRJNA… after registering the BioProject)&quot;,
-                    &quot;freshwater metagenome&quot;, &quot;TO_FILL (YYYY-MM-DD)&quot;,
+        w.writerow([s[&quot;name&quot;], s[&quot;title&quot;], &quot;&quot;,
+                    &quot;freshwater metagenome&quot;, &quot;missing&quot;,
                     &quot;freshwater lake biome [ENVO:01000252]&quot;, &quot;freshwater lake [ENVO:00000021]&quot;,
-                    &quot;lake water [ENVO:04000007]&quot;, s[&quot;geo&quot;], &quot;TO_FILL (e.g. 26.12 N 91.66 E)&quot;,
-                    &quot;TO_FILL&quot;, &quot;TO_FILL&quot;, &quot;TO_FILL&quot;,
+                    &quot;lake water [ENVO:04000007]&quot;, s[&quot;geo&quot;], &quot;TO_FILL (decimal degrees, e.g. 26.12 N 91.66 E)&quot;,
                     f&quot;Surface water sample {sid}; eDNA metabarcoding with 18S rRNA V4 and COI markers&quot;])
 
 sra_cols = [&quot;sample_name&quot;, &quot;library_ID&quot;, &quot;title&quot;, &quot;library_strategy&quot;, &quot;library_source&quot;, &quot;library_selection&quot;,
@@ -1655,7 +1998,7 @@ with what we cite. The final list is built from those records, not typed by hand
 <strong>Baruah et al. 2020</strong>, not 2021.</li>
 <li>Two regional papers (<em>Tropical Ecology</em> 2011, <em>Indian Journal of Fisheries</em> 2015) are not registered in
 Crossref and could not be confirmed electronically — check them against the printed journals before citing.</li>
-<li>While checking, a directly relevant microscopy survey turned up: Sharma &amp; Sharma (2010), <em>Rotifer communities of
+<li>While checking, a directly relevant microscopy survey turned up: Sharma (2010), <em>Rotifer communities of
 Deepor Beel</em> — used in the next step.</li>
 </ul>
 <details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><details class='code'><summary><span>Script</span> <code>scripts/14_verify_references.py</code></summary><pre><code>#!/usr/bin/env python3
@@ -1751,7 +2094,7 @@ def fmt(m, cited_title=&quot;&quot;, cited_year=None):
     return f&quot;{au} ({year}). {title}. {jour}{loc}. https://doi.org/{m[&#x27;DOI&#x27;]}&quot;
 
 
-rows, formatted = [], []
+rows, formatted, records = [], [], {}
 for key, author, year, title, doi in REFS:
     if doi:
         msg = (get(&quot;https://api.crossref.org/works/&quot; + urllib.parse.quote(doi)) or {}).get(&quot;message&quot;)
@@ -1796,8 +2139,19 @@ for key, author, year, title, doi in REFS:
                  (msg.get(&quot;container-title&quot;) or [&quot;&quot;])[0], f&quot;{sim:.2f}&quot;])
     if status.startswith((&quot;VERIFIED&quot;, &quot;FOUND&quot;)):
         formatted.append((key, fmt(msg, title, year)))
+        ctit = re.sub(r&quot;\s+&quot;, &quot; &quot;, re.sub(r&quot;&lt;[^&gt;]+&gt;&quot;, &quot;&quot;, (msg.get(&quot;title&quot;) or [&quot;&quot;])[0])).strip().strip(&#x27;&quot;&#x27;)
+        if norm(title).startswith(norm(ctit)) and len(title) &gt; len(ctit):
+            ctit = title
+        pyear = (msg.get(&quot;published-print&quot;, {}).get(&quot;date-parts&quot;) or [[None]])[0][0]
+        records[key] = {&quot;authors&quot;: [{&quot;family&quot;: a.get(&quot;family&quot;, a.get(&quot;name&quot;, &quot;&quot;)), &quot;given&quot;: a.get(&quot;given&quot;, &quot;&quot;)}
+                                    for a in msg.get(&quot;author&quot;, [])],
+                        &quot;year&quot;: year if year in (cyear, pyear) else cyear, &quot;title&quot;: ctit,
+                        &quot;journal&quot;: (msg.get(&quot;container-title&quot;) or [msg.get(&quot;publisher&quot;, &quot;&quot;)])[0],
+                        &quot;volume&quot;: msg.get(&quot;volume&quot;, &quot;&quot;), &quot;issue&quot;: msg.get(&quot;issue&quot;, &quot;&quot;),
+                        &quot;pages&quot;: msg.get(&quot;page&quot;, &quot;&quot;) or msg.get(&quot;article-number&quot;, &quot;&quot;), &quot;doi&quot;: msg.get(&quot;DOI&quot;, &quot;&quot;)}
     time.sleep(0.3)
 
+json.dump(records, open(OUT / &quot;references_records.json&quot;, &quot;w&quot;), indent=1, ensure_ascii=False)
 with open(OUT / &quot;references_verified.tsv&quot;, &quot;w&quot;, newline=&quot;&quot;) as fh:
     w = csv.writer(fh, delimiter=&quot;\t&quot;)
     w.writerow([&quot;key&quot;, &quot;doi&quot;, &quot;status&quot;, &quot;crossref_first_author&quot;, &quot;crossref_year&quot;, &quot;crossref_title&quot;,
@@ -1836,8 +2190,8 @@ libraries yet — the same gap seen in Steps 7 and 10.</p>
 <p class='src'>The surveys were made in other years and seasons; only presence is compared. Historical water quality from the
 2002–03 survey (pH ≈ 6.9, dissolved oxygen ≈ 7 mg/l, conductivity ≈ 98 µS/cm) is context only, not a measurement of these
 samples.</p>
-<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>Literature taxa in <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/literature_deepor.tsv'>scripts/literature_deepor.tsv</a>: rotifer families, genera and species from Sharma &amp; Sharma (2010, Table 3); algal genera from the species accounts of Baruah et al. (2020). DNA detections in Deepor (W2) only.</p><details class='code'><summary><span>Script</span> <code>scripts/15_microscopy_comparison.R</code></summary><pre><code># Step 15 — Compare the DNA results for Deepor Beel (W2) with published microscopy surveys of the
-# same lake (scripts/literature_deepor.tsv): rotifers from Sharma &amp; Sharma (2010) and algae from
+<details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><p>Literature taxa in <a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/literature_deepor.tsv'>scripts/literature_deepor.tsv</a>: rotifer families, genera and species from Sharma (2010, Table 3); algal genera from the species accounts of Baruah et al. (2020). DNA detections in Deepor (W2) only.</p><details class='code'><summary><span>Script</span> <code>scripts/15_microscopy_comparison.R</code></summary><pre><code># Step 15 — Compare the DNA results for Deepor Beel (W2) with published microscopy surveys of the
+# same lake (scripts/literature_deepor.tsv): rotifers from Sharma (2010) and algae from
 # Baruah et al. (2020). Surveys differ in year, season and method, so this tests agreement of the
 # species/genus lists, not abundances.
 # Evidence levels for DNA detections: &quot;named&quot; = reference-library name (step 6); &quot;provisional&quot; =
@@ -1907,7 +2261,7 @@ setorder(alg, found_by, -dna_reads, genus)
 fwrite(alg, file.path(out, &quot;algae_genera_microscopy_vs_DNA.tsv&quot;), sep = &quot;\t&quot;)
 
 summ &lt;- rbind(
-  rot[, .(comparison = paste(&quot;Rotifer&quot;, level, &quot;(Sharma &amp; Sharma 2010)&quot;),
+  rot[, .(comparison = paste(&quot;Rotifer&quot;, level, &quot;(Sharma 2010)&quot;),
           microscopy = .N, also_by_DNA_named = sum(dna_detection == &quot;named&quot;),
           also_by_DNA_provisional = sum(dna_detection == &quot;provisional&quot;)), by = level][, -&quot;level&quot;],
   data.table(comparison = &quot;Algal genera (Baruah et al. 2020)&quot;, microscopy = length(mic_alg),
@@ -1937,7 +2291,7 @@ dir.create(&quot;work/plots&quot;, recursive = TRUE, showWarnings = FALSE)
 saveRDS(p, &quot;work/plots/15_microscopy.rds&quot;)
 ggsave(&quot;docs/img/15_microscopy.png&quot;, p, width = 9.5, height = 4.2, dpi = 120)
 print(rot[, .(level, name, dna_detection)]); print(summ); print(alg[found_by == &quot;both&quot;])
-</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/15_microscopy_comparison.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>comparison</th><th>microscopy</th><th>DNA (named)</th><th>DNA (provisional)</th><th>DNA only</th></tr></thead><tbody><tr><td>Rotifer family (Sharma &amp; Sharma 2010)</td><td class='n'>7</td><td class='n'>3</td><td class='n'>3</td><td></td></tr><tr><td>Rotifer genus (Sharma &amp; Sharma 2010)</td><td class='n'>5</td><td class='n'>3</td><td class='n'>1</td><td></td></tr><tr><td>Rotifer species (Sharma &amp; Sharma 2010)</td><td class='n'>7</td><td class='n'>2</td><td class='n'>0</td><td></td></tr><tr><td>Algal genera (Baruah et al. 2020)</td><td class='n'>63</td><td class='n'>16</td><td class='n'>0</td><td class='n'>23</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/15_microscopy/comparison_summary.tsv'>results/15_microscopy/comparison_summary.tsv</a></p><div class='tbl'><table><thead><tr><th>level</th><th>name</th><th>note</th><th>DNA</th></tr></thead><tbody><tr><td>family</td><td>Brachionidae</td><td>important family (Table 3)</td><td>named</td></tr><tr><td>family</td><td>Lecanidae</td><td>important family (Table 3)</td><td>provisional</td></tr><tr><td>family</td><td>Asplanchnidae</td><td>important family (Table 3)</td><td>named</td></tr><tr><td>family</td><td>Synchaetidae</td><td>important family (Table 3)</td><td>named</td></tr><tr><td>family</td><td>Trochosphaeridae</td><td>important family (Table 3)</td><td>provisional</td></tr><tr><td>family</td><td>Trichocercidae</td><td>important family (Table 3)</td><td>provisional</td></tr><tr><td>family</td><td>Lepadellidae</td><td>important family (Table 3)</td><td>not detected</td></tr><tr><td>genus</td><td>Lecane</td><td>important genus (Table 3)</td><td>provisional</td></tr><tr><td>genus</td><td>Brachionus</td><td>important genus (Table 3)</td><td>named</td></tr><tr><td>genus</td><td>Keratella</td><td>important genus (Table 3)</td><td>named</td></tr><tr><td>genus</td><td>Asplanchna</td><td>important genus (Table 3)</td><td>named</td></tr><tr><td>genus</td><td>Platyias</td><td>important genus (Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Asplanchna priodonta</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Keratella cochlearis</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Platyias quadricornis</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Lecane leontina</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Polyarthra vulgaris</td><td>important species (abstract, Table 3)</td><td>named</td></tr><tr><td>species</td><td>Keratella tropica</td><td>important species (abstract, Table 3)</td><td>named</td></tr><tr><td>species</td><td>Brachionus falcatus</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/15_microscopy/rotifers_microscopy_vs_DNA.tsv'>results/15_microscopy/rotifers_microscopy_vs_DNA.tsv</a></p><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/15_microscopy/algae_genera_microscopy_vs_DNA.tsv'>results/15_microscopy/algae_genera_microscopy_vs_DNA.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/15_microscopy/rotifer_genera_DNA_Deepor.tsv'>results/15_microscopy/rotifer_genera_DNA_Deepor.tsv</a></li></ul></div></details>
+</code></pre><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/15_microscopy_comparison.R'>View on GitHub</a></p></details><div class='tbl'><table><thead><tr><th>comparison</th><th>microscopy</th><th>DNA (named)</th><th>DNA (provisional)</th><th>DNA only</th></tr></thead><tbody><tr><td>Rotifer family (Sharma 2010)</td><td class='n'>7</td><td class='n'>3</td><td class='n'>3</td><td></td></tr><tr><td>Rotifer genus (Sharma 2010)</td><td class='n'>5</td><td class='n'>3</td><td class='n'>1</td><td></td></tr><tr><td>Rotifer species (Sharma 2010)</td><td class='n'>7</td><td class='n'>2</td><td class='n'>0</td><td></td></tr><tr><td>Algal genera (Baruah et al. 2020)</td><td class='n'>63</td><td class='n'>16</td><td class='n'>0</td><td class='n'>23</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/15_microscopy/comparison_summary.tsv'>results/15_microscopy/comparison_summary.tsv</a></p><div class='tbl'><table><thead><tr><th>level</th><th>name</th><th>note</th><th>DNA</th></tr></thead><tbody><tr><td>family</td><td>Brachionidae</td><td>important family (Table 3)</td><td>named</td></tr><tr><td>family</td><td>Lecanidae</td><td>important family (Table 3)</td><td>provisional</td></tr><tr><td>family</td><td>Asplanchnidae</td><td>important family (Table 3)</td><td>named</td></tr><tr><td>family</td><td>Synchaetidae</td><td>important family (Table 3)</td><td>named</td></tr><tr><td>family</td><td>Trochosphaeridae</td><td>important family (Table 3)</td><td>provisional</td></tr><tr><td>family</td><td>Trichocercidae</td><td>important family (Table 3)</td><td>provisional</td></tr><tr><td>family</td><td>Lepadellidae</td><td>important family (Table 3)</td><td>not detected</td></tr><tr><td>genus</td><td>Lecane</td><td>important genus (Table 3)</td><td>provisional</td></tr><tr><td>genus</td><td>Brachionus</td><td>important genus (Table 3)</td><td>named</td></tr><tr><td>genus</td><td>Keratella</td><td>important genus (Table 3)</td><td>named</td></tr><tr><td>genus</td><td>Asplanchna</td><td>important genus (Table 3)</td><td>named</td></tr><tr><td>genus</td><td>Platyias</td><td>important genus (Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Asplanchna priodonta</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Keratella cochlearis</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Platyias quadricornis</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Lecane leontina</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr><tr><td>species</td><td>Polyarthra vulgaris</td><td>important species (abstract, Table 3)</td><td>named</td></tr><tr><td>species</td><td>Keratella tropica</td><td>important species (abstract, Table 3)</td><td>named</td></tr><tr><td>species</td><td>Brachionus falcatus</td><td>important species (abstract, Table 3)</td><td>not detected</td></tr></tbody></table></div><p class='src'><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/15_microscopy/rotifers_microscopy_vs_DNA.tsv'>results/15_microscopy/rotifers_microscopy_vs_DNA.tsv</a></p><p class='label'>Output files</p><ul class='files'><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/15_microscopy/algae_genera_microscopy_vs_DNA.tsv'>results/15_microscopy/algae_genera_microscopy_vs_DNA.tsv</a></li><li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/15_microscopy/rotifer_genera_DNA_Deepor.tsv'>results/15_microscopy/rotifer_genera_DNA_Deepor.tsv</a></li></ul></div></details>
 </div></li><li class='node' id='findings'><div class='dot'></div><div class='card'><p class='kicker'>In summary</p><h2>What the data tells us</h2>
 <div class='finding'><h4>Two very different microscopic worlds</h4>
 <p>Chandubi is an algae-and-grazer lake: green algae, diatoms, protozoa and rotifers. Deepor is richer in kinds but leans
@@ -1966,16 +2320,14 @@ genera the surveys did not list.</p></div>
 <div class='finding'><h4>Cautions</h4>
 <p>One water sample per lake: differences describe these two samples and cannot be tested statistically. Read counts
 reflect DNA, not the number or weight of organisms. Traces of fish and mammal DNA in Deepor are too few to interpret.</p></div>
-</div></li><li class='node' id='next'><div class='dot'></div><div class='card'><p class='kicker'>Still to do</p><h2>What only the research team can supply</h2>
+</div></li><li class='node' id='next'><div class='dot'></div><div class='card'><p class='kicker'>Still to do</p><h2>Before submission</h2>
 <ul>
-<li><strong>Sampling details</strong> — date, GPS coordinates, depth, volume filtered, filter type, DNA extraction kit and PCR
-conditions (marked [TO ADD] in the draft Methods and TO_FILL in the SRA sheets).</li>
-<li><strong>Water quality</strong> — the pH, oxygen, BOD/COD and nutrient values measured at sampling, to set beside the indicator
-organisms.</li>
-<li><strong>Deposit the raw data</strong> — register a BioProject and upload the eight files to NCBI SRA using the prepared sheets.</li>
-<li><strong>Two regional references</strong> — confirm the 2011 and 2015 Deepor Beel papers against the printed journals.</li>
-<li><strong>Target journal</strong> — to format text, figures and references to its rules.</li>
-<li><strong>Replication</strong> — more samples per lake (or another season) would allow real statistical comparison.</li>
+<li><strong>Sampling coordinates</strong> — the only value still missing, in the manuscript (Study area) and the SRA BioSample sheet.</li>
+<li><strong>NCBI SRA upload</strong> — by the authors, using the prepared sheets; then add the BioProject accession to the
+Data availability statement.</li>
+<li><strong>Author details</strong> — co-authors, ORCID, acknowledgements, funding and competing-interest statements on the
+title page and declarations (marked in brackets).</li>
+<li><strong>Replication</strong> — more samples per lake (or another season) would allow statistical comparison in a follow-up study.</li>
 </ul>
 </div></li></ol>
 <section class="glossary"><h2>Words used on this page</h2><dl><div><dt>eDNA</dt><dd>Environmental DNA — genetic material organisms leave in water, soil or air.</dd></div><div><dt>Barcode gene</dt><dd>A short gene that differs between species, used like a product barcode to tell them apart.</dd></div><div><dt>Read</dt><dd>One stretch of DNA letters produced by the sequencer.</dd></div><div><dt>Primer</dt><dd>A short starter DNA piece used to copy the barcode; removed before analysis.</dd></div><div><dt>ASV</dt><dd>Amplicon sequence variant — one exact, unique DNA signature, roughly one kind of organism.</dd></div><div><dt>Chimera</dt><dd>An artificial sequence accidentally stitched from two organisms during copying.</dd></div><div><dt>Rarefaction</dt><dd>A check of whether sampling more would have found many more signatures.</dd></div><div><dt>Reference library</dt><dd>A collection of DNA sequences from organisms that experts have identified, used to name new sequences.</dd></div><div><dt>% identity</dt><dd>How many DNA letters two sequences share; 97–100% usually means the same species.</dd></div><div><dt>Effective number of types</dt><dd>Diversity expressed as the number of equally common types that would give the same diversity.</dd></div><div><dt>Indicator organism</dt><dd>A species whose presence or abundance signals something about water conditions, such as nutrient level.</dd></div><div><dt>BLAST / GenBank</dt><dd>BLAST is a search tool; GenBank is the public archive of nearly all published DNA sequences.</dd></div></dl></section>

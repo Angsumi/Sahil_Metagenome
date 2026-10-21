@@ -1,0 +1,790 @@
+{
+ "Buchfink2021": {
+  "authors": [
+   {
+    "family": "Buchfink",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Reuter",
+    "given": "Klaus"
+   },
+   {
+    "family": "Drost",
+    "given": "Hajk-Georg"
+   }
+  ],
+  "year": 2021,
+  "title": "Sensitive protein alignments at tree-of-life scale using DIAMOND",
+  "journal": "Nature Methods",
+  "volume": "18",
+  "issue": "4",
+  "pages": "366-368",
+  "doi": "10.1038/s41592-021-01101-x"
+ },
+ "Callahan2016": {
+  "authors": [
+   {
+    "family": "Callahan",
+    "given": "Benjamin J"
+   },
+   {
+    "family": "McMurdie",
+    "given": "Paul J"
+   },
+   {
+    "family": "Rosen",
+    "given": "Michael J"
+   },
+   {
+    "family": "Han",
+    "given": "Andrew W"
+   },
+   {
+    "family": "Johnson",
+    "given": "Amy Jo A"
+   },
+   {
+    "family": "Holmes",
+    "given": "Susan P"
+   }
+  ],
+  "year": 2016,
+  "title": "DADA2: High-resolution sample inference from Illumina amplicon data",
+  "journal": "Nature Methods",
+  "volume": "13",
+  "issue": "7",
+  "pages": "581-583",
+  "doi": "10.1038/nmeth.3869"
+ },
+ "Chen2025": {
+  "authors": [
+   {
+    "family": "Chen",
+    "given": "Xiaoyu"
+   },
+   {
+    "family": "Yan",
+    "given": "Ziling"
+   },
+   {
+    "family": "Li",
+    "given": "Sheng"
+   },
+   {
+    "family": "Yao",
+    "given": "Meng"
+   }
+  ],
+  "year": 2025,
+  "title": "Advancing aquatic biodiversity assessments of invertebrates using eDNA metabarcoding: A systematic evaluation of primers for marine and freshwater communities",
+  "journal": "Methods in Ecology and Evolution",
+  "volume": "16",
+  "issue": "10",
+  "pages": "2408-2430",
+  "doi": "10.1111/2041-210x.70152"
+ },
+ "Comeau2011": {
+  "authors": [
+   {
+    "family": "Comeau",
+    "given": "André M."
+   },
+   {
+    "family": "Li",
+    "given": "William K. W."
+   },
+   {
+    "family": "Tremblay",
+    "given": "Jean-Éric"
+   },
+   {
+    "family": "Carmack",
+    "given": "Eddy C."
+   },
+   {
+    "family": "Lovejoy",
+    "given": "Connie"
+   }
+  ],
+  "year": 2011,
+  "title": "Arctic Ocean Microbial Community Structure before and after the 2007 Record Sea Ice Minimum",
+  "journal": "PLoS ONE",
+  "volume": "6",
+  "issue": "11",
+  "pages": "e27492",
+  "doi": "10.1371/journal.pone.0027492"
+ },
+ "Edgar2016": {
+  "authors": [
+   {
+    "family": "Edgar",
+    "given": "Robert C."
+   }
+  ],
+  "year": 2016,
+  "title": "SINTAX: a simple non-Bayesian taxonomy classifier for 16S and ITS sequences",
+  "journal": "openRxiv",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1101/074161"
+ },
+ "Ewels2016": {
+  "authors": [
+   {
+    "family": "Ewels",
+    "given": "Philip"
+   },
+   {
+    "family": "Magnusson",
+    "given": "Måns"
+   },
+   {
+    "family": "Lundin",
+    "given": "Sverker"
+   },
+   {
+    "family": "Käller",
+    "given": "Max"
+   }
+  ],
+  "year": 2016,
+  "title": "MultiQC: summarize analysis results for multiple tools and samples in a single report",
+  "journal": "Bioinformatics",
+  "volume": "32",
+  "issue": "19",
+  "pages": "3047-3048",
+  "doi": "10.1093/bioinformatics/btw354"
+ },
+ "Geller2013": {
+  "authors": [
+   {
+    "family": "Geller",
+    "given": "J."
+   },
+   {
+    "family": "Meyer",
+    "given": "C."
+   },
+   {
+    "family": "Parker",
+    "given": "M."
+   },
+   {
+    "family": "Hawk",
+    "given": "H."
+   }
+  ],
+  "year": 2013,
+  "title": "Redesign of PCR primers for mitochondrial cytochrome c oxidase subunit I for marine invertebrates and application in all‐taxa biotic surveys",
+  "journal": "Molecular Ecology Resources",
+  "volume": "13",
+  "issue": "5",
+  "pages": "851-861",
+  "doi": "10.1111/1755-0998.12138"
+ },
+ "Guillou2013": {
+  "authors": [
+   {
+    "family": "Guillou",
+    "given": "Laure"
+   },
+   {
+    "family": "Bachar",
+    "given": "Dipankar"
+   },
+   {
+    "family": "Audic",
+    "given": "Stéphane"
+   },
+   {
+    "family": "Bass",
+    "given": "David"
+   },
+   {
+    "family": "Berney",
+    "given": "Cédric"
+   },
+   {
+    "family": "Bittner",
+    "given": "Lucie"
+   },
+   {
+    "family": "Boutte",
+    "given": "Christophe"
+   },
+   {
+    "family": "Burgaud",
+    "given": "Gaétan"
+   },
+   {
+    "family": "de Vargas",
+    "given": "Colomban"
+   },
+   {
+    "family": "Decelle",
+    "given": "Johan"
+   },
+   {
+    "family": "del Campo",
+    "given": "Javier"
+   },
+   {
+    "family": "Dolan",
+    "given": "John R."
+   },
+   {
+    "family": "Dunthorn",
+    "given": "Micah"
+   },
+   {
+    "family": "Edvardsen",
+    "given": "Bente"
+   },
+   {
+    "family": "Holzmann",
+    "given": "Maria"
+   },
+   {
+    "family": "Kooistra",
+    "given": "Wiebe H.C.F."
+   },
+   {
+    "family": "Lara",
+    "given": "Enrique"
+   },
+   {
+    "family": "Le Bescot",
+    "given": "Noan"
+   },
+   {
+    "family": "Logares",
+    "given": "Ramiro"
+   },
+   {
+    "family": "Mahé",
+    "given": "Frédéric"
+   },
+   {
+    "family": "Massana",
+    "given": "Ramon"
+   },
+   {
+    "family": "Montresor",
+    "given": "Marina"
+   },
+   {
+    "family": "Morard",
+    "given": "Raphael"
+   },
+   {
+    "family": "Not",
+    "given": "Fabrice"
+   },
+   {
+    "family": "Pawlowski",
+    "given": "Jan"
+   },
+   {
+    "family": "Probert",
+    "given": "Ian"
+   },
+   {
+    "family": "Sauvadet",
+    "given": "Anne-Laure"
+   },
+   {
+    "family": "Siano",
+    "given": "Raffaele"
+   },
+   {
+    "family": "Stoeck",
+    "given": "Thorsten"
+   },
+   {
+    "family": "Vaulot",
+    "given": "Daniel"
+   },
+   {
+    "family": "Zimmermann",
+    "given": "Pascal"
+   },
+   {
+    "family": "Christen",
+    "given": "Richard"
+   }
+  ],
+  "year": 2012,
+  "title": "The Protist Ribosomal Reference database (PR2): a catalog of unicellular eukaryote Small Sub-Unit rRNA sequences with curated taxonomy",
+  "journal": "Nucleic Acids Research",
+  "volume": "41",
+  "issue": "D1",
+  "pages": "D597-D604",
+  "doi": "10.1093/nar/gks1160"
+ },
+ "Jo2026": {
+  "authors": [
+   {
+    "family": "Jo",
+    "given": "Ga Young"
+   },
+   {
+    "family": "Suman",
+    "given": "Thodhal Yoganandham"
+   },
+   {
+    "family": "Ji",
+    "given": "Chang Woo"
+   },
+   {
+    "family": "Hong",
+    "given": "Cheol"
+   },
+   {
+    "family": "Park",
+    "given": "Young-Seuk"
+   },
+   {
+    "family": "Kong",
+    "given": "Dong-Soo"
+   },
+   {
+    "family": "Kwak",
+    "given": "Ihn-Sil"
+   }
+  ],
+  "year": 2026,
+  "title": "Seasonal and Spatiotemporal Dynamics of Plankton Communities Using eDNA Metabarcoding in Singal Reservoir",
+  "journal": "Environmental Management",
+  "volume": "76",
+  "issue": "3",
+  "pages": "92",
+  "doi": "10.1007/s00267-025-02357-1"
+ },
+ "Lemonnier2025": {
+  "authors": [
+   {
+    "family": "Lemonnier",
+    "given": "Clarisse"
+   },
+   {
+    "family": "Alric",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Domaizon",
+    "given": "Isabelle"
+   },
+   {
+    "family": "Rimet",
+    "given": "Frédéric"
+   }
+  ],
+  "year": 2025,
+  "title": "Comparison of Metabarcoding and Shotgun Sequencing Confirms the Relevance of Chloroplastic rRNA Genes to Assess Community Structure of Lake Phytoplankton",
+  "journal": "Molecular Ecology Resources",
+  "volume": "26",
+  "issue": "1",
+  "pages": "e70077",
+  "doi": "10.1111/1755-0998.70077"
+ },
+ "Leray2013": {
+  "authors": [
+   {
+    "family": "Leray",
+    "given": "Matthieu"
+   },
+   {
+    "family": "Yang",
+    "given": "Joy Y"
+   },
+   {
+    "family": "Meyer",
+    "given": "Christopher P"
+   },
+   {
+    "family": "Mills",
+    "given": "Suzanne C"
+   },
+   {
+    "family": "Agudelo",
+    "given": "Natalia"
+   },
+   {
+    "family": "Ranwez",
+    "given": "Vincent"
+   },
+   {
+    "family": "Boehm",
+    "given": "Joel T"
+   },
+   {
+    "family": "Machida",
+    "given": "Ryuji J"
+   }
+  ],
+  "year": 2013,
+  "title": "A new versatile primer set targeting a short fragment of the mitochondrial COI region for metabarcoding metazoan diversity: application for characterizing coral reef fish gut contents",
+  "journal": "Frontiers in Zoology",
+  "volume": "10",
+  "issue": "1",
+  "pages": "34",
+  "doi": "10.1186/1742-9994-10-34"
+ },
+ "Lin2023": {
+  "authors": [
+   {
+    "family": "Lin",
+    "given": "Yuanyuan"
+   },
+   {
+    "family": "Zhong",
+    "given": "Wenjun"
+   },
+   {
+    "family": "Zhang",
+    "given": "Xiaowei"
+   },
+   {
+    "family": "Zhou",
+    "given": "Xiaohua"
+   },
+   {
+    "family": "He",
+    "given": "Liwei"
+   },
+   {
+    "family": "Lv",
+    "given": "Jiacheng"
+   },
+   {
+    "family": "Zhao",
+    "given": "Zheng"
+   }
+  ],
+  "year": 2023,
+  "title": "Environmental DNA metabarcoding revealed the impacts of anthropogenic activities on phytoplankton diversity in Dianchi Lake and its three inflow rivers",
+  "journal": "Ecology and Evolution",
+  "volume": "13",
+  "issue": "5",
+  "pages": "e10088",
+  "doi": "10.1002/ece3.10088"
+ },
+ "Martin2011": {
+  "authors": [
+   {
+    "family": "Martin",
+    "given": "Marcel"
+   }
+  ],
+  "year": 2011,
+  "title": "Cutadapt removes adapter sequences from high-throughput sequencing reads",
+  "journal": "EMBnet.journal",
+  "volume": "17",
+  "issue": "1",
+  "pages": "10",
+  "doi": "10.14806/ej.17.1.200"
+ },
+ "Porter2018": {
+  "authors": [
+   {
+    "family": "Porter",
+    "given": "Teresita M."
+   },
+   {
+    "family": "Hajibabaei",
+    "given": "Mehrdad"
+   }
+  ],
+  "year": 2018,
+  "title": "Automated high throughput animal CO1 metabarcode classification",
+  "journal": "Scientific Reports",
+  "volume": "8",
+  "issue": "1",
+  "pages": "4226",
+  "doi": "10.1038/s41598-018-22505-4"
+ },
+ "Rognes2016": {
+  "authors": [
+   {
+    "family": "Rognes",
+    "given": "Torbjørn"
+   },
+   {
+    "family": "Flouri",
+    "given": "Tomáš"
+   },
+   {
+    "family": "Nichols",
+    "given": "Ben"
+   },
+   {
+    "family": "Quince",
+    "given": "Christopher"
+   },
+   {
+    "family": "Mahé",
+    "given": "Frédéric"
+   }
+  ],
+  "year": 2016,
+  "title": "VSEARCH: a versatile open source tool for metagenomics",
+  "journal": "PeerJ",
+  "volume": "4",
+  "issue": "",
+  "pages": "e2584",
+  "doi": "10.7717/peerj.2584"
+ },
+ "Sahu2025": {
+  "authors": [
+   {
+    "family": "Sahu",
+    "given": "Ashish"
+   },
+   {
+    "family": "Singh",
+    "given": "Mahender"
+   },
+   {
+    "family": "Laxmi",
+    "given": "Rishikesh Krishan"
+   },
+   {
+    "family": "Shah",
+    "given": "Tarang Kumar"
+   },
+   {
+    "family": "Sharma",
+    "given": "Madhu"
+   }
+  ],
+  "year": 2025,
+  "title": "Environmental DNA (eDNA): an eco-friendly approach for conservation of Indian freshwater diversity—a review",
+  "journal": "Environmental Science and Pollution Research",
+  "volume": "32",
+  "issue": "15",
+  "pages": "9333-9360",
+  "doi": "10.1007/s11356-025-36202-z"
+ },
+ "Shen2016": {
+  "authors": [
+   {
+    "family": "Shen",
+    "given": "Wei"
+   },
+   {
+    "family": "Le",
+    "given": "Shuai"
+   },
+   {
+    "family": "Li",
+    "given": "Yan"
+   },
+   {
+    "family": "Hu",
+    "given": "Fuquan"
+   }
+  ],
+  "year": 2016,
+  "title": "SeqKit: A Cross-Platform and Ultrafast Toolkit for FASTA/Q File Manipulation",
+  "journal": "PLOS ONE",
+  "volume": "11",
+  "issue": "10",
+  "pages": "e0163962",
+  "doi": "10.1371/journal.pone.0163962"
+ },
+ "Sildever2021": {
+  "authors": [
+   {
+    "family": "Sildever",
+    "given": "Sirje"
+   },
+   {
+    "family": "Laas",
+    "given": "Peeter"
+   },
+   {
+    "family": "Kolesova",
+    "given": "Natalja"
+   },
+   {
+    "family": "Lips",
+    "given": "Inga"
+   },
+   {
+    "family": "Lips",
+    "given": "Urmas"
+   },
+   {
+    "family": "Nagai",
+    "given": "Satoshi"
+   }
+  ],
+  "year": 2021,
+  "title": "Plankton biodiversity and species co-occurrence based on environmental DNA – a multiple marker study",
+  "journal": "Metabarcoding and Metagenomics",
+  "volume": "5",
+  "issue": "",
+  "pages": "e72371",
+  "doi": "10.3897/mbmg.5.72371"
+ },
+ "Sladecek1983": {
+  "authors": [
+   {
+    "family": "Sládeček",
+    "given": "Vladimír"
+   }
+  ],
+  "year": 1983,
+  "title": "Rotifers as indicators of water quality",
+  "journal": "Hydrobiologia",
+  "volume": "100",
+  "issue": "1",
+  "pages": "169-201",
+  "doi": "10.1007/bf00027429"
+ },
+ "Stefanni2018": {
+  "authors": [
+   {
+    "family": "Stefanni",
+    "given": "Sergio"
+   },
+   {
+    "family": "Stanković",
+    "given": "David"
+   },
+   {
+    "family": "Borme",
+    "given": "Diego"
+   },
+   {
+    "family": "de Olazabal",
+    "given": "Alessandra"
+   },
+   {
+    "family": "Juretić",
+    "given": "Tea"
+   },
+   {
+    "family": "Pallavicini",
+    "given": "Alberto"
+   },
+   {
+    "family": "Tirelli",
+    "given": "Valentina"
+   }
+  ],
+  "year": 2018,
+  "title": "Multi-marker metabarcoding approach to study mesozooplankton at basin scale",
+  "journal": "Scientific Reports",
+  "volume": "8",
+  "issue": "1",
+  "pages": "12085",
+  "doi": "10.1038/s41598-018-30157-7"
+ },
+ "Zhang2018": {
+  "authors": [
+   {
+    "family": "Zhang",
+    "given": "Guang K."
+   },
+   {
+    "family": "Chain",
+    "given": "Frédéric J. J."
+   },
+   {
+    "family": "Abbott",
+    "given": "Cathryn L."
+   },
+   {
+    "family": "Cristescu",
+    "given": "Melania E."
+   }
+  ],
+  "year": 2018,
+  "title": "Metabarcoding using multiplexed markers increases species detection in complex zooplankton communities",
+  "journal": "Evolutionary Applications",
+  "volume": "11",
+  "issue": "10",
+  "pages": "1901-1914",
+  "doi": "10.1111/eva.12694"
+ },
+ "Zhao2021": {
+  "authors": [
+   {
+    "family": "Zhao",
+    "given": "Lina"
+   },
+   {
+    "family": "Zhang",
+    "given": "Xue"
+   },
+   {
+    "family": "Xu",
+    "given": "Mengyue"
+   },
+   {
+    "family": "Mao",
+    "given": "Ying"
+   },
+   {
+    "family": "Huang",
+    "given": "Yuan"
+   }
+  ],
+  "year": 2021,
+  "title": "DNA metabarcoding of zooplankton communities: species diversity and seasonal variation revealed by 18S rRNA and COI",
+  "journal": "PeerJ",
+  "volume": "9",
+  "issue": "",
+  "pages": "e11057",
+  "doi": "10.7717/peerj.11057"
+ },
+ "Deepor_algae2021": {
+  "authors": [
+   {
+    "family": "Baruah",
+    "given": "Partha Pratim"
+   },
+   {
+    "family": "Boruah",
+    "given": "Bishmita"
+   },
+   {
+    "family": "Nath",
+    "given": "Soumin"
+   },
+   {
+    "family": "Kalita",
+    "given": "Himamani"
+   },
+   {
+    "family": "Bhattacharjee",
+    "given": "Shaswatee"
+   }
+  ],
+  "year": 2020,
+  "title": "Algal Diversity in Deepor Beel of Assam: A Ramsar Site of North East India",
+  "journal": "Nelumbo",
+  "volume": "",
+  "issue": "",
+  "pages": "221-252",
+  "doi": "10.20324/nelumbo/v62/2020/153155"
+ },
+ "Sharma2010": {
+  "authors": [
+   {
+    "family": "Sharma",
+    "given": "B.K."
+   }
+  ],
+  "year": 2010,
+  "title": "Rotifer communities of Deepor Beel, Assam, India: richness, abundance and ecology",
+  "journal": "Journal of Threatened Taxa",
+  "volume": "2",
+  "issue": "8",
+  "pages": "1077-1086",
+  "doi": "10.11609/jott.o2411.1077-86"
+ }
+}

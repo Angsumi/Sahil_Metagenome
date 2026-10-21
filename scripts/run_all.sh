@@ -23,4 +23,5 @@ python3 scripts/13_sra_prep.py
 python3 scripts/14_verify_references.py   # Crossref (internet access required)
 Rscript scripts/15_microscopy_comparison.R
 Rscript scripts/12_manuscript.R           # again, to include the microscopy comparison
+NODE_PATH=work/node/node_modules node scripts/16_manuscript_docx.js   # needs: npm install --prefix work/node docx@9
 python3 scripts/99_build_site.py

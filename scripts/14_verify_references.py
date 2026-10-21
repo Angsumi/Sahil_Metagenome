@@ -91,7 +91,7 @@ def fmt(m, cited_title="", cited_year=None):
     return f"{au} ({year}). {title}. {jour}{loc}. https://doi.org/{m['DOI']}"
 
 
-rows, formatted = [], []
+rows, formatted, records = [], [], {}
 for key, author, year, title, doi in REFS:
     if doi:
         msg = (get("https://api.crossref.org/works/" + urllib.parse.quote(doi)) or {}).get("message")
@@ -136,8 +136,19 @@ for key, author, year, title, doi in REFS:
                  (msg.get("container-title") or [""])[0], f"{sim:.2f}"])
     if status.startswith(("VERIFIED", "FOUND")):
         formatted.append((key, fmt(msg, title, year)))
+        ctit = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", (msg.get("title") or [""])[0])).strip().strip('"')
+        if norm(title).startswith(norm(ctit)) and len(title) > len(ctit):
+            ctit = title
+        pyear = (msg.get("published-print", {}).get("date-parts") or [[None]])[0][0]
+        records[key] = {"authors": [{"family": a.get("family", a.get("name", "")), "given": a.get("given", "")}
+                                    for a in msg.get("author", [])],
+                        "year": year if year in (cyear, pyear) else cyear, "title": ctit,
+                        "journal": (msg.get("container-title") or [msg.get("publisher", "")])[0],
+                        "volume": msg.get("volume", ""), "issue": msg.get("issue", ""),
+                        "pages": msg.get("page", "") or msg.get("article-number", ""), "doi": msg.get("DOI", "")}
     time.sleep(0.3)
 
+json.dump(records, open(OUT / "references_records.json", "w"), indent=1, ensure_ascii=False)
 with open(OUT / "references_verified.tsv", "w", newline="") as fh:
     w = csv.writer(fh, delimiter="\t")
     w.writerow(["key", "doi", "status", "crossref_first_author", "crossref_year", "crossref_title",

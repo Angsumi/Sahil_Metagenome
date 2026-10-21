@@ -121,7 +121,9 @@ ord <- topg[order(W1 - W2), sprintf("%s  (%s · %s)", gsub("_", " ", Genus), mar
 hm[, lab := factor(lab, levels = ord)]
 p3 <- ggplot(hm, aes(site, lab, fill = pmax(pct, 0.001))) +
   geom_tile(colour = "white", linewidth = 0.6) +
-  geom_text(aes(label = ifelse(pct >= 0.01, sprintf("%.2f", pct), "–")), size = 3.1) +
+  geom_text(aes(label = ifelse(pct >= 0.01, sprintf("%.2f", pct), "–"),
+                colour = ifelse(pct >= 0.5, "white", "black")), size = 3.1) +
+  scale_colour_identity() +
   scale_fill_gradientn(colours = c("#f7f7f2", "#cfe3ec", "#7fb2cc", "#2b6c8f", "#163e57"), trans = "log10",
                        labels = function(x) paste0(x, "%"), name = "% of reads") +
   scale_x_discrete(position = "top") +

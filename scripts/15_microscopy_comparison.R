@@ -1,5 +1,5 @@
 # Step 15 — Compare the DNA results for Deepor Beel (W2) with published microscopy surveys of the
-# same lake (scripts/literature_deepor.tsv): rotifers from Sharma & Sharma (2010) and algae from
+# same lake (scripts/literature_deepor.tsv): rotifers from Sharma (2010) and algae from
 # Baruah et al. (2020). Surveys differ in year, season and method, so this tests agreement of the
 # species/genus lists, not abundances.
 # Evidence levels for DNA detections: "named" = reference-library name (step 6); "provisional" =
@@ -69,7 +69,7 @@ setorder(alg, found_by, -dna_reads, genus)
 fwrite(alg, file.path(out, "algae_genera_microscopy_vs_DNA.tsv"), sep = "\t")
 
 summ <- rbind(
-  rot[, .(comparison = paste("Rotifer", level, "(Sharma & Sharma 2010)"),
+  rot[, .(comparison = paste("Rotifer", level, "(Sharma 2010)"),
           microscopy = .N, also_by_DNA_named = sum(dna_detection == "named"),
           also_by_DNA_provisional = sum(dna_detection == "provisional")), by = level][, -"level"],
   data.table(comparison = "Algal genera (Baruah et al. 2020)", microscopy = length(mic_alg),

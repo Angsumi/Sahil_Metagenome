@@ -3,7 +3,8 @@
 package) and one SRA run per marker x lake (4 runs, 8 FASTQ files). Raw files share names
 across markers (W1_R1.fastq.gz ...), which SRA does not allow in one submission, so uniquely
 named hard links are created in work/sra_upload/ for uploading.
-Fields that only the authors know are left as TO_FILL."""
+Only the sampling coordinates are left for the authors (TO_FILL); the collection date is
+recorded as "missing", an INSDC-accepted value."""
 import csv
 import hashlib
 import os
@@ -31,17 +32,15 @@ markers = {
 }
 
 biosample_cols = ["*sample_name", "sample_title", "bioproject_accession", "*organism", "*collection_date",
-                  "*env_broad_scale", "*env_local_scale", "*env_medium", "*geo_loc_name", "*lat_lon",
-                  "depth", "samp_collect_device", "samp_size", "description"]
+                  "*env_broad_scale", "*env_local_scale", "*env_medium", "*geo_loc_name", "*lat_lon", "description"]
 with open(OUT / "biosample_MIMARKS_survey_water.tsv", "w", newline="") as fh:
     w = csv.writer(fh, delimiter="\t")
     w.writerow(biosample_cols)
     for sid, s in sites.items():
-        w.writerow([s["name"], s["title"], "TO_FILL (PRJNA… after registering the BioProject)",
-                    "freshwater metagenome", "TO_FILL (YYYY-MM-DD)",
+        w.writerow([s["name"], s["title"], "",
+                    "freshwater metagenome", "missing",
                     "freshwater lake biome [ENVO:01000252]", "freshwater lake [ENVO:00000021]",
-                    "lake water [ENVO:04000007]", s["geo"], "TO_FILL (e.g. 26.12 N 91.66 E)",
-                    "TO_FILL", "TO_FILL", "TO_FILL",
+                    "lake water [ENVO:04000007]", s["geo"], "TO_FILL (decimal degrees, e.g. 26.12 N 91.66 E)",
                     f"Surface water sample {sid}; eDNA metabarcoding with 18S rRNA V4 and COI markers"])
 
 sra_cols = ["sample_name", "library_ID", "title", "library_strategy", "library_source", "library_selection",

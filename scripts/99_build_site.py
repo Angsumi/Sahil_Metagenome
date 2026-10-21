@@ -99,6 +99,7 @@ steps.append(("field", "Before the computer", "Water, DNA and a sequencing machi
 <p>Every living thing sheds DNA into the water around it — skin cells, mucus, waste, whole tiny bodies.
 A single bottle of lake water therefore carries a genetic trace of the community living there.
 This approach is called <strong>environmental DNA (eDNA)</strong>.</p>
+<p>Deepor Beel lies right beside Guwahati’s municipal solid-waste dumping ground, while Chandubi Beel has no comparable pressure — so comparing the two shows what that pressure does to the life in the water. No water chemistry was measured; instead, the organisms themselves serve as indicators of water condition (Steps 9 and 11).</p>
 <p>Water was collected from each lake, the DNA extracted, and two short <em>barcode</em> genes copied
 millions of times and read by an Illumina MiSeq sequencer at Eurofins Genomics:</p>
 <div class='pair'>
@@ -409,8 +410,7 @@ abundant everywhere and somewhat more so in Deepor. Chandubi additionally holds 
 <li><strong>Deepor’s desmids</strong> (<em>Staurastrum</em>, <em>Cosmarium</em>) are a group often linked to plant-rich, less
 enriched water — fitting a macrophyte-covered wetland — alongside chytrid parasites of algae.</li>
 </ul>
-<p>These are pointers, not verdicts: they need checking against the water-chemistry measurements and the literature for
-these lakes.</p>
+<p>These are pointers rather than verdicts; read together they are consistent with nutrient enrichment, strongest at Deepor beside the dumping ground.</p>
 {specialist(
     "<p>18S roles are assigned from PR2 division/class. COI groups use the reference-library phylum where available and the "
     "NCBI BLAST phylum (≥ 80% identity) for the 40 looked-up ASVs. Indicator notes in "
@@ -493,13 +493,13 @@ Treat the exact value as provisional: several genus names come only from distant
     files(f"{RI}/COI_motus.tsv", f"{RI}/COI_motu97.uc"))}
 """))
 
-steps.append(("paper", "Step 12–13", "Files for the paper", f"""
+steps.append(("paper", "Steps 12, 13, 16", "Files for the paper", f"""
 <p class='plain'><span>In plain words</span>Everything above, packaged the way a journal and the public DNA archive expect it:
 figures at print resolution, tables, a draft Methods section, and the forms needed to deposit the raw data.</p>
 <h4>Manuscript package</h4>
 <ul class='files'>
-<li><a href='{BLOB}/{MS}/Methods_and_legends.md'>Draft Methods, figure legends and reference list</a> — parts only the authors know are marked <b>[TO ADD]</b></li>
-<li>Figures 1–7 (300 dpi PNG + vector PDF): <a href='{REPO}/tree/main/{MS}/figures'>{MS}/figures</a></li>
+<li><a href='{REPO}/raw/main/{MS}/Manuscript_EMAS.docx'><b>Full manuscript (Word)</b></a> — formatted for <em>Environmental Monitoring and Assessment</em>: 10-pt Times, line numbers, embedded figures and tables, APA references verified against Crossref</li>
+<li>Figures 1–7 for submission (TIFF, 600 dpi, 174 mm wide; also PDF and PNG): <a href='{REPO}/tree/main/{MS}/figures'>{MS}/figures</a></li>
 <li>Tables 1–5 (CSV): <a href='{REPO}/tree/main/{MS}/tables'>{MS}/tables</a></li>
 <li><a href='{REPO}/raw/main/{MS}/tables/Supplementary_Tables_S1-S12.xlsx'>Supplementary Tables S1–S12 (Excel)</a> and ASV FASTA files</li>
 </ul>
@@ -507,10 +507,10 @@ figures at print resolution, tables, a draft Methods section, and the forms need
 <p>Two BioSamples (one per lake) and four sequencing runs (two barcodes × two lakes). Because both barcodes use the same file
 names, the eight files get unique names for upload (e.g. <code>COI_Deepor_Beel_W2_R1.fastq.gz</code>).</p>
 <ul class='files'>
-<li><a href='{BLOB}/{SRA}/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package) — fill in date, coordinates, depth</li>
+<li><a href='{BLOB}/{SRA}/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package) — only the coordinates remain to fill in</li>
 <li><a href='{BLOB}/{SRA}/sra_metadata.tsv'>SRA metadata sheet</a> with file names and MD5 checksums</li>
 </ul>
-{specialist(script("scripts/12_manuscript.R"), script("scripts/13_sra_prep.py"))}
+{specialist(script("scripts/12_manuscript.R"), script("scripts/16_manuscript_docx.js"), script("scripts/13_sra_prep.py"))}
 """))
 
 # ---- references and microscopy comparison ----
@@ -538,7 +538,7 @@ with what we cite. The final list is built from those records, not typed by hand
 <strong>Baruah et al. 2020</strong>, not 2021.</li>
 <li>Two regional papers (<em>Tropical Ecology</em> 2011, <em>Indian Journal of Fisheries</em> 2015) are not registered in
 Crossref and could not be confirmed electronically — check them against the printed journals before citing.</li>
-<li>While checking, a directly relevant microscopy survey turned up: Sharma &amp; Sharma (2010), <em>Rotifer communities of
+<li>While checking, a directly relevant microscopy survey turned up: Sharma (2010), <em>Rotifer communities of
 Deepor Beel</em> — used in the next step.</li>
 </ul>
 {specialist(script("scripts/14_verify_references.py"),
@@ -564,7 +564,7 @@ libraries yet — the same gap seen in Steps 7 and 10.</p>
 samples.</p>
 {specialist(
     "<p>Literature taxa in <a href='" + BLOB + "/scripts/literature_deepor.tsv'>scripts/literature_deepor.tsv</a>: rotifer "
-    "families, genera and species from Sharma &amp; Sharma (2010, Table 3); algal genera from the species accounts of Baruah et "
+    "families, genera and species from Sharma (2010, Table 3); algal genera from the species accounts of Baruah et "
     "al. (2020). DNA detections in Deepor (W2) only.</p>",
     script("scripts/15_microscopy_comparison.R"),
     table(f"{MI}/comparison_summary.tsv", {"also_by_DNA_named": "DNA (named)", "also_by_DNA_provisional": "DNA (provisional)",
@@ -603,16 +603,14 @@ genera the surveys did not list.</p></div>
 reflect DNA, not the number or weight of organisms. Traces of fish and mammal DNA in Deepor are too few to interpret.</p></div>
 """))
 
-steps.append(("next", "Still to do", "What only the research team can supply", """
+steps.append(("next", "Still to do", "Before submission", """
 <ul>
-<li><strong>Sampling details</strong> — date, GPS coordinates, depth, volume filtered, filter type, DNA extraction kit and PCR
-conditions (marked [TO ADD] in the draft Methods and TO_FILL in the SRA sheets).</li>
-<li><strong>Water quality</strong> — the pH, oxygen, BOD/COD and nutrient values measured at sampling, to set beside the indicator
-organisms.</li>
-<li><strong>Deposit the raw data</strong> — register a BioProject and upload the eight files to NCBI SRA using the prepared sheets.</li>
-<li><strong>Two regional references</strong> — confirm the 2011 and 2015 Deepor Beel papers against the printed journals.</li>
-<li><strong>Target journal</strong> — to format text, figures and references to its rules.</li>
-<li><strong>Replication</strong> — more samples per lake (or another season) would allow real statistical comparison.</li>
+<li><strong>Sampling coordinates</strong> — the only value still missing, in the manuscript (Study area) and the SRA BioSample sheet.</li>
+<li><strong>NCBI SRA upload</strong> — by the authors, using the prepared sheets; then add the BioProject accession to the
+Data availability statement.</li>
+<li><strong>Author details</strong> — co-authors, ORCID, acknowledgements, funding and competing-interest statements on the
+title page and declarations (marked in brackets).</li>
+<li><strong>Replication</strong> — more samples per lake (or another season) would allow statistical comparison in a follow-up study.</li>
 </ul>
 """))
 timeline = "".join(

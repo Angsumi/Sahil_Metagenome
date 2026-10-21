@@ -7,25 +7,36 @@ dir.create(file.path(out, "figures"), recursive = TRUE, showWarnings = FALSE)
 dir.create(file.path(out, "tables"), recursive = TRUE, showWarnings = FALSE)
 rd <- function(p) fread(p, sep = "\t", quote = "", na.strings = c("", "NA"))
 pl <- function(n) readRDS(file.path("work/plots", paste0(n, ".rds")))
+# Environmental Monitoring and Assessment artwork rules: no titles inside figures, sans-serif
+# lettering 8–12 pt (Liberation Sans = Arial metrics), width <= 174 mm, height <= 234 mm,
+# combination art (plots with text) as TIFF at 600 dpi; files named Fig1, Fig2, ...
+FONT <- "Liberation Sans"
 pub <- theme(plot.title = element_blank(), plot.subtitle = element_blank(),
-             text = element_text(size = 10), legend.text = element_text(size = 9))
-save_fig <- function(p, name, w, h) {
-  ggsave(file.path(out, "figures", paste0(name, ".png")), p, width = w, height = h, dpi = 300, bg = "white")
-  ggsave(file.path(out, "figures", paste0(name, ".pdf")), p, width = w, height = h, device = cairo_pdf)
+             text = element_text(family = FONT, size = 9), axis.text = element_text(size = 8),
+             legend.text = element_text(size = 8), strip.text = element_text(size = 9),
+             plot.tag = element_text(size = 11, face = "bold"))
+save_fig <- function(p, n, h_mm, w_mm = 174) {
+  stopifnot(h_mm <= 234, w_mm <= 174)
+  f <- file.path(out, "figures", paste0("Fig", n))
+  ggsave(paste0(f, ".tif"), p, width = w_mm, height = h_mm, units = "mm", dpi = 600,
+         device = function(filename, width, height, res, ...)
+           grDevices::tiff(filename, width = width, height = height, units = "in", res = res,
+                           compression = "lzw", type = "cairo", family = FONT))
+  ggsave(paste0(f, ".png"), p, width = w_mm, height = h_mm, units = "mm", dpi = 300, bg = "white")
+  ggsave(paste0(f, ".pdf"), p, width = w_mm, height = h_mm, units = "mm", device = cairo_pdf, family = FONT)
 }
+unlink(list.files(file.path(out, "figures"), full.names = TRUE))
 
 # ---- Figures ----
-f1 <- (pl("05_read_tracking") + pub) / (pl("05_rarefaction") + pub) + plot_annotation(tag_levels = "A")
-save_fig(f1, "Figure1_read_processing_rarefaction", 7.5, 8)
-f2 <- (pl("09_18S_roles") + pub) / (pl("09_COI_groups") + pub) + plot_annotation(tag_levels = "A")
-save_fig(f2, "Figure2_community_composition", 8.5, 7.5)
-f3 <- (pl("08_alpha") + pub) / (pl("08_overlap") + pub) + plot_layout(heights = c(1, 1.2)) +
-  plot_annotation(tag_levels = "A")
-save_fig(f3, "Figure3_diversity_overlap", 8, 9)
-save_fig(pl("09_genera_heatmap") + pub, "Figure4_top_genera_heatmap", 7.5, 8.5)
-save_fig(pl("10_protein") + pub, "Figure5_unknowns_DNA_vs_protein", 8, 7)
-save_fig(pl("11_rotifer_genera") + pub, "Figure6_rotifer_genera", 7.5, 4.5)
-save_fig(pl("15_microscopy") + pub, "Figure7_microscopy_vs_DNA", 8, 3.8)
+# Numbered in order of first citation in the manuscript (step 16)
+save_fig((pl("05_read_tracking") + pub) / (pl("05_rarefaction") + pub) + plot_annotation(tag_levels = "a"), 1, 185)
+save_fig(pl("10_protein") + pub, 2, 160)
+save_fig((pl("09_18S_roles") + pub) / (pl("09_COI_groups") + pub) + plot_annotation(tag_levels = "a"), 3, 165)
+save_fig(pl("09_genera_heatmap") + pub, 4, 220)
+save_fig((pl("08_alpha") + pub) / (pl("08_overlap") + pub) + plot_layout(heights = c(1, 1.2)) +
+           plot_annotation(tag_levels = "a"), 5, 210)
+save_fig(pl("11_rotifer_genera") + pub, 6, 100)
+save_fig(pl("15_microscopy") + pub, 7, 85)
 
 # ---- Table 1: sequencing and processing summary ----
 tr <- rd("results/05_summary/read_tracking.tsv")
