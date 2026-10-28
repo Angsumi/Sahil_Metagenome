@@ -3,8 +3,7 @@
 package) and one SRA run per marker x lake (4 runs, 8 FASTQ files). Raw files share names
 across markers (W1_R1.fastq.gz ...), which SRA does not allow in one submission, so uniquely
 named hard links are created in work/sra_upload/ for uploading.
-Only the sampling coordinates are left for the authors (TO_FILL); the collection date is
-recorded as "missing", an INSDC-accepted value."""
+Sampling date, coordinates and the registered BioProject come from the authors."""
 import csv
 import hashlib
 import os
@@ -13,14 +12,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "results/13_sra"
 UPLOAD = ROOT / "work/sra_upload"
+BIOPROJECT = "PRJNA1551452"
+COLLECTION_DATE = "2026-03-29"
 OUT.mkdir(parents=True, exist_ok=True)
 UPLOAD.mkdir(parents=True, exist_ok=True)
 
 sites = {
     "W1": {"folder": "Chandubi", "name": "Chandubi_Beel", "title": "Chandubi Beel lake water, eDNA",
-           "geo": "India: Assam, Kamrup, Chandubi Beel"},
+           "geo": "India: Assam, Kamrup, Chandubi Beel", "lat_lon": "25.881015 N 91.422898 E"},
     "W2": {"folder": "Dipor Beel", "name": "Deepor_Beel", "title": "Deepor Beel (Ramsar site) lake water, eDNA",
-           "geo": "India: Assam, Guwahati, Deepor Beel"},
+           "geo": "India: Assam, Guwahati, Deepor Beel", "lat_lon": "26.10953 N 91.70818 E"},
 }
 markers = {
     "18S": {"desc": "18S rRNA V4 amplicon, primers E572F (CYGCGGTAATTCCAGCTC) / E1009R "
@@ -37,10 +38,10 @@ with open(OUT / "biosample_MIMARKS_survey_water.tsv", "w", newline="") as fh:
     w = csv.writer(fh, delimiter="\t")
     w.writerow(biosample_cols)
     for sid, s in sites.items():
-        w.writerow([s["name"], s["title"], "",
-                    "freshwater metagenome", "missing",
+        w.writerow([s["name"], s["title"], BIOPROJECT,
+                    "freshwater metagenome", COLLECTION_DATE,
                     "freshwater lake biome [ENVO:01000252]", "freshwater lake [ENVO:00000021]",
-                    "lake water [ENVO:04000007]", s["geo"], "TO_FILL (decimal degrees, e.g. 26.12 N 91.66 E)",
+                    "lake water [ENVO:04000007]", s["geo"], s["lat_lon"],
                     f"Surface water sample {sid}; eDNA metabarcoding with 18S rRNA V4 and COI markers"])
 
 sra_cols = ["sample_name", "library_ID", "title", "library_strategy", "library_source", "library_selection",

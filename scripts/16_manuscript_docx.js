@@ -157,7 +157,7 @@ const intro = [
 
 const methods = [
   ["Study area and sampling",
-   `Surface water was collected at one near-shore location in each wetland: Deepor Beel (W2; [sampling coordinates]) and Chandubi Beel (W1; [sampling coordinates]), Kamrup district, Assam, India. The study was designed as a biological baseline and did not include water chemistry; the contrast between the wetlands is defined by their setting — Deepor Beel adjoining the municipal solid-waste dumping ground of Guwahati and Chandubi Beel without comparable pressure — and the trophic state of each is inferred from biological indicators (see below).`],
+   `Surface water was collected on 29 March 2026 at one near-shore location in each wetland: Deepor Beel (W2; 26.10953° N, 91.70818° E) and Chandubi Beel (W1; 25.881015° N, 91.422898° E), Kamrup district, Assam, India. The study was designed as a biological baseline and did not include water chemistry; the contrast between the wetlands is defined by their setting — Deepor Beel adjoining the municipal solid-waste dumping ground of Guwahati and Chandubi Beel without comparable pressure — and the trophic state of each is inferred from biological indicators (see below).`],
   ["DNA extraction, amplification and sequencing",
    `DNA extraction, PCR amplification and library preparation were carried out by Eurofins Genomics following the provider's standard amplicon protocol. Two markers were amplified: the V4 region of the 18S rRNA gene with primers E572F (5′-CYGCGGTAATTCCAGCTC-3′) and E1009R (5′-AYGGTATCTRWTCRTCTTYG-3′) [[Comeau2011]], and the 313-bp "Leray" fragment of COI with mlCOIintF (5′-GGWACWGGWTGAACWGTWTAYCCYCC-3′) [[Leray2013]] and jgHCO2198 (5′-TAIACYTCIGGRTGICCRAARAAYCA-3′) [[Geller2013]]. Libraries were sequenced on an Illumina MiSeq (2 × 300 bp). The identity of both primer pairs was confirmed directly from the reads.`],
   ["Read processing",
@@ -201,7 +201,7 @@ const declarations = [
   ["Acknowledgements", "[Acknowledgements]"],
   ["Author contributions", "Sahil Seikh: conceptualisation, sampling, investigation, data analysis, writing – original draft. [Add other authors and contributions.]"],
   ["Funding", "[State funding sources, or: The authors did not receive support from any organization for the submitted work.]"],
-  ["Data availability", "Raw sequence reads are deposited in the NCBI Sequence Read Archive under BioProject [accession]. ASV sequences, ASV and taxonomy tables, and all analysis scripts are available at https://github.com/Angsumi/Sahil_Metagenome."],
+  ["Data availability", "Raw sequence reads are deposited in the NCBI Sequence Read Archive under BioProject PRJNA1551452 (BioSamples SAMN64467025 and SAMN64467026). ASV sequences, ASV and taxonomy tables, and all analysis scripts are available at https://github.com/Angsumi/Sahil_Metagenome."],
   ["Declarations", "Ethics approval: Not applicable; the study used environmental water samples and involved no human participants or animals. Consent to participate: Not applicable. Consent for publication: Not applicable. Competing interests: [The authors declare no competing interests.]"],
 ];
 

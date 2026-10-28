@@ -112,7 +112,7 @@ footer { padding:30px 0 60px; font-size:.85rem; color:var(--muted); }
 A single bottle of lake water therefore carries a genetic trace of the community living there.
 This approach is called <strong>environmental DNA (eDNA)</strong>.</p>
 <p>Deepor Beel lies right beside Guwahati’s municipal solid-waste dumping ground, while Chandubi Beel has no comparable pressure — so comparing the two shows what that pressure does to the life in the water. No water chemistry was measured; instead, the organisms themselves serve as indicators of water condition (Steps 9 and 11).</p>
-<p>Water was collected from each lake, the DNA extracted, and two short <em>barcode</em> genes copied
+<p>Water was collected on <strong>29 March 2026</strong> — Chandubi Beel at 25.881015° N, 91.422898° E and Deepor Beel at 26.10953° N, 91.70818° E — the DNA extracted, and two short <em>barcode</em> genes copied
 millions of times and read by an Illumina MiSeq sequencer at Eurofins Genomics:</p>
 <div class='pair'>
   <div><h4>18S rRNA</h4><p>A barcode shared by almost all complex life. It catches <strong>microscopic algae, protists
@@ -1475,10 +1475,11 @@ figures at print resolution, tables, a draft Methods section, and the forms need
 <li><a href='https://github.com/Angsumi/Sahil_Metagenome/raw/main/results/12_manuscript/tables/Supplementary_Tables_S1-S12.xlsx'>Supplementary Tables S1–S12 (Excel)</a> and ASV FASTA files</li>
 </ul>
 <h4>NCBI SRA submission</h4>
+<p>Registered under BioProject <a href='https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1551452'>PRJNA1551452</a> (BioSamples SAMN64467025, SAMN64467026).</p>
 <p>Two BioSamples (one per lake) and four sequencing runs (two barcodes × two lakes). Because both barcodes use the same file
 names, the eight files get unique names for upload (e.g. <code>COI_Deepor_Beel_W2_R1.fastq.gz</code>).</p>
 <ul class='files'>
-<li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/13_sra/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package) — only the coordinates remain to fill in</li>
+<li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/13_sra/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package), complete</li>
 <li><a href='https://github.com/Angsumi/Sahil_Metagenome/blob/main/results/13_sra/sra_metadata.tsv'>SRA metadata sheet</a> with file names and MD5 checksums</li>
 </ul>
 <details class='spec'><summary>For specialists — scripts, parameters &amp; full tables</summary><div class='spec-body'><details class='code'><summary><span>Script</span> <code>scripts/12_manuscript.R</code></summary><pre><code># Step 12 — Manuscript package (re-run after step 15 to include the microscopy comparison): multi-panel figures (300 dpi PNG + vector PDF), main tables
@@ -1743,7 +1744,7 @@ const intro = [
 
 const methods = [
   [&quot;Study area and sampling&quot;,
-   `Surface water was collected at one near-shore location in each wetland: Deepor Beel (W2; [sampling coordinates]) and Chandubi Beel (W1; [sampling coordinates]), Kamrup district, Assam, India. The study was designed as a biological baseline and did not include water chemistry; the contrast between the wetlands is defined by their setting — Deepor Beel adjoining the municipal solid-waste dumping ground of Guwahati and Chandubi Beel without comparable pressure — and the trophic state of each is inferred from biological indicators (see below).`],
+   `Surface water was collected on 29 March 2026 at one near-shore location in each wetland: Deepor Beel (W2; 26.10953° N, 91.70818° E) and Chandubi Beel (W1; 25.881015° N, 91.422898° E), Kamrup district, Assam, India. The study was designed as a biological baseline and did not include water chemistry; the contrast between the wetlands is defined by their setting — Deepor Beel adjoining the municipal solid-waste dumping ground of Guwahati and Chandubi Beel without comparable pressure — and the trophic state of each is inferred from biological indicators (see below).`],
   [&quot;DNA extraction, amplification and sequencing&quot;,
    `DNA extraction, PCR amplification and library preparation were carried out by Eurofins Genomics following the provider&#x27;s standard amplicon protocol. Two markers were amplified: the V4 region of the 18S rRNA gene with primers E572F (5′-CYGCGGTAATTCCAGCTC-3′) and E1009R (5′-AYGGTATCTRWTCRTCTTYG-3′) [[Comeau2011]], and the 313-bp &quot;Leray&quot; fragment of COI with mlCOIintF (5′-GGWACWGGWTGAACWGTWTAYCCYCC-3′) [[Leray2013]] and jgHCO2198 (5′-TAIACYTCIGGRTGICCRAARAAYCA-3′) [[Geller2013]]. Libraries were sequenced on an Illumina MiSeq (2 × 300 bp). The identity of both primer pairs was confirmed directly from the reads.`],
   [&quot;Read processing&quot;,
@@ -1787,7 +1788,7 @@ const declarations = [
   [&quot;Acknowledgements&quot;, &quot;[Acknowledgements]&quot;],
   [&quot;Author contributions&quot;, &quot;Sahil Seikh: conceptualisation, sampling, investigation, data analysis, writing – original draft. [Add other authors and contributions.]&quot;],
   [&quot;Funding&quot;, &quot;[State funding sources, or: The authors did not receive support from any organization for the submitted work.]&quot;],
-  [&quot;Data availability&quot;, &quot;Raw sequence reads are deposited in the NCBI Sequence Read Archive under BioProject [accession]. ASV sequences, ASV and taxonomy tables, and all analysis scripts are available at https://github.com/Angsumi/Sahil_Metagenome.&quot;],
+  [&quot;Data availability&quot;, &quot;Raw sequence reads are deposited in the NCBI Sequence Read Archive under BioProject PRJNA1551452 (BioSamples SAMN64467025 and SAMN64467026). ASV sequences, ASV and taxonomy tables, and all analysis scripts are available at https://github.com/Angsumi/Sahil_Metagenome.&quot;],
   [&quot;Declarations&quot;, &quot;Ethics approval: Not applicable; the study used environmental water samples and involved no human participants or animals. Consent to participate: Not applicable. Consent for publication: Not applicable. Competing interests: [The authors declare no competing interests.]&quot;],
 ];
 
@@ -1917,8 +1918,7 @@ Packer.toBuffer(doc).then((b) =&gt; { fs.writeFileSync(out, b); console.log(`wro
 package) and one SRA run per marker x lake (4 runs, 8 FASTQ files). Raw files share names
 across markers (W1_R1.fastq.gz ...), which SRA does not allow in one submission, so uniquely
 named hard links are created in work/sra_upload/ for uploading.
-Only the sampling coordinates are left for the authors (TO_FILL); the collection date is
-recorded as &quot;missing&quot;, an INSDC-accepted value.&quot;&quot;&quot;
+Sampling date, coordinates and the registered BioProject come from the authors.&quot;&quot;&quot;
 import csv
 import hashlib
 import os
@@ -1927,14 +1927,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / &quot;results/13_sra&quot;
 UPLOAD = ROOT / &quot;work/sra_upload&quot;
+BIOPROJECT = &quot;PRJNA1551452&quot;
+COLLECTION_DATE = &quot;2026-03-29&quot;
 OUT.mkdir(parents=True, exist_ok=True)
 UPLOAD.mkdir(parents=True, exist_ok=True)
 
 sites = {
     &quot;W1&quot;: {&quot;folder&quot;: &quot;Chandubi&quot;, &quot;name&quot;: &quot;Chandubi_Beel&quot;, &quot;title&quot;: &quot;Chandubi Beel lake water, eDNA&quot;,
-           &quot;geo&quot;: &quot;India: Assam, Kamrup, Chandubi Beel&quot;},
+           &quot;geo&quot;: &quot;India: Assam, Kamrup, Chandubi Beel&quot;, &quot;lat_lon&quot;: &quot;25.881015 N 91.422898 E&quot;},
     &quot;W2&quot;: {&quot;folder&quot;: &quot;Dipor Beel&quot;, &quot;name&quot;: &quot;Deepor_Beel&quot;, &quot;title&quot;: &quot;Deepor Beel (Ramsar site) lake water, eDNA&quot;,
-           &quot;geo&quot;: &quot;India: Assam, Guwahati, Deepor Beel&quot;},
+           &quot;geo&quot;: &quot;India: Assam, Guwahati, Deepor Beel&quot;, &quot;lat_lon&quot;: &quot;26.10953 N 91.70818 E&quot;},
 }
 markers = {
     &quot;18S&quot;: {&quot;desc&quot;: &quot;18S rRNA V4 amplicon, primers E572F (CYGCGGTAATTCCAGCTC) / E1009R &quot;
@@ -1951,10 +1953,10 @@ with open(OUT / &quot;biosample_MIMARKS_survey_water.tsv&quot;, &quot;w&quot;, n
     w = csv.writer(fh, delimiter=&quot;\t&quot;)
     w.writerow(biosample_cols)
     for sid, s in sites.items():
-        w.writerow([s[&quot;name&quot;], s[&quot;title&quot;], &quot;&quot;,
-                    &quot;freshwater metagenome&quot;, &quot;missing&quot;,
+        w.writerow([s[&quot;name&quot;], s[&quot;title&quot;], BIOPROJECT,
+                    &quot;freshwater metagenome&quot;, COLLECTION_DATE,
                     &quot;freshwater lake biome [ENVO:01000252]&quot;, &quot;freshwater lake [ENVO:00000021]&quot;,
-                    &quot;lake water [ENVO:04000007]&quot;, s[&quot;geo&quot;], &quot;TO_FILL (decimal degrees, e.g. 26.12 N 91.66 E)&quot;,
+                    &quot;lake water [ENVO:04000007]&quot;, s[&quot;geo&quot;], s[&quot;lat_lon&quot;],
                     f&quot;Surface water sample {sid}; eDNA metabarcoding with 18S rRNA V4 and COI markers&quot;])
 
 sra_cols = [&quot;sample_name&quot;, &quot;library_ID&quot;, &quot;title&quot;, &quot;library_strategy&quot;, &quot;library_source&quot;, &quot;library_selection&quot;,
@@ -2322,11 +2324,9 @@ genera the surveys did not list.</p></div>
 reflect DNA, not the number or weight of organisms. Traces of fish and mammal DNA in Deepor are too few to interpret.</p></div>
 </div></li><li class='node' id='next'><div class='dot'></div><div class='card'><p class='kicker'>Still to do</p><h2>Before submission</h2>
 <ul>
-<li><strong>Sampling coordinates</strong> — the only value still missing, in the manuscript (Study area) and the SRA BioSample sheet.</li>
-<li><strong>NCBI SRA upload</strong> — by the authors, using the prepared sheets; then add the BioProject accession to the
-Data availability statement.</li>
 <li><strong>Author details</strong> — co-authors, ORCID, acknowledgements, funding and competing-interest statements on the
-title page and declarations (marked in brackets).</li>
+title page and declarations (marked in brackets in the manuscript).</li>
+<li><strong>SRA runs</strong> — finish uploading the eight read files to BioProject PRJNA1551452 if not yet done.</li>
 <li><strong>Replication</strong> — more samples per lake (or another season) would allow statistical comparison in a follow-up study.</li>
 </ul>
 </div></li></ol>
@@ -2334,6 +2334,6 @@ title page and declarations (marked in brackets).</li>
 </main>
 <footer>Scripts, results and raw data: <a href="https://github.com/Angsumi/Sahil_Metagenome">github.com/Angsumi/Sahil_Metagenome</a> ·
 Reproduce with <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/scripts/run_all.sh">run_all.sh</a> and <a href="https://github.com/Angsumi/Sahil_Metagenome/blob/main/environment.yml">environment.yml</a> ·
-Page built 2026-10-21.</footer>
+Page built 2026-10-28.</footer>
 </div>
 </body></html>

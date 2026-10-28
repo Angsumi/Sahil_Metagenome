@@ -100,7 +100,7 @@ steps.append(("field", "Before the computer", "Water, DNA and a sequencing machi
 A single bottle of lake water therefore carries a genetic trace of the community living there.
 This approach is called <strong>environmental DNA (eDNA)</strong>.</p>
 <p>Deepor Beel lies right beside Guwahati’s municipal solid-waste dumping ground, while Chandubi Beel has no comparable pressure — so comparing the two shows what that pressure does to the life in the water. No water chemistry was measured; instead, the organisms themselves serve as indicators of water condition (Steps 9 and 11).</p>
-<p>Water was collected from each lake, the DNA extracted, and two short <em>barcode</em> genes copied
+<p>Water was collected on <strong>29 March 2026</strong> — Chandubi Beel at 25.881015° N, 91.422898° E and Deepor Beel at 26.10953° N, 91.70818° E — the DNA extracted, and two short <em>barcode</em> genes copied
 millions of times and read by an Illumina MiSeq sequencer at Eurofins Genomics:</p>
 <div class='pair'>
   <div><h4>18S rRNA</h4><p>A barcode shared by almost all complex life. It catches <strong>microscopic algae, protists
@@ -504,10 +504,11 @@ figures at print resolution, tables, a draft Methods section, and the forms need
 <li><a href='{REPO}/raw/main/{MS}/tables/Supplementary_Tables_S1-S12.xlsx'>Supplementary Tables S1–S12 (Excel)</a> and ASV FASTA files</li>
 </ul>
 <h4>NCBI SRA submission</h4>
+<p>Registered under BioProject <a href='https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1551452'>PRJNA1551452</a> (BioSamples SAMN64467025, SAMN64467026).</p>
 <p>Two BioSamples (one per lake) and four sequencing runs (two barcodes × two lakes). Because both barcodes use the same file
 names, the eight files get unique names for upload (e.g. <code>COI_Deepor_Beel_W2_R1.fastq.gz</code>).</p>
 <ul class='files'>
-<li><a href='{BLOB}/{SRA}/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package) — only the coordinates remain to fill in</li>
+<li><a href='{BLOB}/{SRA}/biosample_MIMARKS_survey_water.tsv'>BioSample sheet</a> (MIMARKS survey, water package), complete</li>
 <li><a href='{BLOB}/{SRA}/sra_metadata.tsv'>SRA metadata sheet</a> with file names and MD5 checksums</li>
 </ul>
 {specialist(script("scripts/12_manuscript.R"), script("scripts/16_manuscript_docx.js"), script("scripts/13_sra_prep.py"))}
@@ -605,11 +606,9 @@ reflect DNA, not the number or weight of organisms. Traces of fish and mammal DN
 
 steps.append(("next", "Still to do", "Before submission", """
 <ul>
-<li><strong>Sampling coordinates</strong> — the only value still missing, in the manuscript (Study area) and the SRA BioSample sheet.</li>
-<li><strong>NCBI SRA upload</strong> — by the authors, using the prepared sheets; then add the BioProject accession to the
-Data availability statement.</li>
 <li><strong>Author details</strong> — co-authors, ORCID, acknowledgements, funding and competing-interest statements on the
-title page and declarations (marked in brackets).</li>
+title page and declarations (marked in brackets in the manuscript).</li>
+<li><strong>SRA runs</strong> — finish uploading the eight read files to BioProject PRJNA1551452 if not yet done.</li>
 <li><strong>Replication</strong> — more samples per lake (or another season) would allow statistical comparison in a follow-up study.</li>
 </ul>
 """))

@@ -5,7 +5,9 @@ eDNA metabarcoding of plankton in two wetlands of Assam, India — **Chandubi Be
 - **18S rRNA V4** (E572F / E1009R) — micro-eukaryotes: algae, protists, fungi, small metazoans
 - **COI** Leray fragment (mlCOIintF / jgHCO2198) — metazoan zooplankton
 
-Illumina MiSeq 2 × 301 bp, one sample per site per marker.
+Illumina MiSeq 2 × 301 bp, one sample per site per marker, collected 29 March 2026 (Chandubi Beel 25.881015° N, 91.422898° E; Deepor Beel 26.10953° N, 91.70818° E).
+
+Raw reads: NCBI BioProject [PRJNA1551452](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1551452) (BioSamples SAMN64467025, SAMN64467026).
 
 **📄 Processing report (scripts, results and figures for every step): https://angsumi.online/Sahil_Metagenome/**
 
@@ -64,4 +66,5 @@ Intermediate FASTQs and reference databases are written to `work/` (git-ignored)
 - [x] Manuscript package (`results/12_manuscript/`) and SRA sheets (`results/13_sra/`)
 - [x] References verified against Crossref (`results/14_references/`); comparison with published microscopy (`results/15_microscopy/`)
 - [x] Manuscript formatted for Environmental Monitoring and Assessment (`results/12_manuscript/Manuscript_EMAS.docx`)
-- [ ] Authors: add sampling coordinates (manuscript + SRA sheet), author details; upload reads to SRA
+- [x] Sampling date, coordinates and NCBI BioProject/BioSamples added
+- [ ] Authors: co-authors, ORCID, acknowledgements, funding statements
